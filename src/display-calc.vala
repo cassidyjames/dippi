@@ -19,20 +19,36 @@
 * Authored by: Cassidy James Blaede <c@ssidyjam.es>
 */
 
+// Above 150 but below 192 is potentially problematic
+// Above 300 is potentially problematic
+
 int main (string[] args) {
   Gtk.init (ref args);
+  double inches = 0.0;
+  double width = 0.0;
+  double height = 0.0;
+  double dpi = 0.0;
 
   var window = new Gtk.Window ();
   window.title = "Display Calc";
   window.set_border_width (12);
   window.set_position (Gtk.WindowPosition.CENTER);
-  window.set_default_size (500, 400);
+  window.set_default_size (300, 400);
   window.set_resizable (false);
   window.destroy.connect (Gtk.main_quit);
 
   var layout = new Gtk.Grid ();
   layout.column_spacing = 6;
   layout.row_spacing = 6;
+
+  var inches_entry = new Gtk.Entry();
+  inches_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
+  inches_entry.set_placeholder_text ("Display size (inches)");
+	inches_entry.icon_press.connect ((pos, event) => {
+	  if (pos == Gtk.EntryIconPosition.SECONDARY) {
+		  inches_entry.set_text ("");
+		}
+	});
 
   var width_entry = new Gtk.Entry();
   width_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
@@ -52,28 +68,26 @@ int main (string[] args) {
 		}
 	});
 
-  var inches_entry = new Gtk.Entry();
-  inches_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
-  inches_entry.set_placeholder_text ("Display size (inches)");
-	inches_entry.icon_press.connect ((pos, event) => {
-	  if (pos == Gtk.EntryIconPosition.SECONDARY) {
-		  inches_entry.set_text ("");
-		}
-	});
-
   var dpi_label = new Gtk.Label (null);
+
 
   var button_calc = new Gtk.Button.with_label ("Calculate");
   button_calc.clicked.connect (() => {
-    dpi_label.label = "Wee";
-    button_calc.set_sensitive (false);
+    inches = double.parse (inches_entry.get_text ());
+    width = double.parse (width_entry.get_text ());
+    height = double.parse (height_entry.get_text ());
+
+    dpi = GLib.Math.sqrt( GLib.Math.pow (width, 2) + GLib.Math.pow (height, 2) ) / inches;
+
+    dpi_label.label = (dpi).to_string();
   });
 
   // attach (widget, column, row, column_span, row_span)
+  layout.attach (inches_entry, 0, 0, 2, 1);
   layout.attach (width_entry, 0, 1, 1, 1);
-  layout.attach (height_entry, 0, 2, 1, 1);
-  layout.attach (button_calc, 0, 3, 2, 1);
-  layout.attach (dpi_label, 0, 4, 1, 1);
+  layout.attach (height_entry, 1, 1, 1, 1);
+  layout.attach (button_calc, 0, 2, 2, 1);
+  layout.attach (dpi_label, 0, 3, 2, 1);
 
   window.add (layout);
   window.show_all ();

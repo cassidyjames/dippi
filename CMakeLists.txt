@@ -13,10 +13,10 @@ set (VERSION "0.1")
 set (VERSION_INFO "Getting things together")
 
 find_package(PkgConfig)
-pkg_check_modules(DEPS REQUIRED gtk+-3.0)
+pkg_check_modules(DEPS REQUIRED gtk+-3.0 glib-2.0)
 
 add_definitions(${DEPS_CFLAGS})
-link_libraries(${DEPS_LIBRARIES})
+link_libraries(${DEPS_LIBRARIES} m)
 link_directories(${DEPS_LIBRARY_DIRS})
 
 find_package(Vala REQUIRED)
@@ -29,6 +29,11 @@ vala_precompile(VALA_C ${EXEC_NAME}
 
 PACKAGES
     gtk+-3.0
+    glib-2.0
+
+OPTIONS
+    -X
+    -lm
 )
 
 add_executable(${EXEC_NAME} ${VALA_C})
