@@ -31,7 +31,7 @@ PACKAGES
     gtk+-3.0
 )
 
-add_executables(${EXEC_NAME} ${VALA_C})
+add_executable(${EXEC_NAME} ${VALA_C})
 
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.cassidyjames.display-calc.desktop DESTINATION ${DATADIR}/applications/)
