@@ -30,7 +30,7 @@ public class Dippi : Gtk.Window {
 
   private int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
   private int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
-  
+
   private bool is_hidpi = false;
   private double inches = 0.0;
   private int width = 0;
@@ -48,7 +48,7 @@ public class Dippi : Gtk.Window {
     var layout = new Gtk.Grid ();
     layout.column_spacing = 6;
     layout.row_spacing = 6;
-    
+
     var diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
     diagram.pixel_size = 128;
     diagram.margin_bottom = 12;
@@ -60,6 +60,11 @@ public class Dippi : Gtk.Window {
     diag_entry.max_length = 5;
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
+    diag_entry.focus_in_event.connect ((event) => {
+      diagram.icon_name = "video-display-measure-diagonal";
+
+      return focus_in_event (event);
+    });
 
     var res_label = new Gtk.Label (_("Resolution:"));
     res_label.halign = Gtk.Align.END;
@@ -97,10 +102,10 @@ public class Dippi : Gtk.Window {
       inches = double.parse (diag_entry.get_text ());
 
       recalculate_dpi (
-        inches, 
-        width, 
-        height, 
-        dpi_result_label, 
+        inches,
+        width,
+        height,
+        dpi_result_label,
         width_entry,
         height_entry
       );
@@ -108,20 +113,20 @@ public class Dippi : Gtk.Window {
 
     width_entry.changed.connect (() => {
       width = int.parse (width_entry.get_text ());
-      
+
       is_default_width = false;
-      
+
       recalculate_dpi (
-        inches, 
-        width, 
-        height, 
-        dpi_result_label, 
+        inches,
+        width,
+        height,
+        dpi_result_label,
         width_entry,
         height_entry
       );
 
       recalculate_aspect (width, height, aspect_result_label);
-      
+
       if (is_default_height || height == 0) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
         height_entry.text = (calculated_height).to_string ();
@@ -136,10 +141,10 @@ public class Dippi : Gtk.Window {
       is_default_height = false;
 
       recalculate_dpi (
-        inches, 
-        width, 
-        height, 
-        dpi_result_label, 
+        inches,
+        width,
+        height,
+        dpi_result_label,
         width_entry,
         height_entry
       );
@@ -157,7 +162,7 @@ public class Dippi : Gtk.Window {
 
     // column, row, column_span, row_span
     layout.attach (diagram,             0, 0, 5, 1);
-    
+
     layout.attach (diag_label,          0, 1, 1, 1);
     layout.attach (diag_entry,          1, 1, 1, 1);
     layout.attach (inches_label,        2, 1, 2, 1);
@@ -189,10 +194,10 @@ public class Dippi : Gtk.Window {
 
 
   private void recalculate_dpi (
-    double inches, 
-    int width, 
-    int height, 
-    Gtk.Label dpi_result_label, 
+    double inches,
+    int width,
+    int height,
+    Gtk.Label dpi_result_label,
     Gtk.Entry width_entry,
     Gtk.Entry height_entry
   ) {
@@ -207,11 +212,11 @@ public class Dippi : Gtk.Window {
       }
     }
   }
-  
-  
+
+
   private void recalculate_aspect (
-    int width, 
-    int height, 
+    int width,
+    int height,
     Gtk.Label aspect_result_label
   ) {
       if (width > 0 && height > 0) {
@@ -226,7 +231,7 @@ public class Dippi : Gtk.Window {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
     return Math.round(unrounded_dpi);
   }
-  
+
 
   private int greatest_common_divisor (int a, int b) {
     if (a == 0)
