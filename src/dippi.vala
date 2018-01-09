@@ -64,22 +64,22 @@ public class Dippi : Gtk.Window {
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
 
-    var diag_label = new Gtk.Label ("Diagonal size:");
+    var diag_label = new Gtk.Label (_("Diagonal size:"));
     diag_label.halign = Gtk.Align.END;
 
-    var res_label = new Gtk.Label ("Resolution:");
+    var res_label = new Gtk.Label (_("Resolution:"));
     res_label.halign = Gtk.Align.END;
 
-    var dpi_label = new Gtk.Label ("DPI:");
+    var dpi_label = new Gtk.Label (_("DPI:"));
     dpi_label.halign = Gtk.Align.END;
 
-    var aspect_label = new Gtk.Label ("Aspect ratio:");
+    var aspect_label = new Gtk.Label (_("Aspect ratio:"));
     aspect_label.halign = Gtk.Align.END;
 
-    var x_label = new Gtk.Label ("×");
-    var px_label = new Gtk.Label ("px");
+    var x_label = new Gtk.Label (_("×"));
+    var px_label = new Gtk.Label (_("px"));
 
-    var inches_label = new Gtk.Label ("inches");
+    var inches_label = new Gtk.Label (_("inches"));
     inches_label.halign = Gtk.Align.START;
 
     var dpi_result_label = new Gtk.Label (null);
@@ -99,7 +99,7 @@ public class Dippi : Gtk.Window {
         dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
         }
       }
     });
@@ -119,7 +119,7 @@ public class Dippi : Gtk.Window {
         aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
         }
       }
 
@@ -146,7 +146,7 @@ public class Dippi : Gtk.Window {
         aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
         }
       }
 
