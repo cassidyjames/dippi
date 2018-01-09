@@ -22,22 +22,23 @@
 // Above 150 but below 192 is potentially problematic
 // Above 300 is potentially problematic
 
-const int MIN_HIDPI = 192;
-const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
-const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
-// const int MIN_PROBLEMATIC_LODPI = 150;
-
 public class Dippi : Gtk.Window {
+  private const int MIN_HIDPI = 192;
+  private const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
+  private const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
+  // private const int MIN_PROBLEMATIC_LODPI = 150;
+
+  private int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
+  private int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
+  
+  private bool is_hidpi = false;
+  private double inches = 0.0;
+  private int width = 0;
+  private int height = 0;
+  private bool is_default_width = false;
+  private bool is_default_height = false;
+
   public Dippi () {
-
-    double inches = 0.0;
-    int width = 0;
-    int height = 0;
-    bool default_width = false;
-    bool default_height = false;
-    int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
-    int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
-
     this.title = "Dippi";
     this.border_width = 12;
     this.window_position = Gtk.WindowPosition.CENTER;
@@ -47,11 +48,21 @@ public class Dippi : Gtk.Window {
     var layout = new Gtk.Grid ();
     layout.column_spacing = 6;
     layout.row_spacing = 6;
+    
+    var diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
+    diagram.pixel_size = 128;
+    diagram.margin_bottom = 12;
 
-    var inches_entry = new Gtk.Entry();
-    inches_entry.max_length = 5;
-    inches_entry.max_width_chars = 5;
-    inches_entry.width_chars = 5;
+    var diag_label = new Gtk.Label (_("Diagonal size:"));
+    diag_label.halign = Gtk.Align.END;
+
+    var diag_entry = new Gtk.Entry();
+    diag_entry.max_length = 5;
+    diag_entry.max_width_chars = 5;
+    diag_entry.width_chars = 5;
+
+    var res_label = new Gtk.Label (_("Resolution:"));
+    res_label.halign = Gtk.Align.END;
 
     var width_entry = new Gtk.Entry();
     width_entry.max_length = 5;
@@ -62,12 +73,6 @@ public class Dippi : Gtk.Window {
     width_entry.max_length = 5;
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
-
-    var diag_label = new Gtk.Label (_("Diagonal size:"));
-    diag_label.halign = Gtk.Align.END;
-
-    var res_label = new Gtk.Label (_("Resolution:"));
-    res_label.halign = Gtk.Align.END;
 
     var dpi_label = new Gtk.Label (_("DPI:"));
     dpi_label.halign = Gtk.Align.END;
@@ -88,98 +93,92 @@ public class Dippi : Gtk.Window {
     aspect_result_label.halign = Gtk.Align.START;
 
 
-    // TODO: Deduplicate these
-    inches_entry.changed.connect (() => {
-      inches = double.parse (inches_entry.get_text ());
-      width = int.parse (width_entry.get_text ());
-      height = int.parse (height_entry.get_text ());
+    diag_entry.changed.connect (() => {
+      inches = double.parse (diag_entry.get_text ());
 
-      if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
-
-        if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
-        }
-      }
+      recalculate_dpi (
+        inches, 
+        width, 
+        height, 
+        dpi_result_label, 
+        width_entry,
+        height_entry
+      );
     });
 
     width_entry.changed.connect (() => {
-      inches = double.parse (inches_entry.get_text ());
       width = int.parse (width_entry.get_text ());
-      height = int.parse (height_entry.get_text ());
+      
+      is_default_width = false;
+      
+      recalculate_dpi (
+        inches, 
+        width, 
+        height, 
+        dpi_result_label, 
+        width_entry,
+        height_entry
+      );
 
-      default_width = false;
-
-      if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
-
-        aspect_width = width / greatest_common_divisor (width, height);
-        aspect_height = height / greatest_common_divisor (width, height);
-        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
-
-        if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
-        }
-      }
-
-      if (default_height || height == 0) {
+      recalculate_aspect (width, height, aspect_result_label);
+      
+      if (is_default_height || height == 0) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
         height_entry.text = (calculated_height).to_string ();
 
-        default_height = true;
+        is_default_height = true;
       }
     });
 
     height_entry.changed.connect (() => {
-      inches = double.parse (inches_entry.get_text ());
-      width = int.parse (width_entry.get_text ());
       height = int.parse (height_entry.get_text ());
 
-      default_height = false;
+      is_default_height = false;
 
-      if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
+      recalculate_dpi (
+        inches, 
+        width, 
+        height, 
+        dpi_result_label, 
+        width_entry,
+        height_entry
+      );
 
-        aspect_width = width / greatest_common_divisor (width, height);
-        aspect_height = height / greatest_common_divisor (width, height);
-        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
+      recalculate_aspect (width, height, aspect_result_label);
 
-        if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
-        }
-      }
-
-      if (default_width || width == 0) {
+      if (is_default_width || width == 0) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_RATIO_WIDTH / DEFAULT_ASPECT_RATIO_HEIGHT);
         width_entry.text = (calculated_width).to_string ();
 
-        default_width = true;
+        is_default_width = true;
       }
     });
 
 
     // column, row, column_span, row_span
-    layout.attach (diag_label,          0, 0, 1, 1);
-    layout.attach (inches_entry,        1, 0, 1, 1);
-    layout.attach (inches_label,        2, 0, 2, 1);
+    layout.attach (diagram,             0, 0, 5, 1);
+    
+    layout.attach (diag_label,          0, 1, 1, 1);
+    layout.attach (diag_entry,          1, 1, 1, 1);
+    layout.attach (inches_label,        2, 1, 2, 1);
 
-    layout.attach (res_label,           0, 1, 1, 1);
-    layout.attach (width_entry,         1, 1, 1, 1);
-    layout.attach (x_label,             2, 1, 1, 1);
-    layout.attach (height_entry,        3, 1, 1, 1);
-    layout.attach (px_label,            4, 1, 1, 1);
+    layout.attach (res_label,           0, 2, 1, 1);
+    layout.attach (width_entry,         1, 2, 1, 1);
+    layout.attach (x_label,             2, 2, 1, 1);
+    layout.attach (height_entry,        3, 2, 1, 1);
+    layout.attach (px_label,            4, 2, 1, 1);
 
-    layout.attach (dpi_label,           0, 2, 1, 1);
-    layout.attach (dpi_result_label,    1, 2, 4, 1);
+    layout.attach (dpi_label,           0, 3, 1, 1);
+    layout.attach (dpi_result_label,    1, 3, 4, 1);
 
-    layout.attach (aspect_label,        0, 3, 1, 1);
-    layout.attach (aspect_result_label, 1, 3, 4, 1);
+    layout.attach (aspect_label,        0, 4, 1, 1);
+    layout.attach (aspect_result_label, 1, 4, 4, 1);
 
     this.add (layout);
   }
 
 
-  public static int main (string[] args) {
+  private static int main (string[] args) {
     Gtk.init (ref args);
 
     Dippi app = new Dippi ();
@@ -189,12 +188,47 @@ public class Dippi : Gtk.Window {
   }
 
 
-  public double dpi (double inches, int width, int height) {
+  private void recalculate_dpi (
+    double inches, 
+    int width, 
+    int height, 
+    Gtk.Label dpi_result_label, 
+    Gtk.Entry width_entry,
+    Gtk.Entry height_entry
+  ) {
+    if (inches > 0 && width > 0 && height > 0) {
+      dpi_result_label.label = (dpi (inches, width, height)).to_string ();
+
+      if (dpi (inches, width, height) >= MIN_HIDPI) {
+        is_hidpi = true;
+        dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
+      } else {
+        is_hidpi = false;
+      }
+    }
+  }
+  
+  
+  private void recalculate_aspect (
+    int width, 
+    int height, 
+    Gtk.Label aspect_result_label
+  ) {
+      if (width > 0 && height > 0) {
+        aspect_width = width / greatest_common_divisor (width, height);
+        aspect_height = height / greatest_common_divisor (width, height);
+        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
+      }
+  }
+
+
+  private double dpi (double inches, int width, int height) {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
     return Math.round(unrounded_dpi);
   }
+  
 
-  public int greatest_common_divisor (int a, int b) {
+  private int greatest_common_divisor (int a, int b) {
     if (a == 0)
       return b;
     if (b == 0)
