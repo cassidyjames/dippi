@@ -22,12 +22,11 @@
 // Above 150 but below 192 is potentially problematic
 // Above 300 is potentially problematic
 
+const int MIN_HIDPI = 192;
+// const int MIN_PROBLEMATIC_LODPI = 150;
+
 public class DisplayCalc : Gtk.Window {
   public DisplayCalc () {
-
-    // TODO: Mark if HiDPI or not
-    // const int MIN_HIDPI = 192;
-    // const int MIN_PROBLEMATIC_LODPI = 150;
 
     double inches = 0.0;
     int width = 0;
@@ -75,6 +74,10 @@ public class DisplayCalc : Gtk.Window {
 
       if (inches > 0 && width > 0 && height > 0) {
         dpi_result_label.label = (dpi (inches, width, height)).to_string();
+
+        if (dpi (inches, width, height) >= MIN_HIDPI) {
+          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+        }
       }
     });
 
@@ -85,6 +88,10 @@ public class DisplayCalc : Gtk.Window {
 
       if (inches > 0 && width > 0 && height > 0) {
         dpi_result_label.label = (dpi (inches, width, height)).to_string();
+
+        if (dpi (inches, width, height) >= MIN_HIDPI) {
+          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+        }
       }
     });
 
@@ -95,6 +102,10 @@ public class DisplayCalc : Gtk.Window {
 
       if (inches > 0 && width > 0 && height > 0) {
         dpi_result_label.label = (dpi (inches, width, height)).to_string();
+
+        if (dpi (inches, width, height) >= MIN_HIDPI) {
+          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+        }
       }
     });
 
