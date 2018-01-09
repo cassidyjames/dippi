@@ -23,6 +23,8 @@
 // Above 300 is potentially problematic
 
 const int MIN_HIDPI = 192;
+const double DEFAULT_ASPECT_RATIO_WIDTH = 16;
+const double DEFAULT_ASPECT_RATIO_HEIGHT = 9;
 // const int MIN_PROBLEMATIC_LODPI = 150;
 
 public class DisplayCalc : Gtk.Window {
@@ -31,6 +33,8 @@ public class DisplayCalc : Gtk.Window {
     double inches = 0.0;
     int width = 0;
     int height = 0;
+    bool default_width = true;
+    bool default_height = true;
 
     this.title = "Display Calc";
     this.border_width = 12;
@@ -73,10 +77,10 @@ public class DisplayCalc : Gtk.Window {
       height = int.parse (height_entry.get_text ());
 
       if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
         }
       }
     });
@@ -86,12 +90,21 @@ public class DisplayCalc : Gtk.Window {
       width = int.parse (width_entry.get_text ());
       height = int.parse (height_entry.get_text ());
 
+      default_width = false;
+
       if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
         }
+      }
+
+      if (default_height || height == 0) {
+        double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
+        height_entry.text = (calculated_height).to_string ();
+
+        default_height = true;
       }
     });
 
@@ -100,12 +113,21 @@ public class DisplayCalc : Gtk.Window {
       width = int.parse (width_entry.get_text ());
       height = int.parse (height_entry.get_text ());
 
+      default_height = false;
+
       if (inches > 0 && width > 0 && height > 0) {
-        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+        dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
         if (dpi (inches, width, height) >= MIN_HIDPI) {
-          dpi_result_label.label = dpi_result_label.get_label() + " (HiDPI)";
+          dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
         }
+      }
+
+      if (default_width || width == 0) {
+        double calculated_width = Math.round(height * DEFAULT_ASPECT_RATIO_WIDTH / DEFAULT_ASPECT_RATIO_HEIGHT);
+        width_entry.text = (calculated_width).to_string ();
+
+        default_width = true;
       }
     });
 
@@ -143,4 +165,3 @@ public class DisplayCalc : Gtk.Window {
     return Math.round(unrounded_dpi);
   }
 }
-
