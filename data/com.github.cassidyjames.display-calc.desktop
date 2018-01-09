@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Display Calc
+Name=Dippy
 GenericName=Display information calculator
 Comment=Calculate display and monitor information like DPI
 Categories=Utility;
@@ -7,6 +7,6 @@ Exec=com.github.cassidyjames.display-calc
 Icon=preferences-desktop-display
 Terminal=false
 Type=Application
-X-GNOME-Gettext-Domain=display-calc
-Keywords=DPI;density;monitor;resolution;display;width;height;screen;
+X-GNOME-Gettext-Domain=com.github.cassidyjames.display-calc
+Keywords=DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;
 

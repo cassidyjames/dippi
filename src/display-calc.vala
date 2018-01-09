@@ -38,7 +38,7 @@ public class DisplayCalc : Gtk.Window {
     int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
     int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
 
-    this.title = "Display Calc";
+    this.title = "Dippy";
     this.border_width = 12;
     this.window_position = Gtk.WindowPosition.CENTER;
     this.set_default_size (300, 400);
