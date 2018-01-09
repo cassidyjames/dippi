@@ -22,76 +22,114 @@
 // Above 150 but below 192 is potentially problematic
 // Above 300 is potentially problematic
 
-int main (string[] args) {
-  Gtk.init (ref args);
-  double inches = 0.0;
-  double width = 0.0;
-  double height = 0.0;
-  double dpi = 0.0;
+public class DisplayCalc : Gtk.Window {
+  public DisplayCalc () {
 
-  var window = new Gtk.Window ();
-  window.title = "Display Calc";
-  window.set_border_width (12);
-  window.set_position (Gtk.WindowPosition.CENTER);
-  window.set_default_size (300, 400);
-  window.set_resizable (false);
-  window.destroy.connect (Gtk.main_quit);
+    // TODO: Mark if HiDPI or not
+    // const int MIN_HIDPI = 192;
+    // const int MIN_PROBLEMATIC_LODPI = 150;
 
-  var layout = new Gtk.Grid ();
-  layout.column_spacing = 6;
-  layout.row_spacing = 6;
+    double inches = 0.0;
+    int width = 0;
+    int height = 0;
 
-  var inches_entry = new Gtk.Entry();
-  inches_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
-  inches_entry.set_placeholder_text ("Display size (inches)");
-	inches_entry.icon_press.connect ((pos, event) => {
-	  if (pos == Gtk.EntryIconPosition.SECONDARY) {
-		  inches_entry.set_text ("");
-		}
-	});
+    this.title = "Display Calc";
+    this.border_width = 12;
+    this.window_position = Gtk.WindowPosition.CENTER;
+    this.set_default_size (300, 400);
+    this.set_resizable (false);
+    this.destroy.connect (Gtk.main_quit);
 
-  var width_entry = new Gtk.Entry();
-  width_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
-  width_entry.set_placeholder_text ("Pixel width");
-	width_entry.icon_press.connect ((pos, event) => {
-	  if (pos == Gtk.EntryIconPosition.SECONDARY) {
-		  width_entry.set_text ("");
-		}
-	});
+    var layout = new Gtk.Grid ();
+    layout.column_spacing = 6;
+    layout.row_spacing = 6;
 
-  var height_entry = new Gtk.Entry();
-  height_entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "edit-clear-symbolic");
-  height_entry.set_placeholder_text ("Pixel height");
-	height_entry.icon_press.connect ((pos, event) => {
-	  if (pos == Gtk.EntryIconPosition.SECONDARY) {
-		  height_entry.set_text ("");
-		}
-	});
+    var inches_entry = new Gtk.Entry();
+    var width_entry = new Gtk.Entry();
+    var height_entry = new Gtk.Entry();
 
-  var dpi_label = new Gtk.Label (null);
+    var diag_label = new Gtk.Label ("Diagonal size:");
+    diag_label.halign = Gtk.Align.END;
+
+    var res_label = new Gtk.Label ("Resolution:");
+    res_label.halign = Gtk.Align.END;
+
+    var dpi_label = new Gtk.Label ("DPI:");
+    dpi_label.halign = Gtk.Align.END;
+
+    var x_label = new Gtk.Label ("×");
+    var px_label = new Gtk.Label ("px");
+
+    var inches_label = new Gtk.Label ("inches");
+    inches_label.halign = Gtk.Align.START;
+
+    var dpi_result_label = new Gtk.Label (null);
+    dpi_result_label.halign = Gtk.Align.START;
 
 
-  var button_calc = new Gtk.Button.with_label ("Calculate");
-  button_calc.clicked.connect (() => {
-    inches = double.parse (inches_entry.get_text ());
-    width = double.parse (width_entry.get_text ());
-    height = double.parse (height_entry.get_text ());
+    // TODO: Deduplicate these
+    inches_entry.changed.connect (() => {
+      inches = double.parse (inches_entry.get_text ());
+      width = int.parse (width_entry.get_text ());
+      height = int.parse (height_entry.get_text ());
 
-    dpi = GLib.Math.sqrt( GLib.Math.pow (width, 2) + GLib.Math.pow (height, 2) ) / inches;
+      if (inches > 0 && width > 0 && height > 0) {
+        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+      }
+    });
 
-    dpi_label.label = (dpi).to_string();
-  });
+    width_entry.changed.connect (() => {
+      inches = double.parse (inches_entry.get_text ());
+      width = int.parse (width_entry.get_text ());
+      height = int.parse (height_entry.get_text ());
 
-  // attach (widget, column, row, column_span, row_span)
-  layout.attach (inches_entry, 0, 0, 2, 1);
-  layout.attach (width_entry, 0, 1, 1, 1);
-  layout.attach (height_entry, 1, 1, 1, 1);
-  layout.attach (button_calc, 0, 2, 2, 1);
-  layout.attach (dpi_label, 0, 3, 2, 1);
+      if (inches > 0 && width > 0 && height > 0) {
+        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+      }
+    });
 
-  window.add (layout);
-  window.show_all ();
+    height_entry.changed.connect (() => {
+      inches = double.parse (inches_entry.get_text ());
+      width = int.parse (width_entry.get_text ());
+      height = int.parse (height_entry.get_text ());
 
-  Gtk.main ();
-  return 0;
+      if (inches > 0 && width > 0 && height > 0) {
+        dpi_result_label.label = (dpi (inches, width, height)).to_string();
+      }
+    });
+
+
+    // column, row, column_span, row_span
+    layout.attach (diag_label,       0, 0, 1, 1);
+    layout.attach (inches_entry,     1, 0, 1, 1);
+    layout.attach (inches_label,     2, 0, 2, 1);
+
+    layout.attach (res_label,        0, 1, 1, 1);
+    layout.attach (width_entry,      1, 1, 1, 1);
+    layout.attach (x_label,          2, 1, 1, 1);
+    layout.attach (height_entry,     3, 1, 1, 1);
+    layout.attach (px_label,         4, 1, 1, 1);
+
+    layout.attach (dpi_label,        0, 2, 1, 1);
+    layout.attach (dpi_result_label, 1, 2, 4, 1);
+
+    this.add (layout);
+  }
+
+
+  public static int main (string[] args) {
+    Gtk.init (ref args);
+
+    DisplayCalc app = new DisplayCalc ();
+    app.show_all ();
+    Gtk.main ();
+    return 0;
+  }
+
+
+  public double dpi (double inches, int width, int height) {
+    double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
+    return Math.round(unrounded_dpi);
+  }
 }
+
