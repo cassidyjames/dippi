@@ -23,7 +23,7 @@ Run `cmake` to configure the build environment and then `make` to build
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
     make
 
-To install, use `make install`, then execute with `io.elementary.appcenter`
+To install, use `make install`, then execute with `com.github.cassidyjames.display-calc`
 
     sudo make install
     com.github.cassidyjames.display-calc
