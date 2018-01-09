@@ -50,8 +50,19 @@ public class DisplayCalc : Gtk.Window {
     layout.row_spacing = 6;
 
     var inches_entry = new Gtk.Entry();
+    inches_entry.max_length = 5;
+    inches_entry.max_width_chars = 5;
+    inches_entry.width_chars = 5;
+
     var width_entry = new Gtk.Entry();
+    width_entry.max_length = 5;
+    width_entry.max_width_chars = 5;
+    width_entry.width_chars = 5;
+
     var height_entry = new Gtk.Entry();
+    width_entry.max_length = 5;
+    height_entry.max_width_chars = 5;
+    height_entry.width_chars = 5;
 
     var diag_label = new Gtk.Label ("Diagonal size:");
     diag_label.halign = Gtk.Align.END;
