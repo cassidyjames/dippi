@@ -24,3 +24,4 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
 
     sudo ninja install
     com.github.cassidyjames.dippi
+
