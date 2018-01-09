@@ -1,4 +1,4 @@
-# Dippy
+# Dippi
 
 Calculate display information like DPI and aspect ratio given some simple input.
 
