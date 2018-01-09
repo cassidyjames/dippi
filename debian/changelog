@@ -1,3 +1,9 @@
+com.github.cassidyjames.dippi (0.1.5) xenial; urgency=medium
+
+  * Fix AppStream data
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Tue, 9 Jan 2018 00:31:00 -0700
+
 com.github.cassidyjames.dippi (0.1.4) xenial; urgency=medium
 
   * More packaging work
