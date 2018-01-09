@@ -41,7 +41,6 @@ public class Dippi : Gtk.Window {
     this.title = "Dippi";
     this.border_width = 12;
     this.window_position = Gtk.WindowPosition.CENTER;
-    this.set_default_size (300, 400);
     this.set_resizable (false);
     this.destroy.connect (Gtk.main_quit);
 
