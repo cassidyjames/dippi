@@ -36,4 +36,6 @@ add_executable(${EXEC_NAME} ${VALA_C})
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.cassidyjames.dippi.desktop DESTINATION ${DATADIR}/applications/)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.cassidyjames.dippi.appdata.xml DESTINATION ${DATADIR}/metainfo/)
-
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/48/com.github.cassidyjames.dippi.svg DESTINATION share/icons/hicolor/48x48/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/64/com.github.cassidyjames.dippi.svg DESTINATION share/icons/hicolor/64x64/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/com.github.cassidyjames.dippi.svg DESTINATION share/icons/hicolor/128x128/apps)
