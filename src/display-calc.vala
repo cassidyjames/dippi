@@ -23,8 +23,8 @@
 // Above 300 is potentially problematic
 
 const int MIN_HIDPI = 192;
-const double DEFAULT_ASPECT_RATIO_WIDTH = 16;
-const double DEFAULT_ASPECT_RATIO_HEIGHT = 9;
+const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
+const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
 // const int MIN_PROBLEMATIC_LODPI = 150;
 
 public class DisplayCalc : Gtk.Window {
@@ -35,6 +35,8 @@ public class DisplayCalc : Gtk.Window {
     int height = 0;
     bool default_width = true;
     bool default_height = true;
+    int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
+    int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
 
     this.title = "Display Calc";
     this.border_width = 12;
@@ -60,6 +62,9 @@ public class DisplayCalc : Gtk.Window {
     var dpi_label = new Gtk.Label ("DPI:");
     dpi_label.halign = Gtk.Align.END;
 
+    var aspect_label = new Gtk.Label ("Aspect ratio:");
+    aspect_label.halign = Gtk.Align.END;
+
     var x_label = new Gtk.Label ("×");
     var px_label = new Gtk.Label ("px");
 
@@ -68,6 +73,9 @@ public class DisplayCalc : Gtk.Window {
 
     var dpi_result_label = new Gtk.Label (null);
     dpi_result_label.halign = Gtk.Align.START;
+
+    var aspect_result_label = new Gtk.Label (null);
+    aspect_result_label.halign = Gtk.Align.START;
 
 
     // TODO: Deduplicate these
@@ -95,6 +103,10 @@ public class DisplayCalc : Gtk.Window {
       if (inches > 0 && width > 0 && height > 0) {
         dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
+        aspect_width = width / greatest_common_divisor (width, height);
+        aspect_height = height / greatest_common_divisor (width, height);
+        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
+
         if (dpi (inches, width, height) >= MIN_HIDPI) {
           dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
         }
@@ -118,6 +130,10 @@ public class DisplayCalc : Gtk.Window {
       if (inches > 0 && width > 0 && height > 0) {
         dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
+        aspect_width = width / greatest_common_divisor (width, height);
+        aspect_height = height / greatest_common_divisor (width, height);
+        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
+
         if (dpi (inches, width, height) >= MIN_HIDPI) {
           dpi_result_label.label = dpi_result_label.get_label () + " (HiDPI)";
         }
@@ -133,18 +149,21 @@ public class DisplayCalc : Gtk.Window {
 
 
     // column, row, column_span, row_span
-    layout.attach (diag_label,       0, 0, 1, 1);
-    layout.attach (inches_entry,     1, 0, 1, 1);
-    layout.attach (inches_label,     2, 0, 2, 1);
+    layout.attach (diag_label,          0, 0, 1, 1);
+    layout.attach (inches_entry,        1, 0, 1, 1);
+    layout.attach (inches_label,        2, 0, 2, 1);
 
-    layout.attach (res_label,        0, 1, 1, 1);
-    layout.attach (width_entry,      1, 1, 1, 1);
-    layout.attach (x_label,          2, 1, 1, 1);
-    layout.attach (height_entry,     3, 1, 1, 1);
-    layout.attach (px_label,         4, 1, 1, 1);
+    layout.attach (res_label,           0, 1, 1, 1);
+    layout.attach (width_entry,         1, 1, 1, 1);
+    layout.attach (x_label,             2, 1, 1, 1);
+    layout.attach (height_entry,        3, 1, 1, 1);
+    layout.attach (px_label,            4, 1, 1, 1);
 
-    layout.attach (dpi_label,        0, 2, 1, 1);
-    layout.attach (dpi_result_label, 1, 2, 4, 1);
+    layout.attach (dpi_label,           0, 2, 1, 1);
+    layout.attach (dpi_result_label,    1, 2, 4, 1);
+
+    layout.attach (aspect_label,        0, 3, 1, 1);
+    layout.attach (aspect_result_label, 1, 3, 4, 1);
 
     this.add (layout);
   }
@@ -163,5 +182,17 @@ public class DisplayCalc : Gtk.Window {
   public double dpi (double inches, int width, int height) {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
     return Math.round(unrounded_dpi);
+  }
+
+  public int greatest_common_divisor (int a, int b) {
+    if (a == 0)
+      return b;
+    if (b == 0)
+      return a;
+
+    if (a > b)
+      return greatest_common_divisor(a % b, b);
+    else
+      return greatest_common_divisor(a, b % a);
   }
 }
