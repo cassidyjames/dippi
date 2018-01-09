@@ -1,0 +1,16 @@
+Source: com.github.cassidyjames.dippi
+Section: x11
+Priority: extra
+Maintainer: Cassidy James Blaede <c@ssidyjam.es>
+Build-Depends: cmake (>= 2.8),
+               cmake-elementary,
+               debhelper (>= 9),
+               libgtk-3-dev,
+               valac-0.26 | valac (>= 0.26)
+Standards-Version: 3.9.3
+
+Package: com.github.cassidyjames.dippi
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Dippi inital release
+ Display calculator for DPI and aspect ratio
