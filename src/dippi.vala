@@ -27,8 +27,8 @@ const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
 const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
 // const int MIN_PROBLEMATIC_LODPI = 150;
 
-public class DisplayCalc : Gtk.Window {
-  public DisplayCalc () {
+public class Dippi : Gtk.Window {
+  public Dippi () {
 
     double inches = 0.0;
     int width = 0;
@@ -183,7 +183,7 @@ public class DisplayCalc : Gtk.Window {
   public static int main (string[] args) {
     Gtk.init (ref args);
 
-    DisplayCalc app = new DisplayCalc ();
+    Dippi app = new Dippi ();
     app.show_all ();
     Gtk.main ();
     return 0;
