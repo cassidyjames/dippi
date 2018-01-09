@@ -13,6 +13,15 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="1.0.0" date="2018-01-09">
+  ​    <description>
+  ​      <ul>
+          <li>Shiny new icon<li>
+          <li>Added visualization to UI<li>
+          <li>Significant code cleanup<li>
+        </ul>
+​     </description>
+    </release>
     <release version="0.1.5" date="2018-01-09">
   ​    <description>
   ​      <p>Initial release for AppCenter</p>

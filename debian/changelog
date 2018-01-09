@@ -1,3 +1,12 @@
+com.github.cassidyjames.dippi (1.0.0) xenial; urgency=medium
+
+  * Fix GTK bugs
+  * New icon
+  * Added visualization to UI
+  * Significant refactoring
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Tue, 9 Jan 2018 15:13:00 -0700
+
 com.github.cassidyjames.dippi (0.1.5) xenial; urgency=medium
 
   * Fix AppStream data
