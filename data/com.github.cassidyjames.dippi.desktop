@@ -7,6 +7,6 @@ Exec=com.github.cassidyjames.dippi
 Icon=com.github.cassidyjames.dippi
 Terminal=false
 Type=Application
-X-GNOME-Gettext-Domain=com.github.cassidyjames.display-calc
+X-GNOME-Gettext-Domain=com.github.cassidyjames.dippi
 Keywords=DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;
 

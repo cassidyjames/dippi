@@ -1,3 +1,9 @@
+com.github.cassidyjames.dippi (0.1.2) xenial; urgency=medium
+
+  * Make packaging happy
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Mon, 8 Jan 2018 23:55:00 -0700
+
 com.github.cassidyjames.dippi (0.1) precise; urgency=low
 
   * Initial Release.
