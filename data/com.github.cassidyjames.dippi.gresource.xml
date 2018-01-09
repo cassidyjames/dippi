@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <!--gresource prefix="/com/github/cassidyjames/dippi">
-    <file alias="video-display-measure-diagonal.svg" compressed="true" preprocess="xml-stripblanks">icons/128/video-display-measure-diagonal.svg</file>
-    <file alias="video-display-measure-horizontal.svg" compressed="true" preprocess="xml-stripblanks">icons/128/video-display-measure-horizontal.svg</file>
-    <file alias="video-display-measure-vertical.svg" compressed="true" preprocess="xml-stripblanks">icons/128/video-display-measure-vertical.svg</file>
-  </gresource-->
+  <gresource prefix="/com/github/cassidyjames/dippi">
+    <file alias="com.github.cassidyjames.dippi.svg">icons/128/com.github.cassidyjames.dippi.svg</file>
+    <file alias="video-display-measure-diagonal.svg">icons/128/video-display-measure-diagonal.svg</file>
+    <file alias="video-display-measure-horizontal.svg">icons/128/video-display-measure-horizontal.svg</file>
+    <file alias="video-display-measure-vertical.svg">icons/128/video-display-measure-vertical.svg</file>
+  </gresource>
 </gresources>
 

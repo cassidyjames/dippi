@@ -49,7 +49,7 @@ public class Dippi : Gtk.Window {
     layout.column_spacing = 6;
     layout.row_spacing = 6;
 
-    var diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
+    var diagram = new Gtk.Image.from_resource ("/com/github/cassidyjames/dippi/com.github.cassidyjames.dippi.svg");
     diagram.pixel_size = 128;
     diagram.margin_bottom = 12;
 
@@ -61,7 +61,7 @@ public class Dippi : Gtk.Window {
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
     diag_entry.focus_in_event.connect ((event) => {
-      diagram.icon_name = "video-display-measure-diagonal";
+      diagram.set_from_resource ("/com/github/cassidyjames/dippi/video-display-measure-diagonal.svg");
 
       return focus_in_event (event);
     });
