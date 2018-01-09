@@ -4,6 +4,7 @@ Priority: extra
 Maintainer: Cassidy James Blaede <c@ssidyjam.es>
 Build-Depends: appstream,
                debhelper (>= 9),
+               desktop-file-utils,
                libgtk-3-dev,
                meson,
                valac
