@@ -1,5 +1,7 @@
 # Dippi
 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
+
 Calculate display information like DPI and aspect ratio given some simple input.
 
 ![Screenshot](data/screenshot.png?raw=true)
@@ -25,3 +27,4 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
     sudo ninja install
     com.github.cassidyjames.dippi
 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
