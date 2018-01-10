@@ -39,6 +39,6 @@
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
-    <value key="x-appcenter-suggested-price">10</value>
+    <value key="x-appcenter-suggested-price">4</value>
   </custom>
 </component>
