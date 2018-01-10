@@ -22,7 +22,12 @@
 // Above 150 but below 192 is potentially problematic
 // Above 300 is potentially problematic
 
-public class Dippi : Gtk.Window {
+public class Dippi : Gtk.Application {
+  public Dippi () {
+    Object (application_id: "com.github.cassidyjames.dippi",
+    flags: ApplicationFlags.FLAGS_NONE);
+  }
+  
   private const int MIN_HIDPI = 192;
   private const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
   private const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
@@ -38,18 +43,20 @@ public class Dippi : Gtk.Window {
   private bool is_default_width = false;
   private bool is_default_height = false;
 
-  public Dippi () {
-    this.title = "Dippi";
-    this.border_width = 12;
-    this.window_position = Gtk.WindowPosition.CENTER;
-    this.set_resizable (false);
-    this.destroy.connect (Gtk.main_quit);
+  protected override void activate () {
+    var app_window = new Gtk.ApplicationWindow (this);
+
+    app_window.title = "Dippi";
+    app_window.border_width = 12;
+    app_window.window_position = Gtk.WindowPosition.CENTER;
+    app_window.set_resizable (false);
+    app_window.destroy.connect (Gtk.main_quit);
 
     var layout = new Gtk.Grid ();
     layout.column_spacing = 6;
     layout.row_spacing = 6;
 
-    var diagram = new Gtk.Image.from_resource ("/com/github/cassidyjames/dippi/com.github.cassidyjames.dippi.svg");
+    var diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
     diagram.pixel_size = 128;
     diagram.margin_bottom = 12;
 
@@ -60,11 +67,6 @@ public class Dippi : Gtk.Window {
     diag_entry.max_length = 5;
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
-    diag_entry.focus_in_event.connect ((event) => {
-      diagram.set_from_resource ("/com/github/cassidyjames/dippi/video-display-measure-diagonal.svg");
-
-      return focus_in_event (event);
-    });
 
     var res_label = new Gtk.Label (_("Resolution:"));
     res_label.halign = Gtk.Align.END;
@@ -179,17 +181,17 @@ public class Dippi : Gtk.Window {
     layout.attach (aspect_label,        0, 4, 1, 1);
     layout.attach (aspect_result_label, 1, 4, 4, 1);
 
-    this.add (layout);
+    app_window.add (layout);
+    app_window.show_all ();
+    app_window.show ();
   }
 
 
   private static int main (string[] args) {
     Gtk.init (ref args);
 
-    Dippi app = new Dippi ();
-    app.show_all ();
-    Gtk.main ();
-    return 0;
+    var app = new Dippi ();
+    return app.run (args);
   }
 
 
