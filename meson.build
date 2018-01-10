@@ -14,6 +14,7 @@ asresources = gnome.compile_resources(
 executable(
     meson.project_name(),
     'src/Application.vala',
+    'src/MainWindow.vala',
     dependencies: [
         dependency('glib-2.0'),
         dependency('gtk+-3.0'),
