@@ -14,11 +14,25 @@
       <li>Get advice about different densities</li>
       <li>Stupid simple: all in a cute li'l window.</li>
     </ul>
+    <p>Planned features:</p>
+    <ul>
+      <li>Differentiation between laptops and desktop displays</li>
+      <li>Projector-specific mode</li>
+    </ul>
   </description>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.0.0" date="2018-01-10">
+  ​    <description>
+  ​      <ul>
+          <li>All new side-by-side UI</li>
+          <li>Tweaked DPI assessment and reasoning copy</li>
+          <li>Added icons to make assessment clearer</li>
+        </ul>
+​      </description>
+    </release>
     <release version="1.2.0" date="2018-01-10">
   ​    <description>
   ​      <ul>

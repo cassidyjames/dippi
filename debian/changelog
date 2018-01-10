@@ -1,3 +1,11 @@
+com.github.cassidyjames.dippi (2.0.0) xenial; urgency=medium
+
+  * All-new side-by-side UI
+  * Added icons for clearer assessment results
+  * Tweak assessment and reasoning copy
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Wed, 10 Jan 2018 00:47:00 -0700
+
 com.github.cassidyjames.dippi (1.2.0) xenial; urgency=medium
 
   * Add ranges and reasoning
