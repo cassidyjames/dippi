@@ -47,6 +47,9 @@ public class MainWindow : Gtk.Window {
   }
 
   construct {
+    weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
+    default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
+
     var layout = new Gtk.Grid ();
     layout.column_spacing = 6;
     layout.row_spacing = 6;
@@ -62,6 +65,10 @@ public class MainWindow : Gtk.Window {
     diag_entry.max_length = 5;
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
+    diag_entry.focus_in_event.connect ((event) => {
+      diagram.icon_name = "video-display-measure-diagonal";
+      return focus_in_event (event);
+    });
 
     var res_label = new Gtk.Label (_("Resolution:"));
     res_label.halign = Gtk.Align.END;
@@ -70,11 +77,19 @@ public class MainWindow : Gtk.Window {
     width_entry.max_length = 5;
     width_entry.max_width_chars = 5;
     width_entry.width_chars = 5;
+    width_entry.focus_in_event.connect ((event) => {
+      diagram.icon_name = "video-display-measure-horizontal";
+      return focus_in_event (event);
+    });
 
     var height_entry = new Gtk.Entry();
     width_entry.max_length = 5;
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
+    height_entry.focus_in_event.connect ((event) => {
+      diagram.icon_name = "video-display-measure-vertical";
+      return focus_in_event (event);
+    });
 
     var dpi_label = new Gtk.Label (_("DPI:"));
     dpi_label.halign = Gtk.Align.END;
