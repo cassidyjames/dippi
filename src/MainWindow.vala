@@ -42,16 +42,18 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label dpi_result_label;
   private Gtk.Label aspect_result_label;
 
+
   public MainWindow (Gtk.Application application) {
     Object (
       application: application,
+      border_width: 12,
       icon_name: "com.github.cassidyjames.dippi",
       resizable: false,
       title: _("Dippi"),
-      border_width: 12,
       window_position: Gtk.WindowPosition.CENTER
     );
   }
+
 
   construct {
     weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
@@ -183,11 +185,7 @@ public class MainWindow : Gtk.Window {
   }
 
 
-  private void recalculate_dpi (
-    double inches,
-    int width,
-    int height
-  ) {
+  private void recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
       dpi_result_label.label = (dpi (inches, width, height)).to_string ();
 
@@ -201,10 +199,7 @@ public class MainWindow : Gtk.Window {
   }
 
 
-  private void recalculate_aspect (
-    int width,
-    int height
-  ) {
+  private void recalculate_aspect (int width, int height) {
       if (width > 0 && height > 0) {
         aspect_width = width / greatest_common_divisor (width, height);
         aspect_height = height / greatest_common_divisor (width, height);
@@ -220,15 +215,19 @@ public class MainWindow : Gtk.Window {
 
 
   private int greatest_common_divisor (int a, int b) {
-    if (a == 0)
+    if (a == 0) {
       return b;
-    if (b == 0)
+    }
+    
+    if (b == 0) {
       return a;
-
-    if (a > b)
+    }
+    
+    if (a > b) {
       return greatest_common_divisor(a % b, b);
-    else
+    } else {
       return greatest_common_divisor(a, b % a);
+    }
   }
 }
 
