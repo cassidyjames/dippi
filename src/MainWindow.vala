@@ -20,10 +20,88 @@
 */
 
 public class MainWindow : Gtk.Window {
+  private const int MIN_LODPI = 80;
+  private const int MIN_IDEAL_LODPI = 108;
+  private const int MAX_IDEAL_LODPI = 156;
   private const int MIN_HIDPI = 192;
+  private const int MIN_IDEAL_HIDPI = 209;
+  private const int MAX_IDEAL_HIDPI = MAX_IDEAL_LODPI * 2;
   private const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
   private const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
-  // private const int MIN_PROBLEMATIC_LODPI = 150;
+  private const int MIN_PROBLEMATIC_LODPI = 150;
+
+  private enum Range {
+    TOO_LOW,
+    LOW_LODPI,
+    JUST_RIGHT_LODPI,
+    ALMOST_HIDPI,
+    BARELY_HIDPI,
+    JUST_RIGHT_HIDPI,
+    TOO_HIGH,
+    NOT_SURE;
+
+    public string title () {
+      switch (this) {
+        case TOO_LOW:
+          return _("Bad");
+
+        case LOW_LODPI:
+          return _("Problematic");
+
+        case JUST_RIGHT_LODPI:
+          return _("Great");
+
+        case ALMOST_HIDPI:
+          return _("Potentially Problematic");
+
+        case BARELY_HIDPI:
+          return _("Problematic");
+
+        case JUST_RIGHT_HIDPI:
+          return _("Cassidy Approved");
+
+        case TOO_HIGH:
+          return _("Bad");
+
+        case NOT_SURE:
+          return _("Not sure");
+
+        default:
+            assert_not_reached();
+      }
+    }
+
+    public string description () {
+      switch (this) {
+        case TOO_LOW:
+          return _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible unless you need very large text and UI.");
+
+        case LOW_LODPI:
+          return _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference.");
+
+        case JUST_RIGHT_LODPI:
+          return _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.");
+
+        case ALMOST_HIDPI:
+          return _("Relatively high resolution, but quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear fairly large. The experience may be slightly improved by increasing the text size.");
+
+        case BARELY_HIDPI:
+          return _("Technically HiDPI, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.");
+
+        case JUST_RIGHT_HIDPI:
+          return _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. This is the jackpot.");
+
+        case TOO_HIGH:
+          return _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.");
+
+        case NOT_SURE:
+          return _("I’ve got nothing.");
+
+        default:
+            assert_not_reached();
+      }
+    }
+  }
 
   private int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
   private int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
@@ -34,13 +112,16 @@ public class MainWindow : Gtk.Window {
   private int height = 0;
   private bool is_default_width = false;
   private bool is_default_height = false;
-  
+
   private Gtk.Image diagram;
   private Gtk.Entry diag_entry;
   private Gtk.Entry width_entry;
   private Gtk.Entry height_entry;
   private Gtk.Label dpi_result_label;
   private Gtk.Label aspect_result_label;
+  private Gtk.Label range_title_label;
+  private Gtk.Label range_description_label;
+  private Range range;
 
 
   public MainWindow (Gtk.Application application) {
@@ -118,10 +199,19 @@ public class MainWindow : Gtk.Window {
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
 
+    range_title_label = new Gtk.Label (null);
+    range_title_label.get_style_context ().add_class ("h2");
+    range_title_label.max_width_chars = 16;
+    range_title_label.wrap = true;
+
+    range_description_label = new Gtk.Label (null);
+    range_description_label.max_width_chars = 30;
+    range_description_label.wrap = true;
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
       recalculate_dpi (inches, width, height);
+      assess_range (dpi (inches, width, height));
     });
 
     width_entry.changed.connect (() => {
@@ -131,6 +221,7 @@ public class MainWindow : Gtk.Window {
 
       recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
+      assess_range (dpi (inches, width, height));
 
       if (!height_entry.has_focus && (is_default_height || height == 0)) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
@@ -145,13 +236,9 @@ public class MainWindow : Gtk.Window {
 
       is_default_height = false;
 
-      recalculate_dpi (
-        inches,
-        width,
-        height
-      );
-
+      recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
+      assess_range (dpi (inches, width, height));
 
       if (!width_entry.has_focus && (is_default_width || width == 0)) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_RATIO_WIDTH / DEFAULT_ASPECT_RATIO_HEIGHT);
@@ -163,54 +250,107 @@ public class MainWindow : Gtk.Window {
 
 
     // column, row, column_span, row_span
-    layout.attach (diagram,             0, 0, 5, 1);
+    layout.attach (diagram,                 0, 1, 5, 1);
 
-    layout.attach (diag_label,          0, 1, 1, 1);
-    layout.attach (diag_entry,          1, 1, 1, 1);
-    layout.attach (inches_label,        2, 1, 2, 1);
+    layout.attach (diag_label,              0, 2, 1, 1);
+    layout.attach (diag_entry,              1, 2, 1, 1);
+    layout.attach (inches_label,            2, 2, 2, 1);
 
-    layout.attach (res_label,           0, 2, 1, 1);
-    layout.attach (width_entry,         1, 2, 1, 1);
-    layout.attach (x_label,             2, 2, 1, 1);
-    layout.attach (height_entry,        3, 2, 1, 1);
-    layout.attach (px_label,            4, 2, 1, 1);
+    layout.attach (res_label,               0, 3, 1, 1);
+    layout.attach (width_entry,             1, 3, 1, 1);
+    layout.attach (x_label,                 2, 3, 1, 1);
+    layout.attach (height_entry,            3, 3, 1, 1);
+    layout.attach (px_label,                4, 3, 1, 1);
 
-    layout.attach (dpi_label,           0, 3, 1, 1);
-    layout.attach (dpi_result_label,    1, 3, 4, 1);
+    layout.attach (dpi_label,               0, 4, 1, 1);
+    layout.attach (dpi_result_label,        1, 4, 4, 1);
 
-    layout.attach (aspect_label,        0, 4, 1, 1);
-    layout.attach (aspect_result_label, 1, 4, 4, 1);
+    layout.attach (aspect_label,            0, 5, 1, 1);
+    layout.attach (aspect_result_label,     1, 5, 4, 1);
+
+    layout.attach (range_title_label,       0, 6, 5, 1);
+    layout.attach (range_description_label, 0, 7, 5, 1);
 
     add (layout);
   }
 
 
-  private void recalculate_dpi (double inches, int width, int height) {
+  private int recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
-      dpi_result_label.label = (dpi (inches, width, height)).to_string ();
+      int calculated_dpi = dpi (inches, width, height);
 
-      if (dpi (inches, width, height) >= MIN_HIDPI) {
+      dpi_result_label.label = (calculated_dpi).to_string ();
+
+      if (calculated_dpi >= MIN_HIDPI) {
         is_hidpi = true;
         dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
       } else {
         is_hidpi = false;
       }
+
+      return calculated_dpi;
     }
+
+    return 0;
   }
 
 
   private void recalculate_aspect (int width, int height) {
-      if (width > 0 && height > 0) {
-        aspect_width = width / greatest_common_divisor (width, height);
-        aspect_height = height / greatest_common_divisor (width, height);
-        aspect_result_label.label = (aspect_width).to_string () + ":" + (aspect_height).to_string ();
-      }
+    if (width > 0 && height > 0) {
+      aspect_width = width / greatest_common_divisor (width, height);
+      aspect_height = height / greatest_common_divisor (width, height);
+      aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+    }
   }
 
 
-  private double dpi (double inches, int width, int height) {
+  private int dpi (double inches, int width, int height) {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
-    return Math.round(unrounded_dpi);
+    return (int)unrounded_dpi;
+  }
+
+
+  private Range assess_range (double calculated_dpi) {
+    Range assessment;
+
+    if (calculated_dpi < MIN_LODPI) {
+      assessment = range.TOO_LOW;
+    }
+
+    else if (calculated_dpi < MIN_IDEAL_LODPI) {
+      assessment = range.LOW_LODPI;
+    }
+
+    else if (calculated_dpi <= MAX_IDEAL_LODPI) {
+      assessment = range.JUST_RIGHT_LODPI;
+    }
+
+    else if (calculated_dpi < MIN_HIDPI) {
+      assessment = range.ALMOST_HIDPI;
+    }
+
+    else if (calculated_dpi < MIN_IDEAL_HIDPI) {
+      assessment = range.BARELY_HIDPI;
+    }
+
+    else if (calculated_dpi <= MAX_IDEAL_HIDPI) {
+      assessment = range.JUST_RIGHT_HIDPI;
+    }
+
+    else if (calculated_dpi > MAX_IDEAL_HIDPI) {
+      assessment = range.TOO_HIGH;
+    }
+
+    else {
+      assessment = range.NOT_SURE;
+    }
+
+    if (width > 0 && height > 0) {
+        range_title_label.label = assessment.title ();
+        range_description_label.label = assessment.description ();
+    }
+
+    return assessment;
   }
 
 
@@ -218,11 +358,11 @@ public class MainWindow : Gtk.Window {
     if (a == 0) {
       return b;
     }
-    
+
     if (b == 0) {
       return a;
     }
-    
+
     if (a > b) {
       return greatest_common_divisor(a % b, b);
     } else {

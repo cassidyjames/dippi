@@ -19,9 +19,6 @@
 * Authored by: Cassidy James Blaede <c@ssidyjam.es>
 */
 
-// Above 150 but below 192 is potentially problematic
-// Above 300 is potentially problematic
-
 public class Dippi : Gtk.Application {
   public Dippi () {
     Object (application_id: "com.github.cassidyjames.dippi",
