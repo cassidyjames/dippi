@@ -310,7 +310,7 @@ public class MainWindow : Gtk.Window {
 
     data_grid.attach (aspect_label,            0, 4, 1, 1);
     data_grid.attach (aspect_result_label,     1, 4, 4, 1);
-    assessment_grid.get_style_context ().add_class ("data-grid");
+    data_grid.get_style_context ().add_class ("data-grid");
 
 
     var assessment_grid = new Gtk.Grid ();
