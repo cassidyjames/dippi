@@ -310,6 +310,7 @@ public class MainWindow : Gtk.Window {
 
     data_grid.attach (aspect_label,            0, 4, 1, 1);
     data_grid.attach (aspect_result_label,     1, 4, 4, 1);
+    assessment_grid.get_style_context ().add_class ("data-grid");
 
 
     var assessment_grid = new Gtk.Grid ();
@@ -318,6 +319,7 @@ public class MainWindow : Gtk.Window {
     assessment_grid.margin_start = 24;
     assessment_grid.row_spacing = 6;
     assessment_grid.valign = Gtk.Align.CENTER;
+    assessment_grid.get_style_context ().add_class ("assessment-grid");
 
     // column, row, column_span, row_span
     assessment_grid.attach (range_icon,              0, 0, 1, 2);
