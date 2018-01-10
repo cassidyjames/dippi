@@ -2,13 +2,24 @@
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
 
-Calculate display information like DPI and aspect ratio given some simple input.
-
 ![Screenshot](data/screenshot.png?raw=true)
 
 
-## Building, Testing, and Installation
+## Calculate display info like DPI and aspect ratio
 
+Input a few simple details and figure out the aspect ratio, DPI, and other details of any display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.
+
+Handy features:
+- Find out if a display is a good choice based on its size and resolution
+- Get advice about different densities
+- Stupid simple: all in a cute li'l window
+
+Planned features:
+- Differentiation between laptops and desktop displays
+- Projector-specific mode
+
+
+## Building, Testing, and Installation
 
 You'll need the following dependencies to build:
 
