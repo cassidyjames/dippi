@@ -43,13 +43,13 @@ public class MainWindow : Gtk.Window {
     public string title () {
       switch (this) {
         case TOO_LOW:
-          return _("Bad");
+          return _("Too Low DPI");
 
         case LOW_LODPI:
           return _("Problematic");
 
         case JUST_RIGHT_LODPI:
-          return _("Great");
+          return _("Great!");
 
         case ALMOST_HIDPI:
           return _("Potentially Problematic");
@@ -58,13 +58,13 @@ public class MainWindow : Gtk.Window {
           return _("Problematic");
 
         case JUST_RIGHT_HIDPI:
-          return _("Cassidy Approved");
+          return _("Cassidy Approved!");
 
         case TOO_HIGH:
-          return _("Bad");
+          return _("Too High DPI");
 
         case NOT_SURE:
-          return _("Not sure");
+          return _("Enter Some Data");
 
         default:
             assert_not_reached();
@@ -83,7 +83,7 @@ public class MainWindow : Gtk.Window {
           return _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.");
 
         case ALMOST_HIDPI:
-          return _("Relatively high resolution, but quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear fairly large. The experience may be slightly improved by increasing the text size.");
+          return _("Relatively high resolution, but not quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear fairly large. The experience may be slightly improved by increasing the text size.");
 
         case BARELY_HIDPI:
           return _("Technically HiDPI, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.");
@@ -95,7 +95,38 @@ public class MainWindow : Gtk.Window {
           return _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.");
 
         case NOT_SURE:
-          return _("I’ve got nothing.");
+          return _("Fill the inputs on the left to analyze a display.");
+
+        default:
+            assert_not_reached();
+      }
+    }
+
+    public string icon () {
+      switch (this) {
+        case TOO_LOW:
+          return _("dialog-error");
+
+        case LOW_LODPI:
+          return _("dialog-warning");
+
+        case JUST_RIGHT_LODPI:
+          return _("process-completed");
+
+        case ALMOST_HIDPI:
+          return _("dialog-warning");
+
+        case BARELY_HIDPI:
+          return _("dialog-warning");
+
+        case JUST_RIGHT_HIDPI:
+          return _("process-completed");
+
+        case TOO_HIGH:
+          return _("dialog-error");
+
+        case NOT_SURE:
+          return _("dialog-information");
 
         default:
             assert_not_reached();
@@ -121,6 +152,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label aspect_result_label;
   private Gtk.Label range_title_label;
   private Gtk.Label range_description_label;
+  private Gtk.Image range_icon;
   private Range range;
 
 
@@ -139,10 +171,6 @@ public class MainWindow : Gtk.Window {
   construct {
     weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
     default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
-
-    var layout = new Gtk.Grid ();
-    layout.column_spacing = 6;
-    layout.row_spacing = 6;
 
     diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
     diagram.pixel_size = 128;
@@ -199,14 +227,18 @@ public class MainWindow : Gtk.Window {
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
 
+    range_icon = new Gtk.Image.from_icon_name (Range.NOT_SURE.icon (), Gtk.IconSize.DIALOG);
+    range_icon.margin_bottom = 12;
+
     range_title_label = new Gtk.Label (null);
     range_title_label.get_style_context ().add_class ("h2");
-    range_title_label.max_width_chars = 16;
     range_title_label.wrap = true;
+    range_title_label.label = Range.NOT_SURE.title ();
 
     range_description_label = new Gtk.Label (null);
-    range_description_label.max_width_chars = 30;
+    range_description_label.max_width_chars = 50;
     range_description_label.wrap = true;
+    range_description_label.label = Range.NOT_SURE.description ();
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
@@ -249,29 +281,52 @@ public class MainWindow : Gtk.Window {
     });
 
 
+    var data_grid = new Gtk.Grid ();
+    data_grid.column_spacing = 6;
+    data_grid.margin = 24;
+    data_grid.row_spacing = 6;
+
     // column, row, column_span, row_span
-    layout.attach (diagram,                 0, 1, 5, 1);
+    data_grid.attach (diagram,                 0, 0, 5, 1);
 
-    layout.attach (diag_label,              0, 2, 1, 1);
-    layout.attach (diag_entry,              1, 2, 1, 1);
-    layout.attach (inches_label,            2, 2, 2, 1);
+    data_grid.attach (diag_label,              0, 1, 1, 1);
+    data_grid.attach (diag_entry,              1, 1, 1, 1);
+    data_grid.attach (inches_label,            2, 1, 2, 1);
 
-    layout.attach (res_label,               0, 3, 1, 1);
-    layout.attach (width_entry,             1, 3, 1, 1);
-    layout.attach (x_label,                 2, 3, 1, 1);
-    layout.attach (height_entry,            3, 3, 1, 1);
-    layout.attach (px_label,                4, 3, 1, 1);
+    data_grid.attach (res_label,               0, 2, 1, 1);
+    data_grid.attach (width_entry,             1, 2, 1, 1);
+    data_grid.attach (x_label,                 2, 2, 1, 1);
+    data_grid.attach (height_entry,            3, 2, 1, 1);
+    data_grid.attach (px_label,                4, 2, 1, 1);
 
-    layout.attach (dpi_label,               0, 4, 1, 1);
-    layout.attach (dpi_result_label,        1, 4, 4, 1);
+    data_grid.attach (dpi_label,               0, 3, 1, 1);
+    data_grid.attach (dpi_result_label,        1, 3, 4, 1);
 
-    layout.attach (aspect_label,            0, 5, 1, 1);
-    layout.attach (aspect_result_label,     1, 5, 4, 1);
+    data_grid.attach (aspect_label,            0, 4, 1, 1);
+    data_grid.attach (aspect_result_label,     1, 4, 4, 1);
 
-    layout.attach (range_title_label,       0, 6, 5, 1);
-    layout.attach (range_description_label, 0, 7, 5, 1);
 
-    add (layout);
+    var assessment_grid = new Gtk.Grid ();
+    assessment_grid.column_spacing = 6;
+    assessment_grid.row_spacing = 6;
+    assessment_grid.valign = Gtk.Align.CENTER;
+
+    // column, row, column_span, row_span
+    assessment_grid.attach (range_icon,              0, 0, 1, 1);
+    assessment_grid.attach (range_title_label,       0, 1, 1, 1);
+    assessment_grid.attach (range_description_label, 0, 2, 1, 1);
+
+
+    var main_layout = new Gtk.Grid ();
+    main_layout.column_spacing = 6;
+    main_layout.row_spacing = 6;
+
+    // column, row, column_span, row_span
+    main_layout.attach (data_grid,       0, 0, 1, 1);
+    main_layout.attach (assessment_grid, 1, 0, 1, 1);
+
+
+    add (main_layout);
   }
 
 
@@ -313,7 +368,11 @@ public class MainWindow : Gtk.Window {
   private Range assess_range (double calculated_dpi) {
     Range assessment;
 
-    if (calculated_dpi < MIN_LODPI) {
+    if ( width == 0 || height == 0 ) {
+      assessment = range.NOT_SURE;
+    }
+
+    else if (calculated_dpi < MIN_LODPI) {
       assessment = range.TOO_LOW;
     }
 
@@ -345,10 +404,9 @@ public class MainWindow : Gtk.Window {
       assessment = range.NOT_SURE;
     }
 
-    if (width > 0 && height > 0) {
-        range_title_label.label = assessment.title ();
-        range_description_label.label = assessment.description ();
-    }
+    range_icon.icon_name = assessment.icon ();
+    range_title_label.label = assessment.title ();
+    range_description_label.label = assessment.description ();
 
     return assessment;
   }
