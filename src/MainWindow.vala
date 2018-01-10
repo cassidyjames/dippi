@@ -229,15 +229,21 @@ public class MainWindow : Gtk.Window {
 
     range_icon = new Gtk.Image.from_icon_name (Range.NOT_SURE.icon (), Gtk.IconSize.DIALOG);
     range_icon.margin_bottom = 12;
+    range_icon.valign = Gtk.Align.START;
 
     range_title_label = new Gtk.Label (null);
     range_title_label.get_style_context ().add_class ("h2");
     range_title_label.wrap = true;
+    range_title_label.halign = Gtk.Align.START;
     range_title_label.label = Range.NOT_SURE.title ();
+    range_title_label.xalign = 0;
+    range_title_label.valign = Gtk.Align.END;
 
     range_description_label = new Gtk.Label (null);
     range_description_label.max_width_chars = 50;
     range_description_label.wrap = true;
+    range_description_label.xalign = 0;
+    range_description_label.valign = Gtk.Align.START;
     range_description_label.label = Range.NOT_SURE.description ();
 
     diag_entry.changed.connect (() => {
@@ -307,14 +313,16 @@ public class MainWindow : Gtk.Window {
 
 
     var assessment_grid = new Gtk.Grid ();
-    assessment_grid.column_spacing = 6;
+    assessment_grid.column_spacing = 12;
+    assessment_grid.halign = Gtk.Align.CENTER;
+    assessment_grid.margin_start = 24;
     assessment_grid.row_spacing = 6;
     assessment_grid.valign = Gtk.Align.CENTER;
 
     // column, row, column_span, row_span
-    assessment_grid.attach (range_icon,              0, 0, 1, 1);
-    assessment_grid.attach (range_title_label,       0, 1, 1, 1);
-    assessment_grid.attach (range_description_label, 0, 2, 1, 1);
+    assessment_grid.attach (range_icon,              0, 0, 1, 2);
+    assessment_grid.attach (range_title_label,       1, 0, 1, 1);
+    assessment_grid.attach (range_description_label, 1, 1, 1, 1);
 
 
     var main_layout = new Gtk.Grid ();
