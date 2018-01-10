@@ -13,7 +13,7 @@ asresources = gnome.compile_resources(
 
 executable(
     meson.project_name(),
-    'src/dippi.vala',
+    'src/Application.vala',
     dependencies: [
         dependency('glib-2.0'),
         dependency('gtk+-3.0'),
