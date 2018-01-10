@@ -34,6 +34,13 @@ public class MainWindow : Gtk.Window {
   private int height = 0;
   private bool is_default_width = false;
   private bool is_default_height = false;
+  
+  private Gtk.Image diagram;
+  private Gtk.Entry diag_entry;
+  private Gtk.Entry width_entry;
+  private Gtk.Entry height_entry;
+  private Gtk.Label dpi_result_label;
+  private Gtk.Label aspect_result_label;
 
   public MainWindow (Gtk.Application application) {
     Object (
@@ -54,14 +61,14 @@ public class MainWindow : Gtk.Window {
     layout.column_spacing = 6;
     layout.row_spacing = 6;
 
-    var diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
+    diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
     diagram.pixel_size = 128;
     diagram.margin_bottom = 12;
 
     var diag_label = new Gtk.Label (_("Diagonal size:"));
     diag_label.halign = Gtk.Align.END;
 
-    var diag_entry = new Gtk.Entry();
+    diag_entry = new Gtk.Entry();
     diag_entry.max_length = 5;
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
@@ -73,7 +80,7 @@ public class MainWindow : Gtk.Window {
     var res_label = new Gtk.Label (_("Resolution:"));
     res_label.halign = Gtk.Align.END;
 
-    var width_entry = new Gtk.Entry();
+    width_entry = new Gtk.Entry();
     width_entry.max_length = 5;
     width_entry.max_width_chars = 5;
     width_entry.width_chars = 5;
@@ -82,7 +89,7 @@ public class MainWindow : Gtk.Window {
       return focus_in_event (event);
     });
 
-    var height_entry = new Gtk.Entry();
+    height_entry = new Gtk.Entry();
     width_entry.max_length = 5;
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
@@ -103,24 +110,16 @@ public class MainWindow : Gtk.Window {
     var inches_label = new Gtk.Label (_("inches"));
     inches_label.halign = Gtk.Align.START;
 
-    var dpi_result_label = new Gtk.Label (null);
+    dpi_result_label = new Gtk.Label (null);
     dpi_result_label.halign = Gtk.Align.START;
 
-    var aspect_result_label = new Gtk.Label (null);
+    aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
 
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
-
-      recalculate_dpi (
-        inches,
-        width,
-        height,
-        dpi_result_label,
-        width_entry,
-        height_entry
-      );
+      recalculate_dpi (inches, width, height);
     });
 
     width_entry.changed.connect (() => {
@@ -128,18 +127,10 @@ public class MainWindow : Gtk.Window {
 
       is_default_width = false;
 
-      recalculate_dpi (
-        inches,
-        width,
-        height,
-        dpi_result_label,
-        width_entry,
-        height_entry
-      );
+      recalculate_dpi (inches, width, height);
+      recalculate_aspect (width, height);
 
-      recalculate_aspect (width, height, aspect_result_label);
-
-      if (is_default_height || height == 0) {
+      if (!height_entry.has_focus && (is_default_height || height == 0)) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
         height_entry.text = (calculated_height).to_string ();
 
@@ -155,15 +146,12 @@ public class MainWindow : Gtk.Window {
       recalculate_dpi (
         inches,
         width,
-        height,
-        dpi_result_label,
-        width_entry,
-        height_entry
+        height
       );
 
-      recalculate_aspect (width, height, aspect_result_label);
+      recalculate_aspect (width, height);
 
-      if (is_default_width || width == 0) {
+      if (!width_entry.has_focus && (is_default_width || width == 0)) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_RATIO_WIDTH / DEFAULT_ASPECT_RATIO_HEIGHT);
         width_entry.text = (calculated_width).to_string ();
 
@@ -198,10 +186,7 @@ public class MainWindow : Gtk.Window {
   private void recalculate_dpi (
     double inches,
     int width,
-    int height,
-    Gtk.Label dpi_result_label,
-    Gtk.Entry width_entry,
-    Gtk.Entry height_entry
+    int height
   ) {
     if (inches > 0 && width > 0 && height > 0) {
       dpi_result_label.label = (dpi (inches, width, height)).to_string ();
@@ -218,8 +203,7 @@ public class MainWindow : Gtk.Window {
 
   private void recalculate_aspect (
     int width,
-    int height,
-    Gtk.Label aspect_result_label
+    int height
   ) {
       if (width > 0 && height > 0) {
         aspect_width = width / greatest_common_divisor (width, height);
