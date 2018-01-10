@@ -1,3 +1,11 @@
+com.github.cassidyjames.dippi (1.2.0) xenial; urgency=medium
+
+  * Add ranges and reasoning
+  * Fix bug with adding a zero
+  * Significant refactoring
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Wed, 10 Jan 2018 00:47:00 -0700
+
 com.github.cassidyjames.dippi (1.0.1) xenial; urgency=medium
 
   * Fix GTK bugs

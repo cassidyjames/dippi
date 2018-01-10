@@ -7,12 +7,33 @@
   <name>Dippi</name>
   <summary>Calculate display info like DPI and aspect ratio</summary>
   <description>
-    <p>Input a few simple details and figure out the aspect ratio, DPI, and other details of any display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI!</p>
+    <p>Input a few simple details and figure out the aspect ratio, DPI, and other details of any display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
+    <p>Handy features:</p>
+    <ul>
+      <li>Find out if a display is a good choice ased on its size and resolution</li>
+      <li>Get advice about different densities</li>
+      <li>Stupid simple: all in a cute li'l window.</li>
+    </ul>
   </description>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="1.2.0" date="2018-01-10">
+  ​    <description>
+  ​      <ul>
+          <li>Made visualization interactive!</li>
+          <li>Added Cassidy-approval and reasoning</li>
+          <li>Fix a bug where sometimes an extra zero would sneak in</li>
+          <li>Under-the-hood restructuring</li>
+        </ul>
+​     </description>
+    </release>
+    <release version="0.1.5" date="2018-01-09">
+  ​    <description>
+  ​      <p>Initial release for AppCenter</p>
+​     </description>
+    </release>
     <release version="1.0.1" date="2018-01-09">
   ​    <description>
   ​      <ul>
