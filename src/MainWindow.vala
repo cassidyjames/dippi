@@ -20,16 +20,6 @@
 */
 
 public class MainWindow : Gtk.Window {
-  /*
-  private const int MIN_LODPI = 80;
-  private const int MIN_LODPI_IDEAL = 108;
-  private const int MAX_LODPI_IDEAL = 156;
-  private const int MIN_HIDPI = 192;
-  private const int MIN_HIDPI_IDEAL = 209;
-  private const int MAX_HIDPI_IDEAL = MAX_LODPI_IDEAL * 2;
-  private const int MIN_PROBLEMATIC_LODPI = 150;
-  */
-
   private const int DEFAULT_ASPECT_WIDTH = 16;
   private const int DEFAULT_ASPECT_HEIGHT = 9;
 
@@ -134,34 +124,34 @@ public class MainWindow : Gtk.Window {
     public string icon () {
       switch (this) {
         case LOW:
-          return _("dialog-error");
+          return "dialog-error";
 
         case LODPI_LOW:
-          return _("dialog-warning");
+          return "dialog-warning";
 
         case LODPI_IDEAL:
-          return _("process-completed");
+          return "process-completed";
 
         case LODPI_HIGH:
-          return _("dialog-warning");
+          return "dialog-warning";
 
         case HIDPI_LOW:
-          return _("dialog-warning");
+          return "dialog-warning";
 
         case HIDPI_IDEAL:
-          return _("process-completed");
+          return "process-completed";
 
         case HIDPI_HIGH:
-          return _("dialog-warning");
+          return "dialog-warning";
 
         case HIGH:
-          return _("dialog-error");
+          return "dialog-error";
 
         case UNCLEAR:
-          return _("dialog-error");
+          return "dialog-error";
 
         case INVALID:
-          return _("dialog-information");
+          return "dialog-information";
 
         default:
             assert_not_reached();
@@ -172,6 +162,19 @@ public class MainWindow : Gtk.Window {
   private enum DisplayType {
     INTERNAL,
     EXTERNAL;
+
+    public string to_string () {
+      switch (this) {
+        case INTERNAL:
+          return _("Laptop");
+
+        case EXTERNAL:
+          return _("Desktop");
+
+        default:
+          assert_not_reached();
+      }
+    }
   }
 
   private int aspect_width = DEFAULT_ASPECT_WIDTH;
@@ -190,6 +193,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Entry height_entry;
   private Gtk.Label dpi_result_label;
   private Gtk.Label aspect_result_label;
+  private Gtk.Label type_result_label;
   private Gtk.Label range_title_label;
   private Gtk.Label range_description_label;
   private Gtk.Image range_icon;
@@ -269,11 +273,17 @@ public class MainWindow : Gtk.Window {
     var inches_label = new Gtk.Label (_("inches"));
     inches_label.halign = Gtk.Align.START;
 
+    var type_label = new Gtk.Label (_("Type:"));
+    type_label.halign = Gtk.Align.END;
+
     dpi_result_label = new Gtk.Label (null);
     dpi_result_label.halign = Gtk.Align.START;
 
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
+
+    type_result_label = new Gtk.Label (null);
+    type_result_label.halign = Gtk.Align.START;
 
     range_icon = new Gtk.Image.from_icon_name (Range.INVALID.icon (), Gtk.IconSize.DIALOG);
     range_icon.margin_bottom = 12;
@@ -296,17 +306,24 @@ public class MainWindow : Gtk.Window {
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
-      width = int.parse (width_entry.get_text ());
-      height = int.parse (height_entry.get_text ());
+
+      // TODO: Make this its own function overridden by a modebutton, probably.
+      if (inches >= 18) {
+        display_type = DisplayType.EXTERNAL;
+        message ("Display type: %s", display_type.to_string ());
+        type_result_label.label = display_type.to_string ();
+      } else {
+        display_type = DisplayType.INTERNAL;
+        message ("Display type: %s", display_type.to_string ());
+        type_result_label.label = display_type.to_string ();
+      }
 
       recalculate_dpi (inches, width, height);
       assess_dpi (dpi (inches, width, height), display_type);
     });
 
     width_entry.changed.connect (() => {
-      inches = double.parse (diag_entry.get_text ());
       width = int.parse (width_entry.get_text ());
-      height = int.parse (height_entry.get_text ());
 
       is_default_width = false;
 
@@ -319,13 +336,11 @@ public class MainWindow : Gtk.Window {
         height_entry.text = (calculated_height).to_string ();
 
         is_default_height = true;
+        is_default_height = true;
       }
     });
 
-
     height_entry.changed.connect (() => {
-      inches = double.parse (diag_entry.get_text ());
-      width = int.parse (width_entry.get_text ());
       height = int.parse (height_entry.get_text ());
 
       is_default_height = false;
@@ -366,6 +381,10 @@ public class MainWindow : Gtk.Window {
 
     data_grid.attach (aspect_label,            0, 4, 1, 1);
     data_grid.attach (aspect_result_label,     1, 4, 4, 1);
+
+    data_grid.attach (type_label,              0, 5, 1, 1);
+    data_grid.attach (type_result_label,       1, 5, 4, 1);
+
     data_grid.get_style_context ().add_class ("data-grid");
 
 
@@ -387,6 +406,7 @@ public class MainWindow : Gtk.Window {
     main_layout.column_spacing = 6;
     main_layout.row_spacing = 6;
 
+
     // column, row, column_span, row_span
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
@@ -403,15 +423,6 @@ public class MainWindow : Gtk.Window {
       int calculated_dpi = dpi (inches, width, height);
 
       dpi_result_label.label = (calculated_dpi).to_string ();
-
-      // TODO: Make this its own function overridden by a modebutton, probably.
-      if (inches >= 18) {
-        display_type = DisplayType.EXTERNAL;
-        message ("Display type: %s", display_type.to_string ());
-      } else {
-        display_type = DisplayType.INTERNAL;
-        message ("Display type: %s", display_type.to_string ());
-      }
 
       if (calculated_dpi >= DPI_INFER_HIDPI) {
         is_hidpi = true;
