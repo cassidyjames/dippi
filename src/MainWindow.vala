@@ -171,6 +171,13 @@ public class MainWindow : Gtk.Window {
   construct {
     weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
     default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
+    
+    var header = new Gtk.HeaderBar ();
+    header.show_close_button = true;
+    var header_context = header.get_style_context ();
+    header_context.add_class ("titlebar");
+    header_context.add_class ("default-decoration");
+    header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
     diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
     diagram.pixel_size = 128;
@@ -335,7 +342,8 @@ public class MainWindow : Gtk.Window {
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
 
-
+    get_style_context ().add_class ("rounded");
+    set_titlebar (header);
     add (main_layout);
   }
 
