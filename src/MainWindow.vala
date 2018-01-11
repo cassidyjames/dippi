@@ -169,6 +169,11 @@ public class MainWindow : Gtk.Window {
     }
   }
 
+  private enum DisplayType {
+    INTERNAL,
+    EXTERNAL;
+  }
+
   private int aspect_width = DEFAULT_ASPECT_WIDTH;
   private int aspect_height = DEFAULT_ASPECT_HEIGHT;
 
@@ -189,6 +194,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label range_description_label;
   private Gtk.Image range_icon;
   private Range range;
+  private DisplayType display_type;
 
 
   public MainWindow (Gtk.Application application) {
@@ -290,18 +296,23 @@ public class MainWindow : Gtk.Window {
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
+      width = int.parse (width_entry.get_text ());
+      height = int.parse (height_entry.get_text ());
+
       recalculate_dpi (inches, width, height);
-      assess_dpi (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height), display_type);
     });
 
     width_entry.changed.connect (() => {
+      inches = double.parse (diag_entry.get_text ());
       width = int.parse (width_entry.get_text ());
+      height = int.parse (height_entry.get_text ());
 
       is_default_width = false;
 
       recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_dpi (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height), display_type);
 
       if (!height_entry.has_focus && (is_default_height || height == 0)) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_HEIGHT / DEFAULT_ASPECT_WIDTH);
@@ -311,14 +322,17 @@ public class MainWindow : Gtk.Window {
       }
     });
 
+
     height_entry.changed.connect (() => {
+      inches = double.parse (diag_entry.get_text ());
+      width = int.parse (width_entry.get_text ());
       height = int.parse (height_entry.get_text ());
 
       is_default_height = false;
 
       recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_dpi (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height), display_type);
 
       if (!width_entry.has_focus && (is_default_width || width == 0)) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_WIDTH / DEFAULT_ASPECT_HEIGHT);
@@ -400,6 +414,13 @@ public class MainWindow : Gtk.Window {
       return calculated_dpi;
     }
 
+    // TODO: Make this its own function overridden by a modebutton, probably.
+    if (inches >= 18) {
+      display_type = DisplayType.EXTERNAL;
+    } else {
+      display_type = DisplayType.INTERNAL;
+    }
+
     return 0;
   }
 
@@ -419,70 +440,73 @@ public class MainWindow : Gtk.Window {
   }
 
 
-  private Range assess_dpi (double calculated_dpi/*, DisplayType display_type */) {
+  private Range assess_dpi (double calculated_dpi, DisplayType display_type) {
     // TODO: don't assume it's a laptop! Pass in a display_type.
     int ideal_dpi = INTERNAL_IDEAL_DPI;
     int ideal_range = INTERNAL_IDEAL_RANGE;
     int unclear_range = INTERNAL_UNCLEAR_RANGE;
 
-
-    Range assessment;
+    if (display_type == DisplayType.EXTERNAL ) {
+      ideal_dpi = EXTERNAL_IDEAL_DPI;
+      ideal_range = EXTERNAL_IDEAL_RANGE;
+      unclear_range = EXTERNAL_UNCLEAR_RANGE;
+    }
 
     if ( inches == 0 || width == 0 || height == 0 ) {
-      assessment = range.INVALID;
+      range = Range.INVALID;
     }
 
     else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
-      assessment = range.LOW;
+      range = Range.LOW;
     }
 
     else if (calculated_dpi < ideal_dpi - ideal_range) {
-      assessment = range.LODPI_LOW;
+      range = Range.LODPI_LOW;
     }
 
     else if (calculated_dpi <= ideal_dpi + ideal_range) {
-      assessment = range.LODPI_IDEAL;
+      range = Range.LODPI_IDEAL;
     }
 
     else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
-      assessment = range.LODPI_HIGH;
+      range = Range.LODPI_HIGH;
     }
 
     // It's above the unclear LoDPI range, but still not HiDPI according to GNOME.
     else if (calculated_dpi < DPI_INFER_HIDPI) {
-      assessment = range.UNCLEAR;
+      range = Range.UNCLEAR;
     }
 
     // Below the minimum unclear HiDPI range
     else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
-      assessment = range.UNCLEAR;
+      range = Range.UNCLEAR;
     }
 
     else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
-      assessment = range.HIDPI_LOW;
+      range = Range.HIDPI_LOW;
     }
 
     else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
-      assessment = range.HIDPI_IDEAL;
+      range = Range.HIDPI_IDEAL;
     }
 
     else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
-      assessment = range.HIDPI_HIGH;
+      range = Range.HIDPI_HIGH;
     }
 
     else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
-      assessment = range.HIGH;
+      range = Range.HIGH;
     }
 
     else {
-      assessment = range.UNCLEAR;
+      range = Range.INVALID;
     }
 
-    range_icon.icon_name = assessment.icon ();
-    range_title_label.label = assessment.title ();
-    range_description_label.label = assessment.description ();
+    range_icon.icon_name = range.icon ();
+    range_title_label.label = range.title ();
+    range_description_label.label = range.description ();
 
-    return assessment;
+    return range;
   }
 
 

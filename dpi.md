@@ -6,7 +6,7 @@ These ranges approximate what criteria we use at System76 to determine ideal dis
 
 These ranges also assume only integer scaling for the best experience; [half pixels are a lie](https://medium.com/elementaryos/what-is-hidpi-and-why-does-it-matter-b024eabea20d) and if you can, you should always use integer scaling for the best experience.
 
-_NOTE: GNOME curretnly switches to @2x HiDPI at 192+ no matter what._
+_NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
 ## Laptops
 
