@@ -454,7 +454,6 @@ public class MainWindow : Gtk.Window {
 
 
   private Range assess_dpi (double calculated_dpi, DisplayType display_type) {
-    // TODO: don't assume it's a laptop! Pass in a display_type.
     int ideal_dpi = INTERNAL_IDEAL_DPI;
     int ideal_range = INTERNAL_IDEAL_RANGE;
     int unclear_range = INTERNAL_UNCLEAR_RANGE;
