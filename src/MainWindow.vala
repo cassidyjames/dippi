@@ -342,6 +342,7 @@ public class MainWindow : Gtk.Window {
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
 
+    get_style_context ().add_class ("dippi");
     get_style_context ().add_class ("rounded");
     set_titlebar (header);
     add (main_layout);
