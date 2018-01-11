@@ -20,50 +20,73 @@
 */
 
 public class MainWindow : Gtk.Window {
+  /*
   private const int MIN_LODPI = 80;
-  private const int MIN_IDEAL_LODPI = 108;
-  private const int MAX_IDEAL_LODPI = 156;
+  private const int MIN_LODPI_IDEAL = 108;
+  private const int MAX_LODPI_IDEAL = 156;
   private const int MIN_HIDPI = 192;
-  private const int MIN_IDEAL_HIDPI = 209;
-  private const int MAX_IDEAL_HIDPI = MAX_IDEAL_LODPI * 2;
-  private const int DEFAULT_ASPECT_RATIO_WIDTH = 16;
-  private const int DEFAULT_ASPECT_RATIO_HEIGHT = 9;
+  private const int MIN_HIDPI_IDEAL = 209;
+  private const int MAX_HIDPI_IDEAL = MAX_LODPI_IDEAL * 2;
   private const int MIN_PROBLEMATIC_LODPI = 150;
+  */
+
+  private const int DEFAULT_ASPECT_WIDTH = 16;
+  private const int DEFAULT_ASPECT_HEIGHT = 9;
+
+  private const int INTERNAL_IDEAL_DPI = 140;
+  private const int INTERNAL_IDEAL_RANGE = 20;
+  private const int INTERNAL_UNCLEAR_RANGE = 10;
+
+  private const int EXTERNAL_IDEAL_DPI = 120;
+  private const int EXTERNAL_IDEAL_RANGE = 30;
+  private const int EXTERNAL_UNCLEAR_RANGE = 20;
+
+  private const double INCHES_INFER_EXTERNAL = 18;
+  private const int DPI_INFER_HIDPI = 192; // Determined by GNOME Settings Daemon
+
 
   private enum Range {
-    TOO_LOW,
-    LOW_LODPI,
-    JUST_RIGHT_LODPI,
-    ALMOST_HIDPI,
-    BARELY_HIDPI,
-    JUST_RIGHT_HIDPI,
-    TOO_HIGH,
-    NOT_SURE;
+    LOW,
+    LODPI_LOW,
+    LODPI_IDEAL,
+    LODPI_HIGH,
+    HIDPI_LOW,
+    HIDPI_IDEAL,
+    HIDPI_HIGH,
+    HIGH,
+    UNCLEAR,
+    INVALID;
 
     public string title () {
       switch (this) {
-        case TOO_LOW:
-          return _("Too Low DPI");
+        case LOW:
+          return _("Very Low DPI");
 
-        case LOW_LODPI:
-          return _("Problematic");
+        case LODPI_LOW:
+          return _("Fairly Low DPI");
 
-        case JUST_RIGHT_LODPI:
-          return _("Great!");
+        case LODPI_IDEAL:
+          return _("Ideal for LoDPI");
 
-        case ALMOST_HIDPI:
+        case LODPI_HIGH:
           return _("Potentially Problematic");
 
-        case BARELY_HIDPI:
-          return _("Problematic");
+        case HIDPI_LOW:
+          return _("Potentially Problematic");
 
-        case JUST_RIGHT_HIDPI:
-          return _("Cassidy Approved!");
+        case HIDPI_IDEAL:
+          return _("Ideal for HiDPI");
 
-        case TOO_HIGH:
+        case HIDPI_HIGH:
+          return _("Fairly High for HiDPI");
+
+        case HIGH:
           return _("Too High DPI");
 
-        case NOT_SURE:
+        case UNCLEAR:
+          return _("Unclear");
+
+        case INVALID:
           return _("Enter Some Data");
 
         default:
@@ -73,28 +96,34 @@ public class MainWindow : Gtk.Window {
 
     public string description () {
       switch (this) {
-        case TOO_LOW:
-          return _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible unless you need very large text and UI.");
+        case LOW:
+          return _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible.");
 
-        case LOW_LODPI:
-          return _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference.");
+        case LODPI_LOW:
+          return _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference and physical distance from the display.");
 
-        case JUST_RIGHT_LODPI:
+        case LODPI_IDEAL:
           return _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.");
 
-        case ALMOST_HIDPI:
+        case LODPI_HIGH:
           return _("Relatively high resolution, but not quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear fairly large. The experience may be slightly improved by increasing the text size.");
 
-        case BARELY_HIDPI:
-          return _("Technically HiDPI, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.");
+        case HIDPI_LOW:
+          return _("HiDPI by default, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.");
 
-        case JUST_RIGHT_HIDPI:
+        case HIDPI_IDEAL:
           return _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. This is the jackpot.");
 
-        case TOO_HIGH:
+        case HIDPI_HIGH:
           return _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.");
 
-        case NOT_SURE:
+        case HIGH:
+          return _("Text and UI will appear too small for typical viewing distances.");
+
+        case UNCLEAR:
+          return _("This display is in a very tricky range and is not likely to work well out of the box.");
+
+        case INVALID:
           return _("Fill the inputs on the left to analyze a display.");
 
         default:
@@ -104,28 +133,34 @@ public class MainWindow : Gtk.Window {
 
     public string icon () {
       switch (this) {
-        case TOO_LOW:
+        case LOW:
           return _("dialog-error");
 
-        case LOW_LODPI:
+        case LODPI_LOW:
           return _("dialog-warning");
 
-        case JUST_RIGHT_LODPI:
+        case LODPI_IDEAL:
           return _("process-completed");
 
-        case ALMOST_HIDPI:
+        case LODPI_HIGH:
           return _("dialog-warning");
 
-        case BARELY_HIDPI:
+        case HIDPI_LOW:
           return _("dialog-warning");
 
-        case JUST_RIGHT_HIDPI:
+        case HIDPI_IDEAL:
           return _("process-completed");
 
-        case TOO_HIGH:
+        case HIDPI_HIGH:
           return _("dialog-error");
 
-        case NOT_SURE:
+        case HIGH:
+          return _("dialog-error");
+
+        case UNCLEAR:
+          return _("dialog-error");
+
+        case INVALID:
           return _("dialog-information");
 
         default:
@@ -134,8 +169,8 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-  private int aspect_width = DEFAULT_ASPECT_RATIO_WIDTH;
-  private int aspect_height = DEFAULT_ASPECT_RATIO_HEIGHT;
+  private int aspect_width = DEFAULT_ASPECT_WIDTH;
+  private int aspect_height = DEFAULT_ASPECT_HEIGHT;
 
   private bool is_hidpi = false;
   private double inches = 0.0;
@@ -171,7 +206,7 @@ public class MainWindow : Gtk.Window {
   construct {
     weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
     default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
-    
+
     var header = new Gtk.HeaderBar ();
     header.show_close_button = true;
     var header_context = header.get_style_context ();
@@ -234,7 +269,7 @@ public class MainWindow : Gtk.Window {
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
 
-    range_icon = new Gtk.Image.from_icon_name (Range.NOT_SURE.icon (), Gtk.IconSize.DIALOG);
+    range_icon = new Gtk.Image.from_icon_name (Range.INVALID.icon (), Gtk.IconSize.DIALOG);
     range_icon.margin_bottom = 12;
     range_icon.valign = Gtk.Align.START;
 
@@ -242,7 +277,7 @@ public class MainWindow : Gtk.Window {
     range_title_label.get_style_context ().add_class ("h2");
     range_title_label.wrap = true;
     range_title_label.halign = Gtk.Align.START;
-    range_title_label.label = Range.NOT_SURE.title ();
+    range_title_label.label = Range.INVALID.title ();
     range_title_label.xalign = 0;
     range_title_label.valign = Gtk.Align.END;
 
@@ -251,12 +286,12 @@ public class MainWindow : Gtk.Window {
     range_description_label.wrap = true;
     range_description_label.xalign = 0;
     range_description_label.valign = Gtk.Align.START;
-    range_description_label.label = Range.NOT_SURE.description ();
+    range_description_label.label = Range.INVALID.description ();
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
       recalculate_dpi (inches, width, height);
-      assess_range (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height));
     });
 
     width_entry.changed.connect (() => {
@@ -266,10 +301,10 @@ public class MainWindow : Gtk.Window {
 
       recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_range (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height));
 
       if (!height_entry.has_focus && (is_default_height || height == 0)) {
-        double calculated_height = Math.round(width * DEFAULT_ASPECT_RATIO_HEIGHT / DEFAULT_ASPECT_RATIO_WIDTH);
+        double calculated_height = Math.round(width * DEFAULT_ASPECT_HEIGHT / DEFAULT_ASPECT_WIDTH);
         height_entry.text = (calculated_height).to_string ();
 
         is_default_height = true;
@@ -283,10 +318,10 @@ public class MainWindow : Gtk.Window {
 
       recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_range (dpi (inches, width, height));
+      assess_dpi (dpi (inches, width, height));
 
       if (!width_entry.has_focus && (is_default_width || width == 0)) {
-        double calculated_width = Math.round(height * DEFAULT_ASPECT_RATIO_WIDTH / DEFAULT_ASPECT_RATIO_HEIGHT);
+        double calculated_width = Math.round(height * DEFAULT_ASPECT_WIDTH / DEFAULT_ASPECT_HEIGHT);
         width_entry.text = (calculated_width).to_string ();
 
         is_default_width = true;
@@ -355,7 +390,7 @@ public class MainWindow : Gtk.Window {
 
       dpi_result_label.label = (calculated_dpi).to_string ();
 
-      if (calculated_dpi >= MIN_HIDPI) {
+      if (calculated_dpi >= DPI_INFER_HIDPI) {
         is_hidpi = true;
         dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
       } else {
@@ -384,43 +419,56 @@ public class MainWindow : Gtk.Window {
   }
 
 
-  private Range assess_range (double calculated_dpi) {
+  private Range assess_dpi (double calculated_dpi/*, DisplayType display_type */) {
+    // TODO: don't assume it's a laptop! Pass in a display_type.
+
     Range assessment;
 
-    if ( width == 0 || height == 0 ) {
-      assessment = range.NOT_SURE;
+    if ( inches == 0 || width == 0 || height == 0 ) {
+      assessment = range.INVALID;
     }
 
-    else if (calculated_dpi < MIN_LODPI) {
-      assessment = range.TOO_LOW;
+    else if (calculated_dpi < INTERNAL_IDEAL_DPI - INTERNAL_IDEAL_RANGE - INTERNAL_UNCLEAR_RANGE) {
+      assessment = range.LOW;
     }
 
-    else if (calculated_dpi < MIN_IDEAL_LODPI) {
-      assessment = range.LOW_LODPI;
+    else if (calculated_dpi < INTERNAL_IDEAL_DPI - INTERNAL_IDEAL_RANGE) {
+      assessment = range.LODPI_LOW;
     }
 
-    else if (calculated_dpi <= MAX_IDEAL_LODPI) {
-      assessment = range.JUST_RIGHT_LODPI;
+    else if (calculated_dpi <= INTERNAL_IDEAL_DPI + INTERNAL_IDEAL_RANGE) {
+      assessment = range.LODPI_IDEAL;
     }
 
-    else if (calculated_dpi < MIN_HIDPI) {
-      assessment = range.ALMOST_HIDPI;
+    else if (calculated_dpi < INTERNAL_IDEAL_DPI + INTERNAL_IDEAL_RANGE + INTERNAL_UNCLEAR_RANGE) {
+      assessment = range.LODPI_HIGH;
     }
 
-    else if (calculated_dpi < MIN_IDEAL_HIDPI) {
-      assessment = range.BARELY_HIDPI;
+    // It's outside the unclear LoDPI range, but still not HiDPI according to GNOME.
+    else if (calculated_dpi < DPI_INFER_HIDPI) {
+      assessment = range.UNCLEAR;
     }
 
-    else if (calculated_dpi <= MAX_IDEAL_HIDPI) {
-      assessment = range.JUST_RIGHT_HIDPI;
+/*
+    else if (calculated_dpi < MIN_HIDPI_IDEAL) {
+      assessment = range.HIDPI_LOW;
     }
 
-    else if (calculated_dpi > MAX_IDEAL_HIDPI) {
-      assessment = range.TOO_HIGH;
+    else if (calculated_dpi <= MAX_HIDPI_IDEAL) {
+      assessment = range.HIDPI_IDEAL;
     }
+
+    else if (calculated_dpi > MAX_HIDPI_IDEAL) {
+      assessment = range.HIDPI_HIGH;
+    }
+
+    else if (calculated_dpi > MAX_HIDPI_IDEAL) {
+      assessment = range.HIGH;
+    }
+*/
 
     else {
-      assessment = range.NOT_SURE;
+      assessment = range.UNCLEAR;
     }
 
     range_icon.icon_name = assessment.icon ();
