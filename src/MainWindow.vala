@@ -152,7 +152,7 @@ public class MainWindow : Gtk.Window {
           return _("process-completed");
 
         case HIDPI_HIGH:
-          return _("dialog-error");
+          return _("dialog-warning");
 
         case HIGH:
           return _("dialog-error");
@@ -421,6 +421,10 @@ public class MainWindow : Gtk.Window {
 
   private Range assess_dpi (double calculated_dpi/*, DisplayType display_type */) {
     // TODO: don't assume it's a laptop! Pass in a display_type.
+    int ideal_dpi = INTERNAL_IDEAL_DPI;
+    int ideal_range = INTERNAL_IDEAL_RANGE;
+    int unclear_range = INTERNAL_UNCLEAR_RANGE;
+
 
     Range assessment;
 
@@ -428,44 +432,47 @@ public class MainWindow : Gtk.Window {
       assessment = range.INVALID;
     }
 
-    else if (calculated_dpi < INTERNAL_IDEAL_DPI - INTERNAL_IDEAL_RANGE - INTERNAL_UNCLEAR_RANGE) {
+    else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
       assessment = range.LOW;
     }
 
-    else if (calculated_dpi < INTERNAL_IDEAL_DPI - INTERNAL_IDEAL_RANGE) {
+    else if (calculated_dpi < ideal_dpi - ideal_range) {
       assessment = range.LODPI_LOW;
     }
 
-    else if (calculated_dpi <= INTERNAL_IDEAL_DPI + INTERNAL_IDEAL_RANGE) {
+    else if (calculated_dpi <= ideal_dpi + ideal_range) {
       assessment = range.LODPI_IDEAL;
     }
 
-    else if (calculated_dpi < INTERNAL_IDEAL_DPI + INTERNAL_IDEAL_RANGE + INTERNAL_UNCLEAR_RANGE) {
+    else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
       assessment = range.LODPI_HIGH;
     }
 
-    // It's outside the unclear LoDPI range, but still not HiDPI according to GNOME.
+    // It's above the unclear LoDPI range, but still not HiDPI according to GNOME.
     else if (calculated_dpi < DPI_INFER_HIDPI) {
       assessment = range.UNCLEAR;
     }
 
-/*
-    else if (calculated_dpi < MIN_HIDPI_IDEAL) {
+    // Below the minimum unclear HiDPI range
+    else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
+      assessment = range.UNCLEAR;
+    }
+
+    else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
       assessment = range.HIDPI_LOW;
     }
 
-    else if (calculated_dpi <= MAX_HIDPI_IDEAL) {
+    else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
       assessment = range.HIDPI_IDEAL;
     }
 
-    else if (calculated_dpi > MAX_HIDPI_IDEAL) {
+    else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
       assessment = range.HIDPI_HIGH;
     }
 
-    else if (calculated_dpi > MAX_HIDPI_IDEAL) {
+    else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
       assessment = range.HIGH;
     }
-*/
 
     else {
       assessment = range.UNCLEAR;
