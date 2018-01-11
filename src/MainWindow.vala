@@ -404,6 +404,15 @@ public class MainWindow : Gtk.Window {
 
       dpi_result_label.label = (calculated_dpi).to_string ();
 
+      // TODO: Make this its own function overridden by a modebutton, probably.
+      if (inches >= 18) {
+        display_type = DisplayType.EXTERNAL;
+        message ("Display type: %s", display_type.to_string ());
+      } else {
+        display_type = DisplayType.INTERNAL;
+        message ("Display type: %s", display_type.to_string ());
+      }
+
       if (calculated_dpi >= DPI_INFER_HIDPI) {
         is_hidpi = true;
         dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
@@ -412,13 +421,6 @@ public class MainWindow : Gtk.Window {
       }
 
       return calculated_dpi;
-    }
-
-    // TODO: Make this its own function overridden by a modebutton, probably.
-    if (inches >= 18) {
-      display_type = DisplayType.EXTERNAL;
-    } else {
-      display_type = DisplayType.INTERNAL;
     }
 
     return 0;
@@ -432,6 +434,7 @@ public class MainWindow : Gtk.Window {
       aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
     }
   }
+
 
 
   private int dpi (double inches, int width, int height) {
