@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-12 11:54-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:52
+msgid "Very Low DPI"
+msgstr ""
+
+#: src/MainWindow.vala:55
+msgid "Fairly Low DPI"
+msgstr ""
+
+#: src/MainWindow.vala:58
+msgid "Ideal for LoDPI"
+msgstr ""
+
+#: src/MainWindow.vala:61 src/MainWindow.vala:64 src/MainWindow.vala:76
+msgid "Potentially Problematic"
+msgstr ""
+
+#: src/MainWindow.vala:67
+msgid "Ideal for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:70
+msgid "Fairly High for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:73
+msgid "Too High DPI"
+msgstr ""
+
+#: src/MainWindow.vala:79
+msgid "Enter Some Data"
+msgstr ""
+
+#: src/MainWindow.vala:89
+msgid ""
+"Text and UI are likely to be too big for typical viewing distances. Avoid if "
+"possible."
+msgstr ""
+
+#: src/MainWindow.vala:92
+msgid ""
+"Text and UI might be too big for typical viewing distances, but it's largely "
+"up to user preference and physical distance from the display."
+msgstr ""
+
+#: src/MainWindow.vala:95
+msgid ""
+"Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
+"viewing distances."
+msgstr ""
+
+#: src/MainWindow.vala:98
+msgid ""
+"Relatively high resolution, but not quite HiDPI. Text and UI may be too "
+"small by default, but forcing HiDPI would make them appear too large. The "
+"experience may be slightly improved by increasing the text size."
+msgstr ""
+
+#: src/MainWindow.vala:101
+msgid ""
+"HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
+"and increasing the text size might help."
+msgstr ""
+
+#: src/MainWindow.vala:104
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. This is the jackpot."
+msgstr ""
+
+#: src/MainWindow.vala:107
+msgid ""
+"Text and UI are likely to appear too small for typical viewing distances. "
+"Increasing the text size may help."
+msgstr ""
+
+#: src/MainWindow.vala:110
+msgid "Text and UI will appear too small for typical viewing distances."
+msgstr ""
+
+#: src/MainWindow.vala:113
+msgid ""
+"This display is in a very tricky range and is not likely to work well with "
+"integer scaling out of the box."
+msgstr ""
+
+#: src/MainWindow.vala:116
+msgid "Fill the inputs on the left to analyze a display."
+msgstr ""
+
+#: src/MainWindow.vala:168
+msgid "Laptop"
+msgstr ""
+
+#: src/MainWindow.vala:171
+msgid "Desktop"
+msgstr ""
+
+#: src/MainWindow.vala:209
+msgid "Dippi"
+msgstr ""
+
+#: src/MainWindow.vala:229
+msgid "Diagonal size:"
+msgstr ""
+
+#: src/MainWindow.vala:241
+msgid "Resolution:"
+msgstr ""
+
+#: src/MainWindow.vala:262
+msgid "DPI:"
+msgstr ""
+
+#: src/MainWindow.vala:265
+msgid "Aspect ratio:"
+msgstr ""
+
+#: src/MainWindow.vala:268
+msgid "×"
+msgstr ""
+
+#: src/MainWindow.vala:269
+msgid "px"
+msgstr ""
+
+#: src/MainWindow.vala:271
+msgid "inches"
+msgstr ""
+
+#: src/MainWindow.vala:274
+msgid "Type:"
+msgstr ""
+
+#: src/MainWindow.vala:422
+msgid " (HiDPI)"
+msgstr ""
+
+#: src/MainWindow.vala:437
+msgid ":"
+msgstr ""
