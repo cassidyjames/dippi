@@ -193,6 +193,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label dpi_result_label;
   private Gtk.Label aspect_result_label;
   private Gtk.Label type_result_label;
+  private Granite.Widgets.ModeButton mode_button;
   private Gtk.Label range_title_label;
   private Gtk.Label range_description_label;
   private Gtk.Image range_icon;
