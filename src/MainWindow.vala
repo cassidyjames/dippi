@@ -305,10 +305,10 @@ public class MainWindow : Gtk.Window {
 
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
-
-      recalculate_dpi (inches, width, height);
-      assess_dpi (dpi (inches, width, height), display_type);
-      infer_display_type (inches);
+      assess_dpi (
+        recalculate_dpi (inches, width, height),
+        infer_display_type (inches)
+      );
     });
 
     width_entry.changed.connect (() => {
@@ -316,9 +316,11 @@ public class MainWindow : Gtk.Window {
 
       is_default_width = false;
 
-      recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_dpi (dpi (inches, width, height), display_type);
+      assess_dpi (
+        recalculate_dpi (inches, width, height),
+        display_type
+      );
 
       if (!height_entry.has_focus && (is_default_height || height == 0)) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_HEIGHT / DEFAULT_ASPECT_WIDTH);
@@ -333,9 +335,11 @@ public class MainWindow : Gtk.Window {
 
       is_default_height = false;
 
-      recalculate_dpi (inches, width, height);
       recalculate_aspect (width, height);
-      assess_dpi (dpi (inches, width, height), display_type);
+      assess_dpi (
+        recalculate_dpi (inches, width, height),
+        display_type
+      );
 
       if (!width_entry.has_focus && (is_default_width || width == 0)) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_WIDTH / DEFAULT_ASPECT_HEIGHT);
