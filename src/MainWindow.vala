@@ -34,7 +34,6 @@ public class MainWindow : Gtk.Window {
   private const double INCHES_INFER_EXTERNAL = 18;
   private const int DPI_INFER_HIDPI = 192; // Determined by GNOME Settings Daemon
 
-
   private enum Range {
     LOW,
     LODPI_LOW,
@@ -200,7 +199,6 @@ public class MainWindow : Gtk.Window {
   private Range range;
   private DisplayType display_type;
 
-
   public MainWindow (Gtk.Application application) {
     Object (
       application: application,
@@ -211,7 +209,6 @@ public class MainWindow : Gtk.Window {
       window_position: Gtk.WindowPosition.CENTER
     );
   }
-
 
   construct {
     weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
@@ -336,7 +333,6 @@ public class MainWindow : Gtk.Window {
         height_entry.text = (calculated_height).to_string ();
 
         is_default_height = true;
-        is_default_height = true;
       }
     });
 
@@ -357,36 +353,27 @@ public class MainWindow : Gtk.Window {
       }
     });
 
-
     var data_grid = new Gtk.Grid ();
     data_grid.column_spacing = 6;
     data_grid.margin = 24;
     data_grid.row_spacing = 6;
-
-    // column, row, column_span, row_span
     data_grid.attach (diagram,                 0, 0, 5, 1);
-
     data_grid.attach (diag_label,              0, 1, 1, 1);
     data_grid.attach (diag_entry,              1, 1, 1, 1);
     data_grid.attach (inches_label,            2, 1, 2, 1);
-
     data_grid.attach (res_label,               0, 2, 1, 1);
     data_grid.attach (width_entry,             1, 2, 1, 1);
     data_grid.attach (x_label,                 2, 2, 1, 1);
     data_grid.attach (height_entry,            3, 2, 1, 1);
     data_grid.attach (px_label,                4, 2, 1, 1);
-
     data_grid.attach (dpi_label,               0, 3, 1, 1);
     data_grid.attach (dpi_result_label,        1, 3, 4, 1);
-
     data_grid.attach (aspect_label,            0, 4, 1, 1);
     data_grid.attach (aspect_result_label,     1, 4, 4, 1);
-
     data_grid.attach (type_label,              0, 5, 1, 1);
     data_grid.attach (type_result_label,       1, 5, 4, 1);
 
     data_grid.get_style_context ().add_class ("data-grid");
-
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
@@ -395,19 +382,13 @@ public class MainWindow : Gtk.Window {
     assessment_grid.row_spacing = 6;
     assessment_grid.valign = Gtk.Align.CENTER;
     assessment_grid.get_style_context ().add_class ("assessment-grid");
-
-    // column, row, column_span, row_span
     assessment_grid.attach (range_icon,              0, 0, 1, 2);
     assessment_grid.attach (range_title_label,       1, 0, 1, 1);
     assessment_grid.attach (range_description_label, 1, 1, 1, 1);
 
-
     var main_layout = new Gtk.Grid ();
     main_layout.column_spacing = 6;
     main_layout.row_spacing = 6;
-
-
-    // column, row, column_span, row_span
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
 
@@ -416,7 +397,6 @@ public class MainWindow : Gtk.Window {
     set_titlebar (header);
     add (main_layout);
   }
-
 
   private int recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
@@ -437,7 +417,6 @@ public class MainWindow : Gtk.Window {
     return 0;
   }
 
-
   private void recalculate_aspect (int width, int height) {
     if (width > 0 && height > 0) {
       aspect_width = width / greatest_common_divisor (width, height);
@@ -446,12 +425,10 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-
   private int dpi (double inches, int width, int height) {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
     return (int)unrounded_dpi;
   }
-
 
   private Range assess_dpi (double calculated_dpi, DisplayType display_type) {
     int ideal_dpi = INTERNAL_IDEAL_DPI;
@@ -520,7 +497,6 @@ public class MainWindow : Gtk.Window {
 
     return range;
   }
-
 
   private int greatest_common_divisor (int a, int b) {
     if (a == 0) {
