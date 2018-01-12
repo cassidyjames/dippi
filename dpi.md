@@ -37,7 +37,7 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
 | DPI     | Resulting Range                |
 |---------|--------------------------------|
-| < 70:   | Probably too low               |
+| < 70    | Probably too low               |
 | 70–90   | Unclear (potentially too low)  |
 | 90–150  | Ideal loDPI                    |
 | 150–170 | Unclear (potentially too high) |
@@ -47,4 +47,4 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 | 140–180 | Unclear (probably too low)     |
 | 180–300 | Ideal HiDPI                    |
 | 300–340 | Unclear (potentially too high) |
-| > 340:  | Probably too high              |
+| > 340   | Probably too high              |
