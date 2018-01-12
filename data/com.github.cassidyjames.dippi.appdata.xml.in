@@ -29,6 +29,14 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.2.0" date="2018-01-11">
+  ​    <description>
+  ​      <ul>
+          <li>Select between laptop or desktop</li>
+          <li>Refreshed icons thanks to Micah Ilbery</li>
+        </ul>
+​      </description>
+    </release>
     <release version="2.1.0" date="2018-01-11">
   ​    <description>
   ​      <ul>
