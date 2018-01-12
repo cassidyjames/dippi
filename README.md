@@ -1,8 +1,10 @@
-<center>
-    <img src="https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg" alt="Icon" />
-    <h1>Dippi</h1>
-    <a href="https://appcenter.elementary.io/com.github.cassidyjames.dippi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
-</center>
+<p align="center">
+  <img src="https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg" alt="Icon" />
+</p>
+<h1 align="center">Dippi</h1>
+<p align="center">
+  <a href="https://appcenter.elementary.io/com.github.cassidyjames.dippi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</p>
 
 ![Screenshot](data/screenshot.png?raw=true)
 
