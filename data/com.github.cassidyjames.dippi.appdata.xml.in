@@ -30,6 +30,11 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.3.0" date="2018-01-12">
+  ​    <description>
+  ​      <p>Display icon now changes according to display type</p>
+​      </description>
+    </release>
     <release version="2.2.1" date="2018-01-11">
   ​    <description>
   ​      <ul>
