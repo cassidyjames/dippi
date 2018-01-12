@@ -2,9 +2,12 @@
 <gresources>
   <gresource prefix="/com/github/cassidyjames/dippi">
     <file alias="com.github.cassidyjames.dippi.svg">icons/128/com.github.cassidyjames.dippi.svg</file>
-    <file alias="video-display-measure-diagonal.svg">icons/128/video-display-measure-diagonal.svg</file>
-    <file alias="video-display-measure-horizontal.svg">icons/128/video-display-measure-horizontal.svg</file>
-    <file alias="video-display-measure-vertical.svg">icons/128/video-display-measure-vertical.svg</file>
+    <file alias="display-measure-diagonal.svg">icons/128/display-measure-diagonal.svg</file>
+    <file alias="display-measure-horizontal.svg">icons/128/display-measure-horizontal.svg</file>
+    <file alias="display-measure-vertical.svg">icons/128/display-measure-vertical.svg</file>
+    <file alias="display-measure-diagonal-notebook.svg">icons/128/display-measure-diagonal-notebook.svg</file>
+    <file alias="display-measure-horizontal-notebook.svg">icons/128/display-measure-horizontal-notebook.svg</file>
+    <file alias="display-measure-vertical-notebook.svg">icons/128/display-measure-vertical-notebook.svg</file>
   </gresource>
 </gresources>
 

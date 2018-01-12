@@ -174,6 +174,19 @@ public class MainWindow : Gtk.Window {
           assert_not_reached();
       }
     }
+
+    public string icon_suffix () {
+      switch (this) {
+        case INTERNAL:
+          return "-notebook";
+
+        case EXTERNAL:
+          return "";
+
+        default:
+          assert_not_reached();
+      }
+    }
   }
 
   private int aspect_width = DEFAULT_ASPECT_WIDTH;
@@ -186,6 +199,7 @@ public class MainWindow : Gtk.Window {
   private bool is_default_width = true;
   private bool is_default_height = true;
   private bool is_hidpi = false;
+  private string direction = "";
 
   private Gtk.Image diagram;
   private Gtk.Entry diag_entry;
@@ -234,7 +248,7 @@ public class MainWindow : Gtk.Window {
     diag_entry.max_width_chars = 5;
     diag_entry.width_chars = 5;
     diag_entry.focus_in_event.connect ((event) => {
-      diagram.icon_name = "video-display-measure-diagonal";
+      diagram.icon_name = "display-measure-diagonal" + display_type.icon_suffix ();
       return focus_in_event (event);
     });
 
@@ -246,7 +260,7 @@ public class MainWindow : Gtk.Window {
     width_entry.max_width_chars = 5;
     width_entry.width_chars = 5;
     width_entry.focus_in_event.connect ((event) => {
-      diagram.icon_name = "video-display-measure-horizontal";
+      diagram.icon_name = "display-measure-horizontal" + display_type.icon_suffix ();
       return focus_in_event (event);
     });
 
@@ -255,7 +269,7 @@ public class MainWindow : Gtk.Window {
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
     height_entry.focus_in_event.connect ((event) => {
-      diagram.icon_name = "video-display-measure-vertical";
+      diagram.icon_name = "display-measure-vertical" + display_type.icon_suffix ();
       return focus_in_event (event);
     });
 
@@ -273,7 +287,7 @@ public class MainWindow : Gtk.Window {
 
     var type_label = new Gtk.Label (_("Type:"));
     type_label.halign = Gtk.Align.END;
-    
+
     type_modebutton = new Granite.Widgets.ModeButton ();
     type_modebutton.append_text (DisplayType.INTERNAL.to_string ());
     type_modebutton.append_text (DisplayType.EXTERNAL.to_string ());
@@ -304,14 +318,18 @@ public class MainWindow : Gtk.Window {
     range_description_label.label = Range.INVALID.description ();
 
     diag_entry.changed.connect (() => {
+      direction = "diagonal";
       inches = double.parse (diag_entry.get_text ());
       assess_dpi (
         recalculate_dpi (inches, width, height),
         infer_display_type (inches)
       );
+      
+      diagram.icon_name = "display-measure-diagonal" + display_type.icon_suffix ();
     });
 
     width_entry.changed.connect (() => {
+      direction = "horizontal";
       width = int.parse (width_entry.get_text ());
 
       is_default_width = false;
@@ -321,16 +339,18 @@ public class MainWindow : Gtk.Window {
         recalculate_dpi (inches, width, height),
         display_type
       );
+      
+      set_icon ();
 
       if (!height_entry.has_focus && (is_default_height || height == 0)) {
         double calculated_height = Math.round(width * DEFAULT_ASPECT_HEIGHT / DEFAULT_ASPECT_WIDTH);
         height_entry.text = (calculated_height).to_string ();
-
         is_default_height = true;
       }
     });
 
     height_entry.changed.connect (() => {
+      direction = "vertical";
       height = int.parse (height_entry.get_text ());
 
       is_default_height = false;
@@ -340,25 +360,28 @@ public class MainWindow : Gtk.Window {
         recalculate_dpi (inches, width, height),
         display_type
       );
+      
+      set_icon ();
 
       if (!width_entry.has_focus && (is_default_width || width == 0)) {
         double calculated_width = Math.round(height * DEFAULT_ASPECT_WIDTH / DEFAULT_ASPECT_HEIGHT);
         width_entry.text = (calculated_width).to_string ();
-
         is_default_width = true;
       }
     });
-    
+
     type_modebutton.mode_changed.connect (() => {
       switch (type_modebutton.selected) {
         case 0:
           display_type = DisplayType.INTERNAL;
           assess_dpi (dpi (inches, width, height), display_type);
+          set_icon ();
           break;
 
         case 1:
           display_type = DisplayType.EXTERNAL;
           assess_dpi (dpi (inches, width, height), display_type);
+          set_icon ();
           break;
 
         default:
@@ -523,6 +546,10 @@ public class MainWindow : Gtk.Window {
     }
 
     return display_type;
+  }
+  
+  private void set_icon () {
+    diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
   }
 
   private int greatest_common_divisor (int a, int b) {
