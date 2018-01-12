@@ -1,3 +1,5 @@
+![Dippi icon](https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg)
+
 # Dippi
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
