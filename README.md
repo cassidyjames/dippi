@@ -1,11 +1,10 @@
-![Dippi icon](https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg)
-
-# Dippi
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
+<center>
+    <img src="https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg" alt="Icon" />
+    <h1>Dippi</h1>
+    <a href="https://appcenter.elementary.io/com.github.cassidyjames.dippi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</center>
 
 ![Screenshot](data/screenshot.png?raw=true)
-
 
 ## Calculate display info like DPI and aspect ratio
 
