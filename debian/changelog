@@ -1,3 +1,15 @@
+com.github.cassidyjames.dippi (2.2.1) xenial; urgency=medium
+
+  * Select between laptop or desktop
+  * Refreshed icons thanks to Micah Ilbery
+  * Completely reworked DPI ranges
+  * Differentiate between laptops and desktop displays
+  * Tweaked DPI assessment and reasoning copy
+  * Flattened titlebar
+  * Fixed bugs and warnings
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Wed, 11 Jan 2018 22:28:00 -0700
+
 com.github.cassidyjames.dippi (2.0.0) xenial; urgency=medium
 
   * All-new side-by-side UI
