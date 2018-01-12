@@ -38,4 +38,12 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
     sudo ninja install
     com.github.cassidyjames.dippi
 
+
+## Special Thanks
+
+- [Micah Ilbery](https://github.com/TraumaD) for the shiny new icons!
+- [Daniel Foré](https://github.com/danrabbit) for his apps to use as code examples
+
+-----
+
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)

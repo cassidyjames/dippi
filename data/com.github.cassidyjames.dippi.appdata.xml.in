@@ -19,6 +19,11 @@
     <ul>
       <li>Projector-specific mode</li>
     </ul>
+    <p>Special thanks:</p>
+    <ul>
+      <li>Micah Ilbery for the shiny new icons!</li>
+      <li>Daniel Foré for his apps to use as code examples</li>
+    </ul>
   </description>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
