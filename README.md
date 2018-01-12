@@ -26,6 +26,7 @@ Planned features:
 
 You'll need the following dependencies to build:
 
+* libgranite-dev
 * libgtk-3-dev
 * meson
 * valac
@@ -46,6 +47,7 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
 
 - [Micah Ilbery](https://github.com/TraumaD) for the shiny new icons!
 - [Daniel Foré](https://github.com/danrabbit) for his apps to use as code examples
+- [David Jordan](https://github.com/djordan2) for helping determine DPI ranges and putting up with my constant pinging to talk through them
 
 -----
 
