@@ -18,6 +18,7 @@ executable(
     'src/MainWindow.vala',
     dependencies: [
         dependency('glib-2.0'),
+        dependency('granite'),
         dependency('gtk+-3.0'),
         meson.get_compiler('c').find_library('m', required : false)
     ],
