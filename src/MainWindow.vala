@@ -307,11 +307,9 @@ public class MainWindow : Gtk.Window {
       // TODO: Make this its own function overridden by a modebutton, probably.
       if (inches >= 18) {
         display_type = DisplayType.EXTERNAL;
-        message ("Display type: %s", display_type.to_string ());
         type_result_label.label = display_type.to_string ();
       } else {
         display_type = DisplayType.INTERNAL;
-        message ("Display type: %s", display_type.to_string ());
         type_result_label.label = display_type.to_string ();
       }
 
