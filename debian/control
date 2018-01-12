@@ -5,6 +5,7 @@ Maintainer: Cassidy James Blaede <c@ssidyjam.es>
 Build-Depends: appstream,
                debhelper (>= 9),
                desktop-file-utils,
+               libgranite-dev,
                libgtk-3-dev,
                meson,
                valac
