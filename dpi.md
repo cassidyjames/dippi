@@ -8,14 +8,14 @@ These ranges also assume only integer scaling for the best experience; [half pix
 
 _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
-## Laptops
+| Value         | Laptop               | Desktop              |
+|---------------|----------------------|----------------------|
+| Inferred size | < 18"                | 18+"                 |
+| Ideal anchor  | 140 DPI              | 120 DPI              |
+| Ideal range   | ±20 from anchor      | ±30 from anchor      |
+| Unclear range | ±10 outside of ideal | ±20 outside of ideal |
 
-|               |                      |
-|---------------|----------------------|
-| Inferred size | < 18"                |
-| Ideal anchor  | 140 DPI              |
-| Ideal range   | ±20 from anchor      |
-| Unclear range | ±10 outside of ideal |
+## Laptops
 
 | DPI     | Resulting Range                |
 |---------|--------------------------------|
@@ -34,12 +34,6 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
 ## Desktops
 
-|               |                      |
-|---------------|----------------------|
-| Inferred size | 18+"                 |
-| Ideal anchor  | 120 DPI              |
-| Ideal range   | ±30 from anchor      |
-| Unclear range | ±20 outside of ideal |
 
 | DPI     | Resulting Range                |
 |---------|--------------------------------|
