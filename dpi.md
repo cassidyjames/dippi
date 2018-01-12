@@ -10,39 +10,47 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
 ## Laptops
 
-Inferred size: <18"
-Ideal anchor:  140 DPI
-Ideal range:   ±20 from anchor
-Unclear range: ±10 outside of ideal
+|               |                      |
+|---------------|----------------------|
+| Inferred size | < 18"                |
+| Ideal anchor  | 140 DPI              |
+| Ideal range   | ±20 from anchor      |
+| Unclear range | ±10 outside of ideal |
 
-<110:    Probably too low
-110–120: Unclear (potentially too low)
-120–160: Ideal loDPI
-160–170: Unclear (potentially too high)
-170–192: Probably too high for loDPI
-
-<220:    Probably too low
-220–240: Unclear (potentially too low)
-240–320: Ideal HiDPI
-320–340: Unclear (potentially too high)
->340:    Probably too high
+| DPI     | Resulting Range                |
+|---------|--------------------------------|
+| < 110   | Probably too low               |
+| 110–120 | Unclear (potentially too low)  |
+| 120–160 | Ideal loDPI                    |
+| 160–170 | Unclear (potentially too high) |
+| 170–192 | Probably too high for loDPI    |
+|         |                                |
+| < 220   | Probably too low               |
+| 220–240 | Unclear (potentially too low)  |
+| 240–320 | Ideal HiDPI                    |
+| 320–340 | Unclear (potentially too high) |
+| > 340   | Probably too high              |
 
 
 ## Desktops
 
-Inferred size: 18+"
-Ideal anchor:  120 DPI
-Ideal range:   ±30 from anchor
-Unclear range: ±20 outside of ideal
+|               |                      |
+|---------------|----------------------|
+| Inferred size | 18+"                 |
+| Ideal anchor  | 120 DPI              |
+| Ideal range   | ±30 from anchor      |
+| Unclear range | ±20 outside of ideal |
 
-<70:     Probably too low
-70–90:   Unclear (potentially too low)
-90–150:  Ideal loDPI
-150–170: Unclear (potentially too high)
-170–192: Probably too high for loDPI
-
-<140:    Too low for HiDPI
-140–180: Unclear (probably too low)
-180–300: Ideal HiDPI
-300–340: Unclear (potentially too high)
->340:    Probably too high
+| DPI     | Resulting Range                |
+|---------|--------------------------------|
+| < 70:   | Probably too low               |
+| 70–90   | Unclear (potentially too low)  |
+| 90–150  | Ideal loDPI                    |
+| 150–170 | Unclear (potentially too high) |
+| 170–192 | Probably too high for loDPI    |
+|         |                                |
+| < 140   | Too low for HiDPI              |
+| 140–180 | Unclear (probably too low)     |
+| 180–300 | Ideal HiDPI                    |
+| 300–340 | Unclear (potentially too high) |
+| > 340:  | Probably too high              |
