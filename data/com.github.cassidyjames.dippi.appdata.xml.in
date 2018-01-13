@@ -30,9 +30,12 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
-    <release version="2.3.1" date="2018-01-12">
+    <release version="2.3.3" date="2018-01-12">
       <description>
-        <p>Fix bug with setting display icon</p>
+        <ul>
+          <li>Fix bug with setting display icon</li>
+          <li>Under-the-hood fixes</li>
+        </ul>
       </description>
     </release>
     <release version="2.3.0" date="2018-01-12">
