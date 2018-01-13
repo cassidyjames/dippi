@@ -26,7 +26,7 @@ Planned features:
 
 ### Archlinux
 
-You can get install Dippi from [AUR](https://aur.archlinux.org/packages/dippi/) using 
+You can get Dippi from [AUR](https://aur.archlinux.org/packages/dippi/) using 
 ```
 yaourt -S dippi
 ```
