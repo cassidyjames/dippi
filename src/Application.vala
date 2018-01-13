@@ -33,7 +33,7 @@ public class Dippi : Gtk.Application {
     var quit_action = new SimpleAction ("quit", null);
 
     add_action (quit_action);
-    add_accelerator ("<Control>q", "app.quit", null);
+    add_accelerator ("Escape", "app.quit", null);
 
     quit_action.activate.connect (() => {
       if (app_window != null) {
