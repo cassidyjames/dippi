@@ -31,71 +31,66 @@
   </provides>
   ​<releases>
     <release version="2.3.1" date="2018-01-12">
-  ​    <description>
-  ​      <p>Fix bug with setting display icon</p>
-​      </description>
+      <description>
+        <p>Fix bug with setting display icon</p>
+      </description>
     </release>
     <release version="2.3.0" date="2018-01-12">
-  ​    <description>
-  ​      <p>Display icon now changes according to display type</p>
-​      </description>
+      <description>
+        <p>Display icon now changes according to display type</p>
+      </description>
     </release>
     <release version="2.2.1" date="2018-01-11">
-  ​    <description>
-  ​      <ul>
+      <description>
+        <ul>
           <li>Select between laptop or desktop</li>
           <li>Refreshed icons thanks to Micah Ilbery</li>
         </ul>
-​      </description>
+      </description>
     </release>
     <release version="2.1.0" date="2018-01-11">
-  ​    <description>
-  ​      <ul>
+      <description>
+        <ul>
           <li>Completely reworked DPI ranges</li>
           <li>Differentiate between laptops and desktop displays</li>
           <li>Tweaked DPI assessment and reasoning copy</li>
           <li>Flattened titlebar</li>
           <li>Fixed bugs and warnings</li>
         </ul>
-​      </description>
+      </description>
     </release>
     <release version="2.0.0" date="2018-01-10">
-  ​    <description>
-  ​      <ul>
+      <description>
+        <ul>
           <li>All new side-by-side UI</li>
           <li>Tweaked DPI assessment and reasoning copy</li>
           <li>Added icons to make assessment clearer</li>
         </ul>
-​      </description>
+      </description>
     </release>
     <release version="1.2.0" date="2018-01-10">
-  ​    <description>
-  ​      <ul>
+      <description>
+        <ul>
           <li>Made visualization interactive!</li>
           <li>Added Cassidy-approval and reasoning</li>
           <li>Fix a bug where sometimes an extra zero would sneak in</li>
           <li>Under-the-hood restructuring</li>
         </ul>
-​     </description>
-    </release>
-    <release version="0.1.5" date="2018-01-09">
-  ​    <description>
-  ​      <p>Initial release for AppCenter</p>
-​     </description>
+      </description>
     </release>
     <release version="1.0.1" date="2018-01-09">
-  ​    <description>
-  ​      <ul>
+      <description>
+        <ul>
           <li>Shiny new icon</li>
           <li>Added visualization to UI</li>
           <li>Significant code cleanup</li>
         </ul>
-​     </description>
+      <description>
     </release>
     <release version="0.1.5" date="2018-01-09">
-  ​    <description>
-  ​      <p>Initial release for AppCenter</p>
-​     </description>
+      <description>
+        <p>Initial release for AppCenter</p>
+      </description>
     </release>
   </releases>
   <screenshots>
