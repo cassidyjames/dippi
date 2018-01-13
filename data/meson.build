@@ -3,11 +3,11 @@ icon_sizes = ['48', '64', '128']
 foreach i : icon_sizes
     install_data(
         join_paths('icons', i, meson.project_name() + '.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+        install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
     )
     install_data(
         join_paths('icons', i, meson.project_name() + '.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+        install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
 endforeach
 
@@ -17,7 +17,7 @@ i18n.merge_file(
     po_dir: join_paths(meson.source_root(), 'po'),
     type: 'desktop',
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'applications')
+    install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'applications')
 )
 
 i18n.merge_file(
@@ -25,7 +25,7 @@ i18n.merge_file(
     output: meson.project_name() + '.appdata.xml',
     po_dir: join_paths(meson.source_root(), 'po'),
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
+    install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'metainfo')
 )
 
 desktop_file_validate = find_program('desktop-file-validate', required:false)
