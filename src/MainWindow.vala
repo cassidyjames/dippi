@@ -541,7 +541,7 @@ public class MainWindow : Gtk.Window {
 
     return display_type;
   }
-  
+
   private void set_display_icon () {
     diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
   }
@@ -562,4 +562,3 @@ public class MainWindow : Gtk.Window {
     }
   }
 }
-
