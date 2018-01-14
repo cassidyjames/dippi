@@ -24,6 +24,30 @@ Planned features:
 
 ## Building, Testing, and Installation
 
+### Archlinux
+
+You can get Dippi from [AUR](https://aur.archlinux.org/packages/dippi/) using 
+```
+yaourt -S dippi
+```
+
+### Flatpak
+
+The application is available as a flatpak package for other platforms. You will need to have `flatpak` installed.
+
+1 - Enable [`flathub`](https://flathub.org/) repository
+```
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+2 - Install it
+```
+flatpak install flathub org.github.cassidyjames.dippi
+```
+
+
+### Manual installation
+
 You'll need the following dependencies to build:
 
 * libgranite-dev
