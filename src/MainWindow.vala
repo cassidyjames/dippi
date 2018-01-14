@@ -373,29 +373,29 @@ public class MainWindow : Gtk.Window {
     var data_grid = new Gtk.Grid ();
     data_grid.column_spacing = 6;
     data_grid.margin = 24;
+    data_grid.margin_top = 0;
     data_grid.row_spacing = 6;
     data_grid.get_style_context ().add_class ("data-grid");
 
-    data_grid.attach (diagram,             0, 0, 5, 1);
-    data_grid.attach (diag_label,          0, 1, 1, 1);
-    data_grid.attach (diag_entry,          1, 1, 1, 1);
-    data_grid.attach (inches_label,        2, 1, 2, 1);
-    data_grid.attach (res_label,           0, 2, 1, 1);
-    data_grid.attach (width_entry,         1, 2, 1, 1);
-    data_grid.attach (x_label,             2, 2, 1, 1);
-    data_grid.attach (height_entry,        3, 2, 1, 1);
-    data_grid.attach (px_label,            4, 2, 1, 1);
-    data_grid.attach (type_label,          0, 3, 1, 1);
-    data_grid.attach (type_modebutton,     1, 3, 4, 1);
+    data_grid.attach (diagram,         0, 0, 5, 1);
+    data_grid.attach (diag_label,      0, 1, 1, 1);
+    data_grid.attach (diag_entry,      1, 1, 1, 1);
+    data_grid.attach (inches_label,    2, 1, 2, 1);
+    data_grid.attach (res_label,       0, 2, 1, 1);
+    data_grid.attach (width_entry,     1, 2, 1, 1);
+    data_grid.attach (x_label,         2, 2, 1, 1);
+    data_grid.attach (height_entry,    3, 2, 1, 1);
+    data_grid.attach (px_label,        4, 2, 1, 1);
+    data_grid.attach (type_label,      0, 3, 1, 1);
+    data_grid.attach (type_modebutton, 1, 3, 4, 1);
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
     assessment_grid.halign = Gtk.Align.CENTER;
     assessment_grid.margin = 12;
-    assessment_grid.margin_top = 0;
-    assessment_grid.margin_bottom = 48;
+    assessment_grid.margin_top = 48;
     assessment_grid.row_spacing = 6;
-    assessment_grid.valign = Gtk.Align.CENTER;
+    assessment_grid.valign = Gtk.Align.START;
     assessment_grid.get_style_context ().add_class ("assessment-grid");
 
     assessment_grid.attach (range_icon,               0, 0, 1, 2);
