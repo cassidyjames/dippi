@@ -32,7 +32,7 @@ public class MainWindow : Gtk.Window {
   private const int EXTERNAL_UNCLEAR_RANGE = 20;
 
   private const double INCHES_INFER_EXTERNAL = 18;
-  private const int DPI_INFER_HIDPI = 192; // Determined by GNOME Settings Daemon
+  private const int DPI_INFER_HIDPI = 192; // According to GNOME
 
   private enum Range {
     LOW,
@@ -76,7 +76,7 @@ public class MainWindow : Gtk.Window {
           return _("Potentially Problematic");
 
         case INVALID:
-          return _("Enter Some Data");
+          return _("Analyze a Display");
 
         default:
             assert_not_reached();
@@ -113,7 +113,7 @@ public class MainWindow : Gtk.Window {
           return _("This display is in a very tricky range and is not likely to work well with integer scaling out of the box.");
 
         case INVALID:
-          return _("Fill the inputs on the left to analyze a display.");
+          return _("Enter details about a display to analyze it.");
 
         default:
             assert_not_reached();
@@ -123,31 +123,19 @@ public class MainWindow : Gtk.Window {
     public string icon () {
       switch (this) {
         case LOW:
-          return "dialog-error";
-
-        case LODPI_LOW:
-          return "dialog-warning";
-
-        case LODPI_IDEAL:
-          return "process-completed";
-
-        case LODPI_HIGH:
-          return "dialog-warning";
-
-        case HIDPI_LOW:
-          return "dialog-warning";
-
-        case HIDPI_IDEAL:
-          return "process-completed";
-
-        case HIDPI_HIGH:
-          return "dialog-warning";
-
         case HIGH:
           return "dialog-error";
 
+        case LODPI_LOW:
+        case LODPI_HIGH:
+        case HIDPI_LOW:
+        case HIDPI_HIGH:
         case UNCLEAR:
           return "dialog-warning";
+
+        case LODPI_IDEAL:
+        case HIDPI_IDEAL:
+          return "process-completed";
 
         case INVALID:
           return "dialog-information";
@@ -217,7 +205,7 @@ public class MainWindow : Gtk.Window {
   public MainWindow (Gtk.Application application) {
     Object (
       application: application,
-      border_width: 12,
+      border_width: 0,
       icon_name: "com.github.cassidyjames.dippi",
       resizable: false,
       title: _("Dippi"),
@@ -387,31 +375,33 @@ public class MainWindow : Gtk.Window {
     data_grid.column_spacing = 6;
     data_grid.margin = 24;
     data_grid.row_spacing = 6;
-    data_grid.attach (diagram,                 0, 0, 5, 1);
-    data_grid.attach (diag_label,              0, 1, 1, 1);
-    data_grid.attach (diag_entry,              1, 1, 1, 1);
-    data_grid.attach (inches_label,            2, 1, 2, 1);
-    data_grid.attach (res_label,               0, 2, 1, 1);
-    data_grid.attach (width_entry,             1, 2, 1, 1);
-    data_grid.attach (x_label,                 2, 2, 1, 1);
-    data_grid.attach (height_entry,            3, 2, 1, 1);
-    data_grid.attach (px_label,                4, 2, 1, 1);
-    data_grid.attach (type_label,              0, 3, 1, 1);
-    data_grid.attach (type_modebutton,         1, 3, 4, 1);
-    data_grid.attach (aspect_label,            0, 4, 1, 1);
-    data_grid.attach (aspect_result_label,     1, 4, 4, 1);
-    data_grid.attach (dpi_label,               0, 5, 1, 1);
-    data_grid.attach (dpi_result_label,        1, 5, 4, 1);
-
     data_grid.get_style_context ().add_class ("data-grid");
+
+    data_grid.attach (diagram,             0, 0, 5, 1);
+    data_grid.attach (diag_label,          0, 1, 1, 1);
+    data_grid.attach (diag_entry,          1, 1, 1, 1);
+    data_grid.attach (inches_label,        2, 1, 2, 1);
+    data_grid.attach (res_label,           0, 2, 1, 1);
+    data_grid.attach (width_entry,         1, 2, 1, 1);
+    data_grid.attach (x_label,             2, 2, 1, 1);
+    data_grid.attach (height_entry,        3, 2, 1, 1);
+    data_grid.attach (px_label,            4, 2, 1, 1);
+    data_grid.attach (type_label,          0, 3, 1, 1);
+    data_grid.attach (type_modebutton,     1, 3, 4, 1);
+    data_grid.attach (aspect_label,        0, 4, 1, 1);
+    data_grid.attach (aspect_result_label, 1, 4, 4, 1);
+    data_grid.attach (dpi_label,           0, 5, 1, 1);
+    data_grid.attach (dpi_result_label,    1, 5, 4, 1);
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
     assessment_grid.halign = Gtk.Align.CENTER;
-    assessment_grid.margin_start = 24;
+    assessment_grid.margin = 12;
+    assessment_grid.margin_bottom = 48;
     assessment_grid.row_spacing = 6;
     assessment_grid.valign = Gtk.Align.CENTER;
     assessment_grid.get_style_context ().add_class ("assessment-grid");
+
     assessment_grid.attach (range_icon,              0, 0, 1, 2);
     assessment_grid.attach (range_title_label,       1, 0, 1, 1);
     assessment_grid.attach (range_description_label, 1, 1, 1, 1);
@@ -491,12 +481,10 @@ public class MainWindow : Gtk.Window {
       range = Range.LODPI_HIGH;
     }
 
-    // It's above the unclear LoDPI range, but still not HiDPI according to GNOME.
     else if (calculated_dpi < DPI_INFER_HIDPI) {
       range = Range.UNCLEAR;
     }
 
-    // Below the minimum unclear HiDPI range
     else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
       range = Range.UNCLEAR;
     }

@@ -34,6 +34,13 @@ public class Dippi : Gtk.Application {
 
     add_action (quit_action);
     add_accelerator ("Escape", "app.quit", null);
+    
+    // var gtk_settings = Gtk.Settings.get_default ();
+    // gtk_settings.gtk_application_prefer_dark_theme = true;
+
+    var provider = new Gtk.CssProvider ();
+    provider.load_from_resource ("/com/github/cassidyjames/dippi/Application.css");
+    Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
     quit_action.activate.connect (() => {
       if (app_window != null) {
