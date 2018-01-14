@@ -66,7 +66,7 @@ A community-built and -maintained Flatpak is available on [Flathub](https://flat
 
 - [Micah Ilbery](https://github.com/TraumaD) for the shiny new icons!
 - [Daniel Foré](https://github.com/danrabbit) for his apps to use as code examples
-- [David Jordan](https://github.com/djordan2) for helping determine DPI ranges and putting up with my constant pinging to talk through them
+- [David Jordan](https://github.com/djordan2) for helping determine DPI ranges
 
 -----
 
