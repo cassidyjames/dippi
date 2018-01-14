@@ -182,7 +182,6 @@ public class MainWindow : Gtk.Window {
   private bool is_default_display_type = true;
   private bool is_default_width = true;
   private bool is_default_height = true;
-  private bool is_hidpi = false;
   private string direction = "";
 
   private Gtk.Image diagram;
