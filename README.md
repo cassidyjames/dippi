@@ -11,16 +11,28 @@
 
 ## Calculate display info like DPI and aspect ratio
 
-Input a few simple details and figure out the aspect ratio, DPI, and other details of any display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.
+Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.
 
-Handy features:
+### Handy features:
+
 - Find out if a display is a good choice based on its size and resolution
 - Get advice about different densities
-- Differentiation between laptops and desktop displays
+- Differentiates between laptops and desktop displays
 - Stupid simple: all in a cute li'l window
 
-Planned features:
-- Projector-specific mode
+Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.
+    
+### Tells you if a display‘s density is:
+
+- Very Low DPI,
+- Fairly Low DPI,
+- Ideal for LoDPI,
+- Potentially Problematic,
+- Ideal for HiDPI,
+- Fairly High for HiDPI, or
+- Too High DPI
+
+[Read about the design and development on Medium](https://medium.com/@cassidyjames/introducing-dippi-de2b526464ae)
 
 
 ## Made for [elementary OS](https://elementary.io)
