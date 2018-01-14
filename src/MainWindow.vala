@@ -189,6 +189,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Entry width_entry;
   private Gtk.Entry height_entry;
   private Gtk.Label dpi_result_label;
+  private Gtk.Label logical_resolution_label;
   private Gtk.Label aspect_result_label;
   private Granite.Widgets.ModeButton type_modebutton;
   private Gtk.Label range_title_label;
@@ -259,12 +260,6 @@ public class MainWindow : Gtk.Window {
       return focus_in_event (event);
     });
 
-    var dpi_label = new Gtk.Label (_("DPI:"));
-    dpi_label.halign = Gtk.Align.END;
-
-    var aspect_label = new Gtk.Label (_("Aspect ratio:"));
-    aspect_label.halign = Gtk.Align.END;
-
     var x_label = new Gtk.Label (_("×"));
     var px_label = new Gtk.Label (_("px"));
 
@@ -280,24 +275,34 @@ public class MainWindow : Gtk.Window {
 
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
+    aspect_result_label.selectable = true;
 
     dpi_result_label = new Gtk.Label (null);
     dpi_result_label.halign = Gtk.Align.START;
+    dpi_result_label.selectable = true;
+
+    logical_resolution_label = new Gtk.Label (null);
+    logical_resolution_label.expand = true;
+    logical_resolution_label.halign = Gtk.Align.START;
+    logical_resolution_label.selectable = true;
 
     range_icon = new Gtk.Image.from_icon_name (Range.INVALID.icon (), Gtk.IconSize.DIALOG);
     range_icon.margin_bottom = 12;
     range_icon.valign = Gtk.Align.START;
 
     range_title_label = new Gtk.Label (null);
-    range_title_label.get_style_context ().add_class ("h2");
     range_title_label.wrap = true;
     range_title_label.halign = Gtk.Align.START;
-    range_title_label.label = Range.INVALID.title ();
+    range_title_label.selectable = true;
     range_title_label.xalign = 0;
     range_title_label.valign = Gtk.Align.END;
+    range_title_label.get_style_context ().add_class ("h2");
+    range_title_label.label = Range.INVALID.title ();
 
     range_description_label = new Gtk.Label (null);
+    range_description_label.margin_bottom = 12;
     range_description_label.max_width_chars = 50;
+    range_description_label.selectable = true;
     range_description_label.wrap = true;
     range_description_label.xalign = 0;
     range_description_label.valign = Gtk.Align.START;
@@ -382,29 +387,31 @@ public class MainWindow : Gtk.Window {
     data_grid.attach (px_label,            4, 2, 1, 1);
     data_grid.attach (type_label,          0, 3, 1, 1);
     data_grid.attach (type_modebutton,     1, 3, 4, 1);
-    data_grid.attach (aspect_label,        0, 4, 1, 1);
-    data_grid.attach (aspect_result_label, 1, 4, 4, 1);
-    data_grid.attach (dpi_label,           0, 5, 1, 1);
-    data_grid.attach (dpi_result_label,    1, 5, 4, 1);
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
     assessment_grid.halign = Gtk.Align.CENTER;
     assessment_grid.margin = 12;
+    assessment_grid.margin_top = 0;
     assessment_grid.margin_bottom = 48;
     assessment_grid.row_spacing = 6;
     assessment_grid.valign = Gtk.Align.CENTER;
     assessment_grid.get_style_context ().add_class ("assessment-grid");
 
-    assessment_grid.attach (range_icon,              0, 0, 1, 2);
-    assessment_grid.attach (range_title_label,       1, 0, 1, 1);
-    assessment_grid.attach (range_description_label, 1, 1, 1, 1);
+    assessment_grid.attach (range_icon,               0, 0, 1, 2);
+    assessment_grid.attach (range_title_label,        1, 0, 3, 1);
+    assessment_grid.attach (range_description_label,  1, 1, 3, 1);
+    assessment_grid.attach (aspect_result_label,      1, 2, 1, 1);
+    assessment_grid.attach (dpi_result_label,         2, 2, 1, 1);
+    assessment_grid.attach (logical_resolution_label, 3, 2, 1, 1);
 
     var main_layout = new Gtk.Grid ();
     main_layout.column_spacing = 6;
     main_layout.row_spacing = 6;
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
+
+    diag_entry.grab_focus ();
 
     get_style_context ().add_class ("dippi");
     get_style_context ().add_class ("rounded");
@@ -416,15 +423,13 @@ public class MainWindow : Gtk.Window {
     if (inches > 0 && width > 0 && height > 0) {
       int calculated_dpi = dpi (inches, width, height);
 
-      dpi_result_label.label = (calculated_dpi).to_string ();
+      dpi_result_label.label = _("%d DPI").printf (calculated_dpi);
 
-      if (calculated_dpi >= DPI_INFER_HIDPI) {
-        dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
-      }
-      
+      recalculate_logical_resolution (width, height, calculated_dpi);
       return calculated_dpi;
     }
 
+    dpi_result_label.label = "";
     return 0;
   }
 
@@ -433,6 +438,22 @@ public class MainWindow : Gtk.Window {
       aspect_width = width / greatest_common_divisor (width, height);
       aspect_height = height / greatest_common_divisor (width, height);
       aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+    }
+  }
+
+  private void recalculate_logical_resolution (int width, int height, int dpi) {
+    if (dpi >= DPI_INFER_HIDPI) {
+      int scaling_factor = 2;
+      int logical_width = (int)(width / scaling_factor);
+      int logical_height = (int)(height / scaling_factor);
+
+      logical_resolution_label.label = "%d×%d@%dx".printf (
+        logical_width,
+        logical_height,
+        scaling_factor
+      );
+    } else {
+      logical_resolution_label.label = "%d×%d".printf (width, height);
     }
   }
 
