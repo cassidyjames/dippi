@@ -37,6 +37,16 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.5.0" date="2018-01-14">
+      <description>
+        <ul>
+          <li>New purple accent color</li>
+          <li>Refined margins and alignment</li>
+          <li>Escape now closes the window</li>
+          <li>Lots of little code cleanup</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.0" date="2018-01-13">
       <description>
         <ul>
