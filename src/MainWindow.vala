@@ -58,9 +58,8 @@ public class MainWindow : Gtk.Window {
           return _("Ideal for LoDPI");
 
         case LODPI_HIGH:
-          return _("Potentially Problematic");
-
         case HIDPI_LOW:
+        case UNCLEAR:
           return _("Potentially Problematic");
 
         case HIDPI_IDEAL:
@@ -71,9 +70,6 @@ public class MainWindow : Gtk.Window {
 
         case HIGH:
           return _("Too High DPI");
-
-        case UNCLEAR:
-          return _("Potentially Problematic");
 
         case INVALID:
           return _("Analyze a Display");
@@ -356,19 +352,18 @@ public class MainWindow : Gtk.Window {
       switch (type_modebutton.selected) {
         case 0:
           display_type = DisplayType.INTERNAL;
-          assess_dpi (dpi (inches, width, height), display_type);
-          set_display_icon ();
           break;
 
         case 1:
           display_type = DisplayType.EXTERNAL;
-          assess_dpi (dpi (inches, width, height), display_type);
-          set_display_icon ();
           break;
 
         default:
           assert_not_reached();
       }
+      
+      assess_dpi (dpi (inches, width, height), display_type);
+      set_display_icon ();
     });
 
     var data_grid = new Gtk.Grid ();
@@ -425,12 +420,9 @@ public class MainWindow : Gtk.Window {
       dpi_result_label.label = (calculated_dpi).to_string ();
 
       if (calculated_dpi >= DPI_INFER_HIDPI) {
-        is_hidpi = true;
         dpi_result_label.label = dpi_result_label.get_label () + _(" (HiDPI)");
-      } else {
-        is_hidpi = false;
       }
-
+      
       return calculated_dpi;
     }
 
@@ -450,7 +442,7 @@ public class MainWindow : Gtk.Window {
     return (int)unrounded_dpi;
   }
 
-  private Range assess_dpi (double calculated_dpi, DisplayType display_type) {
+  private void assess_dpi (double calculated_dpi, DisplayType display_type) {
     int ideal_dpi = INTERNAL_IDEAL_DPI;
     int ideal_range = INTERNAL_IDEAL_RANGE;
     int unclear_range = INTERNAL_UNCLEAR_RANGE;
@@ -512,8 +504,6 @@ public class MainWindow : Gtk.Window {
     range_icon.icon_name = range.icon ();
     range_title_label.label = range.title ();
     range_description_label.label = range.description ();
-
-    return range;
   }
 
   private DisplayType infer_display_type (double inches) {
