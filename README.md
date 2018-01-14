@@ -22,7 +22,7 @@ Analyze any display. Input a few simple details and figure out the aspect ratio,
 
 Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.
     
-### Tells you if a display‘s density is:
+### Tells you if a display’s density is:
 
 - Very Low DPI,
 - Fairly Low DPI,
