@@ -7,7 +7,7 @@
   <name>Dippi</name>
   <summary>Calculate display info like DPI and aspect ratio</summary>
   <description>
-    <p>Input a few simple details and figure out the aspect ratio, DPI, and other details of any display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
+    <p>Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
     <p>Handy features:</p>
     <ul>
       <li>Find out if a display is a good choice based on its size and resolution</li>
@@ -15,21 +15,38 @@
       <li>Differentiates between laptops and desktop displays</li>
       <li>Stupid simple: all in a cute li'l window</li>
     </ul>
-    <p>Planned features:</p>
+    <p>Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.</p>
+    <p>Tells you if a display‘s density is:</p>
     <ul>
-      <li>Projector-specific mode</li>
+      <li>Very Low DPI,</li>
+      <li>Fairly Low DPI,</li>
+      <li>Ideal for LoDPI,</li>
+      <li>Potentially Problematic,</li>
+      <li>Ideal for HiDPI,</li>
+      <li>Fairly High for HiDPI, or</li>
+      <li>Too High DPI</li>
     </ul>
     <p>Special thanks:</p>
     <ul>
-      <li>Micah Ilbery for the shiny new icons!</li>
+      <li>Micah Ilbery for the shiny icons!</li>
       <li>Daniel Foré for his apps to use as code examples</li>
-      <li>David Jordan for helping determine DPI ranges and putting up with my constant pinging to talk through them</li>
+      <li>David Jordan for helping determine DPI ranges</li>
     </ul>
   </description>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.4.0" date="2018-01-13">
+      <description>
+        <ul>
+          <li>New purple accent color</li>
+          <li>Refined margins and alignment</li>
+          <li>Escape now closes the window</li>
+          <li>Lots of little code cleanup</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.3.3" date="2018-01-12">
       <description>
         <ul>
