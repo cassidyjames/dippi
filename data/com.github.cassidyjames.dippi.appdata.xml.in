@@ -40,10 +40,8 @@
     <release version="2.5.0" date="2018-01-14">
       <description>
         <ul>
-          <li>New purple accent color</li>
-          <li>Refined margins and alignment</li>
-          <li>Escape now closes the window</li>
-          <li>Lots of little code cleanup</li>
+          <li>Added logical resolution</li>
+          <li>Cleaned up design by moving display details to below the analysis</li>
         </ul>
       </description>
     </release>
