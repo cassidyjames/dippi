@@ -1,0 +1,181 @@
+# SPANISH FOR DIPPI
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# ALAIN M. <alain23@protonmail.com>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-12 11:54-0700\n"
+"PO-Revision-Date: 2018-01-14 20:50\n"
+"Last-Translator: ALAIN M. <alain23@protonmail.com>\n"
+"Language-Team: NONE\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:52
+msgid "Very Low DPI"
+msgstr "DPI muy alto"
+
+#: src/MainWindow.vala:55
+msgid "Fairly Low DPI"
+msgstr "DPI muy bajo"
+
+#: src/MainWindow.vala:58
+msgid "Ideal for LoDPI"
+msgstr "Ideal para LoDPI"
+
+#: src/MainWindow.vala:61 src/MainWindow.vala:64 src/MainWindow.vala:76
+msgid "Potentially Problematic"
+msgstr "Potencialmente problemático"
+
+#: src/MainWindow.vala:67
+msgid "Ideal for HiDPI"
+msgstr "Ideal para HiDPI"
+
+#: src/MainWindow.vala:70
+msgid "Fairly High for HiDPI"
+msgstr "Bastante alto para HiDPI"
+
+#: src/MainWindow.vala:73
+msgid "Too High DPI"
+msgstr "DPI demasiado alto"
+
+#: src/MainWindow.vala:79
+msgid "Enter Some Data"
+msgstr "Ingrese algunos datos"
+
+#: src/MainWindow.vala:89
+msgid ""
+"Text and UI are likely to be too big for typical viewing distances. Avoid if "
+"possible."
+msgstr ""
+"El texto y la IU suelen ser demasiado grandes para las distancias típicas de visualización, Evitar si " 
+"es posible."
+
+#: src/MainWindow.vala:92
+msgid ""
+"Text and UI might be too big for typical viewing distances, but it's largely "
+"up to user preference and physical distance from the display."
+msgstr ""
+"El texto y la IU podría ser demasiado grande para las distancias típicas de visualización, Pero es en gran medida " 
+"de las preferencias del usuario y la distancia física de la pantalla."
+
+
+#: src/MainWindow.vala:95
+msgid ""
+"Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
+"viewing distances."
+msgstr ""
+"No HiDPI, pero un bonito lugar, El texto y la IU deberían ser legibles para las distancias "
+"típicas de visualización."
+
+#: src/MainWindow.vala:98
+msgid ""
+"Relatively high resolution, but not quite HiDPI. Text and UI may be too "
+"small by default, but forcing HiDPI would make them appear too large. The "
+"experience may be slightly improved by increasing the text size."
+msgstr ""
+"Resolución relativamente alta, pero no del todo HiDPI, El Texto y UI podrian ser demasiado " 
+"pequeño por defecto, forzar HiDPI los haría parecer demasiado grandes. La"
+"experiencia puede ser ligeramente mejorada aumentando el tamaño del texto."
+
+
+
+#: src/MainWindow.vala:101
+msgid ""
+"HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
+"and increasing the text size might help."
+msgstr ""
+"HiDPI por defecto, pero el texto y la IU podrian parecer demasiado grande, Apagar HiDPI " 
+"y aumentar el tamaño del texto podrían ayudar.
+
+
+#: src/MainWindow.vala:104
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. This is the jackpot."
+msgstr ""
+"El Texto y la IU de HiDPI seran nítidos junto con un tamaño legible a distancias típicas " 
+"de visualización. Este es el premio mayor."
+
+
+#: src/MainWindow.vala:107
+msgid ""
+"Text and UI are likely to appear too small for typical viewing distances. "
+"Increasing the text size may help."
+msgstr ""
+"Es probable que el texto y la IU parezcan demasiado pequeños para las distancias típicas de visualización."
+"Aumentar el tamaño del texto puede ayudar."
+
+#: src/MainWindow.vala:110
+msgid "Text and UI will appear too small for typical viewing distances."
+msgstr "El texto y la IU parecerán demasiado pequeños para las distancias típicas de visualización."
+
+#: src/MainWindow.vala:113
+msgid ""
+"This display is in a very tricky range and is not likely to work well with "
+"integer scaling out of the box."
+msgstr ""
+"Esta pantalla está en un rango muy alto, es probable que no funcione bien"
+
+
+#: src/MainWindow.vala:116
+msgid "Fill the inputs on the left to analyze a display."
+msgstr "Rellene las entradas de la izquierda para analizar una pantalla."
+
+#: src/MainWindow.vala:168
+msgid "Laptop"
+msgstr "Portátil"
+
+#: src/MainWindow.vala:171
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: src/MainWindow.vala:209
+msgid "Dippi"
+msgstr "Dippi"
+
+#: src/MainWindow.vala:229
+msgid "Diagonal size:"
+msgstr "Tamaño diagonal:"
+
+#: src/MainWindow.vala:241
+msgid "Resolution:"
+msgstr "Resolución:"
+
+#: src/MainWindow.vala:262
+msgid "DPI:"
+msgstr "DPI"
+
+#: src/MainWindow.vala:265
+msgid "Aspect ratio:"
+msgstr "Relación de aspecto:"
+
+#: src/MainWindow.vala:268
+msgid "×"
+msgstr "x"
+
+#: src/MainWindow.vala:269
+msgid "px"
+msgstr "px"
+
+#: src/MainWindow.vala:271
+msgid "inches"
+msgstr "pulgadas"
+
+#: src/MainWindow.vala:274
+msgid "Type:"
+msgstr "Tipo:"
+
+#: src/MainWindow.vala:422
+msgid " (HiDPI)"
+msgstr " (HiDPI)"
+
+#: src/MainWindow.vala:437
+msgid ":"
+msgstr ":"
