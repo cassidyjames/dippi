@@ -29,27 +29,27 @@ msgstr "DPI muy bajo"
 msgid "Ideal for LoDPI"
 msgstr "Ideal para LoDPI"
 
-#: src/MainWindow.vala:61 src/MainWindow.vala:64 src/MainWindow.vala:76
+#: src/MainWindow.vala:63
 msgid "Potentially Problematic"
 msgstr "Potencialmente problemático"
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:66
 msgid "Ideal for HiDPI"
 msgstr "Ideal para HiDPI"
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 msgid "Fairly High for HiDPI"
 msgstr "Bastante alto para HiDPI"
 
-#: src/MainWindow.vala:73
+#: src/MainWindow.vala:72
 msgid "Too High DPI"
 msgstr "DPI demasiado alto"
 
-#: src/MainWindow.vala:79
-msgid "Enter Some Data"
-msgstr "Ingrese algunos datos"
+#: src/MainWindow.vala:75
+msgid "Analyze a Display"
+msgstr ""
 
-#: src/MainWindow.vala:89
+#: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
@@ -57,7 +57,7 @@ msgstr ""
 "El texto y la IU suelen ser demasiado grandes para las distancias típicas de visualización, Evitar si " 
 "es posible."
 
-#: src/MainWindow.vala:92
+#: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
@@ -66,7 +66,7 @@ msgstr ""
 "de las preferencias del usuario y la distancia física de la pantalla."
 
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
@@ -74,7 +74,7 @@ msgstr ""
 "No HiDPI, pero un bonito lugar, El texto y la IU deberían ser legibles para las distancias "
 "típicas de visualización."
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:94
 msgid ""
 "Relatively high resolution, but not quite HiDPI. Text and UI may be too "
 "small by default, but forcing HiDPI would make them appear too large. The "
@@ -86,16 +86,16 @@ msgstr ""
 
 
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:97
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
 "HiDPI por defecto, pero el texto y la IU podrian parecer demasiado grande, Apagar HiDPI " 
-"y aumentar el tamaño del texto podrían ayudar.
+"y aumentar el tamaño del texto podrían ayudar."
 
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
@@ -104,7 +104,7 @@ msgstr ""
 "de visualización. Este es el premio mayor."
 
 
-#: src/MainWindow.vala:107
+#: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
@@ -112,11 +112,11 @@ msgstr ""
 "Es probable que el texto y la IU parezcan demasiado pequeños para las distancias típicas de visualización."
 "Aumentar el tamaño del texto puede ayudar."
 
-#: src/MainWindow.vala:110
+#: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
 msgstr "El texto y la IU parecerán demasiado pequeños para las distancias típicas de visualización."
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
@@ -124,27 +124,27 @@ msgstr ""
 "Esta pantalla está en un rango muy alto, es probable que no funcione bien"
 
 
-#: src/MainWindow.vala:116
-msgid "Fill the inputs on the left to analyze a display."
+#: src/MainWindow.vala:112
+msgid "Enter details about a display to analyze it."
 msgstr "Rellene las entradas de la izquierda para analizar una pantalla."
 
-#: src/MainWindow.vala:168
+#: src/MainWindow.vala:152
 msgid "Laptop"
 msgstr "Portátil"
 
-#: src/MainWindow.vala:171
+#: src/MainWindow.vala:155
 msgid "Desktop"
 msgstr "Escritorio"
 
-#: src/MainWindow.vala:209
+#: src/MainWindow.vala:207
 msgid "Dippi"
 msgstr "Dippi"
 
-#: src/MainWindow.vala:229
+#: src/MainWindow.vala:227
 msgid "Diagonal size:"
 msgstr "Tamaño diagonal:"
 
-#: src/MainWindow.vala:241
+#: src/MainWindow.vala:240
 msgid "Resolution:"
 msgstr "Resolución:"
 
@@ -152,30 +152,27 @@ msgstr "Resolución:"
 msgid "DPI:"
 msgstr "DPI"
 
-#: src/MainWindow.vala:265
-msgid "Aspect ratio:"
-msgstr "Relación de aspecto:"
-
-#: src/MainWindow.vala:268
+#: src/MainWindow.vala:263
 msgid "×"
-msgstr "x"
+msgstr "×"
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:264
 msgid "px"
 msgstr "px"
 
-#: src/MainWindow.vala:271
+#: src/MainWindow.vala:266
 msgid "inches"
 msgstr "pulgadas"
 
-#: src/MainWindow.vala:274
+#: src/MainWindow.vala:269
 msgid "Type:"
 msgstr "Tipo:"
 
-#: src/MainWindow.vala:422
-msgid " (HiDPI)"
-msgstr " (HiDPI)"
+#: src/MainWindow.vala:426
+#, c-format
+msgid "%d DPI"
+msgstr "%d DPI"
 
-#: src/MainWindow.vala:437
+#: src/MainWindow.vala:440
 msgid ":"
 msgstr ":"
