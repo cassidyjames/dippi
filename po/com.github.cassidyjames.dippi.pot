@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the com.github.cassidyjames.dippi package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-12 11:54-0700\n"
+"POT-Creation-Date: 2018-01-14 21:38-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,131 +29,124 @@ msgstr ""
 msgid "Ideal for LoDPI"
 msgstr ""
 
-#: src/MainWindow.vala:61 src/MainWindow.vala:64 src/MainWindow.vala:76
+#: src/MainWindow.vala:63
 msgid "Potentially Problematic"
 msgstr ""
 
-#: src/MainWindow.vala:67
+#: src/MainWindow.vala:66
 msgid "Ideal for HiDPI"
 msgstr ""
 
-#: src/MainWindow.vala:70
+#: src/MainWindow.vala:69
 msgid "Fairly High for HiDPI"
 msgstr ""
 
-#: src/MainWindow.vala:73
+#: src/MainWindow.vala:72
 msgid "Too High DPI"
 msgstr ""
 
-#: src/MainWindow.vala:79
-msgid "Enter Some Data"
+#: src/MainWindow.vala:75
+msgid "Analyze a Display"
 msgstr ""
 
-#: src/MainWindow.vala:89
+#: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
 
-#: src/MainWindow.vala:92
+#: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 msgstr ""
 
-#: src/MainWindow.vala:98
+#: src/MainWindow.vala:94
 msgid ""
 "Relatively high resolution, but not quite HiDPI. Text and UI may be too "
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:97
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
 
-#: src/MainWindow.vala:104
+#: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
 msgstr ""
 
-#: src/MainWindow.vala:107
+#: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
 
-#: src/MainWindow.vala:110
+#: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
 msgstr ""
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
 
-#: src/MainWindow.vala:116
-msgid "Fill the inputs on the left to analyze a display."
+#: src/MainWindow.vala:112
+msgid "Enter details about a display to analyze it."
 msgstr ""
 
-#: src/MainWindow.vala:168
+#: src/MainWindow.vala:152
 msgid "Laptop"
 msgstr ""
 
-#: src/MainWindow.vala:171
+#: src/MainWindow.vala:155
 msgid "Desktop"
 msgstr ""
 
-#: src/MainWindow.vala:209
+#: src/MainWindow.vala:207
 msgid "Dippi"
 msgstr ""
 
-#: src/MainWindow.vala:229
+#: src/MainWindow.vala:227
 msgid "Diagonal size:"
 msgstr ""
 
-#: src/MainWindow.vala:241
+#: src/MainWindow.vala:240
 msgid "Resolution:"
 msgstr ""
 
-#: src/MainWindow.vala:262
-msgid "DPI:"
-msgstr ""
-
-#: src/MainWindow.vala:265
-msgid "Aspect ratio:"
-msgstr ""
-
-#: src/MainWindow.vala:268
+#: src/MainWindow.vala:263
 msgid "×"
 msgstr ""
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:264
 msgid "px"
 msgstr ""
 
-#: src/MainWindow.vala:271
+#: src/MainWindow.vala:266
 msgid "inches"
 msgstr ""
 
-#: src/MainWindow.vala:274
+#: src/MainWindow.vala:269
 msgid "Type:"
 msgstr ""
 
-#: src/MainWindow.vala:422
-msgid " (HiDPI)"
+#: src/MainWindow.vala:426
+#, c-format
+msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:437
+#: src/MainWindow.vala:440
 msgid ":"
 msgstr ""
