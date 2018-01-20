@@ -24,8 +24,8 @@ public class MainWindow : Gtk.Window {
   private const int DEFAULT_ASPECT_HEIGHT = 9;
 
   private const int INTERNAL_IDEAL_DPI = 140;
-  private const int INTERNAL_IDEAL_RANGE = 20;
-  private const int INTERNAL_UNCLEAR_RANGE = 10;
+  private const int INTERNAL_IDEAL_RANGE = 16;
+  private const int INTERNAL_UNCLEAR_RANGE = 14;
 
   private const int EXTERNAL_IDEAL_DPI = 120;
   private const int EXTERNAL_IDEAL_RANGE = 30;
