@@ -1,0 +1,253 @@
+# Letzeburgesch translations for com.github.cassidyjames.dippi package.
+# Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.cassidyjames.dippi package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.cassidyjames.dippi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-20 00:00-0700\n"
+"PO-Revision-Date: 2018-01-20 00:00-0700\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:7
+#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:207
+msgid "Dippi"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:8
+#: data/com.github.cassidyjames.dippi.desktop.in:5
+msgid "Calculate display info like DPI and aspect ratio"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:10
+msgid ""
+"Analyze any display. Input a few simple details and figure out the aspect "
+"ratio, DPI, and other details of a particular display. Great for deciding "
+"which laptop or external monitor to purchase, and if it would be considered "
+"HiDPI."
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:11
+msgid "Handy features:"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:13
+msgid "Find out if a display is a good choice based on its size and resolution"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:14
+msgid "Get advice about different densities"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:15
+msgid "Differentiates between laptops and desktop displays"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:16
+msgid "Stupid simple: all in a cute li'l window"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:18
+msgid ""
+"Based on the expertise of Cassidy James Blaede and the actual logic System76 "
+"uses to determine screen size and resolution combinations."
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:19
+msgid "Tells you if a display‘s density is:"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:21
+msgid "Very Low DPI,"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:22
+msgid "Fairly Low DPI,"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:23
+msgid "Ideal for LoDPI,"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:24
+msgid "Potentially Problematic,"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:25
+msgid "Ideal for HiDPI,"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:26
+msgid "Fairly High for HiDPI, or"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:27 src/MainWindow.vala:72
+msgid "Too High DPI"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:29
+msgid "Special thanks:"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:31
+msgid "Micah Ilbery for the shiny icons!"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:32
+msgid "Daniel Foré for his apps to use as code examples"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:33
+msgid "David Jordan for helping determine DPI ranges"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:176
+msgid "Cassidy James Blaede"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.desktop.in:4
+msgid "Display information calculator"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.desktop.in:8
+msgid "com.github.cassidyjames.dippi"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.desktop.in:12
+msgid ""
+"DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
+"aspect;ratio;"
+msgstr ""
+
+#: src/MainWindow.vala:52
+msgid "Very Low DPI"
+msgstr ""
+
+#: src/MainWindow.vala:55
+msgid "Fairly Low DPI"
+msgstr ""
+
+#: src/MainWindow.vala:58
+msgid "Ideal for LoDPI"
+msgstr ""
+
+#: src/MainWindow.vala:63
+msgid "Potentially Problematic"
+msgstr ""
+
+#: src/MainWindow.vala:66
+msgid "Ideal for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:69
+msgid "Fairly High for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:75
+msgid "Analyze a Display"
+msgstr ""
+
+#: src/MainWindow.vala:85
+msgid ""
+"Text and UI are likely to be too big for typical viewing distances. Avoid if "
+"possible."
+msgstr ""
+
+#: src/MainWindow.vala:88
+msgid ""
+"Text and UI might be too big for typical viewing distances, but it's largely "
+"up to user preference and physical distance from the display."
+msgstr ""
+
+#: src/MainWindow.vala:91
+msgid ""
+"Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
+"viewing distances."
+msgstr ""
+
+#: src/MainWindow.vala:94
+msgid ""
+"Relatively high resolution, but not quite HiDPI. Text and UI may be too "
+"small by default, but forcing HiDPI would make them appear too large. The "
+"experience may be slightly improved by increasing the text size."
+msgstr ""
+
+#: src/MainWindow.vala:97
+msgid ""
+"HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
+"and increasing the text size might help."
+msgstr ""
+
+#: src/MainWindow.vala:100
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. This is the jackpot."
+msgstr ""
+
+#: src/MainWindow.vala:103
+msgid ""
+"Text and UI are likely to appear too small for typical viewing distances. "
+"Increasing the text size may help."
+msgstr ""
+
+#: src/MainWindow.vala:106
+msgid "Text and UI will appear too small for typical viewing distances."
+msgstr ""
+
+#: src/MainWindow.vala:109
+msgid ""
+"This display is in a very tricky range and is not likely to work well with "
+"integer scaling out of the box."
+msgstr ""
+
+#: src/MainWindow.vala:112
+msgid "Enter details about a display to analyze it."
+msgstr ""
+
+#: src/MainWindow.vala:152
+msgid "Laptop"
+msgstr ""
+
+#: src/MainWindow.vala:155
+msgid "Desktop"
+msgstr ""
+
+#: src/MainWindow.vala:227
+msgid "Diagonal size:"
+msgstr ""
+
+#: src/MainWindow.vala:240
+msgid "Resolution:"
+msgstr ""
+
+#: src/MainWindow.vala:263
+msgid "×"
+msgstr ""
+
+#: src/MainWindow.vala:264
+msgid "px"
+msgstr ""
+
+#: src/MainWindow.vala:266
+msgid "inches"
+msgstr ""
+
+#: src/MainWindow.vala:269
+msgid "Type:"
+msgstr ""
+
+#: src/MainWindow.vala:426
+#, c-format
+msgid "%d DPI"
+msgstr ""
+
+#: src/MainWindow.vala:440
+msgid ":"
+msgstr ""

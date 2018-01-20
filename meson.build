@@ -3,7 +3,7 @@ project('com.github.cassidyjames.dippi', 'vala', 'c')
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_global_arguments('-DGETTEXT_PACKAGE="' + meson.project_name() + '"', language:'c')
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 asresources = gnome.compile_resources(
   'as-resources', 'data/' + meson.project_name() + '.gresource.xml',
@@ -13,9 +13,9 @@ asresources = gnome.compile_resources(
 
 executable(
   meson.project_name(),
-  asresources,
   'src/Application.vala',
   'src/MainWindow.vala',
+  asresources,
   dependencies: [
     dependency('glib-2.0'),
     dependency('granite'),

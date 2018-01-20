@@ -37,6 +37,14 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.5.1" date="2018-01-19">
+      <description>
+        <ul>
+          <li>Added logical resolution</li>
+          <li>Cleaned up design by moving display details to below the analysis</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.0" date="2018-01-14">
       <description>
         <ul>

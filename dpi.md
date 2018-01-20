@@ -12,23 +12,23 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 |---------------|----------------------|----------------------|
 | Inferred size | < 18"                | 18+"                 |
 | Ideal anchor  | 140 DPI              | 120 DPI              |
-| Ideal range   | ±20 from anchor      | ±30 from anchor      |
-| Unclear range | ±10 outside of ideal | ±20 outside of ideal |
+| Ideal range   | ±16 from anchor      | ±30 from anchor      |
+| Unclear range | ±14 outside of ideal | ±20 outside of ideal |
 
 ## Laptops
 
 | DPI     | Resulting Range                |
 |---------|--------------------------------|
 | < 110   | Probably too low               |
-| 110–120 | Unclear (potentially too low)  |
-| 120–160 | Ideal loDPI                    |
-| 160–170 | Unclear (potentially too high) |
+| 110–124 | Unclear (potentially too low)  |
+| 124–156 | Ideal loDPI                    |
+| 156–170 | Unclear (potentially too high) |
 | 170–192 | Probably too high for loDPI    |
 |         |                                |
 | < 220   | Probably too low               |
-| 220–240 | Unclear (potentially too low)  |
-| 240–320 | Ideal HiDPI                    |
-| 320–340 | Unclear (potentially too high) |
+| 220–248 | Unclear (potentially too low)  |
+| 248–312 | Ideal HiDPI                    |
+| 312–340 | Unclear (potentially too high) |
 | > 340   | Probably too high              |
 
 

@@ -1,0 +1,4 @@
+data/com.github.cassidyjames.dippi.appdata.xml.in
+data/com.github.cassidyjames.dippi.desktop.in
+src/MainWindow.vala
+src/Application.vala
