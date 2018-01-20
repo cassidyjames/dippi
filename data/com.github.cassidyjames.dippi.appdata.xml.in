@@ -37,12 +37,19 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
-    <release version="2.5.1" date="2018-01-19">
+    <release version="2.5.1" date="2018-01-20">
       <description>
+        <p>Changes:</p>
         <ul>
-          <li>Added logical resolution</li>
-          <li>Cleaned up design by moving display details to below the analysis</li>
+          <li>Tweaked DPI ranges for internal displays to be a tiny more strict for the “ideal” range</li>
+          <li>Metadata additions and tweaks</li>
         </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Install all available icon sizes</li>
+          <li>Allow all languages to be translated</li>
+        </ul>
+        <p>And more! Read the recent blog post at goo.gl/tKwkq4</p>
       </description>
     </release>
     <release version="2.5.0" date="2018-01-14">
@@ -179,6 +186,6 @@
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
-    <value key="x-appcenter-suggested-price">4</value>
+    <value key="x-appcenter-suggested-price">3</value>
   </custom>
 </component>
