@@ -162,7 +162,7 @@ msgstr "Fairly High for HiDPI"
 
 #: src/MainWindow.vala:75
 msgid "Analyze a Display"
-msgstr "Analyze a Display"
+msgstr "Analyse a Display"
 
 #: src/MainWindow.vala:85
 msgid ""
@@ -236,7 +236,7 @@ msgstr ""
 
 #: src/MainWindow.vala:112
 msgid "Enter details about a display to analyze it."
-msgstr "Enter details about a display to analyze it."
+msgstr "Enter details about a display to analyse it."
 
 #: src/MainWindow.vala:152
 msgid "Laptop"
