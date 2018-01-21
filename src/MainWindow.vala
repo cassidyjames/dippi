@@ -183,6 +183,7 @@ public class MainWindow : Gtk.Window {
   private bool is_default_width = true;
   private bool is_default_height = true;
   private string direction = "";
+  private int scaling_factor = 1;
 
   private Gtk.Image diagram;
   private Gtk.Entry diag_entry;
@@ -195,6 +196,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label range_title_label;
   private Gtk.Label range_description_label;
   private Gtk.Image range_icon;
+  private Gtk.LevelBar range_bar;
   private Range range;
   private DisplayType display_type;
 
@@ -308,6 +310,8 @@ public class MainWindow : Gtk.Window {
     range_description_label.valign = Gtk.Align.START;
     range_description_label.label = Range.INVALID.description ();
 
+    range_bar = new Gtk.LevelBar ();
+
     diag_entry.changed.connect (() => {
       inches = double.parse (diag_entry.get_text ());
       assess_dpi (
@@ -365,7 +369,7 @@ public class MainWindow : Gtk.Window {
         default:
           assert_not_reached();
       }
-      
+
       assess_dpi (dpi (inches, width, height), display_type);
       set_display_icon ();
     });
@@ -404,6 +408,7 @@ public class MainWindow : Gtk.Window {
     assessment_grid.attach (aspect_result_label,      1, 2, 1, 1);
     assessment_grid.attach (dpi_result_label,         2, 2, 1, 1);
     assessment_grid.attach (logical_resolution_label, 3, 2, 1, 1);
+    assessment_grid.attach (range_bar,                0, 3, 4, 1);
 
     var main_layout = new Gtk.Grid ();
     main_layout.column_spacing = 6;
@@ -422,6 +427,12 @@ public class MainWindow : Gtk.Window {
   private int recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
       int calculated_dpi = dpi (inches, width, height);
+      
+      if (calculated_dpi >= DPI_INFER_HIDPI) {
+        scaling_factor = 2;
+      } else {
+        scaling_factor = 1;
+      }
 
       dpi_result_label.label = _("%d DPI").printf (calculated_dpi);
 
@@ -442,19 +453,14 @@ public class MainWindow : Gtk.Window {
   }
 
   private void recalculate_logical_resolution (int width, int height, int dpi) {
-    if (dpi >= DPI_INFER_HIDPI) {
-      int scaling_factor = 2;
-      int logical_width = (int)(width / scaling_factor);
-      int logical_height = (int)(height / scaling_factor);
+    int logical_width = (int)(width / scaling_factor);
+    int logical_height = (int)(height / scaling_factor);
 
-      logical_resolution_label.label = "%d×%d@%dx".printf (
-        logical_width,
-        logical_height,
-        scaling_factor
-      );
-    } else {
-      logical_resolution_label.label = "%d×%d".printf (width, height);
-    }
+    logical_resolution_label.label = "%d×%d@%dx".printf (
+      logical_width,
+      logical_height,
+      scaling_factor
+    );
   }
 
   private int dpi (double inches, int width, int height) {
@@ -524,6 +530,14 @@ public class MainWindow : Gtk.Window {
     range_icon.icon_name = range.icon ();
     range_title_label.label = range.title ();
     range_description_label.label = range.description ();
+    range_bar.min_value = (ideal_dpi - ideal_range - unclear_range) * scaling_factor;
+    range_bar.max_value = (ideal_dpi + ideal_range + unclear_range) * scaling_factor;
+
+    if (calculated_dpi > range_bar.max_value) {
+      range_bar.value = range_bar.max_value;
+    } else {
+      range_bar.value = calculated_dpi;
+    }
   }
 
   private DisplayType infer_display_type (double inches) {
