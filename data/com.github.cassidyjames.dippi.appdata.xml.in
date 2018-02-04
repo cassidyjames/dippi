@@ -37,6 +37,14 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.5.2" date="2018-02-04">
+      <description>
+        <p>Under the hood changes:</p>
+        <ul>
+          <li>Include success icon as a fallback for other icon sets</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.1" date="2018-01-20">
       <description>
         <p>Changes:</p>

@@ -71,12 +71,12 @@ While not officially supported, Dippi typically runs well on Ubuntu and other Ub
 
 Dippi has also been made unofficially available via the AUR for Arch Linux under the name `dippi`.
 
-A community-built and -maintained Flatpak is available on [Flathub](https://flathub.org/).
+A community-built and -maintained Flatpak will be made available on [Flathub](https://flathub.org/) after [flathub/flathub#226](https://github.com/flathub/flathub/pull/226) is merged. Do keep in mind that the app may not look or work as well without the elementary stylesheet and icons.
 
 
 ## Special Thanks
 
-- [Micah Ilbery](https://github.com/TraumaD) for the shiny new icons!
+- [Micah Ilbery](https://github.com/TraumaD) for the shiny icons!
 - [Daniel Foré](https://github.com/danrabbit) for his apps to use as code examples
 - [David Jordan](https://github.com/djordan2) for helping determine DPI ranges
 
