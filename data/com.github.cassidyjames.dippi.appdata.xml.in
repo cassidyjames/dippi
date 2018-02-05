@@ -37,6 +37,14 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   ​<releases>
+    <release version="2.5.3" date="2018-02-04">
+      <description>
+        <p>Fixed:</p>
+        <ul>
+          <li>Window no longer resizes when switching between analyses</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.2" date="2018-02-04">
       <description>
         <p>Under the hood changes:</p>
