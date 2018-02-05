@@ -391,7 +391,7 @@ public class MainWindow : Gtk.Window {
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
-    assessment_grid.halign = Gtk.Align.CENTER;
+    assessment_grid.halign = Gtk.Align.START;
     assessment_grid.margin = 12;
     assessment_grid.margin_top = 48;
     assessment_grid.row_spacing = 6;
@@ -407,7 +407,9 @@ public class MainWindow : Gtk.Window {
 
     var main_layout = new Gtk.Grid ();
     main_layout.column_spacing = 6;
+    main_layout.height_request = 258;
     main_layout.row_spacing = 6;
+    main_layout.width_request = 710;
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
 
