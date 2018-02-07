@@ -12,7 +12,8 @@
     <ul>
       <li>Find out if a display is a good choice based on its size and resolution</li>
       <li>Get advice about different densities</li>
-      <li>Differentiates between laptops and desktop displays</li>
+      <li>Learn the logical resolution</li>
+      <li>Differentiate between laptops and desktop displays</li>
       <li>Stupid simple: all in a cute li'l window</li>
     </ul>
     <p>Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.</p>
@@ -28,7 +29,7 @@
     </ul>
     <p>Special thanks:</p>
     <ul>
-      <li>Micah Ilbery for the shiny icons!</li>
+      <li>Micah Ilbery for the shiny icons</li>
       <li>Daniel Foré for his apps to use as code examples</li>
       <li>David Jordan for helping determine DPI ranges</li>
     </ul>
@@ -36,7 +37,12 @@
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
-  ​<releases>
+  <releases>
+    <release version="2.5.4" date="2018-02-07">
+      <description>
+        <p>AppData tweaks</p>
+      </description>
+    </release>
     <release version="2.5.3" date="2018-02-04">
       <description>
         <p>Fixed:</p>
@@ -202,6 +208,6 @@
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
-    <value key="x-appcenter-suggested-price">3</value>
+    <value key="x-appcenter-suggested-price">0</value>
   </custom>
 </component>
