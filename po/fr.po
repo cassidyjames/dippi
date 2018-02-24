@@ -101,37 +101,39 @@ msgstr "Un DPI trop haut"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:29
 msgid "Special thanks:"
-msgstr ""
+msgstr "Remerciements"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:31
 msgid "Micah Ilbery for the shiny icons!"
-msgstr ""
+msgstr "Micah Ilbery pour les magnifiques icones!"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:32
 msgid "Daniel Foré for his apps to use as code examples"
-msgstr ""
+msgstr "Daniel Foré pour ses exemples d'apps"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
 msgid "David Jordan for helping determine DPI ranges"
-msgstr ""
+msgstr "David Jordan pour son aide sur la détermination des aires DPI"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:176
 msgid "Cassidy James Blaede"
-msgstr ""
+msgstr "Cassidy James Blaede"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:4
 msgid "Display information calculator"
-msgstr ""
+msgstr "Affichage d'informations calculées"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
-msgstr ""
+msgstr "com.github.cassidyjames.dippi"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:12
 msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
+"DPI;densité;écran;résolution;largeure;hauteure;HiDPI;loDPI;aspect;"
+"ratio;"
 
 #: src/MainWindow.vala:52
 msgid "Very Low DPI"
@@ -159,25 +161,32 @@ msgstr ""
 
 #: src/MainWindow.vala:75
 msgid "Analyze a Display"
-msgstr ""
+msgstr "Analysez un Ecran"
 
 #: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
+"Le texte et l'interface peuvent être trop grands pour des distances de vue"
+"normale. Evitez si possible."
 
 #: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
+"Le texte et l'interface peuvent être trop grands pour des distances de vue "
+"normale, mais cela dépend en grande partie de la préférence de l'utilisateur "
+"et de la distance physique de l'écran."
 
 #: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 msgstr ""
+"Pas d'HiDPI, mais une densité agréable. Le texte et l'interface devraient "
+"être visible depuis une distance de vue normale."
 
 #: src/MainWindow.vala:94
 msgid ""
@@ -185,76 +194,90 @@ msgid ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
+"Résolution relativement haute, mais pas encore d'HiDPI. Le texte et "
+"l'interface sont peut être trop petites par défaut, mais forcer le HiDPI "
+"les ferait apparaitre trop large. Votre experience devrait être améliorée "
+"en augumentant la taille du texte"
 
 #: src/MainWindow.vala:97
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
+"HiDPI par défaut, mais la taille du texte et de l'interface peut apparaitre "
+"trop large. Enlever le HiDPI et augumenter la taille du texte devrait être "
+"un choix judicieux."
 
 #: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
 msgstr ""
+"Jackpot! Un HiDPI net, le texte et l'interface devraient être lisible "
+"avec une distance normale."
 
 #: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
+"Le texte et l'interface vont peut être apparaitre trop petits pour une "
+"distance de vue normale. Augumenter la taille du texte semble être une "
+"bonne idée."
 
 #: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
-msgstr ""
+msgstr "Le texte et l'interface apparaitront trop petites avec une distance de vue normale"
 
 #: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
+"Cet affichage est dans une gamme très délicate et n'est pas susceptible de "
+"bien fonctionner avec une mise à l'échelle par entiers hors de la boîte."
 
 #: src/MainWindow.vala:112
 msgid "Enter details about a display to analyze it."
-msgstr ""
+msgstr "Entrez les détails de l'écran pour l'analyser."
 
 #: src/MainWindow.vala:152
 msgid "Laptop"
-msgstr ""
+msgstr "Portable"
 
 #: src/MainWindow.vala:155
 msgid "Desktop"
-msgstr ""
+msgstr "Bureau"
 
 #: src/MainWindow.vala:227
 msgid "Diagonal size:"
-msgstr ""
+msgstr "Diagonale"
 
 #: src/MainWindow.vala:240
 msgid "Resolution:"
-msgstr ""
+msgstr "Résolution"
 
 #: src/MainWindow.vala:263
 msgid "×"
-msgstr ""
+msgstr "×"
 
 #: src/MainWindow.vala:264
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: src/MainWindow.vala:266
 msgid "inches"
-msgstr ""
+msgstr "pouces"
 
 #: src/MainWindow.vala:269
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 #: src/MainWindow.vala:426
 #, c-format
 msgid "%d DPI"
-msgstr ""
+msgstr "%d DPI"
 
 #: src/MainWindow.vala:440
 msgid ":"
-msgstr ""
+msgstr ":"
