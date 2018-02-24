@@ -20,12 +20,12 @@ msgstr ""
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
 #: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:207
 msgid "Dippi"
-msgstr ""
+msgstr "Dippi"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:8
 #: data/com.github.cassidyjames.dippi.desktop.in:5
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr ""
+msgstr "Calculez les informations de l'écran comme le DPI ou le ratio"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:10
 msgid ""
@@ -34,64 +34,70 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
+"Analysez n'importe quel écran. Entrez de simples détails à son propos et "
+"obtenez son ratio, son DPI, et d'autres détails. Ainsi, vous pourrez plus "
+"aisément décider quel ordinateur portable ou écran acheter, et savoir si "
+"il serait considéré comme HiDPI."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:11
 msgid "Handy features:"
-msgstr ""
+msgstr "Fonctionnalités utiles:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:13
 msgid "Find out if a display is a good choice based on its size and resolution"
-msgstr ""
+msgstr "Déterminez si un écran est un bon choix en vous basant sur sa diagonale et sa résolution"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:14
 msgid "Get advice about different densities"
-msgstr ""
+msgstr "Obtenez des conseils sur différentes densités d'écran"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
 msgid "Differentiates between laptops and desktop displays"
-msgstr ""
+msgstr "Différencie les écrans d'ordinateurs de bureau et portables"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
 msgid "Stupid simple: all in a cute li'l window"
-msgstr ""
+msgstr "Stupidement simple: tout dans une p'tite fenêtre toute mignone"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:18
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
+"Basé sur l'expertise de Cassidy James Blaede et sur la logique que System76"
+"utilise pour déterminer la résolution et la diagonale d'écran."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:19
 msgid "Tells you if a display‘s density is:"
-msgstr ""
+msgstr "Vous dit si la densité d'un écran a:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
 msgid "Very Low DPI,"
-msgstr ""
+msgstr "Un DPI très faible"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:22
 msgid "Fairly Low DPI,"
-msgstr ""
+msgstr "Un DPI plutôt faible"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23
 msgid "Ideal for LoDPI,"
-msgstr ""
+msgstr "Une densité idéale pour le LoDPI"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:24
 msgid "Potentially Problematic,"
-msgstr ""
+msgstr "Un DPI potentiellement problèmatique"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:25
 msgid "Ideal for HiDPI,"
-msgstr ""
+msgstr "Une densité idéale pour le HiDPI"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:26
 msgid "Fairly High for HiDPI, or"
-msgstr ""
+msgstr "Une densité plutôt haute pour le HiDPI"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:27 src/MainWindow.vala:72
 msgid "Too High DPI"
-msgstr ""
+msgstr "Un DPI trop haut"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:29
 msgid "Special thanks:"
