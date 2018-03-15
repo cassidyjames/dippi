@@ -1,7 +1,7 @@
 # EditorConfig <http://EditorConfig.org>
 root = true
 
-# elementary Default Style
+# elementary defaults
 [*]
 end_of_line = lf
 insert_final_newline = true
@@ -10,6 +10,10 @@ max_line_length = 80
 indent_style = space
 indent_size = tab
 tab_width = 4
+
+# My defaults because habit
+[{*.css,*.vala,*.xml}]
+tab_width = 2
 
 # Special cases
 [debian/**]
