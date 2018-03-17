@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cassidyjames/dippi.svg?branch=master)](https://travis-ci.org/cassidyjames/dippi)
+
 <p align="center">
   <img src="https://cdn.rawgit.com/cassidyjames/dippi/master/data/icons/128/com.github.cassidyjames.dippi.svg" alt="Icon" />
 </p>
