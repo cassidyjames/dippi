@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-20 00:00-0700\n"
+"POT-Creation-Date: 2018-03-19 21:12-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,68 +48,72 @@ msgid "Get advice about different densities"
 msgstr ""
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
-msgid "Differentiates between laptops and desktop displays"
+msgid "Learn the logical resolution"
 msgstr ""
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
+msgid "Differentiate between laptops and desktop displays"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:17
 msgid "Stupid simple: all in a cute li'l window"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:18
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:19
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:19
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid "Tells you if a display‘s density is:"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:21
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:22
 msgid "Very Low DPI,"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:22
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:23
 msgid "Fairly Low DPI,"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:23
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:24
 msgid "Ideal for LoDPI,"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:24
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:25
 msgid "Potentially Problematic,"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:25
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:26
 msgid "Ideal for HiDPI,"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:26
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:27
 msgid "Fairly High for HiDPI, or"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:27 src/MainWindow.vala:72
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:28 src/MainWindow.vala:72
 msgid "Too High DPI"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:29
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:30
 msgid "Special thanks:"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:31
-msgid "Micah Ilbery for the shiny icons!"
-msgstr ""
-
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:32
-msgid "Daniel Foré for his apps to use as code examples"
+msgid "Micah Ilbery for the shiny icons"
 msgstr ""
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
+msgid "Daniel Foré for his apps to use as code examples"
+msgstr ""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:34
 msgid "David Jordan for helping determine DPI ranges"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:176
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:215
 msgid "Cassidy James Blaede"
 msgstr ""
 
@@ -244,11 +248,11 @@ msgstr ""
 msgid "Type:"
 msgstr ""
 
-#: src/MainWindow.vala:426
+#: src/MainWindow.vala:428
 #, c-format
 msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:440
+#: src/MainWindow.vala:442
 msgid ":"
 msgstr ""
