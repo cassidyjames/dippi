@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:36-0600\n"
+"POT-Creation-Date: 2018-03-19 22:53-0600\n"
 "PO-Revision-Date: 2018-02-24 22:06-0700\n"
 "Last-Translator: ArthurS.\n"
 "Language-Team: none\n"
@@ -123,7 +123,7 @@ msgstr "Daniel Foré pour ses exemples d'apps"
 msgid "David Jordan for helping determine DPI ranges"
 msgstr "David Jordan pour son aide sur la détermination des aires DPI"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:215
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:220
 msgid "Cassidy James Blaede"
 msgstr "Cassidy James Blaede"
 
@@ -279,7 +279,7 @@ msgstr "Type:"
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:411
+#: src/MainWindow.vala:412
 msgid ":"
 msgstr ":"
 

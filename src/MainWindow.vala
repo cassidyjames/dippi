@@ -401,6 +401,7 @@ public class MainWindow : Gtk.Window {
     }
 
     dpi_result_label.label = "";
+    logical_resolution_label.label = "";
     return 0;
   }
 
@@ -409,22 +410,28 @@ public class MainWindow : Gtk.Window {
       aspect_width = width / Utils.greatest_common_divisor (width, height);
       aspect_height = height / Utils.greatest_common_divisor (width, height);
       aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+    } else {
+      aspect_result_label.label = "";
     }
   }
 
   private void recalculate_logical_resolution (int width, int height, int dpi) {
-    if (dpi >= DPI_INFER_HIDPI) {
-      int scaling_factor = 2;
-      int logical_width = (int)(width / scaling_factor);
-      int logical_height = (int)(height / scaling_factor);
+    if (width > 0 && height > 0) {
+      if (dpi >= DPI_INFER_HIDPI) {
+        int scaling_factor = 2;
+        int logical_width = (int)(width / scaling_factor);
+        int logical_height = (int)(height / scaling_factor);
 
-      logical_resolution_label.label = "%d×%d@%dx".printf (
-        logical_width,
-        logical_height,
-        scaling_factor
-      );
+        logical_resolution_label.label = "%d×%d@%dx".printf (
+          logical_width,
+          logical_height,
+          scaling_factor
+        );
+      } else {
+        logical_resolution_label.label = "%d×%d".printf (width, height);
+      }
     } else {
-      logical_resolution_label.label = "%d×%d".printf (width, height);
+      logical_resolution_label.label = "";
     }
   }
 
