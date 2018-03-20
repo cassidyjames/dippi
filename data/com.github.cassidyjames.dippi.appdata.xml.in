@@ -38,17 +38,18 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
-    <release version="2.6.0" date="2018-03-19">
+    <release version="2.6.1" date="2018-03-19">
       <description>
         <p>Translation &amp; Tweaks</p>
         <ul>
           <li>French translations</li>
-          <li>Fixed max length on width entry</li>
-          <li>Fixed displayed AppData</li>
+          <li>Hide labels when data is invalid</li>
+          <li>Fix max length on width entry</li>
+          <li>Fix displayed AppData</li>
         </ul>
         <p>Behind the scenes:</p>
         <ul>
-          <li>Added editorconfig and Travis for more consistency</li>
+          <li>Add editorconfig and Travis for more consistency</li>
           <li>Split utilities out into their own file</li>
         </ul>
       </description>
