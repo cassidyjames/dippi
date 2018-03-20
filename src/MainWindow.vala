@@ -251,7 +251,7 @@ public class MainWindow : Gtk.Window {
     });
 
     height_entry = new Gtk.Entry();
-    width_entry.max_length = 5;
+    height_entry.max_length = 5;
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
     height_entry.focus_in_event.connect ((event) => {
@@ -366,7 +366,7 @@ public class MainWindow : Gtk.Window {
           assert_not_reached();
       }
       
-      assess_dpi (dpi (inches, width, height), display_type);
+      assess_dpi (Utils.dpi (inches, width, height), display_type);
       set_display_icon ();
     });
 
@@ -423,7 +423,7 @@ public class MainWindow : Gtk.Window {
 
   private int recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
-      int calculated_dpi = dpi (inches, width, height);
+      int calculated_dpi = Utils.dpi (inches, width, height);
 
       dpi_result_label.label = _("%d DPI").printf (calculated_dpi);
 
@@ -437,8 +437,8 @@ public class MainWindow : Gtk.Window {
 
   private void recalculate_aspect (int width, int height) {
     if (width > 0 && height > 0) {
-      aspect_width = width / greatest_common_divisor (width, height);
-      aspect_height = height / greatest_common_divisor (width, height);
+      aspect_width = width / Utils.greatest_common_divisor (width, height);
+      aspect_height = height / Utils.greatest_common_divisor (width, height);
       aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
     }
   }
@@ -457,11 +457,6 @@ public class MainWindow : Gtk.Window {
     } else {
       logical_resolution_label.label = "%d×%d".printf (width, height);
     }
-  }
-
-  private int dpi (double inches, int width, int height) {
-    double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
-    return (int)unrounded_dpi;
   }
 
   private void assess_dpi (double calculated_dpi, DisplayType display_type) {
@@ -544,21 +539,5 @@ public class MainWindow : Gtk.Window {
 
   private void set_display_icon () {
     diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
-  }
-
-  private int greatest_common_divisor (int a, int b) {
-    if (a == 0) {
-      return b;
-    }
-
-    if (b == 0) {
-      return a;
-    }
-
-    if (a > b) {
-      return greatest_common_divisor(a % b, b);
-    } else {
-      return greatest_common_divisor(a, b % a);
-    }
   }
 }
