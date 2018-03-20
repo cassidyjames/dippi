@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:12-0600\n"
+"POT-Creation-Date: 2018-03-19 21:36-0600\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n==2 ? 1 : 2;\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
-#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:207
+#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
 msgid "Dippi"
 msgstr ""
 
@@ -216,43 +216,43 @@ msgstr ""
 msgid "Enter details about a display to analyze it."
 msgstr ""
 
-#: src/MainWindow.vala:152
-msgid "Laptop"
-msgstr ""
-
-#: src/MainWindow.vala:155
-msgid "Desktop"
-msgstr ""
-
-#: src/MainWindow.vala:227
+#: src/MainWindow.vala:196
 msgid "Diagonal size:"
 msgstr ""
 
-#: src/MainWindow.vala:240
+#: src/MainWindow.vala:209
 msgid "Resolution:"
 msgstr ""
 
-#: src/MainWindow.vala:263
+#: src/MainWindow.vala:232
 msgid "×"
 msgstr ""
 
-#: src/MainWindow.vala:264
+#: src/MainWindow.vala:233
 msgid "px"
 msgstr ""
 
-#: src/MainWindow.vala:266
+#: src/MainWindow.vala:235
 msgid "inches"
 msgstr ""
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:238
 msgid "Type:"
 msgstr ""
 
-#: src/MainWindow.vala:428
+#: src/MainWindow.vala:397
 #, c-format
 msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:442
+#: src/MainWindow.vala:411
 msgid ":"
+msgstr ""
+
+#: src/Utils.vala:30
+msgid "Laptop"
+msgstr ""
+
+#: src/Utils.vala:33
+msgid "Desktop"
 msgstr ""

@@ -20,6 +20,37 @@
 */
 
 namespace Utils {
+  public enum DisplayType {
+    INTERNAL,
+    EXTERNAL;
+
+    public string to_string () {
+      switch (this) {
+        case INTERNAL:
+          return _("Laptop");
+
+        case EXTERNAL:
+          return _("Desktop");
+
+        default:
+          assert_not_reached();
+      }
+    }
+
+    public string icon_suffix () {
+      switch (this) {
+        case INTERNAL:
+          return "-notebook";
+
+        case EXTERNAL:
+          return "";
+
+        default:
+          assert_not_reached();
+      }
+    }
+  }
+
   public int dpi (double inches, int width, int height) {
     double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
     int rounded_dpi = (int)unrounded_dpi;

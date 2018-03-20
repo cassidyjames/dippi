@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:12-0600\n"
+"POT-Creation-Date: 2018-03-19 21:36-0600\n"
 "PO-Revision-Date: 2018-01-15 02:18\n"
 "Last-Translator: ALAIN M. <alain23@protonmail.com>\n"
 "Language-Team: NONE\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
-#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:207
+#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
 msgid "Dippi"
 msgstr "Dippi"
 
@@ -243,46 +243,46 @@ msgstr ""
 msgid "Enter details about a display to analyze it."
 msgstr "Ingrese los detalles de una pantalla para analizar."
 
-#: src/MainWindow.vala:152
-msgid "Laptop"
-msgstr "Portátil"
-
-#: src/MainWindow.vala:155
-msgid "Desktop"
-msgstr "Escritorio"
-
-#: src/MainWindow.vala:227
+#: src/MainWindow.vala:196
 msgid "Diagonal size:"
 msgstr "Tamaño diagonal:"
 
-#: src/MainWindow.vala:240
+#: src/MainWindow.vala:209
 msgid "Resolution:"
 msgstr "Resolución:"
 
-#: src/MainWindow.vala:263
+#: src/MainWindow.vala:232
 msgid "×"
 msgstr "×"
 
-#: src/MainWindow.vala:264
+#: src/MainWindow.vala:233
 msgid "px"
 msgstr "px"
 
-#: src/MainWindow.vala:266
+#: src/MainWindow.vala:235
 msgid "inches"
 msgstr "pulgadas"
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:238
 msgid "Type:"
 msgstr "Tipo:"
 
-#: src/MainWindow.vala:428
+#: src/MainWindow.vala:397
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:442
+#: src/MainWindow.vala:411
 msgid ":"
 msgstr ":"
+
+#: src/Utils.vala:30
+msgid "Laptop"
+msgstr "Portátil"
+
+#: src/Utils.vala:33
+msgid "Desktop"
+msgstr "Escritorio"
 
 #~ msgid "DPI:"
 #~ msgstr "DPI"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:12-0600\n"
+"POT-Creation-Date: 2018-03-19 21:36-0600\n"
 "PO-Revision-Date: 2018-02-24 22:06-0700\n"
 "Last-Translator: ArthurS.\n"
 "Language-Team: none\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
-#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:207
+#: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
 msgid "Dippi"
 msgstr "Dippi"
 
@@ -55,7 +55,7 @@ msgstr "Obtenez des conseils sur différentes densités d'écran"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "Apprendre la résolution logique"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
 #, fuzzy
@@ -71,8 +71,8 @@ msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
-"Basé sur l'expertise de Cassidy James Blaede et sur la logique que "
-"System76utilise pour déterminer la résolution et la diagonale d'écran."
+"Basé sur l'expertise de Cassidy James Blaede et sur la logique que System76 "
+"utilise pour déterminer la résolution et la diagonale d'écran."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid "Tells you if a display‘s density is:"
@@ -113,7 +113,7 @@ msgstr "Remerciements"
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:32
 #, fuzzy
 msgid "Micah Ilbery for the shiny icons"
-msgstr "Micah Ilbery pour les magnifiques icones!"
+msgstr "Micah Ilbery pour les magnifiques icones"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
 msgid "Daniel Foré for his apps to use as code examples"
@@ -250,43 +250,43 @@ msgstr ""
 msgid "Enter details about a display to analyze it."
 msgstr "Entrez les détails de l'écran pour l'analyser."
 
-#: src/MainWindow.vala:152
-msgid "Laptop"
-msgstr "Portable"
-
-#: src/MainWindow.vala:155
-msgid "Desktop"
-msgstr "Bureau"
-
-#: src/MainWindow.vala:227
+#: src/MainWindow.vala:196
 msgid "Diagonal size:"
 msgstr "Diagonale"
 
-#: src/MainWindow.vala:240
+#: src/MainWindow.vala:209
 msgid "Resolution:"
 msgstr "Résolution"
 
-#: src/MainWindow.vala:263
+#: src/MainWindow.vala:232
 msgid "×"
 msgstr "×"
 
-#: src/MainWindow.vala:264
+#: src/MainWindow.vala:233
 msgid "px"
 msgstr "px"
 
-#: src/MainWindow.vala:266
+#: src/MainWindow.vala:235
 msgid "inches"
 msgstr "pouces"
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:238
 msgid "Type:"
 msgstr "Type:"
 
-#: src/MainWindow.vala:428
+#: src/MainWindow.vala:397
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:442
+#: src/MainWindow.vala:411
 msgid ":"
 msgstr ":"
+
+#: src/Utils.vala:30
+msgid "Laptop"
+msgstr "Portable"
+
+#: src/Utils.vala:33
+msgid "Desktop"
+msgstr "Bureau"

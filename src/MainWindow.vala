@@ -142,37 +142,6 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-  private enum DisplayType {
-    INTERNAL,
-    EXTERNAL;
-
-    public string to_string () {
-      switch (this) {
-        case INTERNAL:
-          return _("Laptop");
-
-        case EXTERNAL:
-          return _("Desktop");
-
-        default:
-          assert_not_reached();
-      }
-    }
-
-    public string icon_suffix () {
-      switch (this) {
-        case INTERNAL:
-          return "-notebook";
-
-        case EXTERNAL:
-          return "";
-
-        default:
-          assert_not_reached();
-      }
-    }
-  }
-
   private int aspect_width = DEFAULT_ASPECT_WIDTH;
   private int aspect_height = DEFAULT_ASPECT_HEIGHT;
 
@@ -196,7 +165,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label range_description_label;
   private Gtk.Image range_icon;
   private Range range;
-  private DisplayType display_type;
+  private Utils.DisplayType display_type;
 
   public MainWindow (Gtk.Application application) {
     Object (
@@ -270,8 +239,8 @@ public class MainWindow : Gtk.Window {
     type_label.halign = Gtk.Align.END;
 
     type_modebutton = new Granite.Widgets.ModeButton ();
-    type_modebutton.append_text (DisplayType.INTERNAL.to_string ());
-    type_modebutton.append_text (DisplayType.EXTERNAL.to_string ());
+    type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
+    type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
 
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
@@ -355,11 +324,11 @@ public class MainWindow : Gtk.Window {
     type_modebutton.mode_changed.connect (() => {
       switch (type_modebutton.selected) {
         case 0:
-          display_type = DisplayType.INTERNAL;
+          display_type = Utils.DisplayType.INTERNAL;
           break;
 
         case 1:
-          display_type = DisplayType.EXTERNAL;
+          display_type = Utils.DisplayType.EXTERNAL;
           break;
 
         default:
@@ -459,12 +428,12 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-  private void assess_dpi (double calculated_dpi, DisplayType display_type) {
+  private void assess_dpi (double calculated_dpi, Utils.DisplayType display_type) {
     int ideal_dpi = INTERNAL_IDEAL_DPI;
     int ideal_range = INTERNAL_IDEAL_RANGE;
     int unclear_range = INTERNAL_UNCLEAR_RANGE;
 
-    if (display_type == DisplayType.EXTERNAL ) {
+    if (display_type == Utils.DisplayType.EXTERNAL ) {
       ideal_dpi = EXTERNAL_IDEAL_DPI;
       ideal_range = EXTERNAL_IDEAL_RANGE;
       unclear_range = EXTERNAL_UNCLEAR_RANGE;
@@ -523,14 +492,14 @@ public class MainWindow : Gtk.Window {
     range_description_label.label = range.description ();
   }
 
-  private DisplayType infer_display_type (double inches) {
+  private Utils.DisplayType infer_display_type (double inches) {
     is_default_display_type = true;
 
     if (inches < 18) {
-      display_type = DisplayType.INTERNAL;
+      display_type = Utils.DisplayType.INTERNAL;
       type_modebutton.selected = 0;
     } else {
-      display_type = DisplayType.EXTERNAL;
+      display_type = Utils.DisplayType.EXTERNAL;
       type_modebutton.selected = 1;
     }
 
