@@ -142,37 +142,6 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-  private enum DisplayType {
-    INTERNAL,
-    EXTERNAL;
-
-    public string to_string () {
-      switch (this) {
-        case INTERNAL:
-          return _("Laptop");
-
-        case EXTERNAL:
-          return _("Desktop");
-
-        default:
-          assert_not_reached();
-      }
-    }
-
-    public string icon_suffix () {
-      switch (this) {
-        case INTERNAL:
-          return "-notebook";
-
-        case EXTERNAL:
-          return "";
-
-        default:
-          assert_not_reached();
-      }
-    }
-  }
-
   private int aspect_width = DEFAULT_ASPECT_WIDTH;
   private int aspect_height = DEFAULT_ASPECT_HEIGHT;
 
@@ -200,7 +169,7 @@ public class MainWindow : Gtk.Window {
   private Gtk.Label range_bar_min;
   private Gtk.Label range_bar_max;
   private Range range;
-  private DisplayType display_type;
+  private Utils.DisplayType display_type;
 
   public MainWindow (Gtk.Application application) {
     Object (
@@ -255,7 +224,7 @@ public class MainWindow : Gtk.Window {
     });
 
     height_entry = new Gtk.Entry();
-    width_entry.max_length = 5;
+    height_entry.max_length = 5;
     height_entry.max_width_chars = 5;
     height_entry.width_chars = 5;
     height_entry.focus_in_event.connect ((event) => {
@@ -274,8 +243,8 @@ public class MainWindow : Gtk.Window {
     type_label.halign = Gtk.Align.END;
 
     type_modebutton = new Granite.Widgets.ModeButton ();
-    type_modebutton.append_text (DisplayType.INTERNAL.to_string ());
-    type_modebutton.append_text (DisplayType.EXTERNAL.to_string ());
+    type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
+    type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
 
     aspect_result_label = new Gtk.Label (null);
     aspect_result_label.halign = Gtk.Align.START;
@@ -367,18 +336,18 @@ public class MainWindow : Gtk.Window {
     type_modebutton.mode_changed.connect (() => {
       switch (type_modebutton.selected) {
         case 0:
-          display_type = DisplayType.INTERNAL;
+          display_type = Utils.DisplayType.INTERNAL;
           break;
 
         case 1:
-          display_type = DisplayType.EXTERNAL;
+          display_type = Utils.DisplayType.EXTERNAL;
           break;
 
         default:
           assert_not_reached();
       }
 
-      assess_dpi (dpi (inches, width, height), display_type);
+      assess_dpi (Utils.dpi (inches, width, height), display_type);
       set_display_icon ();
     });
 
@@ -408,7 +377,7 @@ public class MainWindow : Gtk.Window {
 
     var assessment_grid = new Gtk.Grid ();
     assessment_grid.column_spacing = 12;
-    assessment_grid.halign = Gtk.Align.CENTER;
+    assessment_grid.halign = Gtk.Align.START;
     assessment_grid.margin = 12;
     assessment_grid.margin_top = 48;
     assessment_grid.row_spacing = 6;
@@ -425,7 +394,9 @@ public class MainWindow : Gtk.Window {
 
     var main_layout = new Gtk.Grid ();
     main_layout.column_spacing = 6;
+    main_layout.height_request = 258;
     main_layout.row_spacing = 6;
+    main_layout.width_request = 710;
     main_layout.attach (data_grid,       0, 0, 1, 1);
     main_layout.attach (assessment_grid, 1, 0, 1, 1);
 
@@ -439,7 +410,7 @@ public class MainWindow : Gtk.Window {
 
   private int recalculate_dpi (double inches, int width, int height) {
     if (inches > 0 && width > 0 && height > 0) {
-      int calculated_dpi = dpi (inches, width, height);
+      int calculated_dpi = Utils.dpi (inches, width, height);
 
       if (calculated_dpi >= DPI_INFER_HIDPI) {
         scaling_factor = 2;
@@ -459,8 +430,8 @@ public class MainWindow : Gtk.Window {
 
   private void recalculate_aspect (int width, int height) {
     if (width > 0 && height > 0) {
-      aspect_width = width / greatest_common_divisor (width, height);
-      aspect_height = height / greatest_common_divisor (width, height);
+      aspect_width = width / Utils.greatest_common_divisor (width, height);
+      aspect_height = height / Utils.greatest_common_divisor (width, height);
       aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
     }
   }
@@ -476,17 +447,12 @@ public class MainWindow : Gtk.Window {
     );
   }
 
-  private int dpi (double inches, int width, int height) {
-    double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
-    return (int)unrounded_dpi;
-  }
-
-  private void assess_dpi (double calculated_dpi, DisplayType display_type) {
+  private void assess_dpi (double calculated_dpi, Utils.DisplayType display_type) {
     int ideal_dpi = INTERNAL_IDEAL_DPI;
     int ideal_range = INTERNAL_IDEAL_RANGE;
     int unclear_range = INTERNAL_UNCLEAR_RANGE;
 
-    if (display_type == DisplayType.EXTERNAL ) {
+    if (display_type == Utils.DisplayType.EXTERNAL ) {
       ideal_dpi = EXTERNAL_IDEAL_DPI;
       ideal_range = EXTERNAL_IDEAL_RANGE;
       unclear_range = EXTERNAL_UNCLEAR_RANGE;
@@ -560,14 +526,14 @@ public class MainWindow : Gtk.Window {
     }
   }
 
-  private DisplayType infer_display_type (double inches) {
+  private Utils.DisplayType infer_display_type (double inches) {
     is_default_display_type = true;
 
     if (inches < INCHES_INFER_EXTERNAL) {
-      display_type = DisplayType.INTERNAL;
+      display_type = Utils.DisplayType.INTERNAL;
       type_modebutton.selected = 0;
     } else {
-      display_type = DisplayType.EXTERNAL;
+      display_type = Utils.DisplayType.EXTERNAL;
       type_modebutton.selected = 1;
     }
 
@@ -576,21 +542,5 @@ public class MainWindow : Gtk.Window {
 
   private void set_display_icon () {
     diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
-  }
-
-  private int greatest_common_divisor (int a, int b) {
-    if (a == 0) {
-      return b;
-    }
-
-    if (b == 0) {
-      return a;
-    }
-
-    if (a > b) {
-      return greatest_common_divisor(a % b, b);
-    } else {
-      return greatest_common_divisor(a, b % a);
-    }
   }
 }

@@ -12,7 +12,8 @@
     <ul>
       <li>Find out if a display is a good choice based on its size and resolution</li>
       <li>Get advice about different densities</li>
-      <li>Differentiates between laptops and desktop displays</li>
+      <li>Learn the logical resolution</li>
+      <li>Differentiate between laptops and desktop displays</li>
       <li>Stupid simple: all in a cute li'l window</li>
     </ul>
     <p>Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.</p>
@@ -28,7 +29,7 @@
     </ul>
     <p>Special thanks:</p>
     <ul>
-      <li>Micah Ilbery for the shiny icons!</li>
+      <li>Micah Ilbery for the shiny icons</li>
       <li>Daniel Foré for his apps to use as code examples</li>
       <li>David Jordan for helping determine DPI ranges</li>
     </ul>
@@ -36,7 +37,38 @@
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
-  ​<releases>
+  <releases>
+    <release version="2.5.6" date="2018-03-19">
+      <description>
+        <p>Translation &amp; Tweaks</p>
+        <ul>
+          <li>French translations</li>
+          <li>Behind-the-scenes changes: added editorconfig and Travis</li>
+          <li>Fixed displayed AppData</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.5.4" date="2018-02-07">
+      <description>
+        <p>AppData tweaks</p>
+      </description>
+    </release>
+    <release version="2.5.3" date="2018-02-04">
+      <description>
+        <p>Fixed:</p>
+        <ul>
+          <li>Window no longer resizes when switching between analyses</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.5.2" date="2018-02-04">
+      <description>
+        <p>Under the hood changes:</p>
+        <ul>
+          <li>Include success icon as a fallback for other icon sets</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.1" date="2018-01-20">
       <description>
         <p>Changes:</p>
@@ -186,6 +218,6 @@
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
-    <value key="x-appcenter-suggested-price">3</value>
+    <value key="x-appcenter-suggested-price">4</value>
   </custom>
 </component>
