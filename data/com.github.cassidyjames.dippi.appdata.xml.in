@@ -38,6 +38,16 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="2.5.5" date="2018-03-19">
+      <description>
+        <p>Translation & Tweaks</p>
+        <ul>
+          <li>French translations</li>
+          <li>Behind-the-scenes changes: added editorconfig and Travis</li>
+          <li>Fixed displayed AppData</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.4" date="2018-02-07">
       <description>
         <p>AppData tweaks</p>
@@ -208,6 +218,6 @@
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
-    <value key="x-appcenter-suggested-price">0</value>
+    <value key="x-appcenter-suggested-price">4</value>
   </custom>
 </component>
