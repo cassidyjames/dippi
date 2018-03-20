@@ -55,7 +55,7 @@ msgstr "Obtenez des conseils sur différentes densités d'écran"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "Apprendre la résolution logique"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
 #, fuzzy
@@ -72,7 +72,7 @@ msgid ""
 "uses to determine screen size and resolution combinations."
 msgstr ""
 "Basé sur l'expertise de Cassidy James Blaede et sur la logique que "
-"System76utilise pour déterminer la résolution et la diagonale d'écran."
+"System76 utilise pour déterminer la résolution et la diagonale d'écran."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid "Tells you if a display‘s density is:"
@@ -113,7 +113,7 @@ msgstr "Remerciements"
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:32
 #, fuzzy
 msgid "Micah Ilbery for the shiny icons"
-msgstr "Micah Ilbery pour les magnifiques icones!"
+msgstr "Micah Ilbery pour les magnifiques icones"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
 msgid "Daniel Foré for his apps to use as code examples"
