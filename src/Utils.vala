@@ -20,6 +20,13 @@
 */
 
 namespace Utils {
+  public int dpi (double inches, int width, int height) {
+    double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
+    int rounded_dpi = (int)unrounded_dpi;
+
+    return rounded_dpi;
+  }
+
   public int greatest_common_divisor (int a, int b) {
     if (a == 0) {
       return b;
