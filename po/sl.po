@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:24-0600\n"
+"POT-Creation-Date: 2018-03-19 21:36-0600\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -248,4 +248,12 @@ msgstr ""
 
 #: src/MainWindow.vala:411
 msgid ":"
+msgstr ""
+
+#: src/Utils.vala:30
+msgid "Laptop"
+msgstr ""
+
+#: src/Utils.vala:33
+msgid "Desktop"
 msgstr ""

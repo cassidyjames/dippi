@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:24-0600\n"
+"POT-Creation-Date: 2018-03-19 21:36-0600\n"
 "PO-Revision-Date: 2018-01-15 02:18\n"
 "Last-Translator: ALAIN M. <alain23@protonmail.com>\n"
 "Language-Team: NONE\n"
@@ -276,11 +276,13 @@ msgstr "%d DPI"
 msgid ":"
 msgstr ":"
 
-#~ msgid "Laptop"
-#~ msgstr "Portátil"
+#: src/Utils.vala:30
+msgid "Laptop"
+msgstr "Portátil"
 
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
+#: src/Utils.vala:33
+msgid "Desktop"
+msgstr "Escritorio"
 
 #~ msgid "DPI:"
 #~ msgstr "DPI"
