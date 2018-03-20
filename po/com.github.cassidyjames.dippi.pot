@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 21:36-0600\n"
+"POT-Creation-Date: 2018-03-19 22:53-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "David Jordan for helping determine DPI ranges"
 msgstr ""
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:215
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:220
 msgid "Cassidy James Blaede"
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:411
+#: src/MainWindow.vala:412
 msgid ":"
 msgstr ""
 
