@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">Dippi</h1>
 <p align="center">
-  <a href="https://appcenter.elementary.io/com.github.cassidyjames.dippi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+  <a href="https://appcenter.elementary.io/com.github.cassidyjames.dippi"><img src="https://appcenter.elementary.io/badge.svg?new" alt="Get it on AppCenter" /></a>
 </p>
 
 ![Screenshot](data/screenshot.png?raw=true)
@@ -42,7 +42,7 @@ Based on the expertise of Cassidy James Blaede and the actual logic System76 use
 
 Dippi is designed and developed on and for [elementary OS](https://elementary.io). Purchasing through AppCenter directly supports the development and ensures instant updates straight from me. Get it on AppCenter for the best experience.
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
 
 
 ## Developing and Building
@@ -85,4 +85,4 @@ A community-built and -maintained Flatpak is available on [Flathub](https://flat
 
 -----
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
