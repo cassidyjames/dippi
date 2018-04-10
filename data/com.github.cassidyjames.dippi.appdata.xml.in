@@ -38,6 +38,15 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="2.6.2" date="2018-04-10">
+      <description>
+        <p>Lithuanian Translation</p>
+        <ul>
+          <li>Lithuanian translation thanks to welaq</li>
+          <li>Fixed deprecation</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.6.1" date="2018-03-19">
       <description>
         <p>Translation &amp; Tweaks</p>
