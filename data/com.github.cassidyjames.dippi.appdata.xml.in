@@ -38,6 +38,11 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="2.6.3" date="2018-04-14">
+      <description>
+        <p>Added translation link to app data</p>
+      </description>
+    </release>
     <release version="2.6.2" date="2018-04-10">
       <description>
         <p>Lithuanian Translation</p>
