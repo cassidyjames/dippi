@@ -38,6 +38,12 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="2.6.4" date="2018-05-01">
+      <description>
+        <p>Add translation instructions and update translation link in app data</p>
+      </description>
+    </release>
+  <releases>
     <release version="2.6.3" date="2018-04-14">
       <description>
         <p>Added translation link to app data</p>
