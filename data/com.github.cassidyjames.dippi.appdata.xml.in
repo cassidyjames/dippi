@@ -241,7 +241,7 @@
   <developer_name>Cassidy James Blaede</developer_name>
   <url type="homepage">https://cassidyjames.com</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
-  <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po</url>
+  <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
