@@ -20,57 +20,61 @@
 */
 
 namespace Utils {
-  public enum DisplayType {
-    INTERNAL,
-    EXTERNAL;
+    public enum DisplayType {
+        INTERNAL,
+        EXTERNAL;
 
-    public string to_string () {
-      switch (this) {
-        case INTERNAL:
-          return _("Laptop");
+        public string to_string () {
+            switch (this) {
+                case INTERNAL:
+                    return _("Laptop");
 
-        case EXTERNAL:
-          return _("Desktop");
+                case EXTERNAL:
+                    return _("Desktop");
 
-        default:
-          assert_not_reached();
-      }
+                default:
+                    assert_not_reached();
+            }
+        }
+
+        public string icon_suffix () {
+            switch (this) {
+                case INTERNAL:
+                    return "-notebook";
+
+                case EXTERNAL:
+                    return "";
+
+                default:
+                    assert_not_reached();
+            }
+        }
     }
 
-    public string icon_suffix () {
-      switch (this) {
-        case INTERNAL:
-          return "-notebook";
+    public int dpi (double inches, int width, int height) {
+        double unrounded_dpi = Math.sqrt(
+            Math.pow (width, 2) +
+            Math.pow (height, 2)
+        ) / inches;
+        int rounded_dpi = (int)unrounded_dpi;
 
-        case EXTERNAL:
-          return "";
-
-        default:
-          assert_not_reached();
-      }
-    }
-  }
-
-  public int dpi (double inches, int width, int height) {
-    double unrounded_dpi = Math.sqrt( Math.pow (width, 2) + Math.pow (height, 2) ) / inches;
-    int rounded_dpi = (int)unrounded_dpi;
-
-    return rounded_dpi;
-  }
-
-  public int greatest_common_divisor (int a, int b) {
-    if (a == 0) {
-      return b;
+        return rounded_dpi;
     }
 
-    if (b == 0) {
-      return a;
-    }
+    public int greatest_common_divisor (int a, int b) {
+        if (a == 0) {
+            return b;
+        }
 
-    if (a > b) {
-      return greatest_common_divisor (a % b, b);
-    } else {
-      return greatest_common_divisor (a, b % a);
+        if (b == 0) {
+            return a;
+        }
+
+        if (a > b) {
+            return greatest_common_divisor (a % b, b);
+        } else {
+            return greatest_common_divisor (a, b % a);
+        }
     }
-  }
 }
+
