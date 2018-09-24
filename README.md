@@ -68,14 +68,7 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
 
 ## Other Platforms
 
-Dippi is made for elementary OS, but has been built and made available elsewhere by community members. These builds may have modifications or changes and **are not provided or supported by me**.
-
-While not officially supported, Dippi typically runs well on Ubuntu and other Ubuntu-based OSes like Pop!\_OS. You can download .deb files for 16.04+ [here](http://packages.elementary.io/appcenter/pool/main/c/com.github.cassidyjames.dippi/). This version will **not** get automatic updates.
-
-Dippi has also been made unofficially available via the AUR for Arch Linux under the name `dippi`.
-
-A community-built and -maintained Flatpak is available on [Flathub](https://flathub.org/). Do keep in mind that the app may not look or work as well without the elementary stylesheet and icons.
-
+Dippi is made for elementary OS, but may have been built and made available elsewhere by third-parties. These builds may have modifications or changes and **are not provided nor supported by me**. The only supported version is distributed via AppCenter on elementary OS.
 
 ## Special Thanks
 
