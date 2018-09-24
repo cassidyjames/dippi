@@ -10,7 +10,6 @@
 
 ![Screenshot](data/screenshot.png?raw=true)
 
-
 ## Calculate display info like DPI and aspect ratio
 
 Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.
@@ -24,7 +23,7 @@ Analyze any display. Input a few simple details and figure out the aspect ratio,
 - Stupid simple: all in a cute li'l window
 
 Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.
-    
+
 ### Tells you if a display’s density is:
 
 - Very Low DPI,
@@ -37,13 +36,13 @@ Based on the expertise of Cassidy James Blaede and the actual logic System76 use
 
 [Read about the design and development on Medium](https://medium.com/@cassidyjames/introducing-dippi-de2b526464ae)
 
-
 ## Made for [elementary OS](https://elementary.io)
 
 Dippi is designed and developed on and for [elementary OS](https://elementary.io). Purchasing through AppCenter directly supports the development and ensures instant updates straight from me. Get it on AppCenter for the best experience.
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
 
+Versions of Dippi may have been built and made available elsewhere by third-parties. These builds may have modifications or changes and **are not provided nor supported by me**. The only supported version is distributed via AppCenter on elementary OS.
 
 ## Developing and Building
 
@@ -64,11 +63,6 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
 
     sudo ninja install
     com.github.cassidyjames.dippi
-
-
-## Other Platforms
-
-Dippi is made for elementary OS, but may have been built and made available elsewhere by third-parties. These builds may have modifications or changes and **are not provided nor supported by me**. The only supported version is distributed via AppCenter on elementary OS.
 
 ## Special Thanks
 
