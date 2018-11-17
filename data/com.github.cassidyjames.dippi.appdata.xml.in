@@ -41,6 +41,11 @@
   </provides>
 
   <releases>
+    <release version="2.7.1" date="2018-11-16">
+      <description>
+        <p>Under-the-hood tweaks</p>
+      </description>
+    </release>
     <release version="2.7.0" date="2018-06-30">
       <description>
         <p>Hello, Juno!</p>
