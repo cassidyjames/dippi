@@ -262,7 +262,9 @@
   <url type="homepage">https://cassidyjames.com</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
   <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
-  <url type="donation">https://cassidyjames.com/pay/</url>
+  <url type="donation">https://cassidyjames.com/pay</url>
+  <url type="help">https://cassidyjames.com/support</url>
+  <url type="contact">https://cassidyjames.com/support</url>
 
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
