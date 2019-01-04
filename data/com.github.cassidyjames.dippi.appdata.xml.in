@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
-  <id>com.github.cassidyjames.dippi.desktop</id>
+  <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Dippi</name>
@@ -35,7 +35,8 @@
       <li>David Jordan for helping determine DPI ranges</li>
     </ul>
   </description>
-
+  <translation type="gettext">com.github.cassidyjames.dippi</translation>
+  <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
