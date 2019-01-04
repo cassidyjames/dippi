@@ -42,6 +42,11 @@
   </provides>
 
   <releases>
+    <release version="2.7.2" date="2019-01-04">
+      <description>
+        <p>Happy new year! Just some AppData fixes today. 😉</p>
+      </description>
+    </release>
     <release version="2.7.1" date="2018-11-16">
       <description>
         <p>Under-the-hood tweaks</p>
