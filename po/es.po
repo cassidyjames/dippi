@@ -1,21 +1,22 @@
-# SPANISH FOR DIPPI
+# Spanish translation for Dippi
 # Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # ALAIN M. <alain23@protonmail.com>, 2018.
+# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-22 23:36-0700\n"
-"PO-Revision-Date: 2018-01-15 02:18\n"
-"Last-Translator: ALAIN M. <alain23@protonmail.com>\n"
+"PO-Revision-Date: 2019-02-18 13:18-0600\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: NONE\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
 #: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
@@ -25,7 +26,7 @@ msgstr "Dippi"
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:8
 #: data/com.github.cassidyjames.dippi.desktop.in:5
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr ""
+msgstr "Cálculo de datos de la pantalla como los PPP y la relación de aspecto"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:11
 msgid ""
@@ -34,161 +35,167 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
+"Análisis de cualquier pantalla. Proporcione unos pocos datos y averigüe la "
+"relación de aspecto, los PPP y otros detalles sobre una pantalla concreta. "
+"Estupendo para decidir qué portátil o monitor externo comprar y si este "
+"puede considerarse de alta resolución."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:12
 msgid "Handy features:"
-msgstr ""
+msgstr "Funcionalidades útiles:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:14
 msgid "Find out if a display is a good choice based on its size and resolution"
 msgstr ""
+"Descubra si una pantalla es una buena elección en función de su tamaño y su "
+"resolución"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
 msgid "Get advice about different densities"
-msgstr ""
+msgstr "Obtenga orientaciones sobre las distintas densidades"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "Conozca la resolución lógica"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:17
 msgid "Differentiate between laptops and desktop displays"
-msgstr ""
+msgstr "Distinga las pantallas para portátiles de las de escritorio"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:18
 msgid "Stupid simple: all in a cute li'l window"
-msgstr ""
+msgstr "Sencillísimo: todo en una ventanita"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
+"Basada en los conocimientos técnicos de Cassidy James Blaede y la lógica que "
+"System76 emplea para verificar combinaciones de tamaño y resolución en las "
+"pantallas."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
 msgid "Tells you if a display‘s density is:"
-msgstr ""
+msgstr "Le dice si la densidad de una pantalla es:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23
-#, fuzzy
 msgid "Very Low DPI,"
-msgstr "DPI muy alto"
+msgstr "de muy pocos PPP,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:24
-#, fuzzy
 msgid "Fairly Low DPI,"
-msgstr "DPI muy bajo"
+msgstr "de PPP relativamente escasos,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:25
-#, fuzzy
 msgid "Ideal for LoDPI,"
-msgstr "Ideal para LoDPI"
+msgstr "ideal para resolución baja,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:26
-#, fuzzy
 msgid "Potentially Problematic,"
-msgstr "Potencialmente problemático"
+msgstr "potencialmente problemática,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:27
-#, fuzzy
 msgid "Ideal for HiDPI,"
-msgstr "Ideal para HiDPI"
+msgstr "ideal para resolución alta,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:28
-#, fuzzy
 msgid "Fairly High for HiDPI, or"
-msgstr "Bastante alto para HiDPI"
+msgstr "bastante elevada para resolución alta, o"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:29 src/MainWindow.vala:72
 msgid "Too High DPI"
-msgstr "DPI demasiado alto"
+msgstr "de PPP demasiado elevados"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:31
 msgid "Special thanks:"
-msgstr ""
+msgstr "Agradecimientos especiales:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
 msgid "Micah Ilbery for the shiny icons"
-msgstr ""
+msgstr "Micah Ilbery, por los relucientes iconos"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:34
 msgid "Daniel Foré for his apps to use as code examples"
 msgstr ""
+"Daniel Foré, por sus aplicaciones que sirvieron como ejemplo para mi código"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:35
 msgid "David Jordan for helping determine DPI ranges"
-msgstr ""
+msgstr "David Jordan, por su ayuda para determinar los intervalos de PPP"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:265
 msgid "Cassidy James Blaede"
-msgstr ""
+msgstr "Cassidy James Blaede"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:4
 msgid "Display information calculator"
-msgstr ""
+msgstr "Calculadora de datos de pantalla"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
-msgstr ""
+msgstr "com.github.cassidyjames.dippi"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:12
 msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
+"DPI;PPP;densidad;monitor;resolución;pantalla;anchura;altura;visualizador;"
+"HiDPI;loDPI;aspecto;relación;"
 
 #: src/MainWindow.vala:52
 msgid "Very Low DPI"
-msgstr "DPI muy alto"
+msgstr "PPP muy bajos"
 
 #: src/MainWindow.vala:55
 msgid "Fairly Low DPI"
-msgstr "DPI muy bajo"
+msgstr "PPP relativamente escasos"
 
 #: src/MainWindow.vala:58
 msgid "Ideal for LoDPI"
-msgstr "Ideal para LoDPI"
+msgstr "Ideal para resolución baja"
 
 #: src/MainWindow.vala:63
 msgid "Potentially Problematic"
-msgstr "Potencialmente problemático"
+msgstr "Potencialmente problemática"
 
 #: src/MainWindow.vala:66
 msgid "Ideal for HiDPI"
-msgstr "Ideal para HiDPI"
+msgstr "Ideal para resolución alta"
 
 #: src/MainWindow.vala:69
 msgid "Fairly High for HiDPI"
-msgstr "Bastante alto para HiDPI"
+msgstr "Bastante elevada para resolución alta"
 
 #: src/MainWindow.vala:75
 msgid "Analyze a Display"
-msgstr "Analice una pantalla"
+msgstr "Analizar una pantalla"
 
 #: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
-"El texto y la IU suelen ser demasiado grandes a una distancia típica de "
-"visualización, Evitelo si es posible."
+"Es probable que el texto y la interfaz resulten demasiado grandes a "
+"distancias de visión habituales. Evítela en lo posible."
 
 #: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
-"El texto y la IU se podría ver demasiado grande a una distancia típica de "
-"visualización, Pero es en gran medida de las preferencias del usuario y la "
-"distancia física de la pantalla."
+"El texto y la interfaz podrían ser demasiado grandes a distancias de visión "
+"habituales, pero depende en gran medida de la preferencia del usuario y de "
+"la distancia física con la pantalla."
 
 #: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 msgstr ""
-"No HiDPI, pero es un dulce y bonito lugar, El texto y la IU deberían ser "
-"legibles a una distancia típica de visualización."
+"No es de alta resolución, mas es un punto de equilibrio óptimo. El texto y "
+"la interfaz serán legibles a distancias de visión habituales."
 
 #: src/MainWindow.vala:94
 msgid ""
@@ -196,56 +203,58 @@ msgid ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
-"Resolución relativamente alta, pero no del todo HiDPI, El Texto y UI se "
-"podrian ver demasiado pequeño por defecto, forzar HiDPI lo haría ver "
-"demasiado grande. Laexperiencia puede ser ligeramente mejorada aumentando el "
-"tamaño del texto."
+"La resolución es relativamente elevada sin ser «de alta resolución». Es "
+"probable que el texto y la interfaz resulten muy pequeños de manera "
+"predeterminada, y forzar una escala superior los agrandaría demasiado. Si "
+"aumenta el tamaño del texto, la experiencia puede mejorar un poco."
 
 #: src/MainWindow.vala:97
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
-"HiDPI por defecto, pero el texto y la IU se podrian ver demasiado grande, "
-"Desactivar HiDPI y aumentar el tamaño del texto podrían ayudar."
+"Alta resolución de manera predeterminada, pero el texto y la interfaz pueden "
+"mostrarse demasiado grandes. Considere desactivar el modo de alta resolución "
+"y aumentar el tamaño del texto."
 
 #: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
 msgstr ""
-"El Texto y la IU de HiDPI se veran nítidos junto con un tamaño legible a una "
-"distancia típicas de visualización. Este es el premio mayor."
+"El texto y la interfaz de alta resolución se mostrarán nítidos a distancias "
+"de visión habituales. Este es el premio mayor."
 
 #: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
-"Es probable que el texto y la IU se muestren demasiado pequeños a una "
-"distancia típica de visualización.Aumentar el tamaño del texto puedria "
-"ayudar."
+"Es probable que el texto y la interfaz resulten demasiado pequeños a "
+"distancias de visión habituales. Considere aumentar el tamaño del texto."
 
 #: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
 msgstr ""
-"El texto y la IU se verán demasiado pequeños a una distancia típica de "
-"visualización."
+"El texto y la interfaz se mostrarán demasiado pequeños a distancias de "
+"visión habituales."
 
 #: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
-"Esta pantalla está en un rango muy alto, es probable que no funcione bien"
+"Esta pantalla se encuentra en un intervalo muy intricado y podría no "
+"funcionar adecuadamente con el ajuste de escala por enteros a la primera "
+"instalación."
 
 #: src/MainWindow.vala:112
 msgid "Enter details about a display to analyze it."
-msgstr "Ingrese los detalles de una pantalla para analizar."
+msgstr "Ingrese los datos de una pantalla para analizarla."
 
 #: src/MainWindow.vala:196
 msgid "Diagonal size:"
-msgstr "Tamaño diagonal:"
+msgstr "Diagonal:"
 
 #: src/MainWindow.vala:209
 msgid "Resolution:"
@@ -270,7 +279,7 @@ msgstr "Tipo:"
 #: src/MainWindow.vala:408
 #, c-format
 msgid "%d DPI"
-msgstr "%d DPI"
+msgstr "%d PPP"
 
 #: src/MainWindow.vala:423
 msgid ":"
