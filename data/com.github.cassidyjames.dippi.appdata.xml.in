@@ -42,6 +42,15 @@
   </provides>
 
   <releases>
+    <release version="2.7.3" date="2019-04-09">
+      <description>
+        <p>Updated translations</p>
+        <ul>
+          <li>Updated Spanish translations thanks to Adolfo Jayme-Barrientos</li>
+          <li>Hallo! Dutch translations thanks to Heimen Stoffels</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.7.2" date="2019-01-04">
       <description>
         <p>Happy new year! Just some AppData fixes today. 😉</p>
