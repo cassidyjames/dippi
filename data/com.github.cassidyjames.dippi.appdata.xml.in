@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
-  <id>com.github.cassidyjames.dippi.desktop</id>
+  <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Dippi</name>
@@ -35,12 +35,18 @@
       <li>David Jordan for helping determine DPI ranges</li>
     </ul>
   </description>
-
+  <translation type="gettext">com.github.cassidyjames.dippi</translation>
+  <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
 
   <releases>
+    <release version="2.7.2" date="2019-01-04">
+      <description>
+        <p>Happy new year! Just some AppData fixes today. 😉</p>
+      </description>
+    </release>
     <release version="2.7.1" date="2018-11-16">
       <description>
         <p>Under-the-hood tweaks</p>
@@ -261,6 +267,9 @@
   <url type="homepage">https://cassidyjames.com</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
   <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
+  <url type="donation">https://cassidyjames.com/pay</url>
+  <url type="help">https://cassidyjames.com/support</url>
+  <!--url type="contact">https://cassidyjames.com/support</url-->
 
   <custom>
     <value key="x-appcenter-color-primary">#525</value>

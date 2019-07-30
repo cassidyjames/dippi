@@ -47,3 +47,4 @@ if appstreamcli.found()
     args: ['validate', join_paths(meson.current_build_dir (), meson.project_name() + '.appdata.xml')]
   )
 endif
+
