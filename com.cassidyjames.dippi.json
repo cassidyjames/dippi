@@ -1,0 +1,36 @@
+{
+    "app-id" : "com.github.cassidyjames.dippi",
+    "runtime" : "io.elementary.Platform",
+    "runtime-version" : "daily",
+    "sdk" : "io.elementary.Sdk",
+    "command" : "com.github.cassidyjames.dippi",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland"
+    ],
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+        {
+            "name" : "dippi",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/cassidyjames/dippi.git",
+                    "branch" : "main"
+                }
+            ]
+        }
+    ]
+}
