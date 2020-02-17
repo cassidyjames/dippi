@@ -1,3 +1,17 @@
+com.github.cassidyjames.dippi (2.7.4) xenial; urgency=medium
+
+  * Release 2.7.4 (#76)
+  * Update translation template
+  * Create release.yml
+  * Create lint.yml
+  * Create gettext.yml
+  * Create compress-images.yml
+  * Remove debian packaging from in-tree
+  * Update .travis.yml
+  * Prefer dark (#72)
+
+ -- Cassidy James Blaede <c@ssidyjam.es>  Mon, 17 Feb 2020 22:53:11 +0000
+
 com.github.cassidyjames.dippi (2.2.1) xenial; urgency=medium
 
   * Select between laptop or desktop
