@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2018 Cassidy James Blaede (https://cassidyjames.com)
+* Copyright © 2018–2020 Cassidy James Blaede (https://cassidyjames.com)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -75,7 +75,7 @@ public class MainWindow : Gtk.Window {
                     return _("Analyze a Display");
 
                 default:
-                        assert_not_reached();
+                        assert_not_reached ();
             }
         }
 
@@ -112,7 +112,7 @@ public class MainWindow : Gtk.Window {
                     return _("Enter details about a display to analyze it.");
 
                 default:
-                        assert_not_reached();
+                        assert_not_reached ();
             }
         }
 
@@ -137,7 +137,7 @@ public class MainWindow : Gtk.Window {
                     return "dialog-information";
 
                 default:
-                        assert_not_reached();
+                        assert_not_reached ();
             }
         }
     }
@@ -196,7 +196,7 @@ public class MainWindow : Gtk.Window {
         var diag_label = new Gtk.Label (_("Diagonal size:"));
         diag_label.halign = Gtk.Align.END;
 
-        diag_entry = new Gtk.Entry();
+        diag_entry = new Gtk.Entry ();
         diag_entry.max_length = 5;
         diag_entry.max_width_chars = 5;
         diag_entry.width_chars = 5;
@@ -209,7 +209,7 @@ public class MainWindow : Gtk.Window {
         var res_label = new Gtk.Label (_("Resolution:"));
         res_label.halign = Gtk.Align.END;
 
-        width_entry = new Gtk.Entry();
+        width_entry = new Gtk.Entry ();
         width_entry.max_length = 5;
         width_entry.max_width_chars = 5;
         width_entry.width_chars = 5;
@@ -219,7 +219,7 @@ public class MainWindow : Gtk.Window {
             return focus_in_event (event);
         });
 
-        height_entry = new Gtk.Entry();
+        height_entry = new Gtk.Entry ();
         height_entry.max_length = 5;
         height_entry.max_width_chars = 5;
         height_entry.width_chars = 5;
@@ -300,7 +300,7 @@ public class MainWindow : Gtk.Window {
             );
 
             if (!height_entry.has_focus && (is_default_height || height == 0)) {
-                double calculated_height = Math.round(
+                double calculated_height = Math.round (
                     width *
                     DEFAULT_ASPECT_HEIGHT /
                     DEFAULT_ASPECT_WIDTH
@@ -322,7 +322,7 @@ public class MainWindow : Gtk.Window {
             );
 
             if (!width_entry.has_focus && (is_default_width || width == 0)) {
-                double calculated_width = Math.round(
+                double calculated_width = Math.round (
                     height *
                     DEFAULT_ASPECT_WIDTH /
                     DEFAULT_ASPECT_HEIGHT
@@ -343,7 +343,7 @@ public class MainWindow : Gtk.Window {
                     break;
 
                 default:
-                    assert_not_reached();
+                    assert_not_reached ();
             }
 
             assess_dpi (Utils.dpi (inches, width, height), display_type);
@@ -357,17 +357,17 @@ public class MainWindow : Gtk.Window {
         data_grid.row_spacing = 6;
         data_grid.get_style_context ().add_class ("data-grid");
 
-        data_grid.attach (diagram,         0, 0, 5, 1);
-        data_grid.attach (diag_label,      0, 1, 1, 1);
-        data_grid.attach (diag_entry,      1, 1, 1, 1);
-        data_grid.attach (inches_label,    2, 1, 2, 1);
-        data_grid.attach (res_label,       0, 2, 1, 1);
-        data_grid.attach (width_entry,     1, 2, 1, 1);
-        data_grid.attach (x_label,         2, 2, 1, 1);
-        data_grid.attach (height_entry,    3, 2, 1, 1);
-        data_grid.attach (px_label,        4, 2, 1, 1);
-        data_grid.attach (type_label,      0, 3, 1, 1);
-        data_grid.attach (type_modebutton, 1, 3, 4, 1);
+        data_grid.attach (diagram, 0, 0, 5);
+        data_grid.attach (diag_label, 0, 1);
+        data_grid.attach (diag_entry, 1, 1);
+        data_grid.attach (inches_label, 2, 1, 2);
+        data_grid.attach (res_label, 0, 2);
+        data_grid.attach (width_entry, 1, 2);
+        data_grid.attach (x_label, 2, 2);
+        data_grid.attach (height_entry, 3, 2);
+        data_grid.attach (px_label, 4, 2);
+        data_grid.attach (type_label, 0, 3);
+        data_grid.attach (type_modebutton, 1, 3, 4);
 
         var assessment_grid = new Gtk.Grid ();
         assessment_grid.column_spacing = 12;
@@ -378,20 +378,20 @@ public class MainWindow : Gtk.Window {
         assessment_grid.valign = Gtk.Align.START;
         assessment_grid.get_style_context ().add_class ("assessment-grid");
 
-        assessment_grid.attach (range_icon,               0, 0, 1, 2);
-        assessment_grid.attach (range_title_label,        1, 0, 3, 1);
-        assessment_grid.attach (range_description_label,  1, 1, 3, 1);
-        assessment_grid.attach (aspect_result_label,      1, 2, 1, 1);
-        assessment_grid.attach (dpi_result_label,         2, 2, 1, 1);
-        assessment_grid.attach (logical_resolution_label, 3, 2, 1, 1);
+        assessment_grid.attach (range_icon, 0, 0, 1, 2);
+        assessment_grid.attach (range_title_label, 1, 0, 3);
+        assessment_grid.attach (range_description_label, 1, 1, 3);
+        assessment_grid.attach (aspect_result_label, 1, 2);
+        assessment_grid.attach (dpi_result_label, 2, 2);
+        assessment_grid.attach (logical_resolution_label, 3, 2);
 
         var main_layout = new Gtk.Grid ();
         main_layout.column_spacing = 6;
         main_layout.height_request = 258;
         main_layout.row_spacing = 6;
         main_layout.width_request = 710;
-        main_layout.attach (data_grid,             0, 0, 1, 1);
-        main_layout.attach (assessment_grid, 1, 0, 1, 1);
+        main_layout.attach (data_grid, 0, 0);
+        main_layout.attach (assessment_grid, 1, 0);
 
         diag_entry.grab_focus ();
 
@@ -528,4 +528,3 @@ public class MainWindow : Gtk.Window {
         diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
     }
 }
-

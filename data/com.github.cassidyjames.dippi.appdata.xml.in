@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Cassidy James Blaede <c@ssidyjam.es> -->
+<!-- Copyright 2018–2020 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
   <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Dippi</name>
   <summary>Calculate display info like DPI and aspect ratio</summary>
-
   <description>
     <p>Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
     <p>Handy features:</p>
@@ -40,8 +39,12 @@
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
-
   <releases>
+    <release version="2.7.4" date="2020-02-17">
+      <description>
+        <p>Code style and organization fixes</p>
+      </description>
+    </release>
     <release version="2.7.3" date="2019-04-09">
       <description>
         <p>Updated translations</p>
@@ -225,7 +228,6 @@
       </description>
     </release>
   </releases>
-
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot.png</image>
@@ -240,7 +242,6 @@
       <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot-4.png</image>
     </screenshot>
   </screenshots>
-
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
@@ -270,20 +271,16 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-
   <developer_name>Cassidy James Blaede</developer_name>
-
   <url type="homepage">https://cassidyjames.com</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
   <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
   <url type="donation">https://cassidyjames.com/pay</url>
   <url type="help">https://cassidyjames.com/support</url>
   <!--url type="contact">https://cassidyjames.com/support</url-->
-
   <custom>
     <value key="x-appcenter-color-primary">#525</value>
     <value key="x-appcenter-color-primary-text">#fffffc</value>
     <value key="x-appcenter-suggested-price">4</value>
   </custom>
 </component>
-

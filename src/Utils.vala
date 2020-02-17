@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2018 Cassidy James Blaede (https://cassidyjames.com)
+* Copyright © 2018–2020 Cassidy James Blaede (https://cassidyjames.com)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -33,7 +33,7 @@ namespace Utils {
                     return _("Desktop");
 
                 default:
-                    assert_not_reached();
+                    assert_not_reached ();
             }
         }
 
@@ -46,13 +46,13 @@ namespace Utils {
                     return "";
 
                 default:
-                    assert_not_reached();
+                    assert_not_reached ();
             }
         }
     }
 
     public int dpi (double inches, int width, int height) {
-        double unrounded_dpi = Math.sqrt(
+        double unrounded_dpi = Math.sqrt (
             Math.pow (width, 2) +
             Math.pow (height, 2)
         ) / inches;
@@ -77,4 +77,3 @@ namespace Utils {
         }
     }
 }
-

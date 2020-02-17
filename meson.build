@@ -1,4 +1,8 @@
-project('com.github.cassidyjames.dippi', 'vala', 'c')
+project(
+    'com.github.cassidyjames.dippi',
+    'vala', 'c',
+    version: '2.7.4'
+)
 
 gnome = import('gnome')
 i18n = import('i18n')
