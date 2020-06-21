@@ -1,7 +1,7 @@
 name: Gettext updates
 on:
   push:
-    branches: master
+    branches: main
 jobs:
   gettext_template:
     runs-on: ubuntu-latest
@@ -10,3 +10,5 @@ jobs:
     - uses: elementary/actions/gettext-template@master
       env:
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+      with:
+        translation_branch: 'main'
