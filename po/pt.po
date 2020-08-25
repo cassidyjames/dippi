@@ -1,21 +1,22 @@
 # Portuguese translations for com.github.cassidyjames.dippi package.
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
-# Automatically generated, 2018.
+# Diogo Oliveira (https://drom98.github.com), 2028.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 23:36-0700\n"
-"PO-Revision-Date: 2018-08-24 00:00-0700\n"
-"Last-Translator: Diogo Oliveira (https://drom98.github.com)\n"
+"POT-Creation-Date: 2020-02-17 22:52+0000\n"
+"PO-Revision-Date: 2020-08-25 14:15+0100\n"
 "Language-Team: none\n"
-"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
 #: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
@@ -25,107 +26,355 @@ msgstr "Dippi"
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:8
 #: data/com.github.cassidyjames.dippi.desktop.in:5
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr "Calcula informações como DPI e o Aspect Ratio"
+msgstr "Calcule informação do monitor como o DPI e a relação de aspeto"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:11
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:10
 msgid ""
 "Analyze any display. Input a few simple details and figure out the aspect "
 "ratio, DPI, and other details of a particular display. Great for deciding "
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
-"Analise qualquer monitor. Insira alguns simples detalhes e descubra o aspect "
-"ratio, o DPI, e outras informações.Ideal para ajudar a decidir que "
-"computador portátil ou monitor comprar, e se pode ser considerado HiDPI ou "
-"não."
+"Analisa um monitor qualquer. Insira alguns detalhes simples e descubra a "
+"relação de aspeto, DPI e outros detalhes de um monitor em particular. É "
+"ótimo para decidir qual o computador portátil ou monitor a comprar e se é "
+"considerado HiDPI."
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:12
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:11
 msgid "Handy features:"
-msgstr "Recursos interessantes:"
+msgstr "Funcionalidades úteis:"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:14
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:13
 msgid "Find out if a display is a good choice based on its size and resolution"
 msgstr ""
-"Descubra se um monitor é uma boa escolha baseado no seu tamanho e resolução"
+"Descubra se o monitor é a escolha correta baseando-se no seu tamanho e "
+"resolução"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:14
+msgid "Get advice about different densities"
+msgstr "Obtenha conselhos sobre densidades diferentes"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
-msgid "Get advice about different densities"
-msgstr "Obtenha dicas sobre diferentes densidades"
+msgid "Learn the logical resolution"
+msgstr "Aprenda a resolução lógica"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
-msgid "Learn the logical resolution"
-msgstr "Aprenda sobre logical resolution"
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:190
+msgid "Differentiate between laptops and desktop displays"
+msgstr "Diferencie entre computadores portáteis e monitores de secretária"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:17
-msgid "Differentiate between laptops and desktop displays"
-msgstr ""
-"Diferenciar entre monitores de portáteis ou de monitores de secretária."
-
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:18
 msgid "Stupid simple: all in a cute li'l window"
-msgstr "Estupidamente simples: tudo numa janela pequenina"
+msgstr "Estupidamente simples: tudo numa pequena e engraçada janela"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:20
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:19
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
+"Baseado na experiência de Cassidy James Blaede e na lógica em si que o "
+"System76 usa para determinar combinações de tamanho do ecrã e resolução."
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:21
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid "Tells you if a display‘s density is:"
-msgstr "Informa se a densidade do ecrâ é:"
+msgstr "Diz-lhe se a densidade do monitor é:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:22
+msgid "Very Low DPI,"
+msgstr "DPI Muito Baixo,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23
-msgid "Very Low DPI,"
-msgstr "Muito Baixo DPI"
+msgid "Fairly Low DPI,"
+msgstr "DPI Baixo,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:24
-msgid "Fairly Low DPI,"
-msgstr "Relativamente Baixo DPI"
+msgid "Ideal for LoDPI,"
+msgstr "Ideal para LoDPI,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:25
-msgid "Ideal for LoDPI,"
-msgstr "Ideal para LoDPI"
-
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:26
 msgid "Potentially Problematic,"
 msgstr "Potencialmente Problemático"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:27
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:26
 msgid "Ideal for HiDPI,"
-msgstr "Ideal para HiDPI"
+msgstr "Ideal para HiDPI,"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:28
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:27
 msgid "Fairly High for HiDPI, or"
-msgstr "Relativamente Alto para HiDPI, ou"
+msgstr "Razoavelmente Alto para HiDPI, ou"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:29 src/MainWindow.vala:72
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:28 src/MainWindow.vala:72
 msgid "Too High DPI"
-msgstr "Demasiado Alto DPI"
+msgstr "DPI Demasiado Alto"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:31
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:30
 msgid "Special thanks:"
-msgstr "Obrigado especial"
+msgstr "Obrigado especial:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:32
+msgid "Micah Ilbery for the shiny icons"
+msgstr "Micah Ilbery pelos ícones brilhantes"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
-msgid "Micah Ilbery for the shiny icons"
-msgstr "Micah Ilbery pelos icons"
+msgid "Daniel Foré for his apps to use as code examples"
+msgstr "Daniel Foré pelas suas aplicações usadas como exemplo de código"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:34
-msgid "Daniel Foré for his apps to use as code examples"
-msgstr "Daniel Foré pelas suas apps que usei como exemplos"
-
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:35
 msgid "David Jordan for helping determine DPI ranges"
-msgstr "David Jordan por ajudar a determinar o alcance dos DPI"
+msgstr "David Jordan por ajudar a determinar o alcance do DPI"
 
-#: data/com.github.cassidyjames.dippi.appdata.xml.in:265
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:45
+msgid "Code style and organization fixes"
+msgstr "Correções do estilo de código e organização"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:50
+msgid "Updated translations"
+msgstr "Traduções atualizadas"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:52
+msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
+msgstr "Tradução Espanhola atualizada graças a Adolfo Jayme-Barrientos"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:53
+msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
+msgstr "Hallo! Tradução Holandesa graças a Heimen Stoffels"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:59
+msgid "Happy new year! Just some AppData fixes today. 😉"
+msgstr ""
+"Feliz ano novo! Somente algumas correções hoje nos dados da aplicação. 😉"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:64
+msgid "Under-the-hood tweaks"
+msgstr "Ajustes de código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:69
+msgid "Hello, Juno!"
+msgstr "Olá, Juno!"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:71
+msgid "Update translation link"
+msgstr "Link de tradução atualizado"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:72
+msgid "Under the hood cleanup"
+msgstr "Limpeza de código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:78
+msgid "Add translation instructions and update translation link in app data"
+msgstr ""
+"Instruções de tradução adicionadas e atualização do link de tradução nos "
+"dados da aplicação"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:83
+msgid "Added translation link to app data"
+msgstr "Link de tradução adicionado aos dados da aplicação"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:88
+msgid "Lithuanian Translation"
+msgstr "Tradução Lituana"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:90
+msgid "Lithuanian translation thanks to welaq"
+msgstr "Tradução Lituana graças a welaq"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:91
+msgid "Fixed deprecation"
+msgstr "Depreciação corrigida"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:97
+msgid "Translation &amp; Tweaks"
+msgstr "Ajustes de tradução &amp;"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:99
+msgid "French translations"
+msgstr "Tradução Francesa"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:100
+msgid "Hide labels when data is invalid"
+msgstr "Esconder etiquetas quando os dados são inválidos"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:101
+msgid "Fix max length on width entry"
+msgstr "Comprimento máximo na entrada de largura corrigido"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:102
+msgid "Fix displayed AppData"
+msgstr "Visualização dos dados de aplicação corrigido"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:104
+msgid "Behind the scenes:"
+msgstr "Por detrás da cortina:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:106
+msgid "Add editorconfig and Travis for more consistency"
+msgstr "Editorconfig e Travix adicionados para uma melhor consistência"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:107
+msgid "Split utilities out into their own file"
+msgstr "Utilitários de divisão dentro do próprio ficheiro"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:113
+msgid "AppData tweaks"
+msgstr "Ajustes dos dados da aplicação"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:118
+msgid "Fixed:"
+msgstr "Corrigido:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:120
+msgid "Window no longer resizes when switching between analyses"
+msgstr "A janela já não se reajusta ao alterar entre análises"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:126
+msgid "Under the hood changes:"
+msgstr "Alterações de código:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:128
+msgid "Include success icon as a fallback for other icon sets"
+msgstr "Ícone de sucesso incluído como reserva para outros conjuntos de ícones"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:134
+msgid "Changes:"
+msgstr "Alterações:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:136
+msgid ""
+"Tweaked DPI ranges for internal displays to be a tiny more strict for the "
+"“ideal” range"
+msgstr ""
+"Ajuste no alcance de DPI para monitores internos para ser mais restrito pelo "
+"alcance \"ideal\""
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:137
+msgid "Metadata additions and tweaks"
+msgstr "Adições de MetaData e ajustes"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:139
+msgid "Fixes:"
+msgstr "Correções:"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:141
+msgid "Install all available icon sizes"
+msgstr "Instalar todos os tamanhos de ícones disponíveis"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:142
+msgid "Allow all languages to be translated"
+msgstr "Permitir que todas as linguagens sejam traduzidas"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:144
+msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
+msgstr "E mais! Leia as publicações recentes no blog em goo.gl/tKwkq4"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:150
+msgid "Added logical resolution"
+msgstr "Lógica de resolução adicionada"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:151
+msgid "Cleaned up design by moving display details to below the analysis"
+msgstr ""
+"Design mais limpo ao mover os detalhes do monitor para debaixo da análise"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:158
+msgid "New purple accent color"
+msgstr "Nova cor roxa"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:159
+msgid "Refined margins and alignment"
+msgstr "Margens e alinhamento refinados"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:160
+msgid "Escape now closes the window"
+msgstr "A tecla Escape agora fecha a janela"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:161
+msgid "Lots of little code cleanup"
+msgstr "Muita limpeza de pequenas porções de código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:168
+msgid "Fix bug with setting display icon"
+msgstr "Corrigido um erro com o ícone de definições do monitor"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:169
+msgid "Under-the-hood fixes"
+msgstr "Correções de código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:175
+msgid "Display icon now changes according to display type"
+msgstr "O ícone do monitor agora altera conforme o tipo de monitor"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:181
+msgid "Select between laptop or desktop"
+msgstr "Selecione entre computador portátil ou computador de secretária"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:182
+msgid "Refreshed icons thanks to Micah Ilbery"
+msgstr "Ícones atualizados graças a Micah Ilbery"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:189
+msgid "Completely reworked DPI ranges"
+msgstr "Alcances de DPI completamente retrabalhados"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:191
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:201
+msgid "Tweaked DPI assessment and reasoning copy"
+msgstr "Ajustes de avaliação e raciocínio do DPI"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:192
+msgid "Flattened titlebar"
+msgstr "A barra do título foi achatada"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:193
+msgid "Fixed bugs and warnings"
+msgstr "Correções de erros e avisos"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:200
+msgid "All new side-by-side UI"
+msgstr "Nova interface de usuário lado-a-lado"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:202
+msgid "Added icons to make assessment clearer"
+msgstr "Ícones adicionados para fazer uma avaliação mais clara"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:209
+msgid "Made visualization interactive!"
+msgstr "A visualização é agora interativa!"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:210
+msgid "Added Cassidy-approval and reasoning"
+msgstr "Cassidy-aprovar e raciocínio adicionado"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:211
+msgid "Fix a bug where sometimes an extra zero would sneak in"
+msgstr "Corrigido um erro em que por vezes um zero entrava sorrateiramente"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:212
+msgid "Under-the-hood restructuring"
+msgstr "Reestruturação do código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:219
+msgid "Shiny new icon"
+msgstr "Novo ícone"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:220
+msgid "Added visualization to UI"
+msgstr "Visualização adicionada à interface do usuário"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:221
+msgid "Significant code cleanup"
+msgstr "Limpeza significativa do código"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:227
+msgid "Initial release for AppCenter"
+msgstr "Lançamento inicial para o Centro de Aplicações"
+
+#: data/com.github.cassidyjames.dippi.appdata.xml.in:274
 msgid "Cassidy James Blaede"
 msgstr "Cassidy James Blaede"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:4
 msgid "Display information calculator"
-msgstr "Calculadora de informações de monitores"
+msgstr "Mostra informação da calculadora"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
@@ -136,18 +385,20 @@ msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
+"DPI;densidade;monitor;resolução;largura;altura;ecrã;HiDPI;loDPI;relação;"
+"aspeto;"
 
 #: src/MainWindow.vala:52
 msgid "Very Low DPI"
-msgstr "Muito Baixo DPI"
+msgstr "DPI Mutio Baixo"
 
 #: src/MainWindow.vala:55
 msgid "Fairly Low DPI"
-msgstr "Relativamente Baixo DPI"
+msgstr "DPI Razoavelmente Baixo"
 
 #: src/MainWindow.vala:58
 msgid "Ideal for LoDPI"
-msgstr "Ideao para LoDPI"
+msgstr "Ideal para LoDPI"
 
 #: src/MainWindow.vala:63
 msgid "Potentially Problematic"
@@ -159,35 +410,36 @@ msgstr "Ideal para HiDPI"
 
 #: src/MainWindow.vala:69
 msgid "Fairly High for HiDPI"
-msgstr "Relativamente Alto para HiDPI"
+msgstr "DPI Razoavelmente Alto"
 
 #: src/MainWindow.vala:75
 msgid "Analyze a Display"
-msgstr "Analise um Monitor"
+msgstr "Analisar um Monitor"
 
 #: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
-"O texto e a interface são capazes de ser grande para a distância de visão "
-"normal. Evite se possível."
+"O texto e a interface do utilizador são capazes de ser grande para a "
+"distância de visão normal. Evite se possível."
 
 #: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
-"O texto e a interface poderão ser grande demais para a distância de visão "
-"normal, mas é a preferência mais comum do utilizador."
+"O texto e a interface do utilizador poderão ser demasiado grande para a "
+"distância de visão normal, mas depende principalmente da preferência do "
+"usuário e da distancia física do monitor."
 
 #: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 msgstr ""
-"Não é HiDPI, mas está lá perto. O texto e a interface deverão ser legiveis "
-"nas distâncias normais de visualização."
+"Não é HiDPI, mas está lá perto. O texto e a interface do utilizador deverão "
+"ser legíveis nas distâncias normais de visualização."
 
 #: src/MainWindow.vala:94
 msgid ""
@@ -195,9 +447,9 @@ msgid ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
-"Resolução relativamente alta, mas não é HiDPI. O texto e a interface poderão "
-"ser demasiado pequenos por defeito, mas forçando o HiDPI poderá faze-los "
-"parecer maior. A experiência de utilização poderá melhorar "
+"Resolução relativamente alta, mas não é HiDPI. O texto e a interface do "
+"utilizador poderão ser demasiado pequenos por defeito, ao forçar o HiDPI "
+"poderá faze-los parecer maior. A experiência de utilização poderá melhorar "
 "significativamente ao aumentar o tamanho do texto."
 
 #: src/MainWindow.vala:97
@@ -205,38 +457,40 @@ msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
-"HiDPI por defeito, mas o texto e a interface poderão parecer grandes demais. "
-"Desligando o HiDPI e aumentar o tamanho do texto poderá ajudar."
+"HiDPI por defeito, mas o texto e a interface do utilizador poderão parecer "
+"grandes demais. Desligar o HiDPI e aumentar o tamanho do texto poderá ajudar."
 
 #: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
 msgstr ""
-"HiDPI, texto e interface nítidos, em paralelo com um tamanho perfeitamente "
-"legivel em distâncias normais de visualização. Isto é o jackpot."
+"HiDPI, texto e interface do utilizador nítidos, em paralelo com um tamanho "
+"perfeitamente legível em distâncias normais de visualização. Isto é o "
+"jackpot."
 
 #: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
-"O texto e a interface irão provavelmente parecer demasiado pequenos em "
-"distâcias normais de visualização.Aumentar o tamanho do texto deverá ajudar."
+"O texto e a interface do utilizador irão provavelmente parecer demasiado "
+"pequenos em distâncias normais de visualização. Aumentar o tamanho do texto "
+"deverá ajudar."
 
 #: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
 msgstr ""
-"O texto e a interface irão parecer demasiado pequenos em distâncias normais "
-"de visualização."
+"O texto e a interface do utilizador irão parecer demasiado pequenos em "
+"distâncias normais de visualização."
 
 #: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
-"Este monitor está num raio muito complicado e é provável não funcionar bem "
-"com integer scaling nativo."
+"Este monitor está numa escala muito complicada e é provável não funcionar "
+"bem com uma escala de valor inteiro nativo."
 
 #: src/MainWindow.vala:112
 msgid "Enter details about a display to analyze it."
@@ -244,11 +498,11 @@ msgstr "Insira os detalhes de um monitor para o analisar."
 
 #: src/MainWindow.vala:196
 msgid "Diagonal size:"
-msgstr "Tamanho diagonal"
+msgstr "Tamanho na diagonal:"
 
 #: src/MainWindow.vala:209
 msgid "Resolution:"
-msgstr "Resolução"
+msgstr "Resolução:"
 
 #: src/MainWindow.vala:232
 msgid "×"
@@ -264,7 +518,7 @@ msgstr "polegadas"
 
 #: src/MainWindow.vala:238
 msgid "Type:"
-msgstr "Tipo"
+msgstr "Tipo:"
 
 #: src/MainWindow.vala:408
 #, c-format
@@ -277,8 +531,8 @@ msgstr ":"
 
 #: src/Utils.vala:30
 msgid "Laptop"
-msgstr "Portátil"
+msgstr "Computador Portátil"
 
 #: src/Utils.vala:33
 msgid "Desktop"
-msgstr "Desktop"
+msgstr "Computador de Secretária"
