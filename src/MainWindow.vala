@@ -1,5 +1,5 @@
 /*
-* Copyright © 2018–2020 Cassidy James Blaede (https://cassidyjames.com)
+* Copyright © 2018–2021 Cassidy James Blaede (https://cassidyjames.com)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -19,7 +19,7 @@
 * Authored by: Cassidy James Blaede <c@ssidyjam.es>
 */
 
-public class MainWindow : Gtk.Window {
+public class MainWindow : Hdy.Window {
     private const int DEFAULT_ASPECT_WIDTH = 16;
     private const int DEFAULT_ASPECT_HEIGHT = 9;
 
@@ -179,13 +179,16 @@ public class MainWindow : Gtk.Window {
     }
 
     construct {
+        Hdy.init ();
+
         weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
         default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
 
-        var header = new Gtk.HeaderBar ();
-        header.show_close_button = true;
-        var header_context = header.get_style_context ();
-        header_context.add_class ("titlebar");
+        var header = new Hdy.HeaderBar () {
+           decoration_layout = "close:",
+           show_close_button = true
+        };
+        unowned Gtk.StyleContext header_context = header.get_style_context ();
         header_context.add_class ("default-decoration");
         header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
@@ -391,15 +394,18 @@ public class MainWindow : Gtk.Window {
         main_layout.height_request = 258;
         main_layout.row_spacing = 6;
         main_layout.width_request = 710;
-        main_layout.attach (data_grid, 0, 0);
-        main_layout.attach (assessment_grid, 1, 0);
+        main_layout.attach (header, 0, 0, 2);
+        main_layout.attach (data_grid, 0, 1);
+        main_layout.attach (assessment_grid, 1, 1);
 
         diag_entry.grab_focus ();
 
         get_style_context ().add_class ("dippi");
-        get_style_context ().add_class ("rounded");
-        set_titlebar (header);
-        add (main_layout);
+
+        var window_handle = new Hdy.WindowHandle ();
+        window_handle.add (main_layout);
+
+        add (window_handle);
     }
 
     private int recalculate_dpi (double inches, int width, int height) {
