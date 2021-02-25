@@ -268,7 +268,7 @@ public class MainWindow : Gtk.Window {
         range_title_label.selectable = true;
         range_title_label.xalign = 0;
         range_title_label.valign = Gtk.Align.END;
-        range_title_label.get_style_context ().add_class ("h2");
+        range_title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
         range_title_label.label = Range.INVALID.title ();
 
         range_description_label = new Gtk.Label (null);
@@ -279,6 +279,7 @@ public class MainWindow : Gtk.Window {
         range_description_label.xalign = 0;
         range_description_label.valign = Gtk.Align.START;
         range_description_label.label = Range.INVALID.description ();
+        range_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
         diag_entry.changed.connect (() => {
             inches = double.parse (diag_entry.get_text ());
