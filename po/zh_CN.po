@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-22 23:36-0700\n"
-"PO-Revision-Date: 2018-01-20 00:00-0700\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-02-26 10:41+0800\n"
+"Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:7
 #: data/com.github.cassidyjames.dippi.desktop.in:3 src/MainWindow.vala:176
@@ -24,7 +25,7 @@ msgstr ""
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:8
 #: data/com.github.cassidyjames.dippi.desktop.in:5
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr ""
+msgstr "计算 DPI 和纵横比等显示信息"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:11
 msgid ""
@@ -33,84 +34,89 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
+"分析任何显示器。输入一些细节，然后找出特定显示器的纵横比、DPI 和其他详细信"
+"息。非常适合决定购买哪台笔记本电脑和外部显示器，以及显示器是否为 HiDPI 显示"
+"器。"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:12
 msgid "Handy features:"
-msgstr ""
+msgstr "一些特性："
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:14
 msgid "Find out if a display is a good choice based on its size and resolution"
-msgstr ""
+msgstr "根据显示器的尺寸和分辨率，了解这台显示器是否为最佳之选"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:15
 msgid "Get advice about different densities"
-msgstr ""
+msgstr "获取有关不同规格的建议"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:16
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "了解逻辑分辨率"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:17
 msgid "Differentiate between laptops and desktop displays"
-msgstr ""
+msgstr "区分笔记本电脑和台式电脑的显示器"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:18
 msgid "Stupid simple: all in a cute li'l window"
-msgstr ""
+msgstr "超简洁：所有功能基于一个小窗口"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:20
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
+"基于 Cassidy James Blaede 的知识和 System76 使用的用于决定屏幕尺寸和分辨率组"
+"合的实际逻辑。"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
 msgid "Tells you if a display‘s density is:"
-msgstr ""
+msgstr "它能让你了解你的显示器规格是："
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23
 msgid "Very Low DPI,"
-msgstr ""
+msgstr "过低 DPI，"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:24
 msgid "Fairly Low DPI,"
-msgstr ""
+msgstr "较低 DPI，"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:25
 msgid "Ideal for LoDPI,"
-msgstr ""
+msgstr "合适的 LoDPI，"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:26
 msgid "Potentially Problematic,"
-msgstr ""
+msgstr "有潜在问题的尺寸，"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:27
 msgid "Ideal for HiDPI,"
-msgstr ""
+msgstr "合适的 HiDPI，"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:28
 msgid "Fairly High for HiDPI, or"
-msgstr ""
+msgstr "较高 DPI，以及"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:29 src/MainWindow.vala:72
 msgid "Too High DPI"
-msgstr ""
+msgstr "过高 DPI"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:31
 msgid "Special thanks:"
-msgstr ""
+msgstr "特别感谢："
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:33
 msgid "Micah Ilbery for the shiny icons"
-msgstr ""
+msgstr "Micah Ilbery 制作的图标"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:34
 msgid "Daniel Foré for his apps to use as code examples"
-msgstr ""
+msgstr "Daniel Foré 以他的应用程序作代码示例"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:35
 msgid "David Jordan for helping determine DPI ranges"
-msgstr ""
+msgstr "David Jordan 帮助决定 DPI 范围"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:265
 msgid "Cassidy James Blaede"
@@ -118,7 +124,7 @@ msgstr ""
 
 #: data/com.github.cassidyjames.dippi.desktop.in:4
 msgid "Display information calculator"
-msgstr ""
+msgstr "显示器信息计算器"
 
 #: data/com.github.cassidyjames.dippi.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
@@ -132,49 +138,52 @@ msgstr ""
 
 #: src/MainWindow.vala:52
 msgid "Very Low DPI"
-msgstr ""
+msgstr "过低 DPI"
 
 #: src/MainWindow.vala:55
 msgid "Fairly Low DPI"
-msgstr ""
+msgstr "较低 DPI"
 
 #: src/MainWindow.vala:58
 msgid "Ideal for LoDPI"
-msgstr ""
+msgstr "合适的 LoDPI"
 
 #: src/MainWindow.vala:63
 msgid "Potentially Problematic"
-msgstr ""
+msgstr "有潜在问题的尺寸"
 
 #: src/MainWindow.vala:66
 msgid "Ideal for HiDPI"
-msgstr ""
+msgstr "合适的 HiDPI"
 
 #: src/MainWindow.vala:69
 msgid "Fairly High for HiDPI"
-msgstr ""
+msgstr "较高 DPI，以"
 
 #: src/MainWindow.vala:75
 msgid "Analyze a Display"
-msgstr ""
+msgstr "分析显示器"
 
 #: src/MainWindow.vala:85
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
+"对于典型的观看距离而言，文本和 UI 可能会过大。请尽可能避免选择此显示器。"
 
 #: src/MainWindow.vala:88
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
+"对于典型的观看距离而言，文本和 UI 可能会过大，但这更取决于用户偏好及与显示器"
+"的物理距离。"
 
 #: src/MainWindow.vala:91
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
-msgstr ""
+msgstr "不是 HiDPI，但还不错。对于典型的观看距离而言，文本和 UI 应该很合适。"
 
 #: src/MainWindow.vala:94
 msgid ""
@@ -182,46 +191,52 @@ msgid ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
+"分辨率相对较高，但并不完全是 HiDPI。默认情况下，文本和 UI 可能偏小，但强制 "
+"HiDPI 会使它们看起来过大。"
 
 #: src/MainWindow.vala:97
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
+"默认情况下是 HiDPI，但文本和 UI 可能看上去过大。关闭 HiDPI 并调节文本大小也许"
+"会有帮助。"
 
 #: src/MainWindow.vala:100
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
-msgstr ""
+msgstr "清晰的 HiDPI 文本和 UI，以及在典型观看距离下的可读大小。非常合适。"
 
 #: src/MainWindow.vala:103
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
+"对于典型的观看距离而言，文本和 UI 可能会过小。增大文本大小也许会有帮助。"
 
 #: src/MainWindow.vala:106
 msgid "Text and UI will appear too small for typical viewing distances."
-msgstr ""
+msgstr "对于典型的观看距离而言，文本和 UI 可能会过小。"
 
 #: src/MainWindow.vala:109
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
+"这个显示器处在一个非常棘手的范围内，在整型缩放的情况下恐怕无法正常工作。"
 
 #: src/MainWindow.vala:112
 msgid "Enter details about a display to analyze it."
-msgstr ""
+msgstr "输入显示器信息以分析。"
 
 #: src/MainWindow.vala:196
 msgid "Diagonal size:"
-msgstr ""
+msgstr "尺寸："
 
 #: src/MainWindow.vala:209
 msgid "Resolution:"
-msgstr ""
+msgstr "分辨率："
 
 #: src/MainWindow.vala:232
 msgid "×"
@@ -233,11 +248,11 @@ msgstr ""
 
 #: src/MainWindow.vala:235
 msgid "inches"
-msgstr ""
+msgstr "英寸"
 
 #: src/MainWindow.vala:238
 msgid "Type:"
-msgstr ""
+msgstr "类型："
 
 #: src/MainWindow.vala:408
 #, c-format
@@ -246,12 +261,12 @@ msgstr ""
 
 #: src/MainWindow.vala:423
 msgid ":"
-msgstr ""
+msgstr "："
 
 #: src/Utils.vala:30
 msgid "Laptop"
-msgstr ""
+msgstr "笔记本"
 
 #: src/Utils.vala:33
 msgid "Desktop"
-msgstr ""
+msgstr "台式机"
