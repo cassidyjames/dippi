@@ -76,7 +76,7 @@ msgstr ""
 "pantallas."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
 msgstr "Le dice si la densidad de una pantalla es:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23

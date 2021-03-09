@@ -73,7 +73,7 @@ msgstr ""
 "resolutie."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
 msgstr "Toont je of de schermdichtheid:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23

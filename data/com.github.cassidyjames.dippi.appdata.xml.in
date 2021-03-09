@@ -17,7 +17,7 @@
       <li>Stupid simple: all in a cute li'l window</li>
     </ul>
     <p>Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.</p>
-    <p>Tells you if a display‘s density is:</p>
+    <p>Tells you if a display’s density is:</p>
     <ul>
       <li>Very Low DPI,</li>
       <li>Fairly Low DPI,</li>

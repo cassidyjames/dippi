@@ -75,7 +75,7 @@ msgstr ""
 "utilise pour déterminer la résolution et la diagonale d'écran."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
 msgstr "Vous dit si la densité d'un écran a:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23

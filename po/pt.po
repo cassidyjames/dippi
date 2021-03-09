@@ -72,7 +72,7 @@ msgid ""
 msgstr ""
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
 msgstr "Informa se a densidade do ecrâ é:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23

@@ -75,7 +75,7 @@ msgstr ""
 "naudojimais, skirtais nustatyti ekrano dydžio ir raiškos kombinacijas."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
 msgstr "Nurodo ar ekrano tankis yra:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23

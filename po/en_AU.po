@@ -74,8 +74,8 @@ msgstr ""
 "uses to determine screen size and resolution combinations."
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:21
-msgid "Tells you if a display‘s density is:"
-msgstr "Tells you if a display‘s density is:"
+msgid "Tells you if a display’s density is:"
+msgstr "Tells you if a display’s density is:"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:23
 msgid "Very Low DPI,"
