@@ -186,7 +186,8 @@ public class MainWindow : Hdy.Window {
 
         var header = new Hdy.HeaderBar () {
            decoration_layout = "close:",
-           show_close_button = true
+           show_close_button = true,
+           title = _("Dippi")
         };
         unowned Gtk.StyleContext header_context = header.get_style_context ();
         header_context.add_class ("default-decoration");
