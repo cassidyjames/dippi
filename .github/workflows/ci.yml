@@ -28,8 +28,8 @@ jobs:
           bundle: com.github.cassidyjames.dippi.flatpak
           manifest-path: com.github.cassidyjames.dippi.yml
           run-tests: true
-          repository-name: elementary
-          repository-url: https://flatpak.elementary.io/elementary.flatpakrepo
+          repository-name: appcenter
+          repository-url: https://flatpak.elementary.io/appcenter.flatpakrepo
           cache-key: "flatpak-builder-${{ github.sha }}"
 
   lint:
