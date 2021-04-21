@@ -93,7 +93,7 @@ msgstr "Potansiyel Olarak Sorunlu,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:27
 msgid "Ideal for HiDPI,"
-msgstr ""HiDPI için ideal,"
+msgstr "HiDPI için ideal,"
 
 #: data/com.github.cassidyjames.dippi.appdata.xml.in:28
 msgid "Fairly High for HiDPI, or"
