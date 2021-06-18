@@ -185,48 +185,55 @@ public class MainWindow : Hdy.Window {
         default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
 
         var header = new Hdy.HeaderBar () {
-           decoration_layout = "close:",
-           show_close_button = true,
-           title = _("Dippi")
+           show_close_button = true
         };
         unowned Gtk.StyleContext header_context = header.get_style_context ();
         header_context.add_class ("default-decoration");
         header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
-        diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID);
-        diagram.pixel_size = 128;
-        diagram.margin_bottom = 12;
+        diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID) {
+            margin_bottom = 12,
+            pixel_size = 128
+        };
 
-        var diag_label = new Gtk.Label (_("Diagonal size:"));
-        diag_label.halign = Gtk.Align.END;
+        var diag_label = new Gtk.Label (_("Diagonal size:")) {
+            halign = Gtk.Align.END
+        };
 
-        diag_entry = new Gtk.Entry ();
-        diag_entry.max_length = 5;
-        diag_entry.max_width_chars = 5;
-        diag_entry.width_chars = 5;
+        diag_entry = new Gtk.Entry () {
+            max_length = 5,
+            max_width_chars = 5,
+            width_chars = 5
+        };
+
         diag_entry.focus_in_event.connect ((event) => {
             direction = "diagonal";
             set_display_icon ();
             return focus_in_event (event);
         });
 
-        var res_label = new Gtk.Label (_("Resolution:"));
-        res_label.halign = Gtk.Align.END;
+        var res_label = new Gtk.Label (_("Resolution:")) {
+            halign = Gtk.Align.END
+        };
 
-        width_entry = new Gtk.Entry ();
-        width_entry.max_length = 5;
-        width_entry.max_width_chars = 5;
-        width_entry.width_chars = 5;
+        width_entry = new Gtk.Entry () {
+            max_length = 5,
+            max_width_chars = 5,
+            width_chars = 5
+        };
+
         width_entry.focus_in_event.connect ((event) => {
             direction = "horizontal";
             set_display_icon ();
             return focus_in_event (event);
         });
 
-        height_entry = new Gtk.Entry ();
-        height_entry.max_length = 5;
-        height_entry.max_width_chars = 5;
-        height_entry.width_chars = 5;
+        height_entry = new Gtk.Entry () {
+            max_length = 5,
+            max_width_chars = 5,
+            width_chars = 5
+        };
+
         height_entry.focus_in_event.connect ((event) => {
             direction = "vertical";
             set_display_icon ();
@@ -236,28 +243,31 @@ public class MainWindow : Hdy.Window {
         var x_label = new Gtk.Label (_("×"));
         var px_label = new Gtk.Label (_("px"));
 
-        var inches_label = new Gtk.Label (_("inches"));
-        inches_label.halign = Gtk.Align.START;
+        var inches_label = new Gtk.Label (_("inches")) {
+            halign = Gtk.Align.START
+        };
 
-        var type_label = new Gtk.Label (_("Type:"));
-        type_label.halign = Gtk.Align.END;
+        var type_label = new Gtk.Label (_("Type:")) {
+            halign = Gtk.Align.END
+        };
 
         type_modebutton = new Granite.Widgets.ModeButton ();
         type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
         type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
 
-        aspect_result_label = new Gtk.Label (null);
-        aspect_result_label.halign = Gtk.Align.START;
-        aspect_result_label.selectable = true;
+        aspect_result_label = new Gtk.Label (null) {
+            halign = Gtk.Align.START
+        };
 
-        dpi_result_label = new Gtk.Label (null);
-        dpi_result_label.halign = Gtk.Align.START;
-        dpi_result_label.selectable = true;
+        dpi_result_label = new Gtk.Label (null) {
+            halign = Gtk.Align.START
+        };
 
-        logical_resolution_label = new Gtk.Label (null);
-        logical_resolution_label.expand = true;
-        logical_resolution_label.halign = Gtk.Align.START;
-        logical_resolution_label.selectable = true;
+        logical_resolution_label = new Gtk.Label (null) {
+            expand = true,
+            halign = Gtk.Align.START
+        };
+
 
         range_icon = new Gtk.Image.from_icon_name (
             Range.INVALID.icon (),
@@ -266,23 +276,23 @@ public class MainWindow : Hdy.Window {
         range_icon.margin_bottom = 12;
         range_icon.valign = Gtk.Align.START;
 
-        range_title_label = new Gtk.Label (null);
-        range_title_label.wrap = true;
-        range_title_label.halign = Gtk.Align.START;
-        range_title_label.selectable = true;
-        range_title_label.xalign = 0;
-        range_title_label.valign = Gtk.Align.END;
+        range_title_label = new Gtk.Label (null) {
+            halign = Gtk.Align.START,
+            label = Range.INVALID.title (),
+            valign = Gtk.Align.END,
+            wrap = true,
+            xalign = 0
+        };
         range_title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
-        range_title_label.label = Range.INVALID.title ();
 
-        range_description_label = new Gtk.Label (null);
-        range_description_label.margin_bottom = 12;
-        range_description_label.max_width_chars = 50;
-        range_description_label.selectable = true;
-        range_description_label.wrap = true;
-        range_description_label.xalign = 0;
-        range_description_label.valign = Gtk.Align.START;
-        range_description_label.label = Range.INVALID.description ();
+        range_description_label = new Gtk.Label (null) {
+            label = Range.INVALID.description (),
+            margin_bottom = 12,
+            max_width_chars = 50,
+            valign = Gtk.Align.START,
+            wrap = true,
+            xalign = 0
+        };
         range_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
         diag_entry.changed.connect (() => {
@@ -355,12 +365,12 @@ public class MainWindow : Hdy.Window {
             set_display_icon ();
         });
 
-        var data_grid = new Gtk.Grid ();
-        data_grid.column_spacing = 6;
-        data_grid.margin = 24;
-        data_grid.margin_top = 0;
-        data_grid.row_spacing = 6;
-        data_grid.get_style_context ().add_class ("data-grid");
+        var data_grid = new Gtk.Grid () {
+            column_spacing = 6,
+            margin = 24,
+            margin_top = 0,
+            row_spacing = 6
+        };
 
         data_grid.attach (diagram, 0, 0, 5);
         data_grid.attach (diag_label, 0, 1);
@@ -374,14 +384,14 @@ public class MainWindow : Hdy.Window {
         data_grid.attach (type_label, 0, 3);
         data_grid.attach (type_modebutton, 1, 3, 4);
 
-        var assessment_grid = new Gtk.Grid ();
-        assessment_grid.column_spacing = 12;
-        assessment_grid.halign = Gtk.Align.START;
-        assessment_grid.margin = 12;
-        assessment_grid.margin_top = 48;
-        assessment_grid.row_spacing = 6;
-        assessment_grid.valign = Gtk.Align.START;
-        assessment_grid.get_style_context ().add_class ("assessment-grid");
+        var assessment_grid = new Gtk.Grid () {
+            column_spacing = 12,
+            halign = Gtk.Align.START,
+            margin = 12,
+            margin_top = 48,
+            row_spacing = 6,
+            valign = Gtk.Align.START
+        };
 
         assessment_grid.attach (range_icon, 0, 0, 1, 2);
         assessment_grid.attach (range_title_label, 1, 0, 3);
@@ -390,18 +400,18 @@ public class MainWindow : Hdy.Window {
         assessment_grid.attach (dpi_result_label, 2, 2);
         assessment_grid.attach (logical_resolution_label, 3, 2);
 
-        var main_layout = new Gtk.Grid ();
-        main_layout.column_spacing = 6;
-        main_layout.height_request = 258;
-        main_layout.row_spacing = 6;
-        main_layout.width_request = 710;
+        var main_layout = new Gtk.Grid () {
+            column_spacing = 6,
+            height_request = 258,
+            row_spacing = 6,
+            width_request = 710
+        };
+
         main_layout.attach (header, 0, 0, 2);
         main_layout.attach (data_grid, 0, 1);
         main_layout.attach (assessment_grid, 1, 1);
 
         diag_entry.grab_focus ();
-
-        get_style_context ().add_class ("dippi");
 
         var window_handle = new Hdy.WindowHandle ();
         window_handle.add (main_layout);

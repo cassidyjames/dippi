@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/cassidyjames/dippi">
-    <file alias="Application.css">Application.css</file>
     <file alias="com.github.cassidyjames.dippi.svg">icons/128/com.github.cassidyjames.dippi.svg</file>
     <file alias="display-measure-diagonal.svg">icons/128/display-measure-diagonal.svg</file>
     <file alias="display-measure-horizontal.svg">icons/128/display-measure-horizontal.svg</file>

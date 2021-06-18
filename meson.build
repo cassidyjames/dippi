@@ -1,7 +1,7 @@
 project(
     'com.github.cassidyjames.dippi',
     'vala', 'c',
-    version: '2.7.4'
+    version: '3.0.0'
 )
 
 gnome = import('gnome')
@@ -10,16 +10,16 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 asresources = gnome.compile_resources(
-  'as-resources', 'data/' + meson.project_name() + '.gresource.xml',
+  'as-resources', 'data' / meson.project_name() + '.gresource.xml',
   source_dir: 'data',
   c_name: 'as'
 )
 
 executable(
   meson.project_name(),
-  'src/Application.vala',
-  'src/MainWindow.vala',
-  'src/Utils.vala',
+  'src'/ 'Application.vala',
+  'src' / 'MainWindow.vala',
+  'src'/ 'Utils.vala',
   asresources,
   dependencies: [
     dependency('glib-2.0'),
@@ -33,4 +33,4 @@ executable(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson/post_install.py')
+meson.add_install_script('meson'/ 'post_install.py')

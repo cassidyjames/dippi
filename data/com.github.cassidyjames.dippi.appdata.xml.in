@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018–2020 Cassidy James Blaede <c@ssidyjam.es> -->
+<!-- Copyright 2018–2021 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
   <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
@@ -40,6 +40,16 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="3.0.0" date="2021-06-18">
+      <description>
+        <p>Port to elementary OS 6</p>
+        <ul>
+          <li>Follow the dark style preference</li>
+          <li>Drag window from anywhere</li>
+          <li>Refreshed typography</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.7.4" date="2020-02-17">
       <description>
         <p>Code style and organization fixes</p>

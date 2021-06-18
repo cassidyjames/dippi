@@ -1,5 +1,5 @@
 /*
-* Copyright © 2018–2020 Cassidy James Blaede (https://cassidyjames.com)
+* Copyright © 2018–2021 Cassidy James Blaede (https://cassidyjames.com)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -26,24 +26,12 @@ public class Dippi : Gtk.Application {
     }
 
     protected override void activate () {
-        var app_window = new MainWindow (this);
-        app_window.show_all ();
+        unowned var gtk_settings = Gtk.Settings.get_default ();
+        unowned var granite_settings = Granite.Settings.get_default ();
 
-        var quit_action = new SimpleAction ("quit", null);
-
-        add_action (quit_action);
-        set_accels_for_action ("app.quit", {"Escape"});
-
-        var provider = new Gtk.CssProvider ();
-        provider.load_from_resource ("/com/github/cassidyjames/dippi/Application.css");
-        Gtk.StyleContext.add_provider_for_screen (
-            Gdk.Screen.get_default (),
-            provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        );
-
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.gtk_cursor_theme_name = "elementary";
+        gtk_settings.gtk_icon_theme_name = "elementary";
+        gtk_settings.gtk_theme_name = "io.elementary.stylesheet.grape";
 
         gtk_settings.gtk_application_prefer_dark_theme = (
             granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
@@ -54,6 +42,14 @@ public class Dippi : Gtk.Application {
                 granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
             );
         });
+
+        var app_window = new MainWindow (this);
+        app_window.show_all ();
+
+        var quit_action = new SimpleAction ("quit", null);
+
+        add_action (quit_action);
+        set_accels_for_action ("app.quit", {"Escape"});
 
         quit_action.activate.connect (() => {
             if (app_window != null) {
