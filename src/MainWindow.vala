@@ -219,21 +219,19 @@ public class Dippi.MainWindow : Hdy.Window {
 
         aspect_result_label = new Gtk.Label (null) {
             halign = Gtk.Align.START,
-            margin_start = 48 + 6 + 6 // icon plus its margins
+            margin_start = 48 + 6 + 6, // icon plus its margins
+            valign = Gtk.Align.END
         };
 
         dpi_result_label = new Gtk.Label (null) {
-            halign = Gtk.Align.START
+            halign = Gtk.Align.START,
+            valign = Gtk.Align.END
         };
 
         logical_resolution_label = new Gtk.Label (null) {
             expand = true,
-            halign = Gtk.Align.START
-        };
-
-        range_stack = new Gtk.Stack () {
-            transition_duration = Granite.TRANSITION_DURATION_IN_PLACE,
-            transition_type = Gtk.StackTransitionType.CROSSFADE
+            halign = Gtk.Align.START,
+            valign = Gtk.Align.END
         };
 
         var invalid_range_grid = new RangeGrid (
@@ -241,76 +239,80 @@ public class Dippi.MainWindow : Hdy.Window {
             _("Analyze a Display"),
             _("Enter details about a display to analyze it.")
         );
-        range_stack.add_named (invalid_range_grid, "invalid");
 
         var low_range_grid = new RangeGrid (
             "dialog-error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible.")
         );
-        range_stack.add_named (low_range_grid, "low");
 
         var lodpi_low_range_grid = new RangeGrid (
             "dialog-warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference and physical distance from the display.")
         );
-        range_stack.add_named (lodpi_low_range_grid, "lodpi-low");
 
         var lodpi_ideal_range_grid = new RangeGrid (
             "process-completed",
             _("Ideal for LoDPI"),
             _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.")
         );
-        range_stack.add_named (lodpi_ideal_range_grid, "lodpi-ideal");
 
         var lodpi_high_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
             _("Relatively high resolution, but not quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
-        range_stack.add_named (lodpi_high_range_grid, "lodpi-high");
 
         var hidpi_low_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
             _("HiDPI by default, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.")
         );
-        range_stack.add_named (hidpi_low_range_grid, "hidpi-low");
 
         var hidpi_ideal_range_grid = new RangeGrid (
             "process-completed",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. This is the jackpot.")
         );
-        range_stack.add_named (hidpi_ideal_range_grid, "hidpi-ideal");
 
         var hidpi_high_range_grid = new RangeGrid (
             "dialog-warning",
             _("Fairly High for HiDPI"),
             _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.")
         );
-        range_stack.add_named (hidpi_high_range_grid, "hidpi-high");
 
         var high_range_grid = new RangeGrid (
             "dialog-error",
             _("Too High DPI"),
             _("Text and UI will appear too small for typical viewing distances.")
         );
-        range_stack.add_named (high_range_grid, "high");
 
         var unclear_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
             _("This display is in a very tricky range and is not likely to work well with integer scaling out of the box.")
         );
+
+        range_stack = new Gtk.Stack () {
+            transition_duration = Granite.TRANSITION_DURATION_IN_PLACE,
+            transition_type = Gtk.StackTransitionType.CROSSFADE
+        };
+        range_stack.add_named (invalid_range_grid, "invalid");
+        range_stack.add_named (low_range_grid, "low");
+        range_stack.add_named (lodpi_low_range_grid, "lodpi-low");
+        range_stack.add_named (lodpi_ideal_range_grid, "lodpi-ideal");
+        range_stack.add_named (lodpi_high_range_grid, "lodpi-high");
+        range_stack.add_named (hidpi_low_range_grid, "hidpi-low");
+        range_stack.add_named (hidpi_ideal_range_grid, "hidpi-ideal");
+        range_stack.add_named (hidpi_high_range_grid, "hidpi-high");
+        range_stack.add_named (high_range_grid, "high");
         range_stack.add_named (unclear_range_grid, "unclear");
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
             row_spacing = 6,
-            margin = 12,
-            margin_top = 48
+            margin = 24
         };
         assessment_grid.attach (range_stack, 0, 0, 3);
         assessment_grid.attach (aspect_result_label, 0, 1);
@@ -318,10 +320,7 @@ public class Dippi.MainWindow : Hdy.Window {
         assessment_grid.attach (logical_resolution_label, 2, 1);
 
         var main_layout = new Gtk.Grid () {
-            column_spacing = 6,
-            height_request = 258,
-            row_spacing = 6,
-            width_request = 710
+            column_spacing = 6
         };
 
         main_layout.attach (header, 0, 0, 2);
@@ -493,7 +492,7 @@ public class Dippi.MainWindow : Hdy.Window {
 
             var description_label = new Gtk.Label (description) {
                 margin_bottom = 12,
-                max_width_chars = 50,
+                max_width_chars = 40,
                 valign = Gtk.Align.START,
                 wrap = true,
                 xalign = 0
