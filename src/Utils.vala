@@ -35,19 +35,6 @@ namespace Dippi.Utils {
         }
     }
 
-    public enum Range {
-        LOW,
-        LODPI_LOW,
-        LODPI_IDEAL,
-        LODPI_HIGH,
-        HIDPI_LOW,
-        HIDPI_IDEAL,
-        HIDPI_HIGH,
-        HIGH,
-        UNCLEAR,
-        INVALID;
-    }
-
     public int dpi (double inches, int width, int height) {
         double unrounded_dpi = Math.sqrt (
             Math.pow (width, 2) +

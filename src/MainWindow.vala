@@ -37,7 +37,7 @@ public class Dippi.MainWindow : Hdy.Window {
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
     private Granite.Widgets.ModeButton type_modebutton;
-    private Utils.Range range;
+    private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
 
     public MainWindow (Gtk.Application application) {
@@ -231,7 +231,7 @@ public class Dippi.MainWindow : Hdy.Window {
             halign = Gtk.Align.START
         };
 
-        var range_stack = new Gtk.Stack () {
+        range_stack = new Gtk.Stack () {
             transition_duration = Granite.TRANSITION_DURATION_IN_PLACE,
             transition_type = Gtk.StackTransitionType.CROSSFADE
         };
@@ -305,8 +305,6 @@ public class Dippi.MainWindow : Hdy.Window {
             _("This display is in a very tricky range and is not likely to work well with integer scaling out of the box.")
         );
         range_stack.add_named (unclear_range_grid, "unclear");
-
-
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -397,51 +395,51 @@ public class Dippi.MainWindow : Hdy.Window {
         }
 
         if ( inches == 0 || width == 0 || height == 0 ) {
-            range = Utils.Range.INVALID;
+            range_stack.visible_child_name = "invalid";
         }
 
         else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
-            range = Utils.Range.LOW;
+            range_stack.visible_child_name = "low";
         }
 
         else if (calculated_dpi < ideal_dpi - ideal_range) {
-            range = Utils.Range.LODPI_LOW;
+            range_stack.visible_child_name = "lodpi-low";
         }
 
         else if (calculated_dpi <= ideal_dpi + ideal_range) {
-            range = Utils.Range.LODPI_IDEAL;
+            range_stack.visible_child_name = "lodpi-ideal";
         }
 
         else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
-            range = Utils.Range.LODPI_HIGH;
+            range_stack.visible_child_name = "lodpi-high";
         }
 
         else if (calculated_dpi < DPI_INFER_HIDPI) {
-            range = Utils.Range.UNCLEAR;
+            range_stack.visible_child_name = "unclear";
         }
 
         else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
-            range = Utils.Range.UNCLEAR;
+            range_stack.visible_child_name = "unclear";
         }
 
         else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
-            range = Utils.Range.HIDPI_LOW;
+            range_stack.visible_child_name = "hidpi-low";
         }
 
         else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
-            range = Utils.Range.HIDPI_IDEAL;
+            range_stack.visible_child_name = "hidpi-ideal";
         }
 
         else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
-            range = Utils.Range.HIDPI_HIGH;
+            range_stack.visible_child_name = "hidpi-ideal";
         }
 
         else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
-            range = Utils.Range.HIGH;
+            range_stack.visible_child_name = "high";
         }
 
         else {
-            range = Utils.Range.INVALID;
+            range_stack.visible_child_name = "invalid";
         }
     }
 
