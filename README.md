@@ -2,8 +2,6 @@
 
 # Dippi
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
-
 ![Screenshot](data/screenshot.png?raw=true)
 
 ## Calculate display info like DPI and aspect ratio
