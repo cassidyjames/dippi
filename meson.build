@@ -17,9 +17,9 @@ asresources = gnome.compile_resources(
 
 executable(
   meson.project_name(),
-  'src'/ 'App.vala',
+  'src' / 'App.vala',
   'src' / 'MainWindow.vala',
-  'src'/ 'Utils.vala',
+  'src' / 'Utils.vala',
   asresources,
   dependencies: [
     dependency('glib-2.0'),
