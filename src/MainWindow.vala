@@ -145,61 +145,62 @@ public class Dippi.MainWindow : Hdy.Window {
         var invalid_range_grid = new RangeGrid (
             "dialog-information",
             _("Analyze a Display"),
-            _("Enter details about a display to analyze it.")
+            _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."),
+            "https://github.com/cassidyjames/dippi/blob/main/dpi.md"
         );
 
         var low_range_grid = new RangeGrid (
             "dialog-error",
             _("Very Low DPI"),
-            _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible.")
+            _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
             "dialog-warning",
             _("Fairly Low DPI"),
-            _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference and physical distance from the display.")
+            _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
         );
 
         var lodpi_ideal_range_grid = new RangeGrid (
             "process-completed",
             _("Ideal for LoDPI"),
-            _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.")
+            _("Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing distances.")
         );
 
         var lodpi_high_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
-            _("Relatively high resolution, but not quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
+            _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
         var hidpi_low_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
-            _("HiDPI by default, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.")
+            _("HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and increasing the text size might help.")
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
             "process-completed",
             _("Ideal for HiDPI"),
-            _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. This is the jackpot.")
+            _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
         );
 
         var hidpi_high_range_grid = new RangeGrid (
             "dialog-warning",
             _("Fairly High for HiDPI"),
-            _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.")
+            _("Text and UI are likely to appear <b>too small for typical viewing distances</b>. Increasing the text size may help.")
         );
 
         var high_range_grid = new RangeGrid (
             "dialog-error",
             _("Too High DPI"),
-            _("Text and UI will appear too small for typical viewing distances.")
+            _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
         var unclear_range_grid = new RangeGrid (
             "dialog-warning",
             _("Potentially Problematic"),
-            _("This display is in a very tricky range and is not likely to work well with integer scaling out of the box.")
+            _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
         );
 
         range_stack = new Gtk.Stack () {
@@ -463,12 +464,14 @@ public class Dippi.MainWindow : Hdy.Window {
         public string icon_name { get; construct; }
         public string title { get; construct; }
         public string description { get; construct; }
+        public string? link { get; construct; }
 
-        public RangeGrid (string _icon_name, string _title, string _description) {
+        public RangeGrid (string _icon_name, string _title, string _description, string? _link = null) {
             Object (
                 icon_name: _icon_name,
                 title: _title,
-                description: _description
+                description: _description,
+                link: _link
             );
         }
 
@@ -492,6 +495,7 @@ public class Dippi.MainWindow : Hdy.Window {
             var description_label = new Gtk.Label (description) {
                 margin_bottom = 12,
                 max_width_chars = 40,
+                use_markup = true,
                 valign = Gtk.Align.START,
                 wrap = true,
                 xalign = 0
@@ -499,8 +503,16 @@ public class Dippi.MainWindow : Hdy.Window {
             description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
             attach (icon, 0, 0, 1, 2);
-            attach (title_label, 1, 0, 3);
-            attach (description_label, 1, 1, 3);
+            attach (title_label, 1, 0);
+            attach (description_label, 1, 1);
+
+            if (link != null) {
+                var link_button = new Gtk.LinkButton.with_label (link, _("More info…")) {
+                    halign = Gtk.Align.START
+                };
+
+                attach (link_button, 1, 2);
+            }
         }
     }
 }
