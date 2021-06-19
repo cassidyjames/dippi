@@ -1,5 +1,5 @@
-data/com.github.cassidyjames.dippi.appdata.xml.in
-data/com.github.cassidyjames.dippi.desktop.in
+data/metadata.appdata.xml.in
+data/launcher.desktop.in
 src/MainWindow.vala
-src/Application.vala
+src/App.vala
 src/Utils.vala

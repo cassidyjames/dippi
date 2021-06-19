@@ -19,8 +19,8 @@
 * Authored by: Cassidy James Blaede <c@ssidyjam.es>
 */
 
-public class Dippi : Gtk.Application {
-    public Dippi () {
+public class Dippi.App : Gtk.Application {
+    public App () {
         Object (application_id: "com.github.cassidyjames.dippi",
         flags: ApplicationFlags.FLAGS_NONE);
     }
@@ -61,7 +61,7 @@ public class Dippi : Gtk.Application {
     private static int main (string[] args) {
         Gtk.init (ref args);
 
-        var app = new Dippi ();
+        var app = new App ();
         return app.run (args);
     }
 }
