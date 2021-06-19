@@ -16,7 +16,7 @@
       <li>Differentiate between laptops and desktop displays</li>
       <li>Stupid simple: all in a cute li'l window</li>
     </ul>
-    <p>Based on the expertise of Cassidy James Blaede and the actual logic System76 uses to determine screen size and resolution combinations.</p>
+    <p>Based my expertise and experience shipping HiDPI hardware and software at System76 and elementary.</p>
     <p>Tells you if a display’s density is:</p>
     <ul>
       <li>Very Low DPI,</li>
@@ -31,7 +31,6 @@
     <ul>
       <li>Micah Ilbery for the shiny icons</li>
       <li>Daniel Foré for his apps to use as code examples</li>
-      <li>David Jordan for helping determine DPI ranges</li>
     </ul>
   </description>
   <translation type="gettext">com.github.cassidyjames.dippi</translation>
@@ -40,6 +39,17 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="3.1.0" date="2021-06-19">
+      <description>
+        <p>Iterate!</p>
+        <ul>
+          <li>More details on launch</li>
+          <li>Bolded sections of descriptions for easier skimmability</li>
+          <li>Fix window resizing for different results</li>
+          <li>Animate between results</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.0.0" date="2021-06-18">
       <description>
         <p>Port to elementary OS 6</p>
