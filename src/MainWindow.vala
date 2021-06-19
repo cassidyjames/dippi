@@ -78,13 +78,6 @@ public class Dippi.MainWindow : Hdy.Window {
             max_width_chars = 5,
             width_chars = 5
         };
-
-        diag_entry.focus_in_event.connect ((event) => {
-            direction = "diagonal";
-            set_display_icon ();
-            return focus_in_event (event);
-        });
-
         var res_label = new Gtk.Label (_("Resolution:")) {
             halign = Gtk.Align.END
         };
@@ -95,23 +88,11 @@ public class Dippi.MainWindow : Hdy.Window {
             width_chars = 5
         };
 
-        width_entry.focus_in_event.connect ((event) => {
-            direction = "horizontal";
-            set_display_icon ();
-            return focus_in_event (event);
-        });
-
         height_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
         };
-
-        height_entry.focus_in_event.connect ((event) => {
-            direction = "vertical";
-            set_display_icon ();
-            return focus_in_event (event);
-        });
 
         var x_label = new Gtk.Label (_("×"));
         var px_label = new Gtk.Label (_("px"));
@@ -127,76 +108,6 @@ public class Dippi.MainWindow : Hdy.Window {
         type_modebutton = new Granite.Widgets.ModeButton ();
         type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
         type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
-
-        diag_entry.changed.connect (() => {
-            inches = double.parse (diag_entry.get_text ());
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                infer_display_type (inches)
-            );
-        });
-
-        width_entry.changed.connect (() => {
-            width = int.parse (width_entry.get_text ());
-
-            is_default_width = false;
-
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!height_entry.has_focus && (is_default_height || height == 0)) {
-                double calculated_height = Math.round (
-                    width *
-                    DEFAULT_ASPECT_HEIGHT /
-                    DEFAULT_ASPECT_WIDTH
-                );
-                height_entry.text = (calculated_height).to_string ();
-                is_default_height = true;
-            }
-        });
-
-        height_entry.changed.connect (() => {
-            height = int.parse (height_entry.get_text ());
-
-            is_default_height = false;
-
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!width_entry.has_focus && (is_default_width || width == 0)) {
-                double calculated_width = Math.round (
-                    height *
-                    DEFAULT_ASPECT_WIDTH /
-                    DEFAULT_ASPECT_HEIGHT
-                );
-                width_entry.text = (calculated_width).to_string ();
-                is_default_width = true;
-            }
-        });
-
-        type_modebutton.mode_changed.connect (() => {
-            switch (type_modebutton.selected) {
-                case 0:
-                    display_type = Utils.DisplayType.INTERNAL;
-                    break;
-
-                case 1:
-                    display_type = Utils.DisplayType.EXTERNAL;
-                    break;
-
-                default:
-                    assert_not_reached ();
-            }
-
-            assess_dpi (Utils.dpi (inches, width, height), display_type);
-            set_display_icon ();
-        });
 
         var data_grid = new Gtk.Grid () {
             column_spacing = 6,
@@ -336,6 +247,94 @@ public class Dippi.MainWindow : Hdy.Window {
         window_handle.add (main_layout);
 
         add (window_handle);
+
+        diag_entry.focus_in_event.connect ((event) => {
+            direction = "diagonal";
+            set_display_icon ();
+            return focus_in_event (event);
+        });
+
+        width_entry.focus_in_event.connect ((event) => {
+            direction = "horizontal";
+            set_display_icon ();
+            return focus_in_event (event);
+        });
+
+        height_entry.focus_in_event.connect ((event) => {
+            direction = "vertical";
+            set_display_icon ();
+            return focus_in_event (event);
+        });
+
+        diag_entry.changed.connect (() => {
+            inches = double.parse (diag_entry.get_text ());
+            assess_dpi (
+                recalculate_dpi (inches, width, height),
+                infer_display_type (inches)
+            );
+        });
+
+        width_entry.changed.connect (() => {
+            width = int.parse (width_entry.get_text ());
+
+            is_default_width = false;
+
+            recalculate_aspect (width, height);
+            assess_dpi (
+                recalculate_dpi (inches, width, height),
+                display_type
+            );
+
+            if (!height_entry.has_focus && (is_default_height || height == 0)) {
+                double calculated_height = Math.round (
+                    width *
+                    DEFAULT_ASPECT_HEIGHT /
+                    DEFAULT_ASPECT_WIDTH
+                );
+                height_entry.text = (calculated_height).to_string ();
+                is_default_height = true;
+            }
+        });
+
+        height_entry.changed.connect (() => {
+            height = int.parse (height_entry.get_text ());
+
+            is_default_height = false;
+
+            recalculate_aspect (width, height);
+            assess_dpi (
+                recalculate_dpi (inches, width, height),
+                display_type
+            );
+
+            if (!width_entry.has_focus && (is_default_width || width == 0)) {
+                double calculated_width = Math.round (
+                    height *
+                    DEFAULT_ASPECT_WIDTH /
+                    DEFAULT_ASPECT_HEIGHT
+                );
+                width_entry.text = (calculated_width).to_string ();
+                is_default_width = true;
+            }
+        });
+
+        type_modebutton.mode_changed.connect (() => {
+            switch (type_modebutton.selected) {
+                case 0:
+                    display_type = Utils.DisplayType.INTERNAL;
+                    break;
+
+                case 1:
+                    display_type = Utils.DisplayType.EXTERNAL;
+                    break;
+
+                default:
+                    assert_not_reached ();
+            }
+
+            assess_dpi (Utils.dpi (inches, width, height), display_type);
+            set_display_icon ();
+        });
     }
 
     private int recalculate_dpi (double inches, int width, int height) {
