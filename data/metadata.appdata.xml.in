@@ -43,6 +43,8 @@
       <description>
         <p>Iterate!</p>
         <ul>
+          <li>More details on launch</li>
+          <li>Bolded sections of descriptions for easier skimmability</li>
           <li>Fix window resizing for different results</li>
           <li>Animate between results</li>
         </ul>

@@ -34,7 +34,6 @@ _NOTE: GNOME currently switches to @2x HiDPI at 192+ no matter what._
 
 ## Desktops
 
-
 | DPI     | Resulting Range                |
 |---------|--------------------------------|
 | < 70    | Probably too low               |
