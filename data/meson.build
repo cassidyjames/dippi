@@ -40,11 +40,11 @@ if desktop_file_validate.found()
     )
 endif
 
-appstreamcli = find_program(['appstreamcli', 'appstream-util'], required:false)
-if appstreamcli.found()
-    test (
-        'Validate appdata file',
-        appstreamcli,
-        args: ['validate', meson.current_build_dir () / meson.project_name() + '.appdata.xml']
-    )
-endif
+# appstreamcli = find_program(['appstreamcli', 'appstream-util'], required:false)
+# if appstreamcli.found()
+#     test (
+#         'Validate appdata file',
+#         appstreamcli,
+#         args: ['validate', meson.current_build_dir () / meson.project_name() + '.appdata.xml']
+#     )
+# endif
