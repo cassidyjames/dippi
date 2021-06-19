@@ -37,9 +37,6 @@ public class Dippi.MainWindow : Hdy.Window {
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
     private Granite.Widgets.ModeButton type_modebutton;
-    private Gtk.Label range_title_label;
-    private Gtk.Label range_description_label;
-    private Gtk.Image range_icon;
     private Utils.Range range;
     private Utils.DisplayType display_type;
 
@@ -131,46 +128,6 @@ public class Dippi.MainWindow : Hdy.Window {
         type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
         type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
 
-        aspect_result_label = new Gtk.Label (null) {
-            halign = Gtk.Align.START
-        };
-
-        dpi_result_label = new Gtk.Label (null) {
-            halign = Gtk.Align.START
-        };
-
-        logical_resolution_label = new Gtk.Label (null) {
-            expand = true,
-            halign = Gtk.Align.START
-        };
-
-
-        range_icon = new Gtk.Image.from_icon_name (
-            Utils.Range.INVALID.icon (),
-            Gtk.IconSize.DIALOG
-        );
-        range_icon.margin_bottom = 12;
-        range_icon.valign = Gtk.Align.START;
-
-        range_title_label = new Gtk.Label (null) {
-            halign = Gtk.Align.START,
-            label = Utils.Range.INVALID.title (),
-            valign = Gtk.Align.END,
-            wrap = true,
-            xalign = 0
-        };
-        range_title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
-
-        range_description_label = new Gtk.Label (null) {
-            label = Utils.Range.INVALID.description (),
-            margin_bottom = 12,
-            max_width_chars = 50,
-            valign = Gtk.Align.START,
-            wrap = true,
-            xalign = 0
-        };
-        range_description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-
         diag_entry.changed.connect (() => {
             inches = double.parse (diag_entry.get_text ());
             assess_dpi (
@@ -260,21 +217,107 @@ public class Dippi.MainWindow : Hdy.Window {
         data_grid.attach (type_label, 0, 3);
         data_grid.attach (type_modebutton, 1, 3, 4);
 
-        var assessment_grid = new Gtk.Grid () {
-            column_spacing = 12,
+        aspect_result_label = new Gtk.Label (null) {
             halign = Gtk.Align.START,
-            margin = 12,
-            margin_top = 48,
-            row_spacing = 6,
-            valign = Gtk.Align.START
+            margin_start = 48 + 6 + 6 // icon plus its margins
         };
 
-        assessment_grid.attach (range_icon, 0, 0, 1, 2);
-        assessment_grid.attach (range_title_label, 1, 0, 3);
-        assessment_grid.attach (range_description_label, 1, 1, 3);
-        assessment_grid.attach (aspect_result_label, 1, 2);
-        assessment_grid.attach (dpi_result_label, 2, 2);
-        assessment_grid.attach (logical_resolution_label, 3, 2);
+        dpi_result_label = new Gtk.Label (null) {
+            halign = Gtk.Align.START
+        };
+
+        logical_resolution_label = new Gtk.Label (null) {
+            expand = true,
+            halign = Gtk.Align.START
+        };
+
+        var range_stack = new Gtk.Stack () {
+            transition_duration = Granite.TRANSITION_DURATION_IN_PLACE,
+            transition_type = Gtk.StackTransitionType.CROSSFADE
+        };
+
+        var invalid_range_grid = new RangeGrid (
+            "dialog-information",
+            _("Analyze a Display"),
+            _("Enter details about a display to analyze it.")
+        );
+        range_stack.add_named (invalid_range_grid, "invalid");
+
+        var low_range_grid = new RangeGrid (
+            "dialog-error",
+            _("Very Low DPI"),
+            _("Text and UI are likely to be too big for typical viewing distances. Avoid if possible.")
+        );
+        range_stack.add_named (low_range_grid, "low");
+
+        var lodpi_low_range_grid = new RangeGrid (
+            "dialog-warning",
+            _("Fairly Low DPI"),
+            _("Text and UI might be too big for typical viewing distances, but it's largely up to user preference and physical distance from the display.")
+        );
+        range_stack.add_named (lodpi_low_range_grid, "lodpi-low");
+
+        var lodpi_ideal_range_grid = new RangeGrid (
+            "process-completed",
+            _("Ideal for LoDPI"),
+            _("Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical viewing distances.")
+        );
+        range_stack.add_named (lodpi_ideal_range_grid, "lodpi-ideal");
+
+        var lodpi_high_range_grid = new RangeGrid (
+            "dialog-warning",
+            _("Potentially Problematic"),
+            _("Relatively high resolution, but not quite HiDPI. Text and UI may be too small by default, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
+        );
+        range_stack.add_named (lodpi_high_range_grid, "lodpi-high");
+
+        var hidpi_low_range_grid = new RangeGrid (
+            "dialog-warning",
+            _("Potentially Problematic"),
+            _("HiDPI by default, but text and UI may appear too large. Turning off HiDPI and increasing the text size might help.")
+        );
+        range_stack.add_named (hidpi_low_range_grid, "hidpi-low");
+
+        var hidpi_ideal_range_grid = new RangeGrid (
+            "process-completed",
+            _("Ideal for HiDPI"),
+            _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. This is the jackpot.")
+        );
+        range_stack.add_named (hidpi_ideal_range_grid, "hidpi-ideal");
+
+        var hidpi_high_range_grid = new RangeGrid (
+            "dialog-warning",
+            _("Fairly High for HiDPI"),
+            _("Text and UI are likely to appear too small for typical viewing distances. Increasing the text size may help.")
+        );
+        range_stack.add_named (hidpi_high_range_grid, "hidpi-high");
+
+        var high_range_grid = new RangeGrid (
+            "dialog-error",
+            _("Too High DPI"),
+            _("Text and UI will appear too small for typical viewing distances.")
+        );
+        range_stack.add_named (high_range_grid, "high");
+
+        var unclear_range_grid = new RangeGrid (
+            "dialog-warning",
+            _("Potentially Problematic"),
+            _("This display is in a very tricky range and is not likely to work well with integer scaling out of the box.")
+        );
+        range_stack.add_named (unclear_range_grid, "unclear");
+
+
+
+        var assessment_grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 6,
+            margin = 12,
+            margin_top = 48
+        };
+        assessment_grid.attach (range_stack, 0, 0, 3);
+        assessment_grid.attach (aspect_result_label, 0, 1);
+        assessment_grid.attach (dpi_result_label, 1, 1);
+        assessment_grid.attach (logical_resolution_label, 2, 1);
 
         var main_layout = new Gtk.Grid () {
             column_spacing = 6,
@@ -286,6 +329,8 @@ public class Dippi.MainWindow : Hdy.Window {
         main_layout.attach (header, 0, 0, 2);
         main_layout.attach (data_grid, 0, 1);
         main_layout.attach (assessment_grid, 1, 1);
+
+        main_layout.show_all ();
 
         diag_entry.grab_focus ();
 
@@ -398,16 +443,12 @@ public class Dippi.MainWindow : Hdy.Window {
         else {
             range = Utils.Range.INVALID;
         }
-
-        range_icon.icon_name = range.icon ();
-        range_title_label.label = range.title ();
-        range_description_label.label = range.description ();
     }
 
     private Utils.DisplayType infer_display_type (double inches) {
         is_default_display_type = true;
 
-        if (inches < 18) {
+        if (inches < INCHES_INFER_EXTERNAL) {
             display_type = Utils.DisplayType.INTERNAL;
             type_modebutton.selected = 0;
         } else {
@@ -420,5 +461,50 @@ public class Dippi.MainWindow : Hdy.Window {
 
     private void set_display_icon () {
         diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
+    }
+
+    private class RangeGrid : Gtk.Grid {
+        public string icon_name { get; construct; }
+        public string title { get; construct; }
+        public string description { get; construct; }
+
+        public RangeGrid (string _icon_name, string _title, string _description) {
+            Object (
+                icon_name: _icon_name,
+                title: _title,
+                description: _description
+            );
+        }
+
+        construct {
+            column_spacing = 12;
+            row_spacing = 6;
+
+            var icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DIALOG) {
+                margin_bottom = 12,
+                valign = Gtk.Align.START
+            };
+
+            var title_label = new Gtk.Label (title) {
+                halign = Gtk.Align.START,
+                valign = Gtk.Align.END,
+                wrap = true,
+                xalign = 0
+            };
+            title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
+
+            var description_label = new Gtk.Label (description) {
+                margin_bottom = 12,
+                max_width_chars = 50,
+                valign = Gtk.Align.START,
+                wrap = true,
+                xalign = 0
+            };
+            description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+            attach (icon, 0, 0, 1, 2);
+            attach (title_label, 1, 0, 3);
+            attach (description_label, 1, 1, 3);
+        }
     }
 }
