@@ -1,8 +1,8 @@
-![Icon](data/icons/128.svg?raw=true)
-
 # Dippi
 
-![Screenshot](data/screenshot.png?raw=true)
+![Screenshot](data/screenshot.png?raw=true)   | ![Screenshot](data/screenshot-2.png?raw=true)
+--------------------------------------------- | ---------------------------------------------
+![Screenshot](data/screenshot-3.png?raw=true) | ![Screenshot](data/screenshot-4.png?raw=true)
 
 ## Calculate display info like DPI and aspect ratio
 
