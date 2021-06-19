@@ -27,12 +27,8 @@ public class Dippi.MainWindow : Hdy.Window {
     private bool is_default_display_type = true;
     private bool is_default_width = true;
     private bool is_default_height = true;
-    private string direction = "";
 
     private Gtk.Image diagram;
-    private Gtk.Entry diag_entry;
-    private Gtk.Entry width_entry;
-    private Gtk.Entry height_entry;
     private Gtk.Label dpi_result_label;
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
@@ -64,7 +60,7 @@ public class Dippi.MainWindow : Hdy.Window {
         header_context.add_class ("default-decoration");
         header_context.add_class (Gtk.STYLE_CLASS_FLAT);
 
-        diagram = new Gtk.Image.from_icon_name ("com.github.cassidyjames.dippi", Gtk.IconSize.INVALID) {
+        diagram = new Gtk.Image () {
             margin_bottom = 12,
             pixel_size = 128
         };
@@ -73,22 +69,23 @@ public class Dippi.MainWindow : Hdy.Window {
             halign = Gtk.Align.END
         };
 
-        diag_entry = new Gtk.Entry () {
+        var diag_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
         };
+
         var res_label = new Gtk.Label (_("Resolution:")) {
             halign = Gtk.Align.END
         };
 
-        width_entry = new Gtk.Entry () {
+        var width_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
         };
 
-        height_entry = new Gtk.Entry () {
+        var height_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
@@ -248,21 +245,23 @@ public class Dippi.MainWindow : Hdy.Window {
 
         add (window_handle);
 
+        var direction = "diagonal";
+
         diag_entry.focus_in_event.connect ((event) => {
             direction = "diagonal";
-            set_display_icon ();
+            set_display_icon (direction);
             return focus_in_event (event);
         });
 
         width_entry.focus_in_event.connect ((event) => {
             direction = "horizontal";
-            set_display_icon ();
+            set_display_icon (direction);
             return focus_in_event (event);
         });
 
         height_entry.focus_in_event.connect ((event) => {
             direction = "vertical";
-            set_display_icon ();
+            set_display_icon (direction);
             return focus_in_event (event);
         });
 
@@ -333,7 +332,7 @@ public class Dippi.MainWindow : Hdy.Window {
             }
 
             assess_dpi (Utils.dpi (inches, width, height), display_type);
-            set_display_icon ();
+            set_display_icon (direction);
         });
     }
 
@@ -456,7 +455,7 @@ public class Dippi.MainWindow : Hdy.Window {
         return display_type;
     }
 
-    private void set_display_icon () {
+    private void set_display_icon (string direction) {
         diagram.icon_name = "display-measure-" + direction + display_type.icon_suffix ();
     }
 
