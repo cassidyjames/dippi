@@ -295,7 +295,8 @@ public class Dippi.MainWindow : Hdy.Window {
         );
 
         range_stack = new Gtk.Stack () {
-            transition_duration = Granite.TRANSITION_DURATION_IN_PLACE,
+            // NOTE: Replace with Granite.TRANSITION_DURATION_IN_PLACE once Granite 6.1 is released
+            transition_duration = 100,
             transition_type = Gtk.StackTransitionType.CROSSFADE
         };
         range_stack.add_named (invalid_range_grid, "invalid");
