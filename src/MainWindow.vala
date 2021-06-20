@@ -430,7 +430,7 @@ public class Dippi.MainWindow : Hdy.Window {
         }
 
         else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
-            range_stack.visible_child_name = "hidpi-ideal";
+            range_stack.visible_child_name = "hidpi-high";
         }
 
         else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
