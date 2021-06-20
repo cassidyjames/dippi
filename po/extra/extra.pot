@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-19 21:10+0000\n"
+"POT-Creation-Date: 2021-06-20 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,7 +122,9 @@ msgid "Daniel Foré for his apps to use as code examples"
 msgstr ""
 
 #: data/metadata.appdata.xml.in:44
-msgid "Iterate!"
+msgid ""
+"The Adventure of Link: you can now share Dippi results as a link so anyone "
+"can see all the details and make their own calculations. Plus:"
 msgstr ""
 
 #: data/metadata.appdata.xml.in:46

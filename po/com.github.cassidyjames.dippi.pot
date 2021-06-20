@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-19 21:10+0000\n"
+"POT-Creation-Date: 2021-06-20 01:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,141 +17,145 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:45
+#: src/MainWindow.vala:46
 msgid "Dippi"
 msgstr ""
 
-#: src/MainWindow.vala:68
+#: src/MainWindow.vala:69
 msgid "Diagonal size:"
 msgstr ""
 
-#: src/MainWindow.vala:78
+#: src/MainWindow.vala:79
 msgid "Resolution:"
 msgstr ""
 
-#: src/MainWindow.vala:94
+#: src/MainWindow.vala:95
 msgid "×"
 msgstr ""
 
-#: src/MainWindow.vala:95
+#: src/MainWindow.vala:96
 msgid "px"
 msgstr ""
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:98
 msgid "inches"
 msgstr ""
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:102
 msgid "Type:"
 msgstr ""
 
-#: src/MainWindow.vala:147
+#: src/MainWindow.vala:148
+msgid "Share results…"
+msgstr ""
+
+#: src/MainWindow.vala:155
 msgid "Analyze a Display"
 msgstr ""
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:156
 msgid ""
 "For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–"
 "156 is ideal for laptops</b>."
 msgstr ""
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:156
 msgid ""
 "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
 "for laptops</b>."
 msgstr ""
 
-#: src/MainWindow.vala:154
+#: src/MainWindow.vala:162
 msgid "Very Low DPI"
 msgstr ""
 
-#: src/MainWindow.vala:155
+#: src/MainWindow.vala:163
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. <b>Avoid "
 "if possible.</b>"
 msgstr ""
 
-#: src/MainWindow.vala:160
+#: src/MainWindow.vala:168
 msgid "Fairly Low DPI"
 msgstr ""
 
-#: src/MainWindow.vala:161
+#: src/MainWindow.vala:169
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's "
 "<b>largely up to user preference</b> and physical distance from the display."
 msgstr ""
 
-#: src/MainWindow.vala:166
+#: src/MainWindow.vala:174
 msgid "Ideal for LoDPI"
 msgstr ""
 
-#: src/MainWindow.vala:167
+#: src/MainWindow.vala:175
 msgid ""
 "Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at "
 "typical viewing distances."
 msgstr ""
 
-#: src/MainWindow.vala:172 src/MainWindow.vala:178 src/MainWindow.vala:202
+#: src/MainWindow.vala:180 src/MainWindow.vala:186 src/MainWindow.vala:210
 msgid "Potentially Problematic"
 msgstr ""
 
-#: src/MainWindow.vala:173
+#: src/MainWindow.vala:181
 msgid ""
 "Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too "
 "small by default</b>, but forcing HiDPI would make them appear too large. "
 "The experience may be slightly improved by increasing the text size."
 msgstr ""
 
-#: src/MainWindow.vala:179
+#: src/MainWindow.vala:187
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
 "HiDPI and increasing the text size might help."
 msgstr ""
 
-#: src/MainWindow.vala:184
+#: src/MainWindow.vala:192
 msgid "Ideal for HiDPI"
 msgstr ""
 
-#: src/MainWindow.vala:185
+#: src/MainWindow.vala:193
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. <b>This is the jackpot.</b>"
 msgstr ""
 
-#: src/MainWindow.vala:190
+#: src/MainWindow.vala:198
 msgid "Fairly High for HiDPI"
 msgstr ""
 
-#: src/MainWindow.vala:191
+#: src/MainWindow.vala:199
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
 "b>. Increasing the text size may help."
 msgstr ""
 
-#: src/MainWindow.vala:196
+#: src/MainWindow.vala:204
 msgid "Too High DPI"
 msgstr ""
 
-#: src/MainWindow.vala:197
+#: src/MainWindow.vala:205
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 
-#: src/MainWindow.vala:203
+#: src/MainWindow.vala:211
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
 "with integer scaling out of the box."
 msgstr ""
 
-#: src/MainWindow.vala:344
+#: src/MainWindow.vala:353
 #, c-format
 msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:359
+#: src/MainWindow.vala:368
 msgid ":"
 msgstr ""
 
-#: src/MainWindow.vala:510
+#: src/MainWindow.vala:531
 msgid "More info…"
 msgstr ""
 
