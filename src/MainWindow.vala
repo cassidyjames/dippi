@@ -32,6 +32,7 @@ public class Dippi.MainWindow : Hdy.Window {
     private Gtk.Label dpi_result_label;
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
+    private Gtk.LinkButton link;
     private Granite.Widgets.ModeButton type_modebutton;
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
@@ -142,6 +143,13 @@ public class Dippi.MainWindow : Hdy.Window {
             valign = Gtk.Align.END
         };
 
+        link = new Gtk.LinkButton.with_label (
+            "https://cassidyjames.com/dippi/",
+            _("Share results…")
+        ) {
+            valign = Gtk.Align.END
+        };
+
         var invalid_range_grid = new RangeGrid (
             "dialog-information",
             _("Analyze a Display"),
@@ -228,6 +236,7 @@ public class Dippi.MainWindow : Hdy.Window {
         assessment_grid.attach (aspect_result_label, 0, 1);
         assessment_grid.attach (dpi_result_label, 1, 1);
         assessment_grid.attach (logical_resolution_label, 2, 1);
+        assessment_grid.attach (link, 3, 1);
 
         var main_layout = new Gtk.Grid () {
             column_spacing = 6
@@ -440,6 +449,18 @@ public class Dippi.MainWindow : Hdy.Window {
         else {
             range_stack.visible_child_name = "invalid";
         }
+
+        string type_param = "d";
+        if (display_type == Utils.DisplayType.INTERNAL) {
+            type_param = "l";
+        }
+
+        link.uri = "https://cassidyjames.com/dippi/?d=%g&w=%d&h=%d&t=%s".printf (
+            inches,
+            width,
+            height,
+            type_param
+        );
     }
 
     private Utils.DisplayType infer_display_type (double inches) {
