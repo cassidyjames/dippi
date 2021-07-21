@@ -39,6 +39,11 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="3.1.1" date="2021-07-21">
+      <description>
+        <p>Under-the-hood packaging updates for elementary OS 6</p>
+      </description>
+    </release>
     <release version="3.1.0" date="2021-06-19">
       <description>
         <p>The Adventure of Link: you can now share Dippi results as a link so anyone can see all the details and make their own calculations. Plus:</p>
@@ -302,6 +307,6 @@
     <value key="x-appcenter-color-primary">#452981</value>
     <value key="x-appcenter-color-primary-text">#fff</value>
     <value key="x-appcenter-suggested-price">4</value>
-    <value key="x-appcenter-stripe>pk_live_yGX6uUIUSCmSmQq3TZqdavch00dWOYeSYe</value>
+    <value key="x-appcenter-stripe">pk_live_yGX6uUIUSCmSmQq3TZqdavch00dWOYeSYe</value>
   </custom>
 </component>
