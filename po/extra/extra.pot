@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-20 01:56+0000\n"
+"POT-Creation-Date: 2021-07-21 21:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,7 +63,7 @@ msgstr ""
 msgid "Learn the logical resolution"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:16 data/metadata.appdata.xml.in:210
+#: data/metadata.appdata.xml.in:16 data/metadata.appdata.xml.in:215
 msgid "Differentiate between laptops and desktop displays"
 msgstr ""
 
@@ -122,281 +122,285 @@ msgid "Daniel Foré for his apps to use as code examples"
 msgstr ""
 
 #: data/metadata.appdata.xml.in:44
+msgid "Under-the-hood packaging updates for elementary OS 6"
+msgstr ""
+
+#: data/metadata.appdata.xml.in:49
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone "
 "can see all the details and make their own calculations. Plus:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:46
+#: data/metadata.appdata.xml.in:51
 msgid "More details on launch"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:47
+#: data/metadata.appdata.xml.in:52
 msgid "Bolded sections of descriptions for easier skimmability"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:48
+#: data/metadata.appdata.xml.in:53
 msgid "Fix window resizing for different results"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:49
+#: data/metadata.appdata.xml.in:54
 msgid "Animate between results"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:55
+#: data/metadata.appdata.xml.in:60
 msgid "Port to elementary OS 6"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:57
+#: data/metadata.appdata.xml.in:62
 msgid "Follow the dark style preference"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:58
+#: data/metadata.appdata.xml.in:63
 msgid "Drag window from anywhere"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:59
+#: data/metadata.appdata.xml.in:64
 msgid "Refreshed typography and design"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:65
+#: data/metadata.appdata.xml.in:70
 msgid "Code style and organization fixes"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:70
+#: data/metadata.appdata.xml.in:75
 msgid "Updated translations"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:72
+#: data/metadata.appdata.xml.in:77
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:73
+#: data/metadata.appdata.xml.in:78
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:79
+#: data/metadata.appdata.xml.in:84
 msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:84
+#: data/metadata.appdata.xml.in:89
 msgid "Under-the-hood tweaks"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:89
+#: data/metadata.appdata.xml.in:94
 msgid "Hello, Juno!"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:91
+#: data/metadata.appdata.xml.in:96
 msgid "Update translation link"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:92
+#: data/metadata.appdata.xml.in:97
 msgid "Under the hood cleanup"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:98
+#: data/metadata.appdata.xml.in:103
 msgid "Add translation instructions and update translation link in app data"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:103
+#: data/metadata.appdata.xml.in:108
 msgid "Added translation link to app data"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:108
+#: data/metadata.appdata.xml.in:113
 msgid "Lithuanian Translation"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:110
+#: data/metadata.appdata.xml.in:115
 msgid "Lithuanian translation thanks to welaq"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:111
+#: data/metadata.appdata.xml.in:116
 msgid "Fixed deprecation"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:117
+#: data/metadata.appdata.xml.in:122
 msgid "Translation &amp; Tweaks"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:119
+#: data/metadata.appdata.xml.in:124
 msgid "French translations"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:120
+#: data/metadata.appdata.xml.in:125
 msgid "Hide labels when data is invalid"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:121
+#: data/metadata.appdata.xml.in:126
 msgid "Fix max length on width entry"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:122
+#: data/metadata.appdata.xml.in:127
 msgid "Fix displayed AppData"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:124
+#: data/metadata.appdata.xml.in:129
 msgid "Behind the scenes:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:126
+#: data/metadata.appdata.xml.in:131
 msgid "Add editorconfig and Travis for more consistency"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:127
+#: data/metadata.appdata.xml.in:132
 msgid "Split utilities out into their own file"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:133
+#: data/metadata.appdata.xml.in:138
 msgid "AppData tweaks"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:138
+#: data/metadata.appdata.xml.in:143
 msgid "Fixed:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:140
+#: data/metadata.appdata.xml.in:145
 msgid "Window no longer resizes when switching between analyses"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:146
+#: data/metadata.appdata.xml.in:151
 msgid "Under the hood changes:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:148
+#: data/metadata.appdata.xml.in:153
 msgid "Include success icon as a fallback for other icon sets"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:154
+#: data/metadata.appdata.xml.in:159
 msgid "Changes:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:156
+#: data/metadata.appdata.xml.in:161
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:157
+#: data/metadata.appdata.xml.in:162
 msgid "Metadata additions and tweaks"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:159
+#: data/metadata.appdata.xml.in:164
 msgid "Fixes:"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:161
+#: data/metadata.appdata.xml.in:166
 msgid "Install all available icon sizes"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:162
+#: data/metadata.appdata.xml.in:167
 msgid "Allow all languages to be translated"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:164
+#: data/metadata.appdata.xml.in:169
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:170
+#: data/metadata.appdata.xml.in:175
 msgid "Added logical resolution"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:171
+#: data/metadata.appdata.xml.in:176
 msgid "Cleaned up design by moving display details to below the analysis"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:178
+#: data/metadata.appdata.xml.in:183
 msgid "New purple accent color"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:179
+#: data/metadata.appdata.xml.in:184
 msgid "Refined margins and alignment"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:180
+#: data/metadata.appdata.xml.in:185
 msgid "Escape now closes the window"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:181
+#: data/metadata.appdata.xml.in:186
 msgid "Lots of little code cleanup"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:188
+#: data/metadata.appdata.xml.in:193
 msgid "Fix bug with setting display icon"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:189
+#: data/metadata.appdata.xml.in:194
 msgid "Under-the-hood fixes"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:195
+#: data/metadata.appdata.xml.in:200
 msgid "Display icon now changes according to display type"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:201
+#: data/metadata.appdata.xml.in:206
 msgid "Select between laptop or desktop"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:202
+#: data/metadata.appdata.xml.in:207
 msgid "Refreshed icons thanks to Micah Ilbery"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:209
+#: data/metadata.appdata.xml.in:214
 msgid "Completely reworked DPI ranges"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:211 data/metadata.appdata.xml.in:221
+#: data/metadata.appdata.xml.in:216 data/metadata.appdata.xml.in:226
 msgid "Tweaked DPI assessment and reasoning copy"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:212
+#: data/metadata.appdata.xml.in:217
 msgid "Flattened titlebar"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:213
+#: data/metadata.appdata.xml.in:218
 msgid "Fixed bugs and warnings"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:220
+#: data/metadata.appdata.xml.in:225
 msgid "All new side-by-side UI"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:222
+#: data/metadata.appdata.xml.in:227
 msgid "Added icons to make assessment clearer"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:229
+#: data/metadata.appdata.xml.in:234
 msgid "Made visualization interactive!"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:230
+#: data/metadata.appdata.xml.in:235
 msgid "Added Cassidy-approval and reasoning"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:231
+#: data/metadata.appdata.xml.in:236
 msgid "Fix a bug where sometimes an extra zero would sneak in"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:232
+#: data/metadata.appdata.xml.in:237
 msgid "Under-the-hood restructuring"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:239
+#: data/metadata.appdata.xml.in:244
 msgid "Shiny new icon"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:240
+#: data/metadata.appdata.xml.in:245
 msgid "Added visualization to UI"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:241
+#: data/metadata.appdata.xml.in:246
 msgid "Significant code cleanup"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:247
+#: data/metadata.appdata.xml.in:252
 msgid "Initial release for AppCenter"
 msgstr ""
 
-#: data/metadata.appdata.xml.in:294
+#: data/metadata.appdata.xml.in:299
 msgid "Cassidy James Blaede"
 msgstr ""
