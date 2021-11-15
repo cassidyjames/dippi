@@ -39,6 +39,11 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="3.1.2" date="2021-11-15">
+      <description>
+        <p>Add "calculator" category to launcher</p>
+      </description>
+    </release>
     <release version="3.1.1" date="2021-07-21">
       <description>
         <p>Under-the-hood packaging updates for elementary OS 6</p>
