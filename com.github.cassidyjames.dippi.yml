@@ -1,14 +1,12 @@
 app-id: com.github.cassidyjames.dippi
 runtime: io.elementary.Platform
-runtime-version: '6'
+runtime-version: '6.1'
 sdk: io.elementary.Sdk
 command: com.github.cassidyjames.dippi
 finish-args:
   - '--share=ipc'
   - '--socket=fallback-x11'
   - '--socket=wayland'
-  # needed for perfers-color-scheme
-  - '--system-talk-name=org.freedesktop.Accounts'
 modules:
   - name: dippi
     buildsystem: meson
