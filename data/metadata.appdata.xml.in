@@ -39,6 +39,14 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="3.1.4" date="2021-12-14">
+      <description>
+        <p>Under-the-hood improvements:</p>
+        <ul>
+          <li>Update Stripe key</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.3" date="2021-12-09">
       <description>
         <p>Under-the-hood improvements:</p>
@@ -293,6 +301,6 @@
     <value key="x-appcenter-color-primary">#452981</value>
     <value key="x-appcenter-color-primary-text">#fff</value>
     <value key="x-appcenter-suggested-price">4</value>
-    <value key="x-appcenter-stripe">pk_live_51BisUzDZzsY2pYhKm0J1hUMt2BZmPy0tjfL57uJBfLa9lnNaspuLhhP3jakPa3wKVXF4BcSotHNiGrsLCd7I446p00EJKRuKWS</value>
+    <value key="x-appcenter-stripe">pk_live_51BisUzDZzsY2pYhKUvevG2RX6kT5JL74hO2AHKqd69zYYuoo0d4y3Mcb8IoSM1cv81ZgMW0pSqLUsD4e1HqAqkSX00t6yXPfZh</value>
   </custom>
 </component>
