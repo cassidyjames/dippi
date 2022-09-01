@@ -1,7 +1,6 @@
 # EditorConfig <http://EditorConfig.org>
 root = true
 
-# elementary defaults
 [*]
 end_of_line = lf
 insert_final_newline = true
@@ -11,20 +10,8 @@ indent_style = space
 indent_size = tab
 tab_width = 4
 
-# My defaults because habit
-[{*.css,*.xml,*.xml.in}]
+[*.vala]
+tab_width = 4
+
+[*.json,*.xml,*.xml.in,*.yml]
 tab_width = 2
-
-# Special cases
-[debian/**]
-insert_final_newline = false
-
-[debian/changelog]
-tab_width = 2
-
-[{debian/copyright,debian/control}]
-tab_width = 1
-
-[debian/rules]
-indent_style = tab
-indent_size = tab

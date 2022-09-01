@@ -1,9 +1,9 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2021 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
  */
 
-public class Dippi.MainWindow : Hdy.Window {
+public class Dippi.MainWindow : Adw.ApplicationWindow {
     private const int DEFAULT_ASPECT_WIDTH = 16;
     private const int DEFAULT_ASPECT_HEIGHT = 9;
 
@@ -33,33 +33,31 @@ public class Dippi.MainWindow : Hdy.Window {
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
     private Gtk.LinkButton link;
-    private Granite.Widgets.ModeButton type_modebutton;
+    // private Granite.Widgets.ModeButton type_modebutton;
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
 
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            border_width: 0,
+            // border_width: 0,
             icon_name: "com.github.cassidyjames.dippi",
             resizable: false,
-            title: _("Dippi"),
-            window_position: Gtk.WindowPosition.CENTER
+            title: _("Dippi")
         );
     }
 
     construct {
-        Hdy.init ();
+        Adw.init ();
 
-        weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
-        default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
+        // weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
+        // default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
 
-        var header = new Hdy.HeaderBar () {
-           show_close_button = true
+        var header = new Adw.HeaderBar () {
+           // show_close_button = true
         };
         unowned Gtk.StyleContext header_context = header.get_style_context ();
-        header_context.add_class ("default-decoration");
-        header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+        header_context.add_class ("flat");
 
         diagram = new Gtk.Image () {
             margin_bottom = 12,
@@ -99,17 +97,17 @@ public class Dippi.MainWindow : Hdy.Window {
             halign = Gtk.Align.START
         };
 
-        var type_label = new Gtk.Label (_("Type:")) {
-            halign = Gtk.Align.END
-        };
+        // var type_label = new Gtk.Label (_("Type:")) {
+        //     halign = Gtk.Align.END
+        // };
 
-        type_modebutton = new Granite.Widgets.ModeButton ();
-        type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
-        type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
+        // type_modebutton = new Granite.Widgets.ModeButton ();
+        // type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
+        // type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
 
         var data_grid = new Gtk.Grid () {
             column_spacing = 6,
-            margin = 24,
+            // margin = 24,
             margin_top = 0,
             row_spacing = 6
         };
@@ -123,8 +121,8 @@ public class Dippi.MainWindow : Hdy.Window {
         data_grid.attach (x_label, 2, 2);
         data_grid.attach (height_entry, 3, 2);
         data_grid.attach (px_label, 4, 2);
-        data_grid.attach (type_label, 0, 3);
-        data_grid.attach (type_modebutton, 1, 3, 4);
+        // data_grid.attach (type_label, 0, 3);
+        // data_grid.attach (type_modebutton, 1, 3, 4);
 
         aspect_result_label = new Gtk.Label (null) {
             halign = Gtk.Align.START,
@@ -138,7 +136,7 @@ public class Dippi.MainWindow : Hdy.Window {
         };
 
         logical_resolution_label = new Gtk.Label (null) {
-            expand = true,
+            // expand = true,
             halign = Gtk.Align.START,
             valign = Gtk.Align.END
         };
@@ -212,7 +210,6 @@ public class Dippi.MainWindow : Hdy.Window {
         );
 
         range_stack = new Gtk.Stack () {
-            // NOTE: Replace with Granite.TRANSITION_DURATION_IN_PLACE once Granite 6.1 is released
             transition_duration = 100,
             transition_type = Gtk.StackTransitionType.CROSSFADE
         };
@@ -229,8 +226,7 @@ public class Dippi.MainWindow : Hdy.Window {
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
-            row_spacing = 6,
-            margin = 24
+            row_spacing = 6
         };
         assessment_grid.attach (range_stack, 0, 0, 3);
         assessment_grid.attach (aspect_result_label, 0, 1);
@@ -246,34 +242,29 @@ public class Dippi.MainWindow : Hdy.Window {
         main_layout.attach (data_grid, 0, 1);
         main_layout.attach (assessment_grid, 1, 1);
 
-        main_layout.show_all ();
-
         diag_entry.grab_focus ();
 
-        var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (main_layout);
-
-        add (window_handle);
+        set_content (main_layout);
 
         var direction = "diagonal";
 
-        diag_entry.focus_in_event.connect ((event) => {
-            direction = "diagonal";
-            set_display_icon (direction);
-            return focus_in_event (event);
-        });
+        // diag_entry.focus_in_event.connect ((event) => {
+        //     direction = "diagonal";
+        //     set_display_icon (direction);
+        //     return focus_in_event (event);
+        // });
 
-        width_entry.focus_in_event.connect ((event) => {
-            direction = "horizontal";
-            set_display_icon (direction);
-            return focus_in_event (event);
-        });
+        // width_entry.focus_in_event.connect ((event) => {
+        //     direction = "horizontal";
+        //     set_display_icon (direction);
+        //     return focus_in_event (event);
+        // });
 
-        height_entry.focus_in_event.connect ((event) => {
-            direction = "vertical";
-            set_display_icon (direction);
-            return focus_in_event (event);
-        });
+        // height_entry.focus_in_event.connect ((event) => {
+        //     direction = "vertical";
+        //     set_display_icon (direction);
+        //     return focus_in_event (event);
+        // });
 
         diag_entry.changed.connect (() => {
             inches = double.parse (diag_entry.get_text ());
@@ -327,23 +318,23 @@ public class Dippi.MainWindow : Hdy.Window {
             }
         });
 
-        type_modebutton.mode_changed.connect (() => {
-            switch (type_modebutton.selected) {
-                case 0:
-                    display_type = Utils.DisplayType.INTERNAL;
-                    break;
+        // type_modebutton.mode_changed.connect (() => {
+        //     switch (type_modebutton.selected) {
+        //         case 0:
+        //             display_type = Utils.DisplayType.INTERNAL;
+        //             break;
 
-                case 1:
-                    display_type = Utils.DisplayType.EXTERNAL;
-                    break;
+        //         case 1:
+        //             display_type = Utils.DisplayType.EXTERNAL;
+        //             break;
 
-                default:
-                    assert_not_reached ();
-            }
+        //         default:
+        //             assert_not_reached ();
+        //     }
 
-            assess_dpi (Utils.dpi (inches, width, height), display_type);
-            set_display_icon (direction);
-        });
+        //     assess_dpi (Utils.dpi (inches, width, height), display_type);
+        //     set_display_icon (direction);
+        // });
     }
 
     private int recalculate_dpi (double inches, int width, int height) {
@@ -468,10 +459,10 @@ public class Dippi.MainWindow : Hdy.Window {
 
         if (inches < INCHES_INFER_EXTERNAL) {
             display_type = Utils.DisplayType.INTERNAL;
-            type_modebutton.selected = 0;
+            // type_modebutton.selected = 0;
         } else {
             display_type = Utils.DisplayType.EXTERNAL;
-            type_modebutton.selected = 1;
+            // type_modebutton.selected = 1;
         }
 
         return display_type;
@@ -500,7 +491,7 @@ public class Dippi.MainWindow : Hdy.Window {
             column_spacing = 12;
             row_spacing = 6;
 
-            var icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DIALOG) {
+            var icon = new Gtk.Image.from_icon_name (icon_name) {
                 margin_bottom = 12,
                 valign = Gtk.Align.START
             };
@@ -511,7 +502,7 @@ public class Dippi.MainWindow : Hdy.Window {
                 wrap = true,
                 xalign = 0
             };
-            title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
+            title_label.get_style_context ().add_class ("title-1");
 
             var description_label = new Gtk.Label (description) {
                 margin_bottom = 12,
@@ -521,7 +512,7 @@ public class Dippi.MainWindow : Hdy.Window {
                 wrap = true,
                 xalign = 0
             };
-            description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            description_label.get_style_context ().add_class ("body");
 
             attach (icon, 0, 0, 1, 2);
             attach (title_label, 1, 0);
