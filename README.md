@@ -64,4 +64,3 @@ To install, use `ninja install`, then execute with `com.github.cassidyjames.dipp
 ## Special Thanks
 
 - [Micah Ilbery](https://github.com/micahilbery) for the shiny icons
-- [Daniel Foré](https://github.com/danrabbit) for his apps to use as code examples
