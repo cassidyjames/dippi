@@ -50,8 +50,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     construct {
         Adw.init ();
 
-        // weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
-        // default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
+        Gtk.IconTheme.get_for_display (
+            Gdk.Display.get_default ()
+        ).add_resource_path ("/com/github/cassidyjames/dippi");
 
         var header = new Adw.HeaderBar () {
             title_widget = new Gtk.Label ("")
@@ -59,6 +60,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         header.add_css_class ("flat");
 
         diagram = new Gtk.Image () {
+            icon_name = "com.github.cassidyjames.dippi",
             margin_bottom = 12,
             pixel_size = 128
         };
