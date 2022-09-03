@@ -40,7 +40,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            // border_width: 0,
             icon_name: "com.github.cassidyjames.dippi",
             resizable: false,
             title: _("Dippi")
@@ -114,7 +113,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         var data_grid = new Gtk.Grid () {
             column_spacing = 6,
-            // margin = 24,
+            margin_start = margin_end = 24,
             margin_top = 0,
             row_spacing = 6
         };
