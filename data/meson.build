@@ -2,6 +2,7 @@ install_data(
     'icons' / meson.project_name() + '.svg',
     install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps',
 )
+
 install_data(
     'icons' / meson.project_name() + '-symbolic.svg',
     install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps',

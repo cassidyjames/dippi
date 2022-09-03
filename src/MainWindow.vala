@@ -74,6 +74,8 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             max_width_chars = 5,
             width_chars = 5
         };
+        var diag_entry_focus_controller = new Gtk.EventControllerFocus ();
+        diag_entry.add_controller (diag_entry_focus_controller);
 
         var res_label = new Gtk.Label (_("Resolution:")) {
             halign = Gtk.Align.END
@@ -84,12 +86,16 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             max_width_chars = 5,
             width_chars = 5
         };
+        var width_entry_focus_controller = new Gtk.EventControllerFocus ();
+        width_entry.add_controller (width_entry_focus_controller);
 
         var height_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
         };
+        var height_entry_focus_controller = new Gtk.EventControllerFocus ();
+        height_entry.add_controller (height_entry_focus_controller);
 
         var x_label = new Gtk.Label (_("×"));
         var px_label = new Gtk.Label (_("px"));
@@ -252,23 +258,20 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         var direction = "diagonal";
 
-        // diag_entry.focus_in_event.connect ((event) => {
-        //     direction = "diagonal";
-        //     set_display_icon (direction);
-        //     return focus_in_event (event);
-        // });
+        diag_entry_focus_controller.enter.connect ((event) => {
+            direction = "diagonal";
+            set_display_icon (direction);
+        });
 
-        // width_entry.focus_in_event.connect ((event) => {
-        //     direction = "horizontal";
-        //     set_display_icon (direction);
-        //     return focus_in_event (event);
-        // });
+        width_entry_focus_controller.enter.connect ((event) => {
+            direction = "horizontal";
+            set_display_icon (direction);
+        });
 
-        // height_entry.focus_in_event.connect ((event) => {
-        //     direction = "vertical";
-        //     set_display_icon (direction);
-        //     return focus_in_event (event);
-        // });
+        height_entry_focus_controller.enter.connect ((event) => {
+            direction = "vertical";
+            set_display_icon (direction);
+        });
 
         diag_entry.changed.connect (() => {
             inches = double.parse (diag_entry.get_text ());
