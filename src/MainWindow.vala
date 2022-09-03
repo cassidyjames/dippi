@@ -54,10 +54,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         // default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
 
         var header = new Adw.HeaderBar () {
-           // show_close_button = true
+            title_widget = new Gtk.Label ("")
         };
-        unowned Gtk.StyleContext header_context = header.get_style_context ();
-        header_context.add_class ("flat");
+        header.add_css_class ("flat");
 
         diagram = new Gtk.Image () {
             margin_bottom = 12,
@@ -242,9 +241,12 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         main_layout.attach (data_grid, 0, 1);
         main_layout.attach (assessment_grid, 1, 1);
 
+        var window_handle = new Gtk.WindowHandle () ;
+        window_handle.child = main_layout;
+
         diag_entry.grab_focus ();
 
-        set_content (main_layout);
+        set_content (window_handle);
 
         var direction = "diagonal";
 
@@ -502,7 +504,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                 wrap = true,
                 xalign = 0
             };
-            title_label.get_style_context ().add_class ("title-1");
+            title_label.add_css_class ("title-1");
 
             var description_label = new Gtk.Label (description) {
                 margin_bottom = 12,
@@ -512,7 +514,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                 wrap = true,
                 xalign = 0
             };
-            description_label.get_style_context ().add_class ("body");
+            description_label.add_css_class ("body");
 
             attach (icon, 0, 0, 1, 2);
             attach (title_label, 1, 0);
