@@ -1,9 +1,9 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2021 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
  */
 
-public class Dippi.MainWindow : Hdy.Window {
+public class Dippi.MainWindow : Adw.ApplicationWindow {
     private const int DEFAULT_ASPECT_WIDTH = 16;
     private const int DEFAULT_ASPECT_HEIGHT = 9;
 
@@ -32,36 +32,35 @@ public class Dippi.MainWindow : Hdy.Window {
     private Gtk.Label dpi_result_label;
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
-    private Gtk.LinkButton link;
-    private Granite.Widgets.ModeButton type_modebutton;
+    private Gtk.LinkButton link_button;
+    private Gtk.ToggleButton internal_button;
+    private Gtk.ToggleButton external_button;
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
 
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            border_width: 0,
             icon_name: "com.github.cassidyjames.dippi",
             resizable: false,
-            title: _("Dippi"),
-            window_position: Gtk.WindowPosition.CENTER
+            title: _("Dippi")
         );
     }
 
     construct {
-        Hdy.init ();
+        Adw.init ();
 
-        weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
-        default_theme.add_resource_path ("/com/github/cassidyjames/dippi");
+        Gtk.IconTheme.get_for_display (
+            Gdk.Display.get_default ()
+        ).add_resource_path ("/com/github/cassidyjames/dippi");
 
-        var header = new Hdy.HeaderBar () {
-           show_close_button = true
+        var header = new Adw.HeaderBar () {
+            title_widget = new Gtk.Label (null)
         };
-        unowned Gtk.StyleContext header_context = header.get_style_context ();
-        header_context.add_class ("default-decoration");
-        header_context.add_class (Gtk.STYLE_CLASS_FLAT);
+        header.add_css_class ("flat");
 
         diagram = new Gtk.Image () {
+            icon_name = "com.github.cassidyjames.dippi",
             margin_bottom = 12,
             pixel_size = 128
         };
@@ -75,6 +74,8 @@ public class Dippi.MainWindow : Hdy.Window {
             max_width_chars = 5,
             width_chars = 5
         };
+        var diag_entry_focus_controller = new Gtk.EventControllerFocus ();
+        diag_entry.add_controller (diag_entry_focus_controller);
 
         var res_label = new Gtk.Label (_("Resolution:")) {
             halign = Gtk.Align.END
@@ -85,12 +86,16 @@ public class Dippi.MainWindow : Hdy.Window {
             max_width_chars = 5,
             width_chars = 5
         };
+        var width_entry_focus_controller = new Gtk.EventControllerFocus ();
+        width_entry.add_controller (width_entry_focus_controller);
 
         var height_entry = new Gtk.Entry () {
             max_length = 5,
             max_width_chars = 5,
             width_chars = 5
         };
+        var height_entry_focus_controller = new Gtk.EventControllerFocus ();
+        height_entry.add_controller (height_entry_focus_controller);
 
         var x_label = new Gtk.Label (_("×"));
         var px_label = new Gtk.Label (_("px"));
@@ -103,13 +108,23 @@ public class Dippi.MainWindow : Hdy.Window {
             halign = Gtk.Align.END
         };
 
-        type_modebutton = new Granite.Widgets.ModeButton ();
-        type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
-        type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
+        internal_button = new Gtk.ToggleButton () {
+            label = Utils.DisplayType.INTERNAL.to_string ()
+        };
+
+        external_button = new Gtk.ToggleButton () {
+            group = internal_button,
+            label = Utils.DisplayType.EXTERNAL.to_string ()
+        };
+
+        var type_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        type_buttons.add_css_class ("linked");
+        type_buttons.append (internal_button);
+        type_buttons.append (external_button);
 
         var data_grid = new Gtk.Grid () {
             column_spacing = 6,
-            margin = 24,
+            margin_start = margin_end = 24,
             margin_top = 0,
             row_spacing = 6
         };
@@ -124,11 +139,11 @@ public class Dippi.MainWindow : Hdy.Window {
         data_grid.attach (height_entry, 3, 2);
         data_grid.attach (px_label, 4, 2);
         data_grid.attach (type_label, 0, 3);
-        data_grid.attach (type_modebutton, 1, 3, 4);
+        data_grid.attach (type_buttons, 1, 3, 4);
 
         aspect_result_label = new Gtk.Label (null) {
             halign = Gtk.Align.START,
-            margin_start = 48 + 6 + 6, // icon plus its margins
+            margin_start = 32 + 6 + 6, // icon plus its margins
             valign = Gtk.Align.END
         };
 
@@ -138,83 +153,91 @@ public class Dippi.MainWindow : Hdy.Window {
         };
 
         logical_resolution_label = new Gtk.Label (null) {
-            expand = true,
             halign = Gtk.Align.START,
             valign = Gtk.Align.END
         };
 
-        link = new Gtk.LinkButton.with_label (
+        link_button = new Gtk.LinkButton.with_label (
             "https://cassidyjames.com/dippi/",
             _("Share results…")
         ) {
-            valign = Gtk.Align.END
+            halign = Gtk.Align.END,
+            valign = Gtk.Align.END,
+            visible = false,
         };
 
         var invalid_range_grid = new RangeGrid (
-            "dialog-information",
+            "loupe-large",
+            "accent",
             _("Analyze a Display"),
-            _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."),
-            "https://github.com/cassidyjames/dippi/blob/main/dpi.md"
+            _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.")
         );
 
         var low_range_grid = new RangeGrid (
             "dialog-error",
+            "error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
         );
 
         var lodpi_ideal_range_grid = new RangeGrid (
-            "process-completed",
+            "test-pass-symbolic",
+            "success",
             _("Ideal for LoDPI"),
             _("Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing distances.")
         );
 
         var lodpi_high_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
+            "warning",
             _("Potentially Problematic"),
             _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
         var hidpi_low_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
+            "warning",
             _("Potentially Problematic"),
             _("HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and increasing the text size might help.")
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
-            "process-completed",
+            "test-pass",
+            "success",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
         );
 
         var hidpi_high_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
+            "warning",
             _("Fairly High for HiDPI"),
             _("Text and UI are likely to appear <b>too small for typical viewing distances</b>. Increasing the text size may help.")
         );
 
         var high_range_grid = new RangeGrid (
-            "dialog-error",
+            "dialog-error-symbolic",
+            "error",
             _("Too High DPI"),
             _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
         var unclear_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
+            "warning",
             _("Potentially Problematic"),
             _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
         );
 
         range_stack = new Gtk.Stack () {
-            // NOTE: Replace with Granite.TRANSITION_DURATION_IN_PLACE once Granite 6.1 is released
-            transition_duration = 100,
-            transition_type = Gtk.StackTransitionType.CROSSFADE
+            vexpand = true
         };
         range_stack.add_named (invalid_range_grid, "invalid");
         range_stack.add_named (low_range_grid, "low");
@@ -229,120 +252,124 @@ public class Dippi.MainWindow : Hdy.Window {
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
-            row_spacing = 6,
-            margin = 24
+            margin_end = 24,
+            row_spacing = 6
         };
-        assessment_grid.attach (range_stack, 0, 0, 3);
+        assessment_grid.attach (range_stack, 0, 0, 4);
         assessment_grid.attach (aspect_result_label, 0, 1);
         assessment_grid.attach (dpi_result_label, 1, 1);
         assessment_grid.attach (logical_resolution_label, 2, 1);
-        assessment_grid.attach (link, 3, 1);
+        assessment_grid.attach (link_button, 3, 1);
 
         var main_layout = new Gtk.Grid () {
-            column_spacing = 6
+            column_spacing = 6,
+            margin_bottom = 24
         };
 
         main_layout.attach (header, 0, 0, 2);
         main_layout.attach (data_grid, 0, 1);
         main_layout.attach (assessment_grid, 1, 1);
 
-        main_layout.show_all ();
+        var window_handle = new Gtk.WindowHandle () ;
+        window_handle.child = main_layout;
 
         diag_entry.grab_focus ();
 
-        var window_handle = new Hdy.WindowHandle ();
-        window_handle.add (main_layout);
-
-        add (window_handle);
+        set_content (window_handle);
 
         var direction = "diagonal";
 
-        diag_entry.focus_in_event.connect ((event) => {
+        diag_entry_focus_controller.enter.connect ((event) => {
             direction = "diagonal";
             set_display_icon (direction);
-            return focus_in_event (event);
         });
 
-        width_entry.focus_in_event.connect ((event) => {
+        width_entry_focus_controller.enter.connect ((event) => {
             direction = "horizontal";
             set_display_icon (direction);
-            return focus_in_event (event);
         });
 
-        height_entry.focus_in_event.connect ((event) => {
+        height_entry_focus_controller.enter.connect ((event) => {
             direction = "vertical";
             set_display_icon (direction);
-            return focus_in_event (event);
         });
 
         diag_entry.changed.connect (() => {
-            inches = double.parse (diag_entry.get_text ());
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                infer_display_type (inches)
-            );
+            string? text = diag_entry.get_text ();
+            if (text != null && text != "") {
+                inches = double.parse (diag_entry.get_text ());
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    infer_display_type (inches)
+                );
+            }
         });
 
         width_entry.changed.connect (() => {
-            width = int.parse (width_entry.get_text ());
+            string? text = width_entry.get_text ();
+            if (text != null && text != "") {
+                width = int.parse (text);
 
-            is_default_width = false;
+                is_default_width = false;
 
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!height_entry.has_focus && (is_default_height || height == 0)) {
-                double calculated_height = Math.round (
-                    width *
-                    DEFAULT_ASPECT_HEIGHT /
-                    DEFAULT_ASPECT_WIDTH
+                recalculate_aspect (width, height);
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    display_type
                 );
-                height_entry.text = (calculated_height).to_string ();
-                is_default_height = true;
+
+                if (!height_entry.has_focus && (is_default_height || height == 0)) {
+                    double calculated_height = Math.round (
+                        width *
+                        DEFAULT_ASPECT_HEIGHT /
+                        DEFAULT_ASPECT_WIDTH
+                    );
+                    height_entry.text = (calculated_height).to_string ();
+                    is_default_height = true;
+                }
             }
         });
 
         height_entry.changed.connect (() => {
-            height = int.parse (height_entry.get_text ());
+            string? text = height_entry.get_text ();
+            if (text != null && text != "") {
+                height = int.parse (height_entry.get_text ());
 
-            is_default_height = false;
+                is_default_height = false;
 
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!width_entry.has_focus && (is_default_width || width == 0)) {
-                double calculated_width = Math.round (
-                    height *
-                    DEFAULT_ASPECT_WIDTH /
-                    DEFAULT_ASPECT_HEIGHT
+                recalculate_aspect (width, height);
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    display_type
                 );
-                width_entry.text = (calculated_width).to_string ();
-                is_default_width = true;
+
+                if (!width_entry.has_focus && (is_default_width || width == 0)) {
+                    double calculated_width = Math.round (
+                        height *
+                        DEFAULT_ASPECT_WIDTH /
+                        DEFAULT_ASPECT_HEIGHT
+                    );
+                    width_entry.text = (calculated_width).to_string ();
+                    is_default_width = true;
+                }
             }
         });
 
-        type_modebutton.mode_changed.connect (() => {
-            switch (type_modebutton.selected) {
-                case 0:
-                    display_type = Utils.DisplayType.INTERNAL;
-                    break;
-
-                case 1:
-                    display_type = Utils.DisplayType.EXTERNAL;
-                    break;
-
-                default:
-                    assert_not_reached ();
+        internal_button.toggled.connect (() => {
+            if (internal_button.active) {
+                display_type = Utils.DisplayType.INTERNAL;
+                assess_dpi (Utils.dpi (inches, width, height), display_type);
+                set_display_icon (direction);
             }
 
-            assess_dpi (Utils.dpi (inches, width, height), display_type);
-            set_display_icon (direction);
+        });
+
+        external_button.toggled.connect (() => {
+            if (external_button.active) {
+                display_type = Utils.DisplayType.EXTERNAL;
+                assess_dpi (Utils.dpi (inches, width, height), display_type);
+                set_display_icon (direction);
+            }
         });
     }
 
@@ -404,50 +431,40 @@ public class Dippi.MainWindow : Hdy.Window {
 
         if ( inches == 0 || width == 0 || height == 0 ) {
             range_stack.visible_child_name = "invalid";
-        }
-
-        else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
+            link_button.visible = false;
+        } else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
             range_stack.visible_child_name = "low";
-        }
-
-        else if (calculated_dpi < ideal_dpi - ideal_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi < ideal_dpi - ideal_range) {
             range_stack.visible_child_name = "lodpi-low";
-        }
-
-        else if (calculated_dpi <= ideal_dpi + ideal_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= ideal_dpi + ideal_range) {
             range_stack.visible_child_name = "lodpi-ideal";
-        }
-
-        else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
             range_stack.visible_child_name = "lodpi-high";
-        }
-
-        else if (calculated_dpi < DPI_INFER_HIDPI) {
+            link_button.visible = true;
+        } else if (calculated_dpi < DPI_INFER_HIDPI) {
             range_stack.visible_child_name = "unclear";
-        }
-
-        else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
             range_stack.visible_child_name = "unclear";
-        }
-
-        else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
             range_stack.visible_child_name = "hidpi-low";
-        }
-
-        else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
             range_stack.visible_child_name = "hidpi-ideal";
-        }
-
-        else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
             range_stack.visible_child_name = "hidpi-high";
-        }
-
-        else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
             range_stack.visible_child_name = "high";
-        }
-
-        else {
+            link_button.visible = true;
+        } else {
             range_stack.visible_child_name = "invalid";
+            link_button.visible = false;
         }
 
         string type_param = "d";
@@ -455,7 +472,7 @@ public class Dippi.MainWindow : Hdy.Window {
             type_param = "l";
         }
 
-        link.uri = "https://cassidyjames.com/dippi/?d=%g&w=%d&h=%d&t=%s".printf (
+        link_button.uri = "https://cassidyjames.com/dippi/?d=%g&w=%d&h=%d&t=%s".printf (
             inches,
             width,
             height,
@@ -468,10 +485,10 @@ public class Dippi.MainWindow : Hdy.Window {
 
         if (inches < INCHES_INFER_EXTERNAL) {
             display_type = Utils.DisplayType.INTERNAL;
-            type_modebutton.selected = 0;
+            internal_button.active = true;
         } else {
             display_type = Utils.DisplayType.EXTERNAL;
-            type_modebutton.selected = 1;
+            external_button.active = true;
         }
 
         return display_type;
@@ -483,16 +500,16 @@ public class Dippi.MainWindow : Hdy.Window {
 
     private class RangeGrid : Gtk.Grid {
         public string icon_name { get; construct; }
+        public string style_class { get; construct; }
         public string title { get; construct; }
         public string description { get; construct; }
-        public string? link { get; construct; }
 
-        public RangeGrid (string _icon_name, string _title, string _description, string? _link = null) {
+        public RangeGrid (string _icon_name, string _style_class, string _title, string _description) {
             Object (
                 icon_name: _icon_name,
+                style_class: _style_class,
                 title: _title,
-                description: _description,
-                link: _link
+                description: _description
             );
         }
 
@@ -500,40 +517,32 @@ public class Dippi.MainWindow : Hdy.Window {
             column_spacing = 12;
             row_spacing = 6;
 
-            var icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.DIALOG) {
-                margin_bottom = 12,
+            var icon = new Gtk.Image.from_icon_name (icon_name) {
+                margin_top = 4,
+                pixel_size = 32,
                 valign = Gtk.Align.START
             };
+            icon.add_css_class (style_class);
 
             var title_label = new Gtk.Label (title) {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END,
                 wrap = true,
-                xalign = 0
             };
-            title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H1_LABEL);
+            title_label.add_css_class ("title-1");
+            title_label.add_css_class (style_class);
 
             var description_label = new Gtk.Label (description) {
-                margin_bottom = 12,
                 max_width_chars = 40,
                 use_markup = true,
                 valign = Gtk.Align.START,
                 wrap = true,
-                xalign = 0
             };
-            description_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+            description_label.add_css_class ("body");
 
             attach (icon, 0, 0, 1, 2);
             attach (title_label, 1, 0);
             attach (description_label, 1, 1);
-
-            if (link != null) {
-                var link_button = new Gtk.LinkButton.with_label (link, _("More info…")) {
-                    halign = Gtk.Align.START
-                };
-
-                attach (link_button, 1, 2);
-            }
         }
     }
 }

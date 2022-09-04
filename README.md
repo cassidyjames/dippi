@@ -1,8 +1,10 @@
 # Dippi
 
-![Screenshot](data/screenshot.png?raw=true)   | ![Screenshot](data/screenshot-2.png?raw=true)
---------------------------------------------- | ---------------------------------------------
-![Screenshot](data/screenshot-3.png?raw=true) | ![Screenshot](data/screenshot-4.png?raw=true)
+![Screenshot](data/screenshots/default.png?raw=true)     | ![Screenshot](data/screenshots/default-dark.png?raw=true)
+-------------------------------------------------------- | -------------------------------------------------------------
+![Screenshot](data/screenshots/hidpi.png?raw=true)       | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
+![Screenshot](data/screenshots/problematic.png?raw=true) | ![Screenshot](data/screenshots/problematic-dark.png?raw=true)
+![Screenshot](data/screenshots/lodpi.png?raw=true)       | ![Screenshot](data/screenshots/lodpi-dark.png?raw=true)
 
 ## Calculate display info like DPI and aspect ratio
 
@@ -28,38 +30,15 @@ Based my expertise and experience shipping HiDPI hardware and software at System
 - Fairly High for HiDPI, or
 - Too High DPI
 
-[Read about the design and development on Medium](https://medium.com/@cassidyjames/introducing-dippi-de2b526464ae)
+## Made for GNOME
 
-## Made for [elementary OS](https://elementary.io)
-
-Dippi is designed and developed on and for [elementary OS](https://elementary.io). Purchasing through AppCenter directly supports the development and ensures instant updates straight from me. Get it on AppCenter for the best experience.
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/com.github.cassidyjames.dippi)
-
-Flatpak versions may be made available on the [Releases](https://github.com/cassidyjames/dippi/releases) page, but these are intended for testing and will not get updates via Flatpak or your system's update mechanism. Versions of Dippi may have been built and made available elsewhere by third-parties; these builds may have modifications or changes and **are not provided nor supported by me**. The only supported version is distributed via AppCenter on elementary OS.
+Dippi 4 was designed and developed on and for GNOME.
 
 ## Developing and Building
 
-If you want to hack on and build Dippi yourself, you'll need the following dependencies:
+If you want to hack on and build Dippi yourself, I recommend using GNOME Builder. Clone the repository, then just* hit run!
 
-* libgranite-dev
-* libgtk-3-dev
-* meson
-* valac
-
-Run `meson build` to configure the build environment and run `ninja` to build
-
-    meson build --prefix=/usr
-    ninja -C build
-    
-To run automated tests, use `ninja test`
-
-    ninja -C build test
-
-To install, use `ninja install`, then execute with `com.github.cassidyjames.dippi`
-
-    ninja -C build install
-    com.github.cassidyjames.dippi
+<small>*If you're hitting issues, try "Update project dependencies" in the top-center build menu to ensure you have the SDK installed.</small>
 
 ## Special Thanks
 

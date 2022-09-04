@@ -1,0 +1,11 @@
+@define-color accent_color @purple_5;
+@define-color accent_bg_color @purple_3;
+
+.title-1 {
+  font-size: 225%;
+}
+
+.link {
+  margin: 0;
+  padding: 0;
+}

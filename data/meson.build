@@ -1,17 +1,12 @@
-icon_sizes = ['16', '24', '32', '48', '64', '128']
+install_data(
+    'icons' / meson.project_name() + '.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps',
+)
 
-foreach i : icon_sizes
-    install_data(
-        'icons' / i + '.svg',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
-        rename: meson.project_name() + '.svg'
-    )
-    install_data(
-        'icons' / i + '.svg',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
-        rename: meson.project_name() + '.svg'
-    )
-endforeach
+install_data(
+    'icons' / meson.project_name() + '-symbolic.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps',
+)
 
 i18n.merge_file(
     input: 'launcher.desktop.in',

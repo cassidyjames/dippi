@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/cassidyjames/dippi">
-    <file alias="com.github.cassidyjames.dippi.svg">icons/128.svg</file>
-    <file alias="display-measure-diagonal.svg">icons/display-measure-diagonal.svg</file>
-    <file alias="display-measure-horizontal.svg">icons/display-measure-horizontal.svg</file>
-    <file alias="display-measure-vertical.svg">icons/display-measure-vertical.svg</file>
-    <file alias="display-measure-diagonal-notebook.svg">icons/display-measure-diagonal-notebook.svg</file>
-    <file alias="display-measure-horizontal-notebook.svg">icons/display-measure-horizontal-notebook.svg</file>
-    <file alias="display-measure-vertical-notebook.svg">icons/display-measure-vertical-notebook.svg</file>
-    <file alias="process-completed.svg">icons/process-completed.svg</file>
+    <file alias="com.github.cassidyjames.dippi.svg" preprocess="xml-stripblanks">icons/com.github.cassidyjames.dippi.svg</file>
+    <file alias="display-measure-diagonal.svg" preprocess="xml-stripblanks">icons/display-measure-diagonal.svg</file>
+    <file alias="display-measure-horizontal.svg" preprocess="xml-stripblanks">icons/display-measure-horizontal.svg</file>
+    <file alias="display-measure-vertical.svg" preprocess="xml-stripblanks">icons/display-measure-vertical.svg</file>
+    <file alias="display-measure-diagonal-notebook.svg" preprocess="xml-stripblanks">icons/display-measure-diagonal-notebook.svg</file>
+    <file alias="display-measure-horizontal-notebook.svg" preprocess="xml-stripblanks">icons/display-measure-horizontal-notebook.svg</file>
+    <file alias="display-measure-vertical-notebook.svg" preprocess="xml-stripblanks">icons/display-measure-vertical-notebook.svg</file>
+    <file>style.css</file>
+    <file>style-dark.css</file>
+  </gresource>
+  <gresource prefix="/com/github/cassidyjames/dippi/icons/scalable/actions/">
+    <file alias="loupe-large-symbolic.svg" preprocess="xml-stripblanks">icons/loupe-large-symbolic.svg</file>
+    <file alias="test-pass-symbolic.svg" preprocess="xml-stripblanks">icons/test-pass-symbolic.svg</file>
   </gresource>
 </gresources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018–2021 Cassidy James Blaede <c@ssidyjam.es> -->
+<!-- Copyright 2018–2022 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
   <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
@@ -30,7 +30,6 @@
     <p>Special thanks:</p>
     <ul>
       <li>Micah Ilbery for the shiny icons</li>
-      <li>Daniel Foré for his apps to use as code examples</li>
     </ul>
   </description>
   <translation type="gettext">com.github.cassidyjames.dippi</translation>
@@ -39,6 +38,16 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="4.0.0" date="2022-09-04">
+      <description>
+        <p>Complete reworking</p>
+        <ul>
+          <li>elementary → GNOME styling</li>
+          <li>Refreshed icons thanks again to Micah Ilbery</li>
+          <li>Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.4" date="2021-12-14">
       <description>
         <p>Under-the-hood improvements:</p>
@@ -271,22 +280,34 @@
     </release>
     <release version="0.1.5" date="2018-01-09">
       <description>
-        <p>Initial release for AppCenter</p>
+        <p>Initial release</p>
       </description>
     </release>
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot-2.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot-3.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshot-4.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi-dark.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"></content_rating>
