@@ -1,8 +1,10 @@
 # Dippi
 
-![Screenshot](data/screenshot.png?raw=true)   | ![Screenshot](data/screenshot-2.png?raw=true)
---------------------------------------------- | ---------------------------------------------
-![Screenshot](data/screenshot-3.png?raw=true) | ![Screenshot](data/screenshot-4.png?raw=true)
+![Screenshot](data/screenshots/default.png?raw=true)     | ![Screenshot](data/screenshots/default-dark.png?raw=true)
+-------------------------------------------------------- | -------------------------------------------------------------
+![Screenshot](data/screenshots/hidpi.png?raw=true)       | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
+![Screenshot](data/screenshots/problematic.png?raw=true) | ![Screenshot](data/screenshots/problematic-dark.png?raw=true)
+![Screenshot](data/screenshots/lodpi.png?raw=true)       | ![Screenshot](data/screenshots/lodpi-dark.png?raw=true)
 
 ## Calculate display info like DPI and aspect ratio
 
@@ -30,11 +32,13 @@ Based my expertise and experience shipping HiDPI hardware and software at System
 
 ## Made for GNOME
 
-Dippi was designed and developed on and for GNOME.
+Dippi 4 was designed and developed on and for GNOME.
 
 ## Developing and Building
 
-If you want to hack on and build Dippi yourself, I recommend using GNOME Builder.
+If you want to hack on and build Dippi yourself, I recommend using GNOME Builder. Clone the repository, then just* hit run!
+
+<small>*If you're hitting issues, try "Update project dependencies" in the top-center build menu to ensure you have the SDK installed.</small>
 
 ## Special Thanks
 

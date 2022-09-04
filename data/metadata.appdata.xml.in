@@ -38,11 +38,13 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
-    <release version="4.0.0">
+    <release version="4.0.0" date="2022-09-04">
       <description>
         <p>Complete reworking</p>
         <ul>
           <li>elementary → GNOME styling</li>
+          <li>Refreshed icons thanks again to Micah Ilbery</li>
+          <li>Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita</li>
         </ul>
       </description>
     </release>
@@ -278,7 +280,7 @@
     </release>
     <release version="0.1.5" date="2018-01-09">
       <description>
-        <p>Initial release for AppCenter</p>
+        <p>Initial release</p>
       </description>
     </release>
   </releases>

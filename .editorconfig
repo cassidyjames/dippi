@@ -8,10 +8,7 @@ charset = utf-8
 max_line_length = 80
 indent_style = space
 indent_size = tab
-tab_width = 4
-
-[*.vala]
-tab_width = 4
-
-[*.json,*.xml,*.xml.in,*.yml]
 tab_width = 2
+
+[*.vala,meson.build]
+tab_width = 4
