@@ -8,6 +8,7 @@
     <file alias="display-measure-diagonal-notebook.svg">icons/display-measure-diagonal-notebook.svg</file>
     <file alias="display-measure-horizontal-notebook.svg">icons/display-measure-horizontal-notebook.svg</file>
     <file alias="display-measure-vertical-notebook.svg">icons/display-measure-vertical-notebook.svg</file>
-    <file alias="process-completed.svg">icons/process-completed.svg</file>
+    <file alias="test-pass-symbolic.svg">icons/test-pass-symbolic.svg</file>
+    <file alias="styles.css">styles.css</file>
   </gresource>
 </gresources>

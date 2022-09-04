@@ -156,6 +156,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         var invalid_range_grid = new RangeGrid (
             "dialog-information",
+            "accent",
             _("Analyze a Display"),
             _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."),
             "https://github.com/cassidyjames/dippi/blob/main/dpi.md"
@@ -163,54 +164,63 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         var low_range_grid = new RangeGrid (
             "dialog-error",
+            "error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
         );
 
         var lodpi_ideal_range_grid = new RangeGrid (
-            "process-completed",
+            "test-pass",
+            "success",
             _("Ideal for LoDPI"),
             _("Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing distances.")
         );
 
         var lodpi_high_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Potentially Problematic"),
             _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
         var hidpi_low_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Potentially Problematic"),
             _("HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and increasing the text size might help.")
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
-            "process-completed",
+            "test-pass",
+            "success",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
         );
 
         var hidpi_high_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Fairly High for HiDPI"),
             _("Text and UI are likely to appear <b>too small for typical viewing distances</b>. Increasing the text size may help.")
         );
 
         var high_range_grid = new RangeGrid (
             "dialog-error",
+            "error",
             _("Too High DPI"),
             _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
         var unclear_range_grid = new RangeGrid (
             "dialog-warning",
+            "warning",
             _("Potentially Problematic"),
             _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
         );
@@ -480,13 +490,15 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
     private class RangeGrid : Gtk.Grid {
         public string icon_name { get; construct; }
+        public string style_class { get; construct; }
         public string title { get; construct; }
         public string description { get; construct; }
         public string? link { get; construct; }
 
-        public RangeGrid (string _icon_name, string _title, string _description, string? _link = null) {
+        public RangeGrid (string _icon_name, string _style_class, string _title, string _description, string? _link = null) {
             Object (
                 icon_name: _icon_name,
+                style_class: _style_class,
                 title: _title,
                 description: _description,
                 link: _link
@@ -497,10 +509,21 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             column_spacing = 12;
             row_spacing = 6;
 
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("com/github/cassidyjames/dippi/styles.css");
+
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+
             var icon = new Gtk.Image.from_icon_name (icon_name) {
-                margin_bottom = 12,
+                margin_top = 4,
+                pixel_size = 32,
                 valign = Gtk.Align.START
             };
+            icon.add_css_class (style_class);
 
             var title_label = new Gtk.Label (title) {
                 halign = Gtk.Align.START,
@@ -509,6 +532,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                 xalign = 0
             };
             title_label.add_css_class ("title-1");
+            title_label.add_css_class (style_class);
 
             var description_label = new Gtk.Label (description) {
                 margin_bottom = 12,
