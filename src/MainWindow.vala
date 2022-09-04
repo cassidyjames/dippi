@@ -161,7 +161,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             "https://cassidyjames.com/dippi/",
             _("Share results…")
         ) {
-            valign = Gtk.Align.END
+            halign = Gtk.Align.END,
+            valign = Gtk.Align.END,
+            visible = false,
         };
 
         var invalid_range_grid = new RangeGrid (
@@ -235,8 +237,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         );
 
         range_stack = new Gtk.Stack () {
-            transition_duration = 100,
-            transition_type = Gtk.StackTransitionType.CROSSFADE,
             vexpand = true
         };
         range_stack.add_named (invalid_range_grid, "invalid");
@@ -255,7 +255,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             margin_end = 24,
             row_spacing = 6
         };
-        assessment_grid.attach (range_stack, 0, 0, 3);
+        assessment_grid.attach (range_stack, 0, 0, 4);
         assessment_grid.attach (aspect_result_label, 0, 1);
         assessment_grid.attach (dpi_result_label, 1, 1);
         assessment_grid.attach (logical_resolution_label, 2, 1);
@@ -431,50 +431,40 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         if ( inches == 0 || width == 0 || height == 0 ) {
             range_stack.visible_child_name = "invalid";
-        }
-
-        else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
+            link_button.visible = false;
+        } else if (calculated_dpi < ideal_dpi - ideal_range - INTERNAL_UNCLEAR_RANGE) {
             range_stack.visible_child_name = "low";
-        }
-
-        else if (calculated_dpi < ideal_dpi - ideal_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi < ideal_dpi - ideal_range) {
             range_stack.visible_child_name = "lodpi-low";
-        }
-
-        else if (calculated_dpi <= ideal_dpi + ideal_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= ideal_dpi + ideal_range) {
             range_stack.visible_child_name = "lodpi-ideal";
-        }
-
-        else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= ideal_dpi + ideal_range + unclear_range) {
             range_stack.visible_child_name = "lodpi-high";
-        }
-
-        else if (calculated_dpi < DPI_INFER_HIDPI) {
+            link_button.visible = true;
+        } else if (calculated_dpi < DPI_INFER_HIDPI) {
             range_stack.visible_child_name = "unclear";
-        }
-
-        else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
             range_stack.visible_child_name = "unclear";
-        }
-
-        else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi < (ideal_dpi - ideal_range) * 2) {
             range_stack.visible_child_name = "hidpi-low";
-        }
-
-        else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= (ideal_dpi + ideal_range) * 2) {
             range_stack.visible_child_name = "hidpi-ideal";
-        }
-
-        else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi <= (ideal_dpi + ideal_range + unclear_range) * 2) {
             range_stack.visible_child_name = "hidpi-high";
-        }
-
-        else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
+            link_button.visible = true;
+        } else if (calculated_dpi > (ideal_dpi + ideal_range + unclear_range) * 2) {
             range_stack.visible_child_name = "high";
-        }
-
-        else {
+            link_button.visible = true;
+        } else {
             range_stack.visible_child_name = "invalid";
+            link_button.visible = false;
         }
 
         string type_param = "d";
