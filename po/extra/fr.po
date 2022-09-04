@@ -2,42 +2,46 @@
 # Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Automatically generated, 2021.
+# Irénée THIRION <irenee.thirion@e.email>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-18 21:40-0600\n"
-"PO-Revision-Date: 2021-06-18 21:39-0600\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2021-12-14 17:02+0000\n"
+"PO-Revision-Date: 2022-09-04 22:54+0200\n"
+"Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
+"Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: data/launcher.desktop.in:3 data/metadata.appdata.xml.in:7
 msgid "Dippi"
-msgstr ""
+msgstr "Dippi"
 
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
-msgstr ""
+msgstr "Calculateur d’informations de l’écran"
 
 #: data/launcher.desktop.in:5 data/metadata.appdata.xml.in:8
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr ""
+msgstr "Calculez les informations de l’écran comme le DPI ou le ratio"
 
 #: data/launcher.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
-msgstr ""
+msgstr "com.github.cassidyjames.dippi"
 
 #: data/launcher.desktop.in:12
 msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
+"DPI;densité;monitor;écran;résolution;display;affichage;largeur;hauteur;HiDPI;"
+"loDPI;aspect;ratio;"
 
 #: data/metadata.appdata.xml.in:10
 msgid ""
@@ -46,339 +50,402 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
+"Analysez n’importe quel écran. Saisissez quelques informations simples et "
+"découvrez le rapport d’aspect, le DPI et d’autres détails d’un écran "
+"particulier. Idéal pour décider de l’achat d’un ordinateur portable ou d’un "
+"écran externe, et pour savoir s’il est considéré comme HiDPI."
 
 #: data/metadata.appdata.xml.in:11
 msgid "Handy features:"
-msgstr ""
+msgstr "Fonctionnalités pratiques :"
 
 #: data/metadata.appdata.xml.in:13
 msgid "Find out if a display is a good choice based on its size and resolution"
 msgstr ""
+"Vérifiez si un écran est un bon choix en fonction de sa taille et de sa "
+"résolution"
 
 #: data/metadata.appdata.xml.in:14
 msgid "Get advice about different densities"
-msgstr ""
+msgstr "Obtenez des conseils sur les différentes densités"
 
 #: data/metadata.appdata.xml.in:15
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "Apprenez la résolution logique"
 
-#: data/metadata.appdata.xml.in:16 data/metadata.appdata.xml.in:200
+#: data/metadata.appdata.xml.in:16 data/metadata.appdata.xml.in:237
 msgid "Differentiate between laptops and desktop displays"
 msgstr ""
+"Différenciez les écrans d’ordinateurs de bureau et d’ordinateurs portables"
 
 #: data/metadata.appdata.xml.in:17
 msgid "Stupid simple: all in a cute li'l window"
-msgstr ""
+msgstr "Stupidement simple : tout dans une jolie p’tite fenêtre."
 
 #: data/metadata.appdata.xml.in:19
 msgid ""
-"Based on the expertise of Cassidy James Blaede and the actual logic System76 "
-"uses to determine screen size and resolution combinations."
+"Based my expertise and experience shipping HiDPI hardware and software at "
+"System76 and elementary."
 msgstr ""
+"Basé sur mon expertise et mon expérience de l’expédition de matériel et de "
+"logiciels HiDPI chez System76 et elementary."
 
 #: data/metadata.appdata.xml.in:20
 msgid "Tells you if a display’s density is:"
-msgstr ""
+msgstr "Vous dit si la densité d’un écran est :"
 
 #: data/metadata.appdata.xml.in:22
 msgid "Very Low DPI,"
-msgstr ""
+msgstr "à DPI très bas,"
 
 #: data/metadata.appdata.xml.in:23
 msgid "Fairly Low DPI,"
-msgstr ""
+msgstr "à DPI assez bas,"
 
 #: data/metadata.appdata.xml.in:24
 msgid "Ideal for LoDPI,"
-msgstr ""
+msgstr "Idéale pour LoDPI,"
 
 #: data/metadata.appdata.xml.in:25
 msgid "Potentially Problematic,"
-msgstr ""
+msgstr "Potentiellement problématique,"
 
 #: data/metadata.appdata.xml.in:26
 msgid "Ideal for HiDPI,"
-msgstr ""
+msgstr "Idéale pour HiDPI,"
 
 #: data/metadata.appdata.xml.in:27
 msgid "Fairly High for HiDPI, or"
-msgstr ""
+msgstr "assez haute pour HiDPI, ou"
 
 #: data/metadata.appdata.xml.in:28
 msgid "Too High DPI"
-msgstr ""
+msgstr "DPI trop haut"
 
 #: data/metadata.appdata.xml.in:30
 msgid "Special thanks:"
-msgstr ""
+msgstr "Remerciements particuliers à :"
 
 #: data/metadata.appdata.xml.in:32
 msgid "Micah Ilbery for the shiny icons"
-msgstr ""
+msgstr "Micah Ilbery pour les icônes brillantes"
 
 #: data/metadata.appdata.xml.in:33
 msgid "Daniel Foré for his apps to use as code examples"
-msgstr ""
+msgstr "Daniel Foré pour ses applications à utiliser comme exemples de code"
 
-#: data/metadata.appdata.xml.in:34
-msgid "David Jordan for helping determine DPI ranges"
-msgstr ""
+#: data/metadata.appdata.xml.in:44 data/metadata.appdata.xml.in:52
+msgid "Under-the-hood improvements:"
+msgstr "Améliorations sous le capot :"
 
-#: data/metadata.appdata.xml.in:45
-msgid "Port to elementary OS 6"
-msgstr ""
+#: data/metadata.appdata.xml.in:46 data/metadata.appdata.xml.in:55
+msgid "Update Stripe key"
+msgstr "Mise à jour de la clé Stripe"
 
-#: data/metadata.appdata.xml.in:47
-msgid "Follow the dark style preference"
-msgstr ""
+#: data/metadata.appdata.xml.in:54
+msgid "Stricter sandboxing"
+msgstr "Sandboxing plus strict"
 
-#: data/metadata.appdata.xml.in:48
-msgid "Drag window from anywhere"
-msgstr ""
+#: data/metadata.appdata.xml.in:61
+msgid "Add \"calculator\" category to launcher"
+msgstr "Ajout d’une catégorie « calculateur » au lanceur"
 
-#: data/metadata.appdata.xml.in:49
-msgid "Refreshed typography"
-msgstr ""
+#: data/metadata.appdata.xml.in:66
+msgid "Under-the-hood packaging updates for elementary OS 6"
+msgstr "Mises à jour intérieures de packaging pour elementary OS 6"
 
-#: data/metadata.appdata.xml.in:55
-msgid "Code style and organization fixes"
+#: data/metadata.appdata.xml.in:71
+msgid ""
+"The Adventure of Link: you can now share Dippi results as a link so anyone "
+"can see all the details and make their own calculations. Plus:"
 msgstr ""
+"L’Aventure de Link : vous pouvez désormais partager les résultats de Dippi "
+"avec un lien pour que tout le monde puisse voir les détails et faire ses "
+"propres calculs. Plus :"
 
-#: data/metadata.appdata.xml.in:60
-msgid "Updated translations"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:62
-msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:63
-msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:69
-msgid "Happy new year! Just some AppData fixes today. 😉"
-msgstr ""
+#: data/metadata.appdata.xml.in:73
+msgid "More details on launch"
+msgstr "Plus de détails lors du lancement"
 
 #: data/metadata.appdata.xml.in:74
-msgid "Under-the-hood tweaks"
-msgstr ""
+msgid "Bolded sections of descriptions for easier skimmability"
+msgstr "Sections des descriptions mises en gras pour être lues plus facilement"
 
-#: data/metadata.appdata.xml.in:79
-msgid "Hello, Juno!"
+#: data/metadata.appdata.xml.in:75
+msgid "Fix window resizing for different results"
 msgstr ""
+"Correction du redimensionnement de la fenêtre pour différents résultats"
 
-#: data/metadata.appdata.xml.in:81
-msgid "Update translation link"
-msgstr ""
+#: data/metadata.appdata.xml.in:76
+msgid "Animate between results"
+msgstr "Animations entre les résultats"
 
 #: data/metadata.appdata.xml.in:82
-msgid "Under the hood cleanup"
-msgstr ""
+msgid "Port to elementary OS 6"
+msgstr "Portage vers elementary OS 6"
 
-#: data/metadata.appdata.xml.in:88
-msgid "Add translation instructions and update translation link in app data"
-msgstr ""
+#: data/metadata.appdata.xml.in:84
+msgid "Follow the dark style preference"
+msgstr "Suit le paramètre de style sombre"
 
-#: data/metadata.appdata.xml.in:93
-msgid "Added translation link to app data"
-msgstr ""
+#: data/metadata.appdata.xml.in:85
+msgid "Drag window from anywhere"
+msgstr "Faites glisser la fenêtre de n’importe où"
 
-#: data/metadata.appdata.xml.in:98
-msgid "Lithuanian Translation"
-msgstr ""
+#: data/metadata.appdata.xml.in:86
+msgid "Refreshed typography and design"
+msgstr "Typographie et design rafraîchis"
+
+#: data/metadata.appdata.xml.in:92
+msgid "Code style and organization fixes"
+msgstr "Corrections du style et de l’organisation du code"
+
+#: data/metadata.appdata.xml.in:97
+msgid "Updated translations"
+msgstr "Mises à jour des traductions"
+
+#: data/metadata.appdata.xml.in:99
+msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
+msgstr "Mise à jour des traductions espagnoles grâce à Adolfo Jayme-Barrientos"
 
 #: data/metadata.appdata.xml.in:100
-msgid "Lithuanian translation thanks to welaq"
-msgstr ""
+msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
+msgstr "Hallo ! Traductions néerlandaises grâce à Heimen Stoffels"
 
-#: data/metadata.appdata.xml.in:101
-msgid "Fixed deprecation"
+#: data/metadata.appdata.xml.in:106
+msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr ""
-
-#: data/metadata.appdata.xml.in:107
-msgid "Translation &amp; Tweaks"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:109
-msgid "French translations"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:110
-msgid "Hide labels when data is invalid"
-msgstr ""
+"Bonne année ! Juste quelques corrections des données de l’application "
+"aujourd’hui. 😉"
 
 #: data/metadata.appdata.xml.in:111
-msgid "Fix max length on width entry"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:112
-msgid "Fix displayed AppData"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:114
-msgid "Behind the scenes:"
-msgstr ""
+msgid "Under-the-hood tweaks"
+msgstr "Ajustements sous le capot"
 
 #: data/metadata.appdata.xml.in:116
-msgid "Add editorconfig and Travis for more consistency"
-msgstr ""
+msgid "Hello, Juno!"
+msgstr "Salut, Juno !"
 
-#: data/metadata.appdata.xml.in:117
-msgid "Split utilities out into their own file"
-msgstr ""
+#: data/metadata.appdata.xml.in:118
+msgid "Update translation link"
+msgstr "Mise à jour du lien de traduction"
 
-#: data/metadata.appdata.xml.in:123
-msgid "AppData tweaks"
-msgstr ""
+#: data/metadata.appdata.xml.in:119
+msgid "Under the hood cleanup"
+msgstr "Nettoyage sous le capot"
 
-#: data/metadata.appdata.xml.in:128
-msgid "Fixed:"
+#: data/metadata.appdata.xml.in:125
+msgid "Add translation instructions and update translation link in app data"
 msgstr ""
+"Ajout d’instructions de traduction et mise à jour du lien de traduction dans "
+"les données de l’application"
 
 #: data/metadata.appdata.xml.in:130
-msgid "Window no longer resizes when switching between analyses"
-msgstr ""
+msgid "Added translation link to app data"
+msgstr "Ajout d’un lien de traduction aux données de l’application"
 
-#: data/metadata.appdata.xml.in:136
-msgid "Under the hood changes:"
-msgstr ""
+#: data/metadata.appdata.xml.in:135
+msgid "Lithuanian Translation"
+msgstr "Traduction lituanienne"
+
+#: data/metadata.appdata.xml.in:137
+msgid "Lithuanian translation thanks to welaq"
+msgstr "Traduction lituanienne grâce à welaq"
 
 #: data/metadata.appdata.xml.in:138
-msgid "Include success icon as a fallback for other icon sets"
-msgstr ""
+msgid "Fixed deprecation"
+msgstr "Dépréciation corrigée"
 
 #: data/metadata.appdata.xml.in:144
-msgid "Changes:"
-msgstr ""
+msgid "Translation &amp; Tweaks"
+msgstr "Traduction &amp; Ajustements"
 
 #: data/metadata.appdata.xml.in:146
+msgid "French translations"
+msgstr "Traductions françaises"
+
+#: data/metadata.appdata.xml.in:147
+msgid "Hide labels when data is invalid"
+msgstr "Labels masqués quand les données sont invalides"
+
+#: data/metadata.appdata.xml.in:148
+msgid "Fix max length on width entry"
+msgstr "Correction de la longueur maximale pour l’entrée de la largeur"
+
+#: data/metadata.appdata.xml.in:149
+msgid "Fix displayed AppData"
+msgstr "Correction des informations d’application affichées"
+
+#: data/metadata.appdata.xml.in:151
+msgid "Behind the scenes:"
+msgstr "En coulisses :"
+
+#: data/metadata.appdata.xml.in:153
+msgid "Add editorconfig and Travis for more consistency"
+msgstr "Ajout de editorconfig et Travis pour plus de consistance"
+
+#: data/metadata.appdata.xml.in:154
+msgid "Split utilities out into their own file"
+msgstr "Répartition des utilitaires dans leur propre fichier"
+
+#: data/metadata.appdata.xml.in:160
+msgid "AppData tweaks"
+msgstr "Ajustement des données de l’appli"
+
+#: data/metadata.appdata.xml.in:165
+msgid "Fixed:"
+msgstr "Corrigé :"
+
+#: data/metadata.appdata.xml.in:167
+msgid "Window no longer resizes when switching between analyses"
+msgstr ""
+"La fenêtre ne se redimensionne plus lors du passage d’une analyse à l’autre"
+
+#: data/metadata.appdata.xml.in:173
+msgid "Under the hood changes:"
+msgstr "Changements sous le capot :"
+
+#: data/metadata.appdata.xml.in:175
+msgid "Include success icon as a fallback for other icon sets"
+msgstr ""
+"Inclure l’icône de réussite comme solution de rechange pour d’autres jeux "
+"d’icônes"
+
+#: data/metadata.appdata.xml.in:181
+msgid "Changes:"
+msgstr "Changements :"
+
+#: data/metadata.appdata.xml.in:183
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
 msgstr ""
+"Les gammes de DPI pour les écrans internes ont été modifiées pour être un "
+"peu plus strictes pour la gamme « idéale »."
 
-#: data/metadata.appdata.xml.in:147
+#: data/metadata.appdata.xml.in:184
 msgid "Metadata additions and tweaks"
-msgstr ""
+msgstr "Ajout de métadonnées et ajustements"
 
-#: data/metadata.appdata.xml.in:149
+#: data/metadata.appdata.xml.in:186
 msgid "Fixes:"
-msgstr ""
+msgstr "Correction :"
 
-#: data/metadata.appdata.xml.in:151
+#: data/metadata.appdata.xml.in:188
 msgid "Install all available icon sizes"
-msgstr ""
+msgstr "Installe toutes les tailles d’icônes disponibles"
 
-#: data/metadata.appdata.xml.in:152
+#: data/metadata.appdata.xml.in:189
 msgid "Allow all languages to be translated"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:154
-msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:160
-msgid "Added logical resolution"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:161
-msgid "Cleaned up design by moving display details to below the analysis"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:168
-msgid "New purple accent color"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:169
-msgid "Refined margins and alignment"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:170
-msgid "Escape now closes the window"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:171
-msgid "Lots of little code cleanup"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:178
-msgid "Fix bug with setting display icon"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:179
-msgid "Under-the-hood fixes"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:185
-msgid "Display icon now changes according to display type"
-msgstr ""
+msgstr "Permet à tous les langages d’être traduits"
 
 #: data/metadata.appdata.xml.in:191
-msgid "Select between laptop or desktop"
-msgstr ""
+msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
+msgstr "Et plus encore ! Lisez le post de blog récent sur goo.gl/tKwkq4"
 
-#: data/metadata.appdata.xml.in:192
-msgid "Refreshed icons thanks to Micah Ilbery"
-msgstr ""
+#: data/metadata.appdata.xml.in:197
+msgid "Added logical resolution"
+msgstr "Ajout de la résolution logique"
 
-#: data/metadata.appdata.xml.in:199
-msgid "Completely reworked DPI ranges"
+#: data/metadata.appdata.xml.in:198
+msgid "Cleaned up design by moving display details to below the analysis"
 msgstr ""
+"Nettoyage du design en déplaçant les détails de l’écran en dessous de "
+"l’analyse"
 
-#: data/metadata.appdata.xml.in:201 data/metadata.appdata.xml.in:211
-msgid "Tweaked DPI assessment and reasoning copy"
-msgstr ""
+#: data/metadata.appdata.xml.in:205
+msgid "New purple accent color"
+msgstr "Nouvelle couleur d’accentuation rose"
 
-#: data/metadata.appdata.xml.in:202
-msgid "Flattened titlebar"
-msgstr ""
+#: data/metadata.appdata.xml.in:206
+msgid "Refined margins and alignment"
+msgstr "Alignement et marges affinés"
 
-#: data/metadata.appdata.xml.in:203
-msgid "Fixed bugs and warnings"
-msgstr ""
+#: data/metadata.appdata.xml.in:207
+msgid "Escape now closes the window"
+msgstr "La touche Échap ferme désormais la fenêtre "
 
-#: data/metadata.appdata.xml.in:210
-msgid "All new side-by-side UI"
-msgstr ""
+#: data/metadata.appdata.xml.in:208
+msgid "Lots of little code cleanup"
+msgstr "Beaucoup de petits nettoyages du code"
 
-#: data/metadata.appdata.xml.in:212
-msgid "Added icons to make assessment clearer"
-msgstr ""
+#: data/metadata.appdata.xml.in:215
+msgid "Fix bug with setting display icon"
+msgstr "Correction d’un bogue lors de la définition de l’icône de l’écran"
 
-#: data/metadata.appdata.xml.in:219
-msgid "Made visualization interactive!"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:220
-msgid "Added Cassidy-approval and reasoning"
-msgstr ""
-
-#: data/metadata.appdata.xml.in:221
-msgid "Fix a bug where sometimes an extra zero would sneak in"
-msgstr ""
+#: data/metadata.appdata.xml.in:216
+msgid "Under-the-hood fixes"
+msgstr "Corrections sous le capot"
 
 #: data/metadata.appdata.xml.in:222
-msgid "Under-the-hood restructuring"
-msgstr ""
+msgid "Display icon now changes according to display type"
+msgstr "L’icône d’écran change désormais selon le type d’écran"
+
+#: data/metadata.appdata.xml.in:228
+msgid "Select between laptop or desktop"
+msgstr "Sélection entre ordinateur de bureau ou portable"
 
 #: data/metadata.appdata.xml.in:229
+msgid "Refreshed icons thanks to Micah Ilbery"
+msgstr "Icônes rafraîchies grâce à Micah Ilbery"
+
+#: data/metadata.appdata.xml.in:236
+msgid "Completely reworked DPI ranges"
+msgstr "Gammes de DPI complètement retravaillées"
+
+#: data/metadata.appdata.xml.in:238 data/metadata.appdata.xml.in:248
+msgid "Tweaked DPI assessment and reasoning copy"
+msgstr "Amélioration de l’évaluation du DPI et de la copie de raisonnement"
+
+#: data/metadata.appdata.xml.in:239
+msgid "Flattened titlebar"
+msgstr "Barre de titre applatie"
+
+#: data/metadata.appdata.xml.in:240
+msgid "Fixed bugs and warnings"
+msgstr "Correction de bogues et avertissements"
+
+#: data/metadata.appdata.xml.in:247
+msgid "All new side-by-side UI"
+msgstr "Nouvelle interface côte-à-côte"
+
+#: data/metadata.appdata.xml.in:249
+msgid "Added icons to make assessment clearer"
+msgstr "Ajout d’icônes pour rendre l’évaluation plus claire"
+
+#: data/metadata.appdata.xml.in:256
+msgid "Made visualization interactive!"
+msgstr "Visualisation rendue interactive !"
+
+#: data/metadata.appdata.xml.in:257
+msgid "Added Cassidy-approval and reasoning"
+msgstr "Ajout de l’approbation de Cassidy et de son raisonnement"
+
+#: data/metadata.appdata.xml.in:258
+msgid "Fix a bug where sometimes an extra zero would sneak in"
+msgstr ""
+"Correction d’un bogue où parfois un zéro supplémentaire venait se glisser"
+
+#: data/metadata.appdata.xml.in:259
+msgid "Under-the-hood restructuring"
+msgstr "Restructuration intérieure"
+
+#: data/metadata.appdata.xml.in:266
 msgid "Shiny new icon"
-msgstr ""
+msgstr "Nouvelle icône"
 
-#: data/metadata.appdata.xml.in:230
+#: data/metadata.appdata.xml.in:267
 msgid "Added visualization to UI"
-msgstr ""
+msgstr "Ajout de la visualisation à l’interface"
 
-#: data/metadata.appdata.xml.in:231
+#: data/metadata.appdata.xml.in:268
 msgid "Significant code cleanup"
-msgstr ""
+msgstr "Nettoyage significatif du code"
 
-#: data/metadata.appdata.xml.in:237
+#: data/metadata.appdata.xml.in:274
 msgid "Initial release for AppCenter"
-msgstr ""
+msgstr "Première version pour AppCenter"
 
-#: data/metadata.appdata.xml.in:284
+#: data/metadata.appdata.xml.in:293
 msgid "Cassidy James Blaede"
-msgstr ""
+msgstr "Cassidy James Blaede"
