@@ -295,54 +295,63 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         });
 
         diag_entry.changed.connect (() => {
-            inches = double.parse (diag_entry.get_text ());
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                infer_display_type (inches)
-            );
+            string? text = diag_entry.get_text ();
+            if (text != null && text != "") {
+                inches = double.parse (diag_entry.get_text ());
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    infer_display_type (inches)
+                );
+            }
         });
 
         width_entry.changed.connect (() => {
-            width = int.parse (width_entry.get_text ());
+            string? text = width_entry.get_text ();
+            if (text != null && text != "") {
+                width = int.parse (text);
 
-            is_default_width = false;
+                is_default_width = false;
 
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!height_entry.has_focus && (is_default_height || height == 0)) {
-                double calculated_height = Math.round (
-                    width *
-                    DEFAULT_ASPECT_HEIGHT /
-                    DEFAULT_ASPECT_WIDTH
+                recalculate_aspect (width, height);
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    display_type
                 );
-                height_entry.text = (calculated_height).to_string ();
-                is_default_height = true;
+
+                if (!height_entry.has_focus && (is_default_height || height == 0)) {
+                    double calculated_height = Math.round (
+                        width *
+                        DEFAULT_ASPECT_HEIGHT /
+                        DEFAULT_ASPECT_WIDTH
+                    );
+                    height_entry.text = (calculated_height).to_string ();
+                    is_default_height = true;
+                }
             }
         });
 
         height_entry.changed.connect (() => {
-            height = int.parse (height_entry.get_text ());
+            string? text = height_entry.get_text ();
+            if (text != null && text != "") {
+                height = int.parse (height_entry.get_text ());
 
-            is_default_height = false;
+                is_default_height = false;
 
-            recalculate_aspect (width, height);
-            assess_dpi (
-                recalculate_dpi (inches, width, height),
-                display_type
-            );
-
-            if (!width_entry.has_focus && (is_default_width || width == 0)) {
-                double calculated_width = Math.round (
-                    height *
-                    DEFAULT_ASPECT_WIDTH /
-                    DEFAULT_ASPECT_HEIGHT
+                recalculate_aspect (width, height);
+                assess_dpi (
+                    recalculate_dpi (inches, width, height),
+                    display_type
                 );
-                width_entry.text = (calculated_width).to_string ();
-                is_default_width = true;
+
+                if (!width_entry.has_focus && (is_default_width || width == 0)) {
+                    double calculated_width = Math.round (
+                        height *
+                        DEFAULT_ASPECT_WIDTH /
+                        DEFAULT_ASPECT_HEIGHT
+                    );
+                    width_entry.text = (calculated_width).to_string ();
+                    is_default_width = true;
+                }
             }
         });
 
@@ -529,7 +538,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END,
                 wrap = true,
-                xalign = 0
             };
             title_label.add_css_class ("title-1");
             title_label.add_css_class (style_class);
@@ -539,7 +547,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                 use_markup = true,
                 valign = Gtk.Align.START,
                 wrap = true,
-                // xalign = 0
             };
             description_label.add_css_class ("body");
 
