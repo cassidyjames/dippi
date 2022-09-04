@@ -33,7 +33,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     private Gtk.Label logical_resolution_label;
     private Gtk.Label aspect_result_label;
     private Gtk.LinkButton link;
-    // private Granite.Widgets.ModeButton type_modebutton;
+    // private Granite.Widgets.ModeButton type_buttons;
+    private Gtk.ToggleButton internal_button;
+    private Gtk.ToggleButton external_button;
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
 
@@ -103,17 +105,27 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             halign = Gtk.Align.START
         };
 
-        // var type_label = new Gtk.Label (_("Type:")) {
-        //     halign = Gtk.Align.END
-        // };
+        var type_label = new Gtk.Label (_("Type:")) {
+            halign = Gtk.Align.END
+        };
 
-        // type_modebutton = new Granite.Widgets.ModeButton ();
-        // type_modebutton.append_text (Utils.DisplayType.INTERNAL.to_string ());
-        // type_modebutton.append_text (Utils.DisplayType.EXTERNAL.to_string ());
+        internal_button = new Gtk.ToggleButton () {
+            label = Utils.DisplayType.INTERNAL.to_string ()
+        };
+
+        external_button = new Gtk.ToggleButton () {
+            group = internal_button,
+            label = Utils.DisplayType.EXTERNAL.to_string ()
+        };
+
+        var type_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        type_buttons.add_css_class ("linked");
+        type_buttons.append (internal_button);
+        type_buttons.append (external_button);
 
         var data_grid = new Gtk.Grid () {
             column_spacing = 6,
-            margin_start = margin_end = 24,
+            margin_start = margin_end = margin_bottom = 24,
             margin_top = 0,
             row_spacing = 6
         };
@@ -127,12 +139,12 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         data_grid.attach (x_label, 2, 2);
         data_grid.attach (height_entry, 3, 2);
         data_grid.attach (px_label, 4, 2);
-        // data_grid.attach (type_label, 0, 3);
-        // data_grid.attach (type_modebutton, 1, 3, 4);
+        data_grid.attach (type_label, 0, 3);
+        data_grid.attach (type_buttons, 1, 3, 4);
 
         aspect_result_label = new Gtk.Label (null) {
             halign = Gtk.Align.START,
-            margin_start = 48 + 6 + 6, // icon plus its margins
+            margin_start = 32 + 6 + 6, // icon plus its margins
             valign = Gtk.Align.END
         };
 
@@ -155,70 +167,70 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         };
 
         var invalid_range_grid = new RangeGrid (
-            "dialog-information",
+            "dialog-information-symbolic",
             "accent",
             _("Analyze a Display"),
             _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.")
         );
 
         var low_range_grid = new RangeGrid (
-            "dialog-error",
+            "dialog-error-symbolic",
             "error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
         );
 
         var lodpi_ideal_range_grid = new RangeGrid (
-            "test-pass",
+            "test-pass-symbolic",
             "success",
             _("Ideal for LoDPI"),
             _("Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing distances.")
         );
 
         var lodpi_high_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Potentially Problematic"),
             _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
         var hidpi_low_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Potentially Problematic"),
             _("HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and increasing the text size might help.")
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
-            "test-pass",
+            "test-pass-symbolic",
             "success",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
         );
 
         var hidpi_high_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Fairly High for HiDPI"),
             _("Text and UI are likely to appear <b>too small for typical viewing distances</b>. Increasing the text size may help.")
         );
 
         var high_range_grid = new RangeGrid (
-            "dialog-error",
+            "dialog-error-symbolic",
             "error",
             _("Too High DPI"),
             _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
         var unclear_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Potentially Problematic"),
             _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
@@ -333,23 +345,22 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             }
         });
 
-        // type_modebutton.mode_changed.connect (() => {
-        //     switch (type_modebutton.selected) {
-        //         case 0:
-        //             display_type = Utils.DisplayType.INTERNAL;
-        //             break;
+        internal_button.toggled.connect (() => {
+            if (internal_button.active) {
+                display_type = Utils.DisplayType.INTERNAL;
+                assess_dpi (Utils.dpi (inches, width, height), display_type);
+                set_display_icon (direction);
+            }
 
-        //         case 1:
-        //             display_type = Utils.DisplayType.EXTERNAL;
-        //             break;
+        });
 
-        //         default:
-        //             assert_not_reached ();
-        //     }
-
-        //     assess_dpi (Utils.dpi (inches, width, height), display_type);
-        //     set_display_icon (direction);
-        // });
+        external_button.toggled.connect (() => {
+            if (external_button.active) {
+                display_type = Utils.DisplayType.EXTERNAL;
+                assess_dpi (Utils.dpi (inches, width, height), display_type);
+                set_display_icon (direction);
+            }
+        });
     }
 
     private int recalculate_dpi (double inches, int width, int height) {
@@ -474,10 +485,10 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         if (inches < INCHES_INFER_EXTERNAL) {
             display_type = Utils.DisplayType.INTERNAL;
-            // type_modebutton.selected = 0;
+            // type_buttons.selected = 0;
         } else {
             display_type = Utils.DisplayType.EXTERNAL;
-            // type_modebutton.selected = 1;
+            // type_buttons.selected = 1;
         }
 
         return display_type;
@@ -506,15 +517,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         construct {
             column_spacing = 12;
             row_spacing = 6;
-
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("com/github/cassidyjames/dippi/styles.css");
-
-            Gtk.StyleContext.add_provider_for_display (
-                Gdk.Display.get_default (),
-                provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
 
             var icon = new Gtk.Image.from_icon_name (icon_name) {
                 margin_top = 4,
