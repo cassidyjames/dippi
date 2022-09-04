@@ -1,23 +1,22 @@
 name: Lint
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
 
- on:
-   pull_request:
-     types:
-       - opened
-       - reopened
-       - synchronize
+jobs:
+  lint:
+    name: Vala Lint
+    runs-on: ubuntu-latest
 
- jobs:
-   lint:
-     name: Lint
-     runs-on: ubuntu-latest
+    container:
+      image: valalang/lint
 
-     container:
-       image: valalang/lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-     steps:
-       - name: Checkout
-         uses: actions/checkout@v2
-
-       - name: Lint
-         run: io.elementary.vala-lint -d .
+      - name: Lint
+        run: io.elementary.vala-lint -d .
