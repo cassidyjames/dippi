@@ -54,7 +54,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         ).add_resource_path ("/com/github/cassidyjames/dippi");
 
         var header = new Adw.HeaderBar () {
-            title_widget = new Gtk.Label ("")
+            title_widget = new Gtk.Label (null)
         };
         header.add_css_class ("flat");
 
@@ -158,8 +158,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             "dialog-information",
             "accent",
             _("Analyze a Display"),
-            _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."),
-            "https://github.com/cassidyjames/dippi/blob/main/dpi.md"
+            _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.")
         );
 
         var low_range_grid = new RangeGrid (
@@ -495,13 +494,12 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         public string description { get; construct; }
         public string? link { get; construct; }
 
-        public RangeGrid (string _icon_name, string _style_class, string _title, string _description, string? _link = null) {
+        public RangeGrid (string _icon_name, string _style_class, string _title, string _description) {
             Object (
                 icon_name: _icon_name,
                 style_class: _style_class,
                 title: _title,
-                description: _description,
-                link: _link
+                description: _description
             );
         }
 
@@ -547,14 +545,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             attach (icon, 0, 0, 1, 2);
             attach (title_label, 1, 0);
             attach (description_label, 1, 1);
-
-            if (link != null) {
-                var link_button = new Gtk.LinkButton.with_label (link, _("More info…")) {
-                    halign = Gtk.Align.START
-                };
-
-                attach (link_button, 1, 2);
-            }
         }
     }
 }
