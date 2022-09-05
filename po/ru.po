@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+Russian translation for com.github.cassidyjames.dippi package.
+# Copyright (C) 2022 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
 # ViktorOn https://github.com/viktoron, 2022.
 #
@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: 2022-09-05 14:14+0000\n"
 "Last-Translator: ViktorOn https://github.com/viktoron\n"
 "Language-Team: No Team, LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
