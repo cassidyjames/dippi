@@ -1,4 +1,4 @@
-Russian translation for com.github.cassidyjames.dippi package.
+# Russian translation for com.github.cassidyjames.dippi package.
 # Copyright (C) 2022 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
 # ViktorOn https://github.com/viktoron, 2022.
@@ -73,7 +73,8 @@ msgstr "Очень низкий DPI"
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. <b>Avoid "
 "if possible.</b>"
-msgstr ""
+msgstr "Текст и UI, вероятно, будут слишком большими для обычных расстояний просмотра. <b>Избегайте "
+"если возможно.</b>"
 
 #: src/MainWindow.vala:168
 msgid "Fairly Low DPI"
