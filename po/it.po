@@ -1,16 +1,16 @@
 # Italian translations for com.github.cassidyjames.dippi package.
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
-# Automatically generated, 2018.
+# Albano Battistella <albano_battistella@hotmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-18 21:40-0600\n"
-"PO-Revision-Date: 2018-01-20 00:00-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-09-04 18:30+0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,11 @@ msgstr ""
 #: data/metadata.appdata.xml.in:7 data/launcher.desktop.in:3
 #: src/MainWindow.vala:68
 msgid "Dippi"
-msgstr ""
+msgstr "Dippi"
 
 #: data/metadata.appdata.xml.in:8 data/launcher.desktop.in:5
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr ""
+msgstr "Calcola informazioni di visualizzazione come DPI e proporzioni"
 
 #: data/metadata.appdata.xml.in:10
 msgid ""
@@ -33,364 +33,374 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
+"Analizza qualsiasi display. Inserisci alcuni semplici dettagli e scopri le proporzioni, "
+"il DPI e altri dettagli di un particolare display. Ottimo per decidere "
+"quale laptop o monitor esterno acquistare e se sarebbe considerato "
+"HiDPI."
 
 #: data/metadata.appdata.xml.in:11
 msgid "Handy features:"
-msgstr ""
+msgstr "Funzioni utili:"
 
 #: data/metadata.appdata.xml.in:13
 msgid "Find out if a display is a good choice based on its size and resolution"
-msgstr ""
+msgstr "Scopri se un display è una buona scelta in base alle sue dimensioni e risoluzione"
 
 #: data/metadata.appdata.xml.in:14
 msgid "Get advice about different densities"
-msgstr ""
+msgstr "Ottieni consigli sulle diverse densità"
 
 #: data/metadata.appdata.xml.in:15
 msgid "Learn the logical resolution"
-msgstr ""
+msgstr "Impara la risoluzione logica"
 
 #: data/metadata.appdata.xml.in:16 data/metadata.appdata.xml.in:200
 msgid "Differentiate between laptops and desktop displays"
-msgstr ""
+msgstr "Distinguere tra laptop e display desktop"
 
 #: data/metadata.appdata.xml.in:17
 msgid "Stupid simple: all in a cute li'l window"
-msgstr ""
+msgstr "Stupido e semplice: tutto in una graziosa finestrella"
 
 #: data/metadata.appdata.xml.in:19
 msgid ""
 "Based on the expertise of Cassidy James Blaede and the actual logic System76 "
 "uses to determine screen size and resolution combinations."
 msgstr ""
+"Sulla base dell'esperienza di Cassidy James Bladede e dell'attuale sistema logico System76 "
+"usa per determinare le dimensioni dello schermo e le combinazioni di risoluzione."
 
 #: data/metadata.appdata.xml.in:20
 msgid "Tells you if a display’s density is:"
-msgstr ""
+msgstr "Ti dice se la densità di un display è:"
 
 #: data/metadata.appdata.xml.in:22
 msgid "Very Low DPI,"
-msgstr ""
+msgstr "DPI molto basso,"
 
 #: data/metadata.appdata.xml.in:23
 msgid "Fairly Low DPI,"
-msgstr ""
+msgstr "DPI abbastanza basso,"
 
 #: data/metadata.appdata.xml.in:24
 msgid "Ideal for LoDPI,"
-msgstr ""
+msgstr "Ideale per LoDPI,"
 
 #: data/metadata.appdata.xml.in:25
 msgid "Potentially Problematic,"
-msgstr ""
+msgstr "Potenzialmente problematico,"
 
 #: data/metadata.appdata.xml.in:26
 msgid "Ideal for HiDPI,"
-msgstr ""
+msgstr "Ideale per HiDPI,"
 
 #: data/metadata.appdata.xml.in:27
 msgid "Fairly High for HiDPI, or"
-msgstr ""
+msgstr "Abbastanza alto per HiDPI, o"
 
 #: data/metadata.appdata.xml.in:28 src/Utils.vala:89
 msgid "Too High DPI"
-msgstr ""
+msgstr "DPI troppo alto"
 
 #: data/metadata.appdata.xml.in:30
 msgid "Special thanks:"
-msgstr ""
+msgstr "Ringraziamenti speciali:"
 
 #: data/metadata.appdata.xml.in:32
 msgid "Micah Ilbery for the shiny icons"
-msgstr ""
+msgstr "Micah Ilbery per le icone luccicanti"
 
 #: data/metadata.appdata.xml.in:33
 msgid "Daniel Foré for his apps to use as code examples"
-msgstr ""
+msgstr "Daniel Foré per le sue app da utilizzare come esempi di codice"
 
 #: data/metadata.appdata.xml.in:34
 msgid "David Jordan for helping determine DPI ranges"
-msgstr ""
+msgstr "David Jordan per aver aiutato a determinare gli intervalli DPI"
 
 #: data/metadata.appdata.xml.in:45
 msgid "Port to elementary OS 6"
-msgstr ""
+msgstr "Port su elementary OS 6"
 
 #: data/metadata.appdata.xml.in:47
 msgid "Follow the dark style preference"
-msgstr ""
+msgstr "Segue la preferenza di stile scuro"
 
 #: data/metadata.appdata.xml.in:48
 msgid "Drag window from anywhere"
-msgstr ""
+msgstr "Trascina la finestra da qualsiasi punto"
 
 #: data/metadata.appdata.xml.in:49
 msgid "Refreshed typography"
-msgstr ""
+msgstr "Tipografia rinnovata"
 
 #: data/metadata.appdata.xml.in:55
 msgid "Code style and organization fixes"
-msgstr ""
+msgstr "Correzioni di stile e organizzazione del codice"
 
 #: data/metadata.appdata.xml.in:60
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduzioni aggiornate"
 
 #: data/metadata.appdata.xml.in:62
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
-msgstr ""
+msgstr "Traduzione spagnola aggiornata grazie ad Adolfo Jayme-Barrientos"
 
 #: data/metadata.appdata.xml.in:63
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
-msgstr ""
+msgstr "Ciao! Traduzioni in olandese grazie a Heimen Stoffels"
 
 #: data/metadata.appdata.xml.in:69
 msgid "Happy new year! Just some AppData fixes today. 😉"
-msgstr ""
+msgstr "Felice anno nuovo! Solo alcune correzioni di AppData oggi. 😉"
 
 #: data/metadata.appdata.xml.in:74
 msgid "Under-the-hood tweaks"
-msgstr ""
+msgstr "Modifiche sotto il cofano"
 
 #: data/metadata.appdata.xml.in:79
 msgid "Hello, Juno!"
-msgstr ""
+msgstr "Ciao, Juno!"
 
 #: data/metadata.appdata.xml.in:81
 msgid "Update translation link"
-msgstr ""
+msgstr "Aggiornato collegamento alla traduzione"
 
 #: data/metadata.appdata.xml.in:82
 msgid "Under the hood cleanup"
-msgstr ""
+msgstr "Pulizia sotto il cofano"
 
 #: data/metadata.appdata.xml.in:88
 msgid "Add translation instructions and update translation link in app data"
-msgstr ""
+msgstr "Aggiunto le istruzioni di traduzione e aggiornato il link di traduzione nei dati dell'app"
 
 #: data/metadata.appdata.xml.in:93
 msgid "Added translation link to app data"
-msgstr ""
+msgstr "Aggiunto collegamento di traduzione ai dati dell'app"
 
 #: data/metadata.appdata.xml.in:98
 msgid "Lithuanian Translation"
-msgstr ""
+msgstr "Traduzione lituana"
 
 #: data/metadata.appdata.xml.in:100
 msgid "Lithuanian translation thanks to welaq"
-msgstr ""
+msgstr "Traduzione lituana grazie a welaq"
 
 #: data/metadata.appdata.xml.in:101
 msgid "Fixed deprecation"
-msgstr ""
+msgstr "Deprecazioni corrette"
 
 #: data/metadata.appdata.xml.in:107
 msgid "Translation &amp; Tweaks"
-msgstr ""
+msgstr "Traduzione &amp; Modifiche"
 
 #: data/metadata.appdata.xml.in:109
 msgid "French translations"
-msgstr ""
+msgstr "traduzioni francesi"
 
 #: data/metadata.appdata.xml.in:110
 msgid "Hide labels when data is invalid"
-msgstr ""
+msgstr "Nascondi le etichette quando i dati non sono validi"
 
 #: data/metadata.appdata.xml.in:111
 msgid "Fix max length on width entry"
-msgstr ""
+msgstr "Risolto la lunghezza massima all'ingresso della larghezza"
 
 #: data/metadata.appdata.xml.in:112
 msgid "Fix displayed AppData"
-msgstr ""
+msgstr "Risolto il problema con AppData visualizzati"
 
 #: data/metadata.appdata.xml.in:114
 msgid "Behind the scenes:"
-msgstr ""
+msgstr "Dietro le quinte:"
 
 #: data/metadata.appdata.xml.in:116
 msgid "Add editorconfig and Travis for more consistency"
-msgstr ""
+msgstr "Aggiunto editorconfig e Travis per una maggiore coerenza"
 
 #: data/metadata.appdata.xml.in:117
 msgid "Split utilities out into their own file"
-msgstr ""
+msgstr "Dividi le utilità nel proprio file"
 
 #: data/metadata.appdata.xml.in:123
 msgid "AppData tweaks"
-msgstr ""
+msgstr "Modifiche a AppData"
 
 #: data/metadata.appdata.xml.in:128
 msgid "Fixed:"
-msgstr ""
+msgstr "Corretto:"
 
 #: data/metadata.appdata.xml.in:130
 msgid "Window no longer resizes when switching between analyses"
-msgstr ""
+msgstr "La finestra non si ridimensiona più quando si passa da un'analisi all'altra"
 
 #: data/metadata.appdata.xml.in:136
 msgid "Under the hood changes:"
-msgstr ""
+msgstr "Cambia sotto il cofano:"
 
 #: data/metadata.appdata.xml.in:138
 msgid "Include success icon as a fallback for other icon sets"
-msgstr ""
+msgstr "Includi l'icona di successo come fallback per altri set di icone"
 
 #: data/metadata.appdata.xml.in:144
 msgid "Changes:"
-msgstr ""
+msgstr "Modifiche:"
 
 #: data/metadata.appdata.xml.in:146
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
 msgstr ""
+"Intervalli DPI ottimizzati per i display interni per essere un po' più severi per "
+"la gamma “ideale”"
 
 #: data/metadata.appdata.xml.in:147
 msgid "Metadata additions and tweaks"
-msgstr ""
+msgstr "Aggiunte e modifiche ai metadati"
 
 #: data/metadata.appdata.xml.in:149
 msgid "Fixes:"
-msgstr ""
+msgstr "Correzioni:"
 
 #: data/metadata.appdata.xml.in:151
 msgid "Install all available icon sizes"
-msgstr ""
+msgstr "Installa tutte le dimensioni delle icone disponibili"
 
 #: data/metadata.appdata.xml.in:152
 msgid "Allow all languages to be translated"
-msgstr ""
+msgstr "Consenti la traduzione di tutte le lingue"
 
 #: data/metadata.appdata.xml.in:154
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
-msgstr ""
+msgstr "E altro ancora! Leggi il recente post del blog su goo.gl/tKwkq4"
 
 #: data/metadata.appdata.xml.in:160
 msgid "Added logical resolution"
-msgstr ""
+msgstr "Aggiunta risoluzione logica"
 
 #: data/metadata.appdata.xml.in:161
 msgid "Cleaned up design by moving display details to below the analysis"
-msgstr ""
+msgstr "Design pulito spostando i dettagli del display al di sotto dell'analisi"
 
 #: data/metadata.appdata.xml.in:168
 msgid "New purple accent color"
-msgstr ""
+msgstr "Nuovo colore viola"
 
 #: data/metadata.appdata.xml.in:169
 msgid "Refined margins and alignment"
-msgstr ""
+msgstr "Rifinitura dei margini e allineamento"
 
 #: data/metadata.appdata.xml.in:170
 msgid "Escape now closes the window"
-msgstr ""
+msgstr "Il tasto Esc ora chiude la finestra"
 
 #: data/metadata.appdata.xml.in:171
 msgid "Lots of little code cleanup"
-msgstr ""
+msgstr "Un sacco di piccola pulizia del codice"
 
 #: data/metadata.appdata.xml.in:178
 msgid "Fix bug with setting display icon"
-msgstr ""
+msgstr "Risolto un bug con l'impostazione dell'icona di visualizzazione"
 
 #: data/metadata.appdata.xml.in:179
 msgid "Under-the-hood fixes"
-msgstr ""
+msgstr "Correzioni sotto il cofano"
 
 #: data/metadata.appdata.xml.in:185
 msgid "Display icon now changes according to display type"
-msgstr ""
+msgstr "L'icona del display ora cambia in base al tipo di display"
 
 #: data/metadata.appdata.xml.in:191
 msgid "Select between laptop or desktop"
-msgstr ""
+msgstr "Scegli tra laptop o desktop"
 
 #: data/metadata.appdata.xml.in:192
 msgid "Refreshed icons thanks to Micah Ilbery"
-msgstr ""
+msgstr "Icone rinnovate grazie a Michea Ilbery"
 
 #: data/metadata.appdata.xml.in:199
 msgid "Completely reworked DPI ranges"
-msgstr ""
+msgstr "Intervalli DPI completamente rielaborati"
 
 #: data/metadata.appdata.xml.in:201 data/metadata.appdata.xml.in:211
 msgid "Tweaked DPI assessment and reasoning copy"
-msgstr ""
+msgstr "Valutazione DPI ottimizzata e copia ragionevole"
 
 #: data/metadata.appdata.xml.in:202
 msgid "Flattened titlebar"
-msgstr ""
+msgstr "Barra del titolo appiattita"
 
 #: data/metadata.appdata.xml.in:203
 msgid "Fixed bugs and warnings"
-msgstr ""
+msgstr "Risolti bug e avvisi"
 
 #: data/metadata.appdata.xml.in:210
 msgid "All new side-by-side UI"
-msgstr ""
+msgstr "Tutta la nuova interfaccia utente affiancata"
 
 #: data/metadata.appdata.xml.in:212
 msgid "Added icons to make assessment clearer"
-msgstr ""
+msgstr "Aggiunte icone per rendere più chiara la valutazione"
 
 #: data/metadata.appdata.xml.in:219
 msgid "Made visualization interactive!"
-msgstr ""
+msgstr "Resa interattiva la visualizzazione!"
 
 #: data/metadata.appdata.xml.in:220
 msgid "Added Cassidy-approval and reasoning"
-msgstr ""
+msgstr "Aggiunti l'approvazione e il ragionamento di Cassidy"
 
 #: data/metadata.appdata.xml.in:221
 msgid "Fix a bug where sometimes an extra zero would sneak in"
-msgstr ""
+msgstr "Risolto un bug per cui a volte uno zero in più si intrufolava"
 
 #: data/metadata.appdata.xml.in:222
 msgid "Under-the-hood restructuring"
-msgstr ""
+msgstr "Ristrutturazione sotto il cofano"
 
 #: data/metadata.appdata.xml.in:229
 msgid "Shiny new icon"
-msgstr ""
+msgstr "Nuova icona scintillante"
 
 #: data/metadata.appdata.xml.in:230
 msgid "Added visualization to UI"
-msgstr ""
+msgstr "Aggiunta visualizzazione all'interfaccia utente"
 
 #: data/metadata.appdata.xml.in:231
 msgid "Significant code cleanup"
-msgstr ""
+msgstr "Pulizia significativa del codice"
 
 #: data/metadata.appdata.xml.in:237
 msgid "Initial release for AppCenter"
-msgstr ""
+msgstr "Versione iniziale per AppCenter"
 
 #: data/metadata.appdata.xml.in:284
 msgid "Cassidy James Blaede"
-msgstr ""
+msgstr "Cassidy James Blaede"
 
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
-msgstr ""
+msgstr "Visualizza informazioni del calcolatore"
 
 #: data/launcher.desktop.in:8
 msgid "com.github.cassidyjames.dippi"
-msgstr ""
+msgstr "com.github.cassidyjames.dippi"
 
 #: data/launcher.desktop.in:12
 msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
+"DPI;densità;monitor;risoluzione;visualizzazione;larghezza;altezza;schermo;HiDPI;loDPI;"
+"proporzioni;"
 
 #: src/MainWindow.vala:91
 msgid "Diagonal size:"
-msgstr ""
+msgstr "Dimensione diagonale:"
 
 #: src/MainWindow.vala:107
 msgid "Resolution:"
-msgstr ""
+msgstr "Risoluzione:"
 
 #: src/MainWindow.vala:135
 msgid "×"
@@ -402,11 +412,11 @@ msgstr ""
 
 #: src/MainWindow.vala:138
 msgid "inches"
-msgstr ""
+msgstr "pollici"
 
 #: src/MainWindow.vala:142
 msgid "Type:"
-msgstr ""
+msgstr "Tipo:"
 
 #: src/MainWindow.vala:318
 #, c-format
@@ -419,57 +429,63 @@ msgstr ""
 
 #: src/Utils.vala:30
 msgid "Laptop"
-msgstr ""
+msgstr "Laptop"
 
 #: src/Utils.vala:33
 msgid "Desktop"
-msgstr ""
+msgstr "Desktop"
 
 #: src/Utils.vala:69
 msgid "Very Low DPI"
-msgstr ""
+msgstr "DPI molto basso"
 
 #: src/Utils.vala:72
 msgid "Fairly Low DPI"
-msgstr ""
+msgstr "DPI abbastanza basso"
 
 #: src/Utils.vala:75
 msgid "Ideal for LoDPI"
-msgstr ""
+msgstr "Ideale per LoDPI"
 
 #: src/Utils.vala:80
 msgid "Potentially Problematic"
-msgstr ""
+msgstr "Potenzialmente problematico"
 
 #: src/Utils.vala:83
 msgid "Ideal for HiDPI"
-msgstr ""
+msgstr "Ideale per HiDPI"
 
 #: src/Utils.vala:86
 msgid "Fairly High for HiDPI"
-msgstr ""
+msgstr "Abbastanza alto per HiDPI"
 
 #: src/Utils.vala:92
 msgid "Analyze a Display"
-msgstr ""
+msgstr "Analizza un display"
 
 #: src/Utils.vala:102
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. Avoid if "
 "possible."
 msgstr ""
+"È probabile che il testo e l'interfaccia utente siano troppo grandi per le distanze di visualizzazione tipiche. Da evitare se "
+"possibile."
 
 #: src/Utils.vala:105
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's largely "
 "up to user preference and physical distance from the display."
 msgstr ""
+"Il testo e l'interfaccia utente potrebbero essere troppo grandi per le distanze di visualizzazione tipiche,"
+"ma dipende in gran parte dalle preferenze dell'utente e dalla distanza fisica dal display."
 
 #: src/Utils.vala:108
 msgid ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 msgstr ""
+"Non HiDPI, ma un punto a favore. Il testo e l'interfaccia utente dovrebbero essere "
+"leggibili alle distanze di visualizzazione tipiche."
 
 #: src/Utils.vala:111
 msgid ""
@@ -477,35 +493,46 @@ msgid ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 msgstr ""
+"Risoluzione relativamente alta, ma non del tutto HiDPI. Anche il testo e l'interfaccia utente potrebbero essere "
+"piccolo per impostazione predefinita, ma forzare HiDPI li fa apparire troppo grandi. "
+"L'esperienza potrebbe essere leggermente migliorata aumentando la dimensione del testo."
 
 #: src/Utils.vala:114
 msgid ""
 "HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
 "and increasing the text size might help."
 msgstr ""
+"HiDPI per impostazione predefinita, ma il testo e l'interfaccia utente potrebbero apparire troppo grandi. Disattivare HiDPI "
+"e aumentare la dimensione del testo potrebbe aiutare."
 
 #: src/Utils.vala:117
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. This is the jackpot."
 msgstr ""
+"Testo e interfaccia utente HiDPI nitidi insieme a una dimensione leggibile per le distanze di visualizzazione "
+"tipiche. Questo è il jackpot."
 
 #: src/Utils.vala:120
 msgid ""
 "Text and UI are likely to appear too small for typical viewing distances. "
 "Increasing the text size may help."
 msgstr ""
+"È probabile che il testo e l'interfaccia utente appaiano troppo piccoli per le distanze di visualizzazione tipiche. "
+"Aumentare la dimensione del testo può aiutare."
 
 #: src/Utils.vala:123
 msgid "Text and UI will appear too small for typical viewing distances."
-msgstr ""
+msgstr "Il testo e l'interfaccia utente appariranno troppo piccoli per le distanze di visualizzazione tipiche."
 
 #: src/Utils.vala:126
 msgid ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 msgstr ""
+"Questo display è in un intervallo molto difficile ed è probabile che non funzioni bene con "
+"ridimensionamento intero fuori dagli schemi."
 
 #: src/Utils.vala:129
 msgid "Enter details about a display to analyze it."
-msgstr ""
+msgstr "Immettere i dettagli su un display per analizzarlo."
