@@ -2,11 +2,9 @@
 
 <a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
 
-![Screenshot](data/screenshots/default.png?raw=true)     | ![Screenshot](data/screenshots/default-dark.png?raw=true)
--------------------------------------------------------- | -------------------------------------------------------------
-![Screenshot](data/screenshots/hidpi.png?raw=true)       | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
-![Screenshot](data/screenshots/problematic.png?raw=true) | ![Screenshot](data/screenshots/problematic-dark.png?raw=true)
-![Screenshot](data/screenshots/lodpi.png?raw=true)       | ![Screenshot](data/screenshots/lodpi-dark.png?raw=true)
+![Screenshot](data/screenshots/default.png?raw=true)    | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
+------------------------------------------------------- | --------------------------------------------------------
+![Screenshot](data/screenshots/lodpi-dark.png?raw=true) | ![Screenshot](data/screenshots/problematic.png?raw=true)
 
 ## Calculate display info like DPI and aspect ratio
 
