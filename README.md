@@ -1,5 +1,7 @@
 # Dippi
 
+<a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+
 ![Screenshot](data/screenshots/default.png?raw=true)     | ![Screenshot](data/screenshots/default-dark.png?raw=true)
 -------------------------------------------------------- | -------------------------------------------------------------
 ![Screenshot](data/screenshots/hidpi.png?raw=true)       | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
@@ -33,6 +35,8 @@ Based my expertise and experience shipping HiDPI hardware and software at System
 ## Made for GNOME
 
 Dippi 4 was designed and developed on and for GNOME.
+
+<a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
 
 ## Developing and Building
 
