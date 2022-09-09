@@ -5,13 +5,13 @@
 
 # Dippi
 
-![Screenshot](data/screenshots/default.png?raw=true)    | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
-------------------------------------------------------- | --------------------------------------------------------
-![Screenshot](data/screenshots/lodpi-dark.png?raw=true) | ![Screenshot](data/screenshots/problematic.png?raw=true)
-
 ## Calculate display info like DPI and aspect ratio
 
 Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.
+
+![Screenshot](data/screenshots/default.png?raw=true)    | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
+------------------------------------------------------- | --------------------------------------------------------
+![Screenshot](data/screenshots/lodpi-dark.png?raw=true) | ![Screenshot](data/screenshots/problematic.png?raw=true)
 
 ### Handy features:
 
