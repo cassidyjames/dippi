@@ -1,6 +1,9 @@
-# Dippi
+[![Flathub](https://img.shields.io/flathub/v/com.github.cassidyjames.dippi?logo=flathub&logoColor=white&style=for-the-badge)][flathub]
+[![Installs](https://img.shields.io/flathub/downloads/com.github.cassidyjames.dippi?label=Installs&logo=flathub&logoColor=white&style=for-the-badge)][flathub]
 
-<a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+![Icon](data/icons/com.github.cassidyjames.dippi.svg?raw=true)
+
+# Dippi
 
 ![Screenshot](data/screenshots/default.png?raw=true)    | ![Screenshot](data/screenshots/hidpi-dark.png?raw=true)
 ------------------------------------------------------- | --------------------------------------------------------
@@ -34,7 +37,7 @@ Based my expertise and experience shipping HiDPI hardware and software at System
 
 Dippi 4 was designed and developed on and for GNOME.
 
-<a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg'/></a>
+<a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg' /></a>
 
 ## Developing and Building
 
@@ -45,3 +48,5 @@ If you want to hack on and build Dippi yourself, I recommend using GNOME Builder
 ## Special Thanks
 
 - [Micah Ilbery](https://github.com/micahilbery) for the shiny icons
+
+[flathub]: https://flathub.org/apps/details/com.github.cassidyjames.dippi
