@@ -128,7 +128,7 @@ msgstr "Даниэль Форе (Daniel Foré) за приложения, кот
 
 #: data/metadata.appdata.xml.in:44 data/metadata.appdata.xml.in:52
 msgid "Under-the-hood improvements:"
-msgstr "Улучшения "под капотом":"
+msgstr "Улучшения \"под капотом\":"
 
 #: data/metadata.appdata.xml.in:46 data/metadata.appdata.xml.in:55
 msgid "Update Stripe key"
@@ -144,7 +144,7 @@ msgstr "Добавлена категория \"Калькулятор\" в ла
 
 #: data/metadata.appdata.xml.in:66
 msgid "Under-the-hood packaging updates for elementary OS 6"
-msgstr "Обновления пакетов "под капотом" для elementary OS 6"
+msgstr "Обновления пакетов \"под капотом\" для elementary OS 6"
 
 #: data/metadata.appdata.xml.in:71
 msgid ""
@@ -286,7 +286,7 @@ msgstr "Размер окна больше не изменяется при пе
 
 #: data/metadata.appdata.xml.in:173
 msgid "Under the hood changes:"
-msgstr "Изменения "под капотом":"
+msgstr "Изменения \"под капотом\":"
 
 #: data/metadata.appdata.xml.in:175
 msgid "Include success icon as a fallback for other icon sets"
