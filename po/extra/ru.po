@@ -206,7 +206,7 @@ msgstr "С Новым Годом! Сегодня только некоторые
 
 #: data/metadata.appdata.xml.in:111
 msgid "Under-the-hood tweaks"
-msgstr "Правки "под капотом""
+msgstr "Правки \"под капотом\""
 
 #: data/metadata.appdata.xml.in:116
 msgid "Hello, Juno!"
@@ -218,7 +218,7 @@ msgstr "Обновлена ссылка на перевод"
 
 #: data/metadata.appdata.xml.in:119
 msgid "Under the hood cleanup"
-msgstr "Чистка "под капотом""
+msgstr "Чистка \"под капотом\""
 
 #: data/metadata.appdata.xml.in:125
 msgid "Add translation instructions and update translation link in app data"
@@ -352,7 +352,7 @@ msgstr "Исправлена ошибка с настройкой значка �
 
 #: data/metadata.appdata.xml.in:216
 msgid "Under-the-hood fixes"
-msgstr "Исправления "под капотом""
+msgstr "Исправления \"под капотом\""
 
 #: data/metadata.appdata.xml.in:222
 msgid "Display icon now changes according to display type"
@@ -404,7 +404,7 @@ msgstr "Исправлена ошибку, из-за которой иногда
 
 #: data/metadata.appdata.xml.in:259
 msgid "Under-the-hood restructuring"
-msgstr "Реструктуризация "под капотом""
+msgstr "Реструктуризация \"под капотом\""
 
 #: data/metadata.appdata.xml.in:266
 msgid "Shiny new icon"
