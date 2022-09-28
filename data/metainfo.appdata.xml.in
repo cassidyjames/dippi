@@ -43,8 +43,15 @@
         <p>Even GNOMEier</p>
         <ul>
           <li>Added “About” window</li>
-          <li>Improvements to developer tools to make translations easier to keep up to date</li>
+          <li>Improved text legibility</li>
           <li>Updated runtime to GNOME 43</li>
+        </ul>
+        <p>New and updated translations:</p>
+        <ul>
+          <li>French translations thanks to Irénée THIRION</li>
+          <li>Italian translations thanks to Albano Battistella</li>
+          <li>Russian translations thanks to @ViktorOn</li>
+          <li>Improvements to developer tools to make translations easier to keep up to date</li>
         </ul>
       </description>
     </release>
