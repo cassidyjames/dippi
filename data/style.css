@@ -5,6 +5,10 @@
   font-size: 225%;
 }
 
+.body {
+  line-height: 1.25;
+}
+
 .link {
   margin: 0;
   padding: 0;

@@ -41,26 +41,53 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            icon_name: "com.github.cassidyjames.dippi",
+            icon_name: APP_ID,
             resizable: false,
-            title: _("Dippi")
+            title: App.NAME
         );
     }
 
     construct {
         Adw.init ();
 
-        Gtk.IconTheme.get_for_display (
-            Gdk.Display.get_default ()
-        ).add_resource_path ("/com/github/cassidyjames/dippi");
+        var about_button = new Gtk.Button.from_icon_name ("about-symbolic") {
+            tooltip_text = _("About")
+        };
+        about_button.add_css_class ("dim-label");
+
+        var about_window = new Adw.AboutWindow () {
+            transient_for = this,
+
+            application_icon = APP_ID,
+            application_name = App.NAME,
+            developer_name = App.DEVELOPER,
+            version = VERSION,
+
+            website = "https://cassidyjames.com/dippi",
+            issue_url = "https://github.com/cassidyjames/dippi/issues",
+
+            // Credits
+            developers = { App.DEVELOPER },
+            artists = {
+                "Micah Ilbery",
+                App.DEVELOPER,
+            },
+            /// The translator credits. Please translate this with your name(s).
+            translator_credits = _("translator-credits"),
+
+            // Legal
+            copyright = "© 2018–2022 %s".printf (App.DEVELOPER),
+            license_type = Gtk.License.GPL_3_0,
+        };
 
         var header = new Adw.HeaderBar () {
             title_widget = new Gtk.Label (null)
         };
         header.add_css_class ("flat");
+        header.pack_start (about_button);
 
         diagram = new Gtk.Image () {
-            icon_name = "com.github.cassidyjames.dippi",
+            icon_name = APP_ID,
             margin_bottom = 12,
             pixel_size = 128
         };
@@ -276,6 +303,8 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         diag_entry.grab_focus ();
 
         set_content (window_handle);
+
+        about_button.clicked.connect (() => about_window.present () );
 
         var direction = "diagonal";
 

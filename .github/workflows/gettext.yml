@@ -1,16 +1,72 @@
-# name: Gettext updates
-# on:
-#   push:
-#     branches: main
-# jobs:
-#   gettext_template:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v1
-#     - uses: elementary/actions/gettext-template@master
-#       env:
-#         GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
-#         GIT_USER_NAME: "cassidyjames"
-#         GIT_USER_EMAIL: "c@ssidyjam.es"
-#       with:
-#         translation_branch: 'main'
+name: Update translation files
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.vala'
+      - 'data/launcher.desktop.in'
+      - 'data/metainfo.appdata.xml.in'
+      - 'po/LINGUAS'
+      - 'po/POTFILES.in'
+      - 'po/extra/LINGUAS'
+      - 'po/extra/POTFILES.in'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            appstream \
+            gettext\
+            git \
+            libadwaita-1-dev \
+            libgtk-4-dev \
+            libxml2-utils \
+            meson \
+            policykit-1 \
+            sudo \
+            valac
+
+      - name: Build libadwaita
+        run: |
+          # Ubuntu doesn't have a new enough version
+          git clone https://gitlab.gnome.org/GNOME/libadwaita.git /tmp/libadwaita
+          cd /tmp/libadwaita
+          git checkout 1.2.0
+          meson . _build -Dexamples=false
+          ninja -C _build
+          sudo ninja -C _build install
+          cd -
+          rm -rf /tmp/libadwaita
+
+      - name: Build
+        run: |
+          rm -rf _build
+          meson _build
+          ninja -C _build
+
+      - name: Regenerate translation files
+        run: |
+          ninja -C _build $(git ls-files | grep \.pot$ | sed 's/.*\///' | sed 's/.pot/-update-po/')
+
+      - name: Commit & push
+        continue-on-error: true
+        run: |
+          echo "Configuring git credentials…"
+          git remote set-url origin https://x-access-token:"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+          echo "Committing…"
+          git checkout main
+          git add .
+          git commit --message "Update translation files"
+
+          echo "Pushing…"
+          git push --set-upstream origin main || true

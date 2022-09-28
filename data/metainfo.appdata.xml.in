@@ -38,6 +38,23 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="4.0.1" date="2022-09-27">
+      <description>
+        <p>Even GNOMEier</p>
+        <ul>
+          <li>Added “About” window</li>
+          <li>Improved text legibility</li>
+          <li>Updated runtime to GNOME 43</li>
+        </ul>
+        <p>New and updated translations:</p>
+        <ul>
+          <li>French translations thanks to Irénée THIRION</li>
+          <li>Italian translations thanks to Albano Battistella</li>
+          <li>Russian translations thanks to @ViktorOn</li>
+          <li>Improvements to developer tools to make translations easier to keep up to date</li>
+        </ul>
+      </description>
+    </release>
     <release version="4.0.0" date="2022-09-04">
       <description>
         <p>Complete reworking</p>
@@ -312,14 +329,16 @@
   </screenshots>
   <content_rating type="oars-1.1"></content_rating>
   <developer_name>Cassidy James Blaede</developer_name>
-  <url type="homepage">https://cassidyjames.com</url>
+  <url type="homepage">https://cassidyjames.com/dippi</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
   <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
   <url type="donation">https://cassidyjames.com/pay</url>
   <url type="help">https://cassidyjames.com/support</url>
-  <!--url type="contact">https://cassidyjames.com/support</url-->
+  <branding>
+    <color type="primary">#613583</color>
+  </branding>
   <custom>
-    <value key="x-appcenter-color-primary">#452981</value>
+    <value key="x-appcenter-color-primary">#613583</value>
     <value key="x-appcenter-color-primary-text">#fff</value>
     <value key="x-appcenter-suggested-price">4</value>
     <value key="x-appcenter-stripe">pk_live_51BisUzDZzsY2pYhKUvevG2RX6kT5JL74hO2AHKqd69zYYuoo0d4y3Mcb8IoSM1cv81ZgMW0pSqLUsD4e1HqAqkSX00t6yXPfZh</value>

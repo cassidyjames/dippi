@@ -4,9 +4,14 @@
  */
 
 public class Dippi.App : Adw.Application {
+    public const string NAME = "Dippi";
+    public const string DEVELOPER = "Cassidy James Blaede";
+
     public App () {
-        Object (application_id: "com.github.cassidyjames.dippi",
-        flags: ApplicationFlags.FLAGS_NONE);
+        Object (
+            application_id: APP_ID,
+            flags: ApplicationFlags.FLAGS_NONE
+        );
     }
 
     protected override void activate () {

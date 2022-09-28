@@ -1,3 +1,5 @@
+data/metainfo.appdata.xml.in
+data/launcher.desktop.in
 src/App.vala
 src/MainWindow.vala
 src/Utils.vala
