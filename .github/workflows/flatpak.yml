@@ -32,7 +32,7 @@ jobs:
 
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
       with:
-        bundle: Dippi.flatpak
+        bundle: dippi-${{ matrix.arch }}.flatpak
         manifest-path: com.github.cassidyjames.dippi.json
         cache-key: "flatpak-builder-${{ github.sha }}"
         arch: ${{ matrix.arch }}
