@@ -39,7 +39,6 @@ jobs:
 
       - name: Build libadwaita
         run: |
-          # Ubuntu doesn't have a new enough version
           git clone https://gitlab.gnome.org/GNOME/libadwaita.git /tmp/libadwaita
           cd /tmp/libadwaita
           git checkout 1.2.0

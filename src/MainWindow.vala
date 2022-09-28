@@ -48,8 +48,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        Adw.init ();
-
         var about_button = new Gtk.Button.from_icon_name ("about-symbolic") {
             tooltip_text = _("About")
         };
@@ -57,6 +55,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         var about_window = new Adw.AboutWindow () {
             transient_for = this,
+            hide_on_close = true,
 
             application_icon = APP_ID,
             application_name = App.NAME,

@@ -38,6 +38,11 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="4.0.2" date="2022-09-28">
+      <description>
+        <p>Hotfix: fix About window when closing and re-opening it</p>
+      </description>
+    </release>
     <release version="4.0.1" date="2022-09-28">
       <description>
         <p>Even GNOMEier</p>
