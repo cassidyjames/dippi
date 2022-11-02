@@ -35,7 +35,7 @@ Based my expertise and experience shipping HiDPI hardware and software at System
 
 ## Made for GNOME
 
-Dippi 4 was designed and developed on and for GNOME.
+Dippi 4 was designed and developed on and for GNOME. As such, contributors agree to abide by the [GNOME Code of Conduct](https://wiki.gnome.org/Foundation/CodeOfConduct).
 
 <a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg' /></a>
 
