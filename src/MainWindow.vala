@@ -62,20 +62,22 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             developer_name = App.DEVELOPER,
             version = VERSION,
 
+            comments = _("Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI."),
+
             website = "https://cassidyjames.com/dippi",
             issue_url = "https://github.com/cassidyjames/dippi/issues",
 
             // Credits
-            developers = { App.DEVELOPER },
+            developers = { "%s <%s>".printf (App.DEVELOPER, App.EMAIL) },
+            designers = { "%s %s".printf (App.DEVELOPER, App.URL) },
             artists = {
-                "Micah Ilbery",
-                App.DEVELOPER,
+                "Micah Ilbery https://micahilbery.com",
             },
             /// The translator credits. Please translate this with your name(s).
             translator_credits = _("translator-credits"),
 
             // Legal
-            copyright = "© 2018–2022 %s".printf (App.DEVELOPER),
+            copyright = "Copyright © 2018–2022 %s".printf (App.DEVELOPER),
             license_type = Gtk.License.GPL_3_0,
         };
 
