@@ -14,6 +14,7 @@
     <file alias="display-measure-vertical-notebook.svg" preprocess="xml-stripblanks">icons/display-measure-vertical-notebook.svg</file>
     <file alias="about-symbolic.svg" preprocess="xml-stripblanks">icons/about-symbolic.svg</file>
     <file alias="loupe-large-symbolic.svg" preprocess="xml-stripblanks">icons/loupe-large-symbolic.svg</file>
+    <file alias="settings-symbolic.svg" preprocess="xml-stripblanks">icons/settings-symbolic.svg</file>
     <file alias="test-pass-symbolic.svg" preprocess="xml-stripblanks">icons/test-pass-symbolic.svg</file>
   </gresource>
 </gresources>

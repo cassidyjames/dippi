@@ -195,21 +195,21 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         };
 
         var invalid_range_grid = new RangeGrid (
-            "loupe-large",
+            "loupe-large-symbolic",
             "accent",
             _("Analyze a Display"),
             _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.")
         );
 
         var low_range_grid = new RangeGrid (
-            "dialog-error",
+            "dialog-error-symbolic",
             "error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
@@ -229,6 +229,20 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
+        var lodpi_should_be_hidpi_range_grid = new RangeGrid (
+            "settings-symbolic",
+            "warning",
+            _("Tweak for HiDPI"),
+            _("This display may default to loDPI on some desktops, which could result in too-small text and UI. However, it <b>should be usable with HiDPI by manually enabling 2× scaling</b>.")
+        );
+
+        var unclear_range_grid = new RangeGrid (
+            "dialog-warning-symbolic",
+            "warning",
+            _("Potentially Problematic"),
+            _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
+        );
+
         var hidpi_low_range_grid = new RangeGrid (
             "dialog-warning-symbolic",
             "warning",
@@ -237,7 +251,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
-            "test-pass",
+            "test-pass-symbolic",
             "success",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
@@ -257,13 +271,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
-        var unclear_range_grid = new RangeGrid (
-            "dialog-warning-symbolic",
-            "warning",
-            _("Potentially Problematic"),
-            _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
-        );
-
         range_stack = new Gtk.Stack () {
             vexpand = true
         };
@@ -272,11 +279,12 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         range_stack.add_named (lodpi_low_range_grid, "lodpi-low");
         range_stack.add_named (lodpi_ideal_range_grid, "lodpi-ideal");
         range_stack.add_named (lodpi_high_range_grid, "lodpi-high");
+        range_stack.add_named (lodpi_should_be_hidpi_range_grid, "lodpi-should-be-hidpi");
+        range_stack.add_named (unclear_range_grid, "unclear");
         range_stack.add_named (hidpi_low_range_grid, "hidpi-low");
         range_stack.add_named (hidpi_ideal_range_grid, "hidpi-ideal");
         range_stack.add_named (hidpi_high_range_grid, "hidpi-high");
         range_stack.add_named (high_range_grid, "high");
-        range_stack.add_named (unclear_range_grid, "unclear");
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -475,7 +483,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             range_stack.visible_child_name = "lodpi-high";
             link_button.visible = true;
         } else if (calculated_dpi < DPI_INFER_HIDPI) {
-            range_stack.visible_child_name = "unclear";
+            range_stack.visible_child_name = "lodpi-should-be-hidpi";
             link_button.visible = true;
         } else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
             range_stack.visible_child_name = "unclear";
