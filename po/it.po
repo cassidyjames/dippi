@@ -1,14 +1,14 @@
 # Italian translations for com.github.cassidyjames.dippi package.
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
-# Albano Battistella <albano_battistella@hotmail.com>, 2022.
+# Albano Battistella <albano_battistella@hotmail.com>, 2022,2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-17 06:44+0000\n"
-"PO-Revision-Date: 2022-09-04 18:30+0100\n"
+"PO-Revision-Date: 2023-01-26 17:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -68,6 +68,8 @@ msgid ""
 "Based my expertise and experience shipping HiDPI hardware and software at "
 "System76 and elementary."
 msgstr ""
+"Sulla base della mia competenza ed esperienza nella spedizione di hardware e software HiDPI presso "
+"System76 ed elementary."
 
 #: data/metainfo.appdata.xml.in:20
 msgid "Tells you if a display’s density is:"
@@ -111,111 +113,110 @@ msgstr "Micah Ilbery per le icone luccicanti"
 
 #: data/metainfo.appdata.xml.in:43
 msgid "Hotfix: fix About window when closing and re-opening it"
-msgstr ""
+msgstr "Hotfix: correzione della finestra Informazioni durante la chiusura e la riapertura"
 
 #: data/metainfo.appdata.xml.in:48
 msgid "Even GNOMEier"
-msgstr ""
+msgstr "Anche GNOMEier"
 
 #: data/metainfo.appdata.xml.in:50
 msgid "Added “About” window"
-msgstr ""
+msgstr "Aggiunta la finestra "Informazioni".
 
 #: data/metainfo.appdata.xml.in:51
 msgid "Improved text legibility"
-msgstr ""
+msgstr "Leggibilità del testo migliorata"
 
 #: data/metainfo.appdata.xml.in:52
 msgid "Updated runtime to GNOME 43"
-msgstr ""
+msgstr "Runtime aggiornato a GNOME 43"
 
 #: data/metainfo.appdata.xml.in:54
-#, fuzzy
 msgid "New and updated translations:"
-msgstr "Traduzioni aggiornate"
+msgstr "Nuove traduzioni e aggiornate:"
 
 #: data/metainfo.appdata.xml.in:56
 msgid "French translations thanks to Irénée THIRION"
-msgstr ""
+msgstr "Traduzioni in francese grazie a Irénée THIRION"
 
 #: data/metainfo.appdata.xml.in:57
-#, fuzzy
 msgid "Italian translations thanks to Albano Battistella"
-msgstr "Traduzione lituana grazie a welaq"
+msgstr "Traduzioni in italiano grazie ad Albano Battistella"
 
 #: data/metainfo.appdata.xml.in:58
-#, fuzzy
 msgid "Russian translations thanks to @ViktorOn"
-msgstr "Traduzione lituana grazie a welaq"
+msgstr "Traduzioni in russo grazie a @ViktorOn"
 
 #: data/metainfo.appdata.xml.in:59
 msgid ""
 "Improvements to developer tools to make translations easier to keep up to "
 "date"
 msgstr ""
+"Miglioramenti agli strumenti per sviluppatori per rendere le traduzioni più facili da tenere "
+"aggiornate."
 
 #: data/metainfo.appdata.xml.in:65
-#, fuzzy
 msgid "Complete reworking"
-msgstr "Intervalli DPI completamente rielaborati"
+msgstr "Completa rielaborazione"
 
 #: data/metainfo.appdata.xml.in:67
 msgid "elementary → GNOME styling"
-msgstr ""
+msgstr "elementary → GNOME styling"
 
 #: data/metainfo.appdata.xml.in:68
-#, fuzzy
 msgid "Refreshed icons thanks again to Micah Ilbery"
-msgstr "Icone rinnovate grazie a Michea Ilbery"
+msgstr "Icone rinnovate grazie ancora a Micah Ilbery"
 
 #: data/metainfo.appdata.xml.in:69
 msgid ""
 "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
 msgstr ""
+"Aggiornamento tecnico all'ultima piattaforma GNOME, incluse GTK4 e LibAdwaita"
 
 #: data/metainfo.appdata.xml.in:75 data/metainfo.appdata.xml.in:83
-#, fuzzy
 msgid "Under-the-hood improvements:"
-msgstr "Correzioni sotto il cofano"
+msgstr "Miglioramenti sotto il cofano:"
 
 #: data/metainfo.appdata.xml.in:77 data/metainfo.appdata.xml.in:86
 #, fuzzy
 msgid "Update Stripe key"
-msgstr "Aggiornato collegamento alla traduzione"
+msgstr "Aggiornato la Stripe key"
 
 #: data/metainfo.appdata.xml.in:85
 msgid "Stricter sandboxing"
-msgstr ""
+msgstr "Sandboxing più rigoroso"
 
 #: data/metainfo.appdata.xml.in:92
 msgid "Add \"calculator\" category to launcher"
-msgstr ""
+msgstr "Aggiunto la categoria \"calcolatrice\" al programma di avvio"
 
 #: data/metainfo.appdata.xml.in:97
 msgid "Under-the-hood packaging updates for elementary OS 6"
-msgstr ""
+msgstr "Aggiornamenti del pacchetto sotto il cofano per il sistema operativo elementary 6"
 
 #: data/metainfo.appdata.xml.in:102
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone "
 "can see all the details and make their own calculations. Plus:"
 msgstr ""
+"L'avventura di Link: ora puoi condividere i risultati di Dippi come link così chiunque "
+"può vedere tutti i dettagli e fare i propri calcoli. Inoltre:"
 
 #: data/metainfo.appdata.xml.in:104
 msgid "More details on launch"
-msgstr ""
+msgstr ""Maggiori dettagli sull'avvio"
 
 #: data/metainfo.appdata.xml.in:105
 msgid "Bolded sections of descriptions for easier skimmability"
-msgstr ""
+msgstr "Sezioni delle descrizioni in grassetto per una più facile scremabilità"
 
 #: data/metainfo.appdata.xml.in:106
 msgid "Fix window resizing for different results"
-msgstr ""
+msgstr "Risolto il problema del ridimensionamento della finestra per risultati diversi"
 
 #: data/metainfo.appdata.xml.in:107
 msgid "Animate between results"
-msgstr ""
+msgstr "Animazione tra i risultati"
 
 #: data/metainfo.appdata.xml.in:113
 msgid "Port to elementary OS 6"
@@ -230,9 +231,8 @@ msgid "Drag window from anywhere"
 msgstr "Trascina la finestra da qualsiasi punto"
 
 #: data/metainfo.appdata.xml.in:117
-#, fuzzy
 msgid "Refreshed typography and design"
-msgstr "Tipografia rinnovata"
+msgstr "Design e tipografia aggiornati"
 
 #: data/metainfo.appdata.xml.in:123
 msgid "Code style and organization fixes"
@@ -475,9 +475,8 @@ msgid "Significant code cleanup"
 msgstr "Pulizia significativa del codice"
 
 #: data/metainfo.appdata.xml.in:305
-#, fuzzy
 msgid "Initial release"
-msgstr "Versione iniziale per AppCenter"
+msgstr "Versione iniziale"
 
 #: data/metainfo.appdata.xml.in:336
 msgid "Cassidy James Blaede"
@@ -497,23 +496,21 @@ msgstr ""
 
 #: src/MainWindow.vala:52
 msgid "About"
-msgstr ""
+msgstr "Informazioni"
 
 #: src/MainWindow.vala:65
-#, fuzzy
 msgid ""
 "Input a few simple details and figure out the aspect ratio, DPI, and other "
 "details of a particular display. Great for deciding which laptop or external "
 "monitor to purchase, and if it would be considered HiDPI."
 msgstr ""
-"Analizza qualsiasi display. Inserisci alcuni semplici dettagli e scopri le "
-"proporzioni, il DPI e altri dettagli di un particolare display. Ottimo per "
-"decidere quale laptop o monitor esterno acquistare e se sarebbe considerato "
-"HiDPI."
+"Inserisci alcuni semplici dettagli e calcola le proporzioni, i DPI e altri "
+"dettagli di un particolare display. Ottimo per decidere quale laptop o monitor "
+"esterno da acquistare e se sarebbero considerati HiDPI."
 
 #: src/MainWindow.vala:77
 msgid "translator-credits"
-msgstr ""
+msgstr "Albano Battistella"
 
 #: src/MainWindow.vala:96
 msgid "Diagonal size:"
@@ -525,11 +522,11 @@ msgstr "Risoluzione:"
 
 #: src/MainWindow.vala:128
 msgid "×"
-msgstr ""
+msgstr "x"
 
 #: src/MainWindow.vala:129
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: src/MainWindow.vala:131
 msgid "inches"
@@ -541,7 +538,7 @@ msgstr "Tipo:"
 
 #: src/MainWindow.vala:190
 msgid "Share results…"
-msgstr ""
+msgstr "Condividi risultati…"
 
 #: src/MainWindow.vala:200
 msgid "Analyze a Display"
@@ -552,130 +549,119 @@ msgid ""
 "For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–"
 "156 is ideal for laptops</b>."
 msgstr ""
+"Per LoDPI, un intervallo DPI di <b>90–150 è l'ideale per i desktop</b> mentre <b>124–"
+"156 è l'ideale per i laptop</b>."
 
 #: src/MainWindow.vala:201
 msgid ""
 "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
 "for laptops</b>."
 msgstr ""
+"Per HiDPI, <b>180–300 è l'ideale per i desktop</b> mentre <b>248–312 è l'ideale "
+"per laptop</b>."
 
 #: src/MainWindow.vala:207
 msgid "Very Low DPI"
 msgstr "DPI molto basso"
 
 #: src/MainWindow.vala:208
-#, fuzzy
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. <b>Avoid "
 "if possible.</b>"
 msgstr ""
-"È probabile che il testo e l'interfaccia utente siano troppo grandi per le "
-"distanze di visualizzazione tipiche. Da evitare se possibile."
+"È probabile che il testo e l'interfaccia utente siano troppo grandi per le normali distanze di visualizzazione. <b>Evita "
+"se possibile.</b>"
 
 #: src/MainWindow.vala:214
 msgid "Fairly Low DPI"
 msgstr "DPI abbastanza basso"
 
 #: src/MainWindow.vala:215
-#, fuzzy
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's "
 "<b>largely up to user preference</b> and physical distance from the display."
 msgstr ""
-"Il testo e l'interfaccia utente potrebbero essere troppo grandi per le "
-"distanze di visualizzazione tipiche,ma dipende in gran parte dalle "
-"preferenze dell'utente e dalla distanza fisica dal display."
+"Il testo e l'interfaccia utente potrebbero essere troppo grandi per le normali distanze di visualizzazione, ma è "
+"<b>dipendente in gran parte dalle preferenze dell'utente</b> e dalla distanza fisica dal display."
 
 #: src/MainWindow.vala:221
 msgid "Ideal for LoDPI"
 msgstr "Ideale per LoDPI"
 
 #: src/MainWindow.vala:222
-#, fuzzy
 msgid ""
 "Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at "
 "typical viewing distances."
 msgstr ""
-"Non HiDPI, ma un punto a favore. Il testo e l'interfaccia utente dovrebbero "
-"essere leggibili alle distanze di visualizzazione tipiche."
+"Non HiDPI, ma <b>un bel punto debole</b>. Il testo e l'interfaccia utente dovrebbero essere leggibili nella "
+"tipica distanza di visione".
 
 #: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
 msgid "Potentially Problematic"
 msgstr "Potenzialmente problematico"
 
 #: src/MainWindow.vala:229
-#, fuzzy
 msgid ""
 "Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too "
 "small by default</b>, but forcing HiDPI would make them appear too large. "
 "The experience may be slightly improved by increasing the text size."
 msgstr ""
-"Risoluzione relativamente alta, ma non del tutto HiDPI. Anche il testo e "
-"l'interfaccia utente potrebbero essere piccolo per impostazione predefinita, "
-"ma forzare HiDPI li fa apparire troppo grandi. L'esperienza potrebbe essere "
-"leggermente migliorata aumentando la dimensione del testo."
+"Risoluzione relativamente alta, ma non abbastanza HiDPI. Il testo e l'interfaccia utente <b>potrebbero essere troppo "
+"piccolo per impostazione predefinita</b>, ma forzare HiDPI li farebbe apparire troppo grandi. "
+"L'esperienza può essere leggermente migliorata aumentando la dimensione del testo."
 
 #: src/MainWindow.vala:236
-#, fuzzy
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
 "HiDPI and increasing the text size might help."
 msgstr ""
-"HiDPI per impostazione predefinita, ma il testo e l'interfaccia utente "
-"potrebbero apparire troppo grandi. Disattivare HiDPI e aumentare la "
-"dimensione del testo potrebbe aiutare."
+"HiDPI per impostazione predefinita, ma <b>il testo e l'interfaccia utente potrebbero apparire troppo grandi</b>. Disattivazione "
+"HiDPI e l'aumento delle dimensioni del testo potrebbero essere d'aiuto."
 
 #: src/MainWindow.vala:242
 msgid "Ideal for HiDPI"
 msgstr "Ideale per HiDPI"
 
 #: src/MainWindow.vala:243
-#, fuzzy
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. <b>This is the jackpot.</b>"
 msgstr ""
-"Testo e interfaccia utente HiDPI nitidi insieme a una dimensione leggibile "
-"per le distanze di visualizzazione tipiche. Questo è il jackpot."
+"Testo e interfaccia utente HiDPI nitidi insieme a una dimensione leggibile alla visualizzazione tipica "
+"delle distanze. <b>Questo è il jackpot.</b>"
 
 #: src/MainWindow.vala:249
 msgid "Fairly High for HiDPI"
 msgstr "Abbastanza alto per HiDPI"
 
 #: src/MainWindow.vala:250
-#, fuzzy
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
 "b>. Increasing the text size may help."
 msgstr ""
-"È probabile che il testo e l'interfaccia utente appaiano troppo piccoli per "
-"le distanze di visualizzazione tipiche. Aumentare la dimensione del testo "
-"può aiutare."
+"È probabile che il testo e l'interfaccia utente appaiano <b>troppo piccoli per le normali distanze di visualizzazione</"
+"b>. Può essere utile aumentare la dimensione del testo."
 
 #: src/MainWindow.vala:257
-#, fuzzy
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""
-"Il testo e l'interfaccia utente appariranno troppo piccoli per le distanze "
-"di visualizzazione tipiche."
+msgstr ""Il testo e l'interfaccia utente appariranno <b>troppo piccoli per le normali distanze di visualizzazione</b>."
 
 #: src/MainWindow.vala:264
-#, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
 "with integer scaling out of the box."
 msgstr ""
-"Questo display è in un intervallo molto difficile ed è probabile che non "
-"funzioni bene con ridimensionamento intero fuori dagli schemi."
+"Questo display si trova in un intervallo molto difficile ed è <b>probabile che non funzioni bene</b> "
+"con ridimensionamento di numeri interi fuori dagli schemi."
 
 #: src/MainWindow.vala:410
 #, c-format
 msgid "%d DPI"
-msgstr ""
+msgstr "%d DPI"
 
 #: src/MainWindow.vala:425
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: src/Utils.vala:14
 msgid "Laptop"
