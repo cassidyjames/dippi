@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-17 06:44+0000\n"
-"PO-Revision-Date: 2022-09-04 22:54+0200\n"
-"Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
+"PO-Revision-Date: 2023-03-16 11:45+0100\n"
+"Last-Translator: Irénée Thirion <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 42.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/launcher.desktop.in:3 data/metainfo.appdata.xml.in:7
 msgid "Dippi"
@@ -25,19 +25,19 @@ msgstr "Dippi"
 
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
-msgstr "Calculateur d’informations de l’écran"
+msgstr "Calculateur d’informations d’affichage"
 
 #: data/launcher.desktop.in:5 data/metainfo.appdata.xml.in:8
 msgid "Calculate display info like DPI and aspect ratio"
-msgstr "Calculez les informations de l’écran comme le DPI ou le ratio"
+msgstr "Calculez des informations sur l'écran comme le DPI ou le ratio"
 
 #: data/launcher.desktop.in:12
 msgid ""
 "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;"
 "aspect;ratio;"
 msgstr ""
-"DPI;densité;monitor;écran;résolution;display;affichage;largeur;hauteur;HiDPI;"
-"loDPI;aspect;ratio;"
+"DPI;densité;monitor;écran;résolution;affichage;largeur;hauteur;HiDPI;loDPI;"
+"aspect;ratio;calculateur;"
 
 #: data/metainfo.appdata.xml.in:10
 msgid ""
@@ -47,7 +47,7 @@ msgid ""
 "HiDPI."
 msgstr ""
 "Analysez n’importe quel écran. Saisissez quelques informations simples et "
-"découvrez le rapport d’aspect, le DPI et d’autres détails d’un écran "
+"découvrez le ratio d’aspect, le DPI et d’autres détails d’un écran "
 "particulier. Idéal pour décider de l’achat d’un ordinateur portable ou d’un "
 "écran externe, et pour savoir s’il est considéré comme HiDPI."
 
@@ -58,33 +58,32 @@ msgstr "Fonctionnalités pratiques :"
 #: data/metainfo.appdata.xml.in:13
 msgid "Find out if a display is a good choice based on its size and resolution"
 msgstr ""
-"Vérifiez si un écran est un bon choix en fonction de sa taille et de sa "
-"résolution"
+"Déterminer si un écran est un bon choix en vous basant sur sa diagonale et "
+"sa résolution"
 
 #: data/metainfo.appdata.xml.in:14
 msgid "Get advice about different densities"
-msgstr "Obtenez des conseils sur les différentes densités"
+msgstr "Obtenir des conseils sur différentes densités d'écran"
 
 #: data/metainfo.appdata.xml.in:15
 msgid "Learn the logical resolution"
-msgstr "Apprenez la résolution logique"
+msgstr "Apprendre la résolution logique"
 
 #: data/metainfo.appdata.xml.in:16 data/metainfo.appdata.xml.in:268
 msgid "Differentiate between laptops and desktop displays"
-msgstr ""
-"Différenciez les écrans d’ordinateurs de bureau et d’ordinateurs portables"
+msgstr "Différencier les écrans d’ordinateurs de bureau et laptops"
 
 #: data/metainfo.appdata.xml.in:17
 msgid "Stupid simple: all in a cute li'l window"
-msgstr "Stupidement simple : tout dans une jolie p’tite fenêtre."
+msgstr "Stupidement simple : tout dans une p’tite fenêtre toute mignonne"
 
 #: data/metainfo.appdata.xml.in:19
 msgid ""
 "Based my expertise and experience shipping HiDPI hardware and software at "
 "System76 and elementary."
 msgstr ""
-"Basé sur mon expertise et mon expérience de l’expédition de matériel et de "
-"logiciels HiDPI chez System76 et elementary."
+"Basé sur mon expertise et mon expérience dans la livraison de logiciels et "
+"de matériel HiDPI chez System76 et elementary."
 
 #: data/metainfo.appdata.xml.in:20
 msgid "Tells you if a display’s density is:"
@@ -124,71 +123,72 @@ msgstr "Remerciements particuliers à :"
 
 #: data/metainfo.appdata.xml.in:32
 msgid "Micah Ilbery for the shiny icons"
-msgstr "Micah Ilbery pour les icônes brillantes"
+msgstr "Micah Ilbery pour les magnifiques icônes"
 
 #: data/metainfo.appdata.xml.in:43
 msgid "Hotfix: fix About window when closing and re-opening it"
 msgstr ""
+"Correctif : correction de la fenêtre « À propos » lors de sa fermeture et de "
+"sa réouverture"
 
 #: data/metainfo.appdata.xml.in:48
 msgid "Even GNOMEier"
-msgstr ""
+msgstr "Encore plus dans le style GNOME"
 
 #: data/metainfo.appdata.xml.in:50
 msgid "Added “About” window"
-msgstr ""
+msgstr "Ajout d’une fenêtre « À propos »"
 
 #: data/metainfo.appdata.xml.in:51
 msgid "Improved text legibility"
-msgstr ""
+msgstr "Amélioration de la lisibilité du texte"
 
 #: data/metainfo.appdata.xml.in:52
 msgid "Updated runtime to GNOME 43"
-msgstr ""
+msgstr "Mise à jour de l’environnement d’exécution vers GNOME 43"
 
 #: data/metainfo.appdata.xml.in:54
-#, fuzzy
 msgid "New and updated translations:"
-msgstr "Mises à jour des traductions"
+msgstr "Nouvelles traductions et mises à jour :"
 
 #: data/metainfo.appdata.xml.in:56
 msgid "French translations thanks to Irénée THIRION"
-msgstr ""
+msgstr "Traduction française grâce à Irénée THIRION"
 
 #: data/metainfo.appdata.xml.in:57
-#, fuzzy
 msgid "Italian translations thanks to Albano Battistella"
-msgstr "Traduction lituanienne grâce à welaq"
+msgstr "Traduction italienne grâce à Albano Battistella"
 
 #: data/metainfo.appdata.xml.in:58
-#, fuzzy
 msgid "Russian translations thanks to @ViktorOn"
-msgstr "Traduction lituanienne grâce à welaq"
+msgstr "Traduction russe grâce à @ViktorOn"
 
 #: data/metainfo.appdata.xml.in:59
 msgid ""
 "Improvements to developer tools to make translations easier to keep up to "
 "date"
 msgstr ""
+"Améliorations des outils développeur pour mettre les traductions à jour plus "
+"facilement"
 
 #: data/metainfo.appdata.xml.in:65
-#, fuzzy
 msgid "Complete reworking"
-msgstr "Gammes de DPI complètement retravaillées"
+msgstr "Refonte complète"
 
 #: data/metainfo.appdata.xml.in:67
 msgid "elementary → GNOME styling"
-msgstr ""
+msgstr "style elementary → style GNOME"
 
 #: data/metainfo.appdata.xml.in:68
-#, fuzzy
 msgid "Refreshed icons thanks again to Micah Ilbery"
-msgstr "Icônes rafraîchies grâce à Micah Ilbery"
+msgstr "Icônes rafraîchies, encore grâce à Micah Ilbery"
 
 #: data/metainfo.appdata.xml.in:69
 msgid ""
 "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
 msgstr ""
+"Mise à jour technique vers la dernière plateforme GNOME incluant GTK4 et "
+"LibAdwaita"
 
 #: data/metainfo.appdata.xml.in:75 data/metainfo.appdata.xml.in:83
 msgid "Under-the-hood improvements:"
@@ -314,7 +314,7 @@ msgstr "Dépréciation corrigée"
 
 #: data/metainfo.appdata.xml.in:175
 msgid "Translation &amp; Tweaks"
-msgstr "Traduction &amp; Ajustements"
+msgstr "Traduction & ajustements"
 
 #: data/metainfo.appdata.xml.in:177
 msgid "French translations"
@@ -499,9 +499,8 @@ msgid "Significant code cleanup"
 msgstr "Nettoyage significatif du code"
 
 #: data/metainfo.appdata.xml.in:305
-#, fuzzy
 msgid "Initial release"
-msgstr "Première version pour AppCenter"
+msgstr "Première version"
 
 #: data/metainfo.appdata.xml.in:336
 msgid "Cassidy James Blaede"
