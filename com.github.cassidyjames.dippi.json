@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.cassidyjames.dippi",
     "runtime" : "org.gnome.Platform",
-    "runtime-version": "43",
+    "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
     "command": "com.github.cassidyjames.dippi",
     "finish-args": [
@@ -12,6 +12,40 @@
         "--share=ipc"
     ],
     "modules": [
+        {
+          "name" : "libsass",
+          "buildsystem" : "meson",
+          "sources" : [
+            {
+              "type" : "git",
+              "url" : "https://github.com/lazka/libsass.git",
+              "branch" : "meson"
+            }
+          ]
+        },
+        {
+          "name" : "sassc",
+          "buildsystem" : "meson",
+          "sources" : [
+            {
+              "type" : "git",
+              "url" : "https://github.com/lazka/sassc.git",
+              "branch" : "meson"
+            }
+          ]
+        },
+        {
+          "name": "libadwaita",
+          "buildsystem": "meson",
+          "builddir": true,
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+              "branch": "wip/cdavis/accent-colors"
+            }
+          ]
+        },
         {
             "name": "dippi",
             "buildsystem": "meson",
