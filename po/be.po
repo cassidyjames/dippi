@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Fairly High for HiDPI, or"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr ""
 
@@ -562,7 +562,7 @@ msgid ""
 "typical viewing distances."
 msgstr ""
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr ""
 
@@ -573,48 +573,59 @@ msgid ""
 "The experience may be slightly improved by increasing the text size."
 msgstr ""
 
-#: src/MainWindow.vala:236
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
+#: src/MainWindow.vala:235
+msgid "Tweak for HiDPI"
 msgstr ""
 
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
 msgstr ""
 
 #: src/MainWindow.vala:243
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr ""
-
-#: src/MainWindow.vala:250
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-
-#: src/MainWindow.vala:257
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""
-
-#: src/MainWindow.vala:264
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
 "with integer scaling out of the box."
 msgstr ""
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:257
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr ""
+
+#: src/MainWindow.vala:264
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+
+#: src/MainWindow.vala:271
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr ""
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr ""
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ""
 

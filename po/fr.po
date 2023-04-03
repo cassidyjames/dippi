@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2022-09-04 23:07+0200\n"
 "Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -100,7 +100,7 @@ msgstr "Densité idéale pour le HiDPI"
 msgid "Fairly High for HiDPI, or"
 msgstr "Plutôt haute pour le HiDPI, ou"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "DPI trop haut"
 
@@ -592,7 +592,7 @@ msgstr ""
 "Pas de HiDPI, mais <b>un entre-deux agréable</b>. Le texte et l’interface "
 "devraient être visibles depuis une distance de vue normale."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "DPI potentiellement problèmatique"
 
@@ -607,7 +607,27 @@ msgstr ""
 "HiDPI les ferait apparaître trop larges. Votre expérience devrait être "
 "améliorée en augmentant la taille du texte."
 
+#: src/MainWindow.vala:235
+#, fuzzy
+msgid "Tweak for HiDPI"
+msgstr "Densité idéale pour le HiDPI"
+
 #: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
+#: src/MainWindow.vala:243
+msgid ""
+"This display is in a very tricky range and is <b>not likely to work well</b> "
+"with integer scaling out of the box."
+msgstr ""
+"Cet affichage est dans une gamme très délicate et <b>est susceptible de ne "
+"pas bien fonctionner</b> avec une mise à l’échelle à l’entier par défaut."
+
+#: src/MainWindow.vala:250
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
 "HiDPI and increasing the text size might help."
@@ -616,11 +636,11 @@ msgstr ""
 "larges</b>. Enlever le HiDPI et augmenter la taille du texte devrait être un "
 "choix judicieux."
 
-#: src/MainWindow.vala:242
+#: src/MainWindow.vala:256
 msgid "Ideal for HiDPI"
 msgstr "Densité idéale pour le HiDPI"
 
-#: src/MainWindow.vala:243
+#: src/MainWindow.vala:257
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
 "distances. <b>This is the jackpot.</b>"
@@ -628,11 +648,11 @@ msgstr ""
 "<b>Jackpot !</b> Un HiDPI net, le texte et l’interface devraient être clairs "
 "comme du cristal depuis une distance de vue normale."
 
-#: src/MainWindow.vala:249
+#: src/MainWindow.vala:263
 msgid "Fairly High for HiDPI"
 msgstr "Densité plutôt haute pour le HiDPI"
 
-#: src/MainWindow.vala:250
+#: src/MainWindow.vala:264
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
 "b>. Increasing the text size may help."
@@ -641,26 +661,18 @@ msgstr ""
 "distance de vue normale</b>. Augmenter la taille du texte pourrait être une "
 "bonne idée."
 
-#: src/MainWindow.vala:257
+#: src/MainWindow.vala:271
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 "Le texte et l'interface apparaîtront <b>trop petits avec une distance de vue "
 "normale</b>."
 
-#: src/MainWindow.vala:264
-msgid ""
-"This display is in a very tricky range and is <b>not likely to work well</b> "
-"with integer scaling out of the box."
-msgstr ""
-"Cet affichage est dans une gamme très délicate et <b>est susceptible de ne "
-"pas bien fonctionner</b> avec une mise à l’échelle à l’entier par défaut."
-
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

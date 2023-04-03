@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr "Ideaal voor HiDPI,"
 msgid "Fairly High for HiDPI, or"
 msgstr "Redelijk hoog voor HiDPI of"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "Té hoog"
 
@@ -585,7 +585,7 @@ msgstr ""
 "Geen HiDPI, maar een mooie tussenoplossing. Tekst en werkomgeving zijn goed "
 "afleesbaar op normale kijkafstanden."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Wellicht problematisch"
 
@@ -600,47 +600,19 @@ msgstr ""
 "standaard mogelijk iets te klein, maar HiDPI afdwingen maakt alles juist te "
 "groot. De kijkervaring kan mogelijk worden verbeterd door tekst te vergroten."
 
-#: src/MainWindow.vala:236
+#: src/MainWindow.vala:235
 #, fuzzy
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
-msgstr ""
-"Standaard HiDPI, maar tekst en werkomgeving zijn mogelijk te groot. HiDPI "
-"uitschakelen en tekst vergroten helpt wellicht."
-
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+msgid "Tweak for HiDPI"
 msgstr "Ideaal voor HiDPI"
 
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
 #: src/MainWindow.vala:243
-#, fuzzy
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-"Scherpe HiDPI-tekst en -werkomgeving en leesbare tekst op normale "
-"kijkafstanden. Dit is de koning onder de schermen."
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr "Redelijk hoog voor HiDPI"
-
-#: src/MainWindow.vala:250
-#, fuzzy
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-"Tekst en werkomgeving zijn mogelijk te klein voor normale kijkafstanden. "
-"Mogelijk helpt het om tekst te vergroten."
-
-#: src/MainWindow.vala:257
-#, fuzzy
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr "Tekst en werkomgeving zijn té klein voor normale kijkafstanden."
-
-#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -649,12 +621,52 @@ msgstr ""
 "Dit scherm bevindt zich in een moeilijke situatie en werkt mogelijk "
 "standaard niet goed met opschalen."
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+#, fuzzy
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+"Standaard HiDPI, maar tekst en werkomgeving zijn mogelijk te groot. HiDPI "
+"uitschakelen en tekst vergroten helpt wellicht."
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr "Ideaal voor HiDPI"
+
+#: src/MainWindow.vala:257
+#, fuzzy
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+"Scherpe HiDPI-tekst en -werkomgeving en leesbare tekst op normale "
+"kijkafstanden. Dit is de koning onder de schermen."
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr "Redelijk hoog voor HiDPI"
+
+#: src/MainWindow.vala:264
+#, fuzzy
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+"Tekst en werkomgeving zijn mogelijk te klein voor normale kijkafstanden. "
+"Mogelijk helpt het om tekst te vergroten."
+
+#: src/MainWindow.vala:271
+#, fuzzy
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr "Tekst en werkomgeving zijn té klein voor normale kijkafstanden."
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

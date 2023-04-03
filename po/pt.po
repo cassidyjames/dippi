@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2020-08-25 14:15+0100\n"
 "Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
@@ -99,7 +99,7 @@ msgstr "Ideal para HiDPI,"
 msgid "Fairly High for HiDPI, or"
 msgstr "Razoavelmente Alto para HiDPI, ou"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "DPI Demasiado Alto"
 
@@ -600,7 +600,7 @@ msgstr ""
 "Não é HiDPI, mas está lá perto. O texto e a interface do utilizador deverão "
 "ser legíveis nas distâncias normais de visualização."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Potencialmente Problemático"
 
@@ -616,7 +616,28 @@ msgstr ""
 "poderá faze-los parecer maior. A experiência de utilização poderá melhorar "
 "significativamente ao aumentar o tamanho do texto."
 
+#: src/MainWindow.vala:235
+#, fuzzy
+msgid "Tweak for HiDPI"
+msgstr "Ideal para HiDPI"
+
 #: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
+#: src/MainWindow.vala:243
+#, fuzzy
+msgid ""
+"This display is in a very tricky range and is <b>not likely to work well</b> "
+"with integer scaling out of the box."
+msgstr ""
+"Este monitor está numa escala muito complicada e é provável não funcionar "
+"bem com uma escala de valor inteiro nativo."
+
+#: src/MainWindow.vala:250
 #, fuzzy
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
@@ -625,11 +646,11 @@ msgstr ""
 "HiDPI por defeito, mas o texto e a interface do utilizador poderão parecer "
 "grandes demais. Desligar o HiDPI e aumentar o tamanho do texto poderá ajudar."
 
-#: src/MainWindow.vala:242
+#: src/MainWindow.vala:256
 msgid "Ideal for HiDPI"
 msgstr "Ideal para HiDPI"
 
-#: src/MainWindow.vala:243
+#: src/MainWindow.vala:257
 #, fuzzy
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
@@ -639,11 +660,11 @@ msgstr ""
 "perfeitamente legível em distâncias normais de visualização. Isto é o "
 "jackpot."
 
-#: src/MainWindow.vala:249
+#: src/MainWindow.vala:263
 msgid "Fairly High for HiDPI"
 msgstr "DPI Razoavelmente Alto"
 
-#: src/MainWindow.vala:250
+#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
@@ -653,28 +674,19 @@ msgstr ""
 "pequenos em distâncias normais de visualização. Aumentar o tamanho do texto "
 "deverá ajudar."
 
-#: src/MainWindow.vala:257
+#: src/MainWindow.vala:271
 #, fuzzy
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 "O texto e a interface do utilizador irão parecer demasiado pequenos em "
 "distâncias normais de visualização."
 
-#: src/MainWindow.vala:264
-#, fuzzy
-msgid ""
-"This display is in a very tricky range and is <b>not likely to work well</b> "
-"with integer scaling out of the box."
-msgstr ""
-"Este monitor está numa escala muito complicada e é provável não funcionar "
-"bem com uma escala de valor inteiro nativo."
-
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

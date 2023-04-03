@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -98,7 +98,7 @@ msgstr "Ideal for HiDPI,"
 msgid "Fairly High for HiDPI, or"
 msgstr "Fairly High for HiDPI, or"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "Too High DPI"
 
@@ -586,7 +586,7 @@ msgstr ""
 "Not HiDPI, but a nice sweet spot. Text and UI should be legible at typical "
 "viewing distances."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Potentially Problematic"
 
@@ -601,47 +601,19 @@ msgstr ""
 "small by default, but forcing HiDPI would make them appear too large. The "
 "experience may be slightly improved by increasing the text size."
 
-#: src/MainWindow.vala:236
+#: src/MainWindow.vala:235
 #, fuzzy
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
-msgstr ""
-"HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
-"and increasing the text size might help."
-
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+msgid "Tweak for HiDPI"
 msgstr "Ideal for HiDPI"
 
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
 #: src/MainWindow.vala:243
-#, fuzzy
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. This is the jackpot."
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr "Fairly High for HiDPI"
-
-#: src/MainWindow.vala:250
-#, fuzzy
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-"Text and UI are likely to appear too small for typical viewing distances. "
-"Increasing the text size may help."
-
-#: src/MainWindow.vala:257
-#, fuzzy
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr "Text and UI will appear too small for typical viewing distances."
-
-#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -650,12 +622,52 @@ msgstr ""
 "This display is in a very tricky range and is not likely to work well with "
 "integer scaling out of the box."
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+#, fuzzy
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+"HiDPI by default, but text and UI may appear too large. Turning off HiDPI "
+"and increasing the text size might help."
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr "Ideal for HiDPI"
+
+#: src/MainWindow.vala:257
+#, fuzzy
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. This is the jackpot."
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr "Fairly High for HiDPI"
+
+#: src/MainWindow.vala:264
+#, fuzzy
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+"Text and UI are likely to appear too small for typical viewing distances. "
+"Increasing the text size may help."
+
+#: src/MainWindow.vala:271
+#, fuzzy
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr "Text and UI will appear too small for typical viewing distances."
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

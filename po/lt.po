@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2018-03-25 18:48+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -99,7 +99,7 @@ msgstr "Idealus HiDPI,"
 msgid "Fairly High for HiDPI, or"
 msgstr "Pakankamai didelis HiDPI ar"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "Per didelio DPI"
 
@@ -588,7 +588,7 @@ msgstr ""
 "Ne HiDPI, tačiau geras viduriukas. Tekstas ir naudotojo sąsaja, žiūrint iš "
 "įprastų nuotolių, turėtų būti įskaitomi."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Galimai problematiškas"
 
@@ -603,48 +603,19 @@ msgstr ""
 "gali būti per maži, tačiau priverstinai naudojant HiDPI, jie atrodytų per "
 "dideli. Patyrimas gali būti šiek tiek pagerintas, padidinus teksto dydį."
 
-#: src/MainWindow.vala:236
+#: src/MainWindow.vala:235
 #, fuzzy
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
-msgstr ""
-"Pagal numatymą HiDPI, tačiau tekstas ir naudotojo sąsaja gali atrodyti per "
-"dideli. Išjungus HiDPI ir padidinus teksto dydį, gali būti šiek tiek geriau."
-
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+msgid "Tweak for HiDPI"
 msgstr "Idealus HiDPI"
 
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
 #: src/MainWindow.vala:243
-#, fuzzy
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-"Ryškus HiDPI tekstas ir naudotojo sąsaja, skaitomo dydžio iš įprasto "
-"nuotolio. Tai yra aukso puodas."
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr "Pakankamai didelis HiDPI"
-
-#: src/MainWindow.vala:250
-#, fuzzy
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-"Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, greičiausiai, "
-"atrodys per maži. Padidinus teksto dydį, gali būti šiek tiek geriau."
-
-#: src/MainWindow.vala:257
-#, fuzzy
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""
-"Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, atrodys per maži."
-
-#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -653,12 +624,53 @@ msgstr ""
 "Šis ekranas yra labai sudėtingame rėžyje ir, greičiausiai, keičiant mastelį "
 "pagal sveikąjį skaičių, pats savaime neveiks tinkamai."
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+#, fuzzy
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+"Pagal numatymą HiDPI, tačiau tekstas ir naudotojo sąsaja gali atrodyti per "
+"dideli. Išjungus HiDPI ir padidinus teksto dydį, gali būti šiek tiek geriau."
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr "Idealus HiDPI"
+
+#: src/MainWindow.vala:257
+#, fuzzy
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+"Ryškus HiDPI tekstas ir naudotojo sąsaja, skaitomo dydžio iš įprasto "
+"nuotolio. Tai yra aukso puodas."
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr "Pakankamai didelis HiDPI"
+
+#: src/MainWindow.vala:264
+#, fuzzy
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+"Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, greičiausiai, "
+"atrodys per maži. Padidinus teksto dydį, gali būti šiek tiek geriau."
+
+#: src/MainWindow.vala:271
+#, fuzzy
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr ""
+"Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, atrodys per maži."
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

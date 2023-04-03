@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Safak Genisol <Bjksafak45@gmail.com>, 2020.\n"
 "Language-Team: none\n"
@@ -98,7 +98,7 @@ msgstr "HiDPI için ideal,"
 msgid "Fairly High for HiDPI, or"
 msgstr "HiDPI için Oldukça Yüksek veya"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "Çok Yüksek DPI"
 
@@ -585,7 +585,7 @@ msgstr ""
 "HiDPI değil, ama hoş bir yer. Metin ve kullanıcı arayüzü tipik görüntüleme "
 "mesafelerinde okunabilir olmalıdır."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Potansiyel Olarak Sorunlu"
 
@@ -601,49 +601,19 @@ msgstr ""
 "çok büyük gösterecektir. Metin boyutunu artırarak deneyim biraz "
 "iyileştirilebilir."
 
-#: src/MainWindow.vala:236
+#: src/MainWindow.vala:235
 #, fuzzy
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
-msgstr ""
-"Varsayılan olarak HiDPI, ancak metin ve kullanıcı arayüzü çok büyük "
-"görünebilir. HiDPI'yi kapatmak ve metin boyutunu artırmak yardımcı olabilir."
-
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+msgid "Tweak for HiDPI"
 msgstr "HiDPI için ideal"
 
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
 #: src/MainWindow.vala:243
-#, fuzzy
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-"Net HiDPI metin ve kullanıcı arayüzü ile birlikte tipik görüntüleme "
-"mesafelerinde okunabilir boyut. Bu bir ikramiye."
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr "HiDPI için Oldukça Yüksek"
-
-#: src/MainWindow.vala:250
-#, fuzzy
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-"Metin ve kullanıcı arayüzü tipik görüntüleme mesafeleri için çok küçük "
-"görünecektir. Metin boyutunu büyütmek yardımcı olabilir."
-
-#: src/MainWindow.vala:257
-#, fuzzy
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""
-"Metin ve kullanıcı arayüzü tipik görüntüleme mesafeleri için çok küçük "
-"görünecektir."
-
-#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -652,12 +622,54 @@ msgstr ""
 "Bu ekran çok zor bir aralıktadır ve kutudan çıkan tamsayı ölçeklendirmesi "
 "ile iyi çalışma olasılığı yoktur."
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+#, fuzzy
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+"Varsayılan olarak HiDPI, ancak metin ve kullanıcı arayüzü çok büyük "
+"görünebilir. HiDPI'yi kapatmak ve metin boyutunu artırmak yardımcı olabilir."
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr "HiDPI için ideal"
+
+#: src/MainWindow.vala:257
+#, fuzzy
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+"Net HiDPI metin ve kullanıcı arayüzü ile birlikte tipik görüntüleme "
+"mesafelerinde okunabilir boyut. Bu bir ikramiye."
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr "HiDPI için Oldukça Yüksek"
+
+#: src/MainWindow.vala:264
+#, fuzzy
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+"Metin ve kullanıcı arayüzü tipik görüntüleme mesafeleri için çok küçük "
+"görünecektir. Metin boyutunu büyütmek yardımcı olabilir."
+
+#: src/MainWindow.vala:271
+#, fuzzy
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr ""
+"Metin ve kullanıcı arayüzü tipik görüntüleme mesafeleri için çok küçük "
+"görünecektir."
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

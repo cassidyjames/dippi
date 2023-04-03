@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2019-02-18 13:18-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: NONE\n"
@@ -99,7 +99,7 @@ msgstr "ideal para resolución alta,"
 msgid "Fairly High for HiDPI, or"
 msgstr "bastante elevada para resolución alta, o"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "de PPP demasiado elevados"
 
@@ -588,7 +588,7 @@ msgstr ""
 "No es de alta resolución, mas es un punto de equilibrio óptimo. El texto y "
 "la interfaz serán legibles a distancias de visión habituales."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "Potencialmente problemática"
 
@@ -604,50 +604,19 @@ msgstr ""
 "predeterminada, y forzar una escala superior los agrandaría demasiado. Si "
 "aumenta el tamaño del texto, la experiencia puede mejorar un poco."
 
-#: src/MainWindow.vala:236
+#: src/MainWindow.vala:235
 #, fuzzy
-msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
-msgstr ""
-"Alta resolución de manera predeterminada, pero el texto y la interfaz pueden "
-"mostrarse demasiado grandes. Considere desactivar el modo de alta resolución "
-"y aumentar el tamaño del texto."
-
-#: src/MainWindow.vala:242
-msgid "Ideal for HiDPI"
+msgid "Tweak for HiDPI"
 msgstr "Ideal para resolución alta"
 
+#: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
 #: src/MainWindow.vala:243
-#, fuzzy
-msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
-msgstr ""
-"El texto y la interfaz de alta resolución se mostrarán nítidos a distancias "
-"de visión habituales. Este es el premio mayor."
-
-#: src/MainWindow.vala:249
-msgid "Fairly High for HiDPI"
-msgstr "Bastante elevada para resolución alta"
-
-#: src/MainWindow.vala:250
-#, fuzzy
-msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
-msgstr ""
-"Es probable que el texto y la interfaz resulten demasiado pequeños a "
-"distancias de visión habituales. Considere aumentar el tamaño del texto."
-
-#: src/MainWindow.vala:257
-#, fuzzy
-msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""
-"El texto y la interfaz se mostrarán demasiado pequeños a distancias de "
-"visión habituales."
-
-#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -657,12 +626,55 @@ msgstr ""
 "funcionar adecuadamente con el ajuste de escala por enteros a la primera "
 "instalación."
 
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:250
+#, fuzzy
+msgid ""
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
+"HiDPI and increasing the text size might help."
+msgstr ""
+"Alta resolución de manera predeterminada, pero el texto y la interfaz pueden "
+"mostrarse demasiado grandes. Considere desactivar el modo de alta resolución "
+"y aumentar el tamaño del texto."
+
+#: src/MainWindow.vala:256
+msgid "Ideal for HiDPI"
+msgstr "Ideal para resolución alta"
+
+#: src/MainWindow.vala:257
+#, fuzzy
+msgid ""
+"Crisp HiDPI text and UI along with a readable size at typical viewing "
+"distances. <b>This is the jackpot.</b>"
+msgstr ""
+"El texto y la interfaz de alta resolución se mostrarán nítidos a distancias "
+"de visión habituales. Este es el premio mayor."
+
+#: src/MainWindow.vala:263
+msgid "Fairly High for HiDPI"
+msgstr "Bastante elevada para resolución alta"
+
+#: src/MainWindow.vala:264
+#, fuzzy
+msgid ""
+"Text and UI are likely to appear <b>too small for typical viewing distances</"
+"b>. Increasing the text size may help."
+msgstr ""
+"Es probable que el texto y la interfaz resulten demasiado pequeños a "
+"distancias de visión habituales. Considere aumentar el tamaño del texto."
+
+#: src/MainWindow.vala:271
+#, fuzzy
+msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
+msgstr ""
+"El texto y la interfaz se mostrarán demasiado pequeños a distancias de "
+"visión habituales."
+
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d PPP"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-04-03 19:28+0000\n"
 "PO-Revision-Date: 2018-02-24 22:06-0700\n"
 "Last-Translator: ArthurS.\n"
 "Language-Team: none\n"
@@ -99,7 +99,7 @@ msgstr "Densité idéale pour le HiDPI"
 msgid "Fairly High for HiDPI, or"
 msgstr "Densité plutôt haute pour le HiDPI, ou"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:256
+#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:270
 msgid "Too High DPI"
 msgstr "DPI trop haut"
 
@@ -588,7 +588,7 @@ msgstr ""
 "Pas d'HiDPI, mais un entre-deux agréable. Le texte et l'interface devraient "
 "être visible depuis une distance de vue normale."
 
-#: src/MainWindow.vala:228 src/MainWindow.vala:235 src/MainWindow.vala:263
+#: src/MainWindow.vala:228 src/MainWindow.vala:242 src/MainWindow.vala:249
 msgid "Potentially Problematic"
 msgstr "DPI potentiellement problèmatique"
 
@@ -604,7 +604,28 @@ msgstr ""
 "ferait apparaitre trop large. Votre experience devrait être améliorée en "
 "augumentant la taille du texte"
 
+#: src/MainWindow.vala:235
+#, fuzzy
+msgid "Tweak for HiDPI"
+msgstr "Densité idéale pour le HiDPI"
+
 #: src/MainWindow.vala:236
+msgid ""
+"This display may default to loDPI on some desktops, which could result in "
+"too-small text and UI. However, it <b>should be usable with HiDPI by "
+"manually enabling 2× scaling</b>."
+msgstr ""
+
+#: src/MainWindow.vala:243
+#, fuzzy
+msgid ""
+"This display is in a very tricky range and is <b>not likely to work well</b> "
+"with integer scaling out of the box."
+msgstr ""
+"Cet affichage est dans une gamme très délicate et n'est pas susceptible de "
+"bien fonctionner avec une mise à l'échelle à l'entiers par défaut."
+
+#: src/MainWindow.vala:250
 #, fuzzy
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
@@ -614,11 +635,11 @@ msgstr ""
 "trop large. Enlever le HiDPI et augumenter la taille du texte devrait être "
 "un choix judicieux."
 
-#: src/MainWindow.vala:242
+#: src/MainWindow.vala:256
 msgid "Ideal for HiDPI"
 msgstr "Densité idéale pour le HiDPI"
 
-#: src/MainWindow.vala:243
+#: src/MainWindow.vala:257
 #, fuzzy
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
@@ -627,11 +648,11 @@ msgstr ""
 "Jackpot! Un HiDPI net, le texte et l'interface devraient être clair comme du "
 "cristal depuis une distance de vue normale."
 
-#: src/MainWindow.vala:249
+#: src/MainWindow.vala:263
 msgid "Fairly High for HiDPI"
 msgstr "Densité plutôt haute pour le HiDPI"
 
-#: src/MainWindow.vala:250
+#: src/MainWindow.vala:264
 #, fuzzy
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
@@ -641,28 +662,19 @@ msgstr ""
 "distance de vue normale. Augumenter la taille du texte semble être une bonne "
 "idée."
 
-#: src/MainWindow.vala:257
+#: src/MainWindow.vala:271
 #, fuzzy
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 "Le texte et l'interface apparaitront trop petites avec une distance de vue "
 "normale."
 
-#: src/MainWindow.vala:264
-#, fuzzy
-msgid ""
-"This display is in a very tricky range and is <b>not likely to work well</b> "
-"with integer scaling out of the box."
-msgstr ""
-"Cet affichage est dans une gamme très délicate et n'est pas susceptible de "
-"bien fonctionner avec une mise à l'échelle à l'entiers par défaut."
-
-#: src/MainWindow.vala:410
+#: src/MainWindow.vala:418
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:425
+#: src/MainWindow.vala:433
 msgid ":"
 msgstr ":"
 
