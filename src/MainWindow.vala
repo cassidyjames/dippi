@@ -77,7 +77,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             translator_credits = _("translator-credits"),
 
             // Legal
-            copyright = "Copyright © 2018–2022 %s".printf (App.DEVELOPER),
+            copyright = "Copyright © 2018–2023 %s".printf (App.DEVELOPER),
             license_type = Gtk.License.GPL_3_0,
         };
 

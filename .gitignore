@@ -1,4 +1,5 @@
 *~
 _build/
 src/display-calc
+.flatpak-builder/
 
