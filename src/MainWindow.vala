@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2023 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 public class Dippi.MainWindow : Adw.ApplicationWindow {
@@ -77,7 +77,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             translator_credits = _("translator-credits"),
 
             // Legal
-            copyright = "Copyright © 2018–2022 %s".printf (App.DEVELOPER),
+            copyright = "Copyright © 2018–2023 %s".printf (App.DEVELOPER),
             license_type = Gtk.License.GPL_3_0,
         };
 
@@ -233,7 +233,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             "settings-symbolic",
             "warning",
             _("Tweak for HiDPI"),
-            _("This display may default to loDPI on some desktops, which could result in too-small text and UI. However, it <b>should be usable with HiDPI by manually enabling 2× scaling</b>.")
+            _("This display may default to loDPI on some desktops, which could result in too-small text and UI. However, it <b>may be usable with HiDPI by manually enabling 2× scaling</b>. Further adjustments can be made by decreasing the text size.")
         );
 
         var unclear_range_grid = new RangeGrid (
