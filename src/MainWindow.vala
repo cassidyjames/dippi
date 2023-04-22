@@ -347,7 +347,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             string? text = width_entry.get_text ();
             if (text != null && text != "") {
                 width = int.parse (text);
-
+                if ( width == 0 ) {
+                    return;
+                }
                 is_default_width = false;
 
                 recalculate_aspect (width, height);
@@ -372,7 +374,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             string? text = height_entry.get_text ();
             if (text != null && text != "") {
                 height = int.parse (height_entry.get_text ());
-
+                if ( height == 0 ) {
+                    return;
+                }
                 is_default_height = false;
 
                 recalculate_aspect (width, height);
