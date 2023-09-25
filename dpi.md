@@ -1,3 +1,11 @@
+> [!WARNING]
+> **Dippi is no longer actively maintained for elementary AppCenter.** You can get the latest updates from [Flathub].
+>
+> See the [README] for more information.
+
+[Flathub]: https://flathub.org/apps/com.github.cassidyjames.dippi
+[README]: https://github.com/cassidyjames/dippi
+
 # DPI Calculations/Ranges
 
 Special thanks to [David Jordan](https://github.com/djordan2) for helping determine these ranges and putting up with my constant pinging to talk through this.
