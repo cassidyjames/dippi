@@ -39,6 +39,9 @@ Dippi 4 was designed and developed on and for GNOME. As such, contributors agree
 
 <a href='https://flathub.org/apps/details/com.github.cassidyjames.dippi'><img width='180' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.svg' /></a>
 
+> [!WARNING]
+> **Dippi is no longer actively maintained for elementary AppCenter.** You can get the latest updates from [Flathub].
+
 ## Developing and Building
 
 If you want to hack on and build Dippi yourself, I recommend using GNOME Builder. Clone the repository, then just* hit run!
