@@ -565,7 +565,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             var title_label = new Gtk.Label (title) {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END,
-                wrap = true,
+                wrap = false,
             };
             title_label.add_css_class ("title-1");
             title_label.add_css_class (style_class);
@@ -584,3 +584,4 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         }
     }
 }
+
