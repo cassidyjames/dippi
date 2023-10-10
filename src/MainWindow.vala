@@ -41,9 +41,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            icon_name: APP_ID,
-            resizable: false,
-            title: App.NAME
+            resizable: false
         );
     }
 
@@ -53,33 +51,40 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         };
         about_button.add_css_class ("dim-label");
 
-        var about_window = new Adw.AboutWindow () {
+        var about_window = new Adw.AboutWindow.from_appdata (
+            "/com/github/cassidyjames/dippi/metainfo.xml", VERSION
+        ) {
             transient_for = this,
             hide_on_close = true,
 
-            application_icon = APP_ID,
-            application_name = App.NAME,
-            developer_name = App.DEVELOPER,
-            version = VERSION,
-
             comments = _("Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI."),
-
-            website = "https://cassidyjames.com/dippi",
-            issue_url = "https://github.com/cassidyjames/dippi/issues",
-
-            // Credits
-            developers = { "%s <%s>".printf (App.DEVELOPER, App.EMAIL) },
-            designers = { "%s %s".printf (App.DEVELOPER, App.URL) },
             artists = {
                 "Micah Ilbery https://micahilbery.com",
             },
             /// The translator credits. Please translate this with your name(s).
             translator_credits = _("translator-credits"),
-
-            // Legal
-            copyright = "Copyright © 2018–2023 %s".printf (App.DEVELOPER),
-            license_type = Gtk.License.GPL_3_0,
         };
+        about_window.developers = {
+            "%s %s".printf (
+                about_window.developer_name,
+                about_window.website
+            ),
+        };
+        about_window.designers = {
+            "%s %s".printf (
+                about_window.developer_name,
+                about_window.website
+            ),
+        };
+        about_window.copyright = "© 2018–%i %s".printf (
+            new DateTime.now_local ().get_year (),
+            about_window.developer_name
+        );
+
+        // Set MainWindow properties from the AppData already fetched and parsed
+        // by the AboutWindow construction
+        this.icon_name = about_window.application_icon;
+        this.title = about_window.application_name;
 
         var header = new Adw.HeaderBar () {
             title_widget = new Gtk.Label (null)

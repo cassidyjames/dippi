@@ -11,7 +11,7 @@ install_data(
 i18n.merge_file(
   input: 'launcher.desktop.in',
   output: meson.project_name() + '.desktop',
-  po_dir: meson.source_root() / 'po' / 'extra',
+  po_dir: meson.project_source_root() / 'po' / 'extra',
   type: 'desktop',
   install: true,
   install_dir: get_option('datadir') / 'applications'
@@ -20,7 +20,7 @@ i18n.merge_file(
 i18n.merge_file(
   input: 'metainfo.appdata.xml.in',
   output: meson.project_name() + '.metainfo.xml',
-  po_dir: meson.source_root() / 'po' / 'extra',
+  po_dir: meson.project_source_root() / 'po' / 'extra',
   type: 'xml',
   install: true,
   install_dir: get_option('datadir') / 'metainfo'
@@ -34,12 +34,3 @@ if desktop_file_validate.found()
     args: meson.current_build_dir () / meson.project_name() + '.desktop'
   )
 endif
-
-# appstreamcli = find_program(['appstreamcli', 'appstream-util'], required:false)
-# if appstreamcli.found()
-#     test (
-#         'Validate appdata file',
-#         appstreamcli,
-#         args: ['validate', meson.current_build_dir () / meson.project_name() + '.appdata.xml']
-#     )
-# endif

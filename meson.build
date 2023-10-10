@@ -1,7 +1,8 @@
 project(
   'com.github.cassidyjames.dippi',
   'vala', 'c',
-  version: '4.0.6'
+  version: '4.0.6',
+  meson_version: '>=0.58',
 )
 
 gnome = import('gnome')
@@ -42,5 +43,3 @@ executable(
 )
 subdir('data')
 subdir('po')
-
-meson.add_install_script('build-aux' / 'meson'/ 'post_install.py')
