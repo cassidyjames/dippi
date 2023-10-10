@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 17:01+0000\n"
+"POT-Creation-Date: 2023-10-10 17:51+0000\n"
 "PO-Revision-Date: 2018-03-25 18:48+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -668,12 +668,12 @@ msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 "Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, atrodys per maži."
 
-#: src/MainWindow.vala:418
+#: src/MainWindow.vala:414
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:433
+#: src/MainWindow.vala:429
 msgid ":"
 msgstr ":"
 

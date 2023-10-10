@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 17:01+0000\n"
+"POT-Creation-Date: 2023-10-10 17:51+0000\n"
 "PO-Revision-Date: 2019-02-18 13:18-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: NONE\n"
@@ -672,12 +672,12 @@ msgstr ""
 "El texto y la interfaz se mostrarán demasiado pequeños a distancias de "
 "visión habituales."
 
-#: src/MainWindow.vala:418
+#: src/MainWindow.vala:414
 #, c-format
 msgid "%d DPI"
 msgstr "%d PPP"
 
-#: src/MainWindow.vala:433
+#: src/MainWindow.vala:429
 msgid ":"
 msgstr ":"
 

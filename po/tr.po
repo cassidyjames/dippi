@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 17:01+0000\n"
+"POT-Creation-Date: 2023-10-10 17:51+0000\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Safak Genisol <Bjksafak45@gmail.com>, 2020.\n"
 "Language-Team: none\n"
@@ -667,12 +667,12 @@ msgstr ""
 "Metin ve kullanıcı arayüzü tipik görüntüleme mesafeleri için çok küçük "
 "görünecektir."
 
-#: src/MainWindow.vala:418
+#: src/MainWindow.vala:414
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:433
+#: src/MainWindow.vala:429
 msgid ":"
 msgstr ":"
 
