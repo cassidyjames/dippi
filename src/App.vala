@@ -4,11 +4,6 @@
  */
 
 public class Dippi.App : Adw.Application {
-    public const string NAME = "Dippi";
-    public const string DEVELOPER = "Cassidy James Blaede";
-    public const string EMAIL = "c@ssidyjam.es";
-    public const string URL = "https://cassidyjames.com";
-
     public App () {
         Object (
             application_id: APP_ID,
@@ -28,7 +23,6 @@ public class Dippi.App : Adw.Application {
             "<Ctrl>Q",
             "<Ctrl>W",
         });
-
 
         quit_action.activate.connect (() => {
             if (app_window != null) {

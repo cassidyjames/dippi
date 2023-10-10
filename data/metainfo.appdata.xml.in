@@ -35,6 +35,15 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="4.0.6" date="2023-10-10">
+      <description>
+        <p>GNOME 45 and crash fix</p>
+      </description>
+      <issues>
+        <issue url="https://github.com/cassidyjames/dippi/issues/111">Crash when typing zero into pixel-size field</issue>
+        <issue url="https://github.com/cassidyjames/dippi/issues/120">Titles wrap with GNOME 45</issue>
+      </issues>
+    </release>
     <release version="4.0.5" date="2023-10-10">
       <description>
         <p>Translations and GNOME 44</p>
@@ -310,35 +319,35 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi-dark.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"></content_rating>
   <developer_name>Cassidy James Blaede</developer_name>
   <url type="homepage">https://cassidyjames.com/dippi</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
-  <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
+  <url type="translate">https://github.com/cassidyjames/dippi/tree/main/po#readme</url>
   <url type="donation">https://cassidyjames.com/pay</url>
   <url type="help">https://cassidyjames.com/support</url>
   <branding>
