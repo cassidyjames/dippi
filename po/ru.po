@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 16:47+0000\n"
+"POT-Creation-Date: 2023-10-10 16:58+0000\n"
 "PO-Revision-Date: 2022-09-05 14:14+0000\n"
 "Last-Translator: ViktorOn https://github.com/viktoron\n"
 "Language-Team: No Team, LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+msgid "Lots of handy features:"
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:13
