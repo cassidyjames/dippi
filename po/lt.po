@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 16:47+0000\n"
+"POT-Creation-Date: 2023-10-10 16:58+0000\n"
 "PO-Revision-Date: 2018-03-25 18:48+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -41,7 +41,8 @@ msgstr ""
 "išorinį ekraną įsigyti, ir ar jis bus laikomas HiDPI."
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+#, fuzzy
+msgid "Lots of handy features:"
 msgstr "Naudingos ypatybės:"
 
 #: data/metainfo.appdata.xml.in:13

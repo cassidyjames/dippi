@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 16:47+0000\n"
+"POT-Creation-Date: 2023-10-10 16:58+0000\n"
 "PO-Revision-Date: 2021-06-18 21:39-0600\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+msgid "Lots of handy features:"
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:13

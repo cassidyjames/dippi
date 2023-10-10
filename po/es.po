@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 16:47+0000\n"
+"POT-Creation-Date: 2023-10-10 16:58+0000\n"
 "PO-Revision-Date: 2019-02-18 13:18-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: NONE\n"
@@ -39,7 +39,8 @@ msgstr ""
 "puede considerarse de alta resolución."
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+#, fuzzy
+msgid "Lots of handy features:"
 msgstr "Funcionalidades útiles:"
 
 #: data/metainfo.appdata.xml.in:13

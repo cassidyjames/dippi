@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 16:47+0000\n"
+"POT-Creation-Date: 2023-10-10 16:58+0000\n"
 "PO-Revision-Date: 2022-09-04 22:54+0200\n"
 "Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -52,7 +52,8 @@ msgstr ""
 "écran externe, et pour savoir s’il est considéré comme HiDPI."
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+#, fuzzy
+msgid "Lots of handy features:"
 msgstr "Fonctionnalités pratiques :"
 
 #: data/metainfo.appdata.xml.in:13
