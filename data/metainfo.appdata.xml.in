@@ -38,11 +38,11 @@
     <release version="4.0.6" date="2023-10-10">
       <description>
         <p>GNOME 45 and crash fix</p>
-        <issues>
-          <issue url="https://github.com/cassidyjames/dippi/issues/111">Crash when typing zero into pixel-size field</issue>
-          <issue url="https://github.com/cassidyjames/dippi/issues/120">Titles wrap with GNOME 45</issue>
-        </issues>
       </description>
+      <issues>
+        <issue url="https://github.com/cassidyjames/dippi/issues/111">Crash when typing zero into pixel-size field</issue>
+        <issue url="https://github.com/cassidyjames/dippi/issues/120">Titles wrap with GNOME 45</issue>
+      </issues>
     </release>
     <release version="4.0.5" date="2023-10-10">
       <description>
