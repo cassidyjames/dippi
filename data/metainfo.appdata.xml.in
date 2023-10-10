@@ -27,10 +27,7 @@
       <li>Fairly High for HiDPI, or</li>
       <li>Too High DPI</li>
     </ul>
-    <p>Special thanks:</p>
-    <ul>
-      <li>Micah Ilbery for the shiny icons</li>
-    </ul>
+    <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
   <translation type="gettext">com.github.cassidyjames.dippi</translation>
   <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
@@ -38,7 +35,7 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
-    <release version="4.0.4" date="2023-10-10">
+    <release version="4.0.5" date="2023-10-10">
       <description>
         <p>Translations and GNOME 44</p>
       </description>
