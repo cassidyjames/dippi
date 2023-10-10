@@ -345,11 +345,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         width_entry.changed.connect (() => {
             string? text = width_entry.get_text ();
-            if (text != null && text != "") {
-                width = int.parse (text);
-
+            width = int.parse (text);
+            if (width != 0) {
                 is_default_width = false;
-
                 recalculate_aspect (width, height);
                 assess_dpi (
                     recalculate_dpi (inches, width, height),
@@ -370,11 +368,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         height_entry.changed.connect (() => {
             string? text = height_entry.get_text ();
-            if (text != null && text != "") {
-                height = int.parse (height_entry.get_text ());
-
+            height = int.parse (height_entry.get_text ());
+            if (height != 0) {
                 is_default_height = false;
-
                 recalculate_aspect (width, height);
                 assess_dpi (
                     recalculate_dpi (inches, width, height),
