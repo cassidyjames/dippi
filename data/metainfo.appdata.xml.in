@@ -8,7 +8,7 @@
   <summary>Calculate display info like DPI and aspect ratio</summary>
   <description>
     <p>Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
-    <p>Handy features:</p>
+    <p>Lots of handy features:</p>
     <ul>
       <li>Find out if a display is a good choice based on its size and resolution</li>
       <li>Get advice about different densities</li>
@@ -27,10 +27,7 @@
       <li>Fairly High for HiDPI, or</li>
       <li>Too High DPI</li>
     </ul>
-    <p>Special thanks:</p>
-    <ul>
-      <li>Micah Ilbery for the shiny icons</li>
-    </ul>
+    <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
   <translation type="gettext">com.github.cassidyjames.dippi</translation>
   <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
@@ -38,7 +35,7 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
-    <release version="4.0.3" date="2023-04-03">
+    <release version="4.0.5" date="2023-10-10">
       <description>
         <p>Translations and GNOME 44</p>
       </description>
