@@ -38,7 +38,7 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
-    <release version="4.0.3" date="2023-09-10">
+    <release version="4.0.4" date="2023-10-10">
       <description>
         <p>Translations and GNOME 44</p>
       </description>
