@@ -18,9 +18,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     private const double INCHES_INFER_EXTERNAL = 18;
     private const int DPI_INFER_HIDPI = 192; // According to GNOME
 
-    private int aspect_width = DEFAULT_ASPECT_WIDTH;
-    private int aspect_height = DEFAULT_ASPECT_HEIGHT;
-
     private double inches = 0.0;
     private int width = 0;
     private int height = 0;
@@ -37,6 +34,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     private Gtk.ToggleButton external_button;
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
+    private Utils.Aspect aspect;
 
     public MainWindow (Gtk.Application application) {
         Object (
@@ -46,6 +44,8 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        aspect = new Utils.Aspect();
+
         var about_button = new Gtk.Button.from_icon_name ("about-symbolic") {
             tooltip_text = _("About")
         };
@@ -429,9 +429,13 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
     private void recalculate_aspect (int width, int height) {
         if (width > 0 && height > 0) {
-            aspect_width = width / Utils.greatest_common_divisor (width, height);
-            aspect_height = height / Utils.greatest_common_divisor (width, height);
-            aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+            var aspect_string = aspect.get_aspect(width, height);
+            if (aspect_string == "") {
+                var aspect_width = width / Utils.greatest_common_divisor (width, height);
+                var aspect_height = height / Utils.greatest_common_divisor (width, height);
+                aspect_string = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+            }
+            aspect_result_label.label = aspect_string;
         } else {
             aspect_result_label.label = "";
         }
