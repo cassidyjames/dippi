@@ -32,6 +32,7 @@ executable(
   'src' / 'App.vala',
   'src' / 'MainWindow.vala',
   'src' / 'Utils.vala',
+  'src' / 'Aspect.vala',
   asresources,
   config_file,
   dependencies: [
