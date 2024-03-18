@@ -344,7 +344,7 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"></content_rating>
-  <developer>
+  <developer id="com.github.cassidyjames">
     <name>Cassidy James Blaede</name>
   </developer>
   <url type="homepage">https://cassidyjames.com/dippi</url>
