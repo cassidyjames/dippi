@@ -36,7 +36,7 @@ executable(
   config_file,
   dependencies: [
     dependency('gtk4', version: '>=4.14.4'),
-    dependency('libadwaita-1', version: '>=1.5.3'),
+    dependency('libadwaita-1', version: '>=1.5.2'),
     meson.get_compiler('c').find_library('m', required : false)
   ],
   install: true
