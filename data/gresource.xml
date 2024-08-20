@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/cassidyjames/dippi">
-    <file>style.css</file>
-    <file>style-dark.css</file>
+  <gresource prefix="/com/github/cassidyjames/dippi/">
+    <file alias="metainfo.xml" preprocess="xml-stripblanks">metainfo.appdata.xml.in</file>
+    <file alias="style.css">styles/style.css</file>
+    <file alias="style-dark.css">styles/dark.css</file>
   </gresource>
   <gresource prefix="/com/github/cassidyjames/dippi/icons/scalable/actions/">
     <file alias="com.github.cassidyjames.dippi.svg" preprocess="xml-stripblanks">icons/com.github.cassidyjames.dippi.svg</file>
@@ -14,6 +15,7 @@
     <file alias="display-measure-vertical-notebook.svg" preprocess="xml-stripblanks">icons/display-measure-vertical-notebook.svg</file>
     <file alias="about-symbolic.svg" preprocess="xml-stripblanks">icons/about-symbolic.svg</file>
     <file alias="loupe-large-symbolic.svg" preprocess="xml-stripblanks">icons/loupe-large-symbolic.svg</file>
+    <file alias="settings-symbolic.svg" preprocess="xml-stripblanks">icons/settings-symbolic.svg</file>
     <file alias="test-pass-symbolic.svg" preprocess="xml-stripblanks">icons/test-pass-symbolic.svg</file>
   </gresource>
 </gresources>

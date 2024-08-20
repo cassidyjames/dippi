@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018–2022 Cassidy James Blaede <c@ssidyjam.es> -->
+<!-- Copyright 2018–2023 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
   <id>com.github.cassidyjames.dippi</id>
   <metadata_license>CC0</metadata_license>
@@ -8,7 +8,7 @@
   <summary>Calculate display info like DPI and aspect ratio</summary>
   <description>
     <p>Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
-    <p>Handy features:</p>
+    <p>Lots of handy features:</p>
     <ul>
       <li>Find out if a display is a good choice based on its size and resolution</li>
       <li>Get advice about different densities</li>
@@ -27,10 +27,7 @@
       <li>Fairly High for HiDPI, or</li>
       <li>Too High DPI</li>
     </ul>
-    <p>Special thanks:</p>
-    <ul>
-      <li>Micah Ilbery for the shiny icons</li>
-    </ul>
+    <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
   <translation type="gettext">com.github.cassidyjames.dippi</translation>
   <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
@@ -38,6 +35,20 @@
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
   <releases>
+    <release version="4.0.6" date="2023-10-10">
+      <description>
+        <p>GNOME 45 and crash fix</p>
+      </description>
+      <issues>
+        <issue url="https://github.com/cassidyjames/dippi/issues/111">Crash when typing zero into pixel-size field</issue>
+        <issue url="https://github.com/cassidyjames/dippi/issues/120">Titles wrap with GNOME 45</issue>
+      </issues>
+    </release>
+    <release version="4.0.5" date="2023-10-10">
+      <description>
+        <p>Translations and GNOME 44</p>
+      </description>
+    </release>
     <release version="4.0.2" date="2022-09-28">
       <description>
         <p>Hotfix: fix About window when closing and re-opening it</p>
@@ -308,35 +319,35 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/default-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/hidpi-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/problematic-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic-dark.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/master/data/screenshots/lodpi-dark.png</image>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi-dark.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"></content_rating>
   <developer_name>Cassidy James Blaede</developer_name>
   <url type="homepage">https://cassidyjames.com/dippi</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
-  <url type="translate">https://github.com/cassidyjames/dippi/tree/master/po#readme</url>
+  <url type="translate">https://github.com/cassidyjames/dippi/tree/main/po#readme</url>
   <url type="donation">https://cassidyjames.com/pay</url>
   <url type="help">https://cassidyjames.com/support</url>
   <branding>
