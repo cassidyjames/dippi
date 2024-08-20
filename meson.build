@@ -2,7 +2,7 @@ project(
   'com.github.cassidyjames.dippi',
   'vala', 'c',
   version: '4.1.0',
-  meson_version: '>=0.58',
+  meson_version: '>=1.3.2',
 )
 
 gnome = import('gnome')
@@ -35,8 +35,8 @@ executable(
   asresources,
   config_file,
   dependencies: [
-    dependency('gtk4'),
-    dependency('libadwaita-1', version: '>=1.4'),
+    dependency('gtk4', version: '>=4.14.4'),
+    dependency('libadwaita-1', version: '>=1.5.3'),
     meson.get_compiler('c').find_library('m', required : false)
   ],
   install: true
