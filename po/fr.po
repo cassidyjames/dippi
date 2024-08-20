@@ -708,9 +708,6 @@ msgstr "Ordinateur de bureau"
 #~ msgid "Cassidy James Blaede"
 #~ msgstr "Cassidy James Blaede"
 
-#~ msgid "Special thanks:"
-#~ msgstr "Remerciements"
-
 #~ msgid "More info…"
 #~ msgstr "Plus d’informations…"
 
