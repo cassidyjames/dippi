@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 18:52+0000\n"
+"POT-Creation-Date: 2024-08-20 19:03+0000\n"
 "PO-Revision-Date: 2022-09-04 18:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian\n"
@@ -485,10 +485,6 @@ msgstr "Pulizia significativa del codice"
 msgid "Initial release"
 msgstr "Versione iniziale per AppCenter"
 
-#: data/metainfo.appdata.xml.in:347
-msgid "Cassidy James Blaede"
-msgstr "Cassidy James Blaede"
-
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
 msgstr "Visualizza informazioni del calcolatore"
@@ -703,6 +699,9 @@ msgstr "Laptop"
 #: src/Utils.vala:17
 msgid "Desktop"
 msgstr "Desktop"
+
+#~ msgid "Cassidy James Blaede"
+#~ msgstr "Cassidy James Blaede"
 
 #~ msgid "Special thanks:"
 #~ msgstr "Ringraziamenti speciali:"
