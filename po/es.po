@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 18:52+0000\n"
+"POT-Creation-Date: 2024-08-20 19:03+0000\n"
 "PO-Revision-Date: 2019-02-18 13:18-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: NONE\n"
@@ -474,10 +474,6 @@ msgstr ""
 msgid "Initial release"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:347
-msgid "Cassidy James Blaede"
-msgstr "Cassidy James Blaede"
-
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
 msgstr "Calculadora de datos de pantalla"
@@ -692,6 +688,9 @@ msgstr "Portátil"
 #: src/Utils.vala:17
 msgid "Desktop"
 msgstr "Escritorio"
+
+#~ msgid "Cassidy James Blaede"
+#~ msgstr "Cassidy James Blaede"
 
 #~ msgid "Special thanks:"
 #~ msgstr "Agradecimientos especiales:"

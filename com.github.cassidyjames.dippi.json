@@ -1,26 +1,26 @@
 {
-    "app-id": "com.github.cassidyjames.dippi",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version": "45",
-    "sdk": "org.gnome.Sdk",
-    "command": "com.github.cassidyjames.dippi",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--device=dri",
-        "--share=ipc"
-    ],
-    "modules": [
+  "app-id": "com.github.cassidyjames.dippi",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version": "46",
+  "sdk": "org.gnome.Sdk",
+  "command": "com.github.cassidyjames.dippi",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--share=ipc"
+  ],
+  "modules": [
+    {
+      "name": "dippi",
+      "buildsystem": "meson",
+      "sources": [
         {
-            "name": "dippi",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "dir",
-                    "path": "."
-                }
-            ]
+          "type": "dir",
+          "path": "."
         }
-    ]
+      ]
+    }
+  ]
 }
