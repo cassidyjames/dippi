@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2023 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 public class Dippi.MainWindow : Adw.ApplicationWindow {
@@ -41,9 +41,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            icon_name: APP_ID,
-            resizable: false,
-            title: App.NAME
+            resizable: false
         );
     }
 
@@ -53,33 +51,40 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         };
         about_button.add_css_class ("dim-label");
 
-        var about_window = new Adw.AboutWindow () {
+        var about_window = new Adw.AboutWindow.from_appdata (
+            "/com/github/cassidyjames/dippi/metainfo.xml", VERSION
+        ) {
             transient_for = this,
             hide_on_close = true,
 
-            application_icon = APP_ID,
-            application_name = App.NAME,
-            developer_name = App.DEVELOPER,
-            version = VERSION,
-
             comments = _("Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI."),
-
-            website = "https://cassidyjames.com/dippi",
-            issue_url = "https://github.com/cassidyjames/dippi/issues",
-
-            // Credits
-            developers = { "%s <%s>".printf (App.DEVELOPER, App.EMAIL) },
-            designers = { "%s %s".printf (App.DEVELOPER, App.URL) },
             artists = {
                 "Micah Ilbery https://micahilbery.com",
             },
             /// The translator credits. Please translate this with your name(s).
             translator_credits = _("translator-credits"),
-
-            // Legal
-            copyright = "Copyright © 2018–2022 %s".printf (App.DEVELOPER),
-            license_type = Gtk.License.GPL_3_0,
         };
+        about_window.developers = {
+            "%s %s".printf (
+                about_window.developer_name,
+                about_window.website
+            ),
+        };
+        about_window.designers = {
+            "%s %s".printf (
+                about_window.developer_name,
+                about_window.website
+            ),
+        };
+        about_window.copyright = "© 2018–%i %s".printf (
+            new DateTime.now_local ().get_year (),
+            about_window.developer_name
+        );
+
+        // Set MainWindow properties from the AppData already fetched and parsed
+        // by the AboutWindow construction
+        this.icon_name = about_window.application_icon;
+        this.title = about_window.application_name;
 
         var header = new Adw.HeaderBar () {
             title_widget = new Gtk.Label (null)
@@ -195,21 +200,21 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         };
 
         var invalid_range_grid = new RangeGrid (
-            "loupe-large",
+            "loupe-large-symbolic",
             "accent",
             _("Analyze a Display"),
             _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.") + "\n\n" + _("For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.")
         );
 
         var low_range_grid = new RangeGrid (
-            "dialog-error",
+            "dialog-error-symbolic",
             "error",
             _("Very Low DPI"),
             _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>")
         );
 
         var lodpi_low_range_grid = new RangeGrid (
-            "dialog-warning",
+            "dialog-warning-symbolic",
             "warning",
             _("Fairly Low DPI"),
             _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.")
@@ -229,6 +234,20 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.")
         );
 
+        var lodpi_should_be_hidpi_range_grid = new RangeGrid (
+            "settings-symbolic",
+            "warning",
+            _("Tweak for HiDPI"),
+            _("This display may default to loDPI on some desktops, which could result in too-small text and UI. However, it <b>may be usable with HiDPI by manually enabling 2× scaling</b>. Further adjustments can be made by decreasing the text size.")
+        );
+
+        var unclear_range_grid = new RangeGrid (
+            "dialog-warning-symbolic",
+            "warning",
+            _("Potentially Problematic"),
+            _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
+        );
+
         var hidpi_low_range_grid = new RangeGrid (
             "dialog-warning-symbolic",
             "warning",
@@ -237,7 +256,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         );
 
         var hidpi_ideal_range_grid = new RangeGrid (
-            "test-pass",
+            "test-pass-symbolic",
             "success",
             _("Ideal for HiDPI"),
             _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>")
@@ -257,13 +276,6 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             _("Text and UI will appear <b>too small for typical viewing distances</b>.")
         );
 
-        var unclear_range_grid = new RangeGrid (
-            "dialog-warning-symbolic",
-            "warning",
-            _("Potentially Problematic"),
-            _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.")
-        );
-
         range_stack = new Gtk.Stack () {
             vexpand = true
         };
@@ -272,11 +284,12 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         range_stack.add_named (lodpi_low_range_grid, "lodpi-low");
         range_stack.add_named (lodpi_ideal_range_grid, "lodpi-ideal");
         range_stack.add_named (lodpi_high_range_grid, "lodpi-high");
+        range_stack.add_named (lodpi_should_be_hidpi_range_grid, "lodpi-should-be-hidpi");
+        range_stack.add_named (unclear_range_grid, "unclear");
         range_stack.add_named (hidpi_low_range_grid, "hidpi-low");
         range_stack.add_named (hidpi_ideal_range_grid, "hidpi-ideal");
         range_stack.add_named (hidpi_high_range_grid, "hidpi-high");
         range_stack.add_named (high_range_grid, "high");
-        range_stack.add_named (unclear_range_grid, "unclear");
 
         var assessment_grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -337,11 +350,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         width_entry.changed.connect (() => {
             string? text = width_entry.get_text ();
-            if (text != null && text != "") {
-                width = int.parse (text);
-
+            width = int.parse (text);
+            if (width != 0) {
                 is_default_width = false;
-
                 recalculate_aspect (width, height);
                 assess_dpi (
                     recalculate_dpi (inches, width, height),
@@ -362,11 +373,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         height_entry.changed.connect (() => {
             string? text = height_entry.get_text ();
-            if (text != null && text != "") {
-                height = int.parse (height_entry.get_text ());
-
+            height = int.parse (height_entry.get_text ());
+            if (height != 0) {
                 is_default_height = false;
-
                 recalculate_aspect (width, height);
                 assess_dpi (
                     recalculate_dpi (inches, width, height),
@@ -475,7 +484,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             range_stack.visible_child_name = "lodpi-high";
             link_button.visible = true;
         } else if (calculated_dpi < DPI_INFER_HIDPI) {
-            range_stack.visible_child_name = "unclear";
+            range_stack.visible_child_name = "lodpi-should-be-hidpi";
             link_button.visible = true;
         } else if (calculated_dpi < (ideal_dpi - ideal_range - unclear_range) * 2) {
             range_stack.visible_child_name = "unclear";
@@ -557,7 +566,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             var title_label = new Gtk.Label (title) {
                 halign = Gtk.Align.START,
                 valign = Gtk.Align.END,
-                wrap = true,
+                wrap = false,
             };
             title_label.add_css_class ("title-1");
             title_label.add_css_class (style_class);

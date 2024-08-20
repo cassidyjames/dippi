@@ -1,14 +1,9 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2023 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 public class Dippi.App : Adw.Application {
-    public const string NAME = "Dippi";
-    public const string DEVELOPER = "Cassidy James Blaede";
-    public const string EMAIL = "c@ssidyjam.es";
-    public const string URL = "https://cassidyjames.com";
-
     public App () {
         Object (
             application_id: APP_ID,
@@ -23,7 +18,11 @@ public class Dippi.App : Adw.Application {
         var quit_action = new SimpleAction ("quit", null);
 
         add_action (quit_action);
-        set_accels_for_action ("app.quit", {"Escape"});
+        set_accels_for_action ("app.quit", {
+            "Escape",
+            "<Ctrl>Q",
+            "<Ctrl>W",
+        });
 
         quit_action.activate.connect (() => {
             if (app_window != null) {

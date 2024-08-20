@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 06:44+0000\n"
+"POT-Creation-Date: 2023-10-10 17:51+0000\n"
 "PO-Revision-Date: 2022-09-09 00:58+0600\n"
 "Last-Translator: ViktorOn https://github.com/viktoron\n"
 "Language-Team: No Team, LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,8 @@ msgstr ""
 "будет ли он считаться HiDPI."
 
 #: data/metainfo.appdata.xml.in:11
-msgid "Handy features:"
+#, fuzzy
+msgid "Lots of handy features:"
 msgstr "Удобные функции:"
 
 #: data/metainfo.appdata.xml.in:13
@@ -66,7 +67,7 @@ msgstr "Получите информацию о различных плотно
 msgid "Learn the logical resolution"
 msgstr "Узнай логическое разрешение"
 
-#: data/metainfo.appdata.xml.in:16 data/metainfo.appdata.xml.in:268
+#: data/metainfo.appdata.xml.in:16 data/metainfo.appdata.xml.in:270
 msgid "Differentiate between laptops and desktop displays"
 msgstr "Различие между дисплеями ноутбуков и настольными дисплеями"
 
@@ -113,379 +114,383 @@ msgid "Too High DPI"
 msgstr "Слишком высокий DPI"
 
 #: data/metainfo.appdata.xml.in:30
-msgid "Special thanks:"
-msgstr "Особая благодарность:"
-
-#: data/metainfo.appdata.xml.in:32
-msgid "Micah Ilbery for the shiny icons"
+#, fuzzy
+msgid "Special thanks to Micah Ilbery for the shiny icons."
 msgstr "Мика Илбери (Micah Ilbery) за блестящие значки"
 
-#: data/metainfo.appdata.xml.in:43
+#: data/metainfo.appdata.xml.in:40
+msgid "Translations and GNOME 44"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:45
 msgid "Hotfix: fix About window when closing and re-opening it"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:48
+#: data/metainfo.appdata.xml.in:50
 msgid "Even GNOMEier"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:50
+#: data/metainfo.appdata.xml.in:52
 msgid "Added “About” window"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:51
+#: data/metainfo.appdata.xml.in:53
 msgid "Improved text legibility"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:52
+#: data/metainfo.appdata.xml.in:54
 msgid "Updated runtime to GNOME 43"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:54
+#: data/metainfo.appdata.xml.in:56
 #, fuzzy
 msgid "New and updated translations:"
 msgstr "Обновлены переводы"
 
-#: data/metainfo.appdata.xml.in:56
+#: data/metainfo.appdata.xml.in:58
 msgid "French translations thanks to Irénée THIRION"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:57
+#: data/metainfo.appdata.xml.in:59
 #, fuzzy
 msgid "Italian translations thanks to Albano Battistella"
 msgstr "Перевод на литовский благодаря welaq"
 
-#: data/metainfo.appdata.xml.in:58
+#: data/metainfo.appdata.xml.in:60
 #, fuzzy
 msgid "Russian translations thanks to @ViktorOn"
 msgstr "Перевод на литовский благодаря welaq"
 
-#: data/metainfo.appdata.xml.in:59
+#: data/metainfo.appdata.xml.in:61
 msgid ""
 "Improvements to developer tools to make translations easier to keep up to "
 "date"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:65
+#: data/metainfo.appdata.xml.in:67
 #, fuzzy
 msgid "Complete reworking"
 msgstr "Полностью переработанные диапазоны DPI"
 
-#: data/metainfo.appdata.xml.in:67
+#: data/metainfo.appdata.xml.in:69
 msgid "elementary → GNOME styling"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:68
+#: data/metainfo.appdata.xml.in:70
 #, fuzzy
 msgid "Refreshed icons thanks again to Micah Ilbery"
 msgstr "Обновленные иконки благодаря Micah Ilbery"
 
-#: data/metainfo.appdata.xml.in:69
+#: data/metainfo.appdata.xml.in:71
 msgid ""
 "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:75 data/metainfo.appdata.xml.in:83
+#: data/metainfo.appdata.xml.in:77 data/metainfo.appdata.xml.in:85
 msgid "Under-the-hood improvements:"
 msgstr "Улучшения \"под капотом\":"
 
-#: data/metainfo.appdata.xml.in:77 data/metainfo.appdata.xml.in:86
+#: data/metainfo.appdata.xml.in:79 data/metainfo.appdata.xml.in:88
 msgid "Update Stripe key"
 msgstr "Обновлён ключ Stripe"
 
-#: data/metainfo.appdata.xml.in:85
+#: data/metainfo.appdata.xml.in:87
 msgid "Stricter sandboxing"
 msgstr "Более строгая песочница"
 
-#: data/metainfo.appdata.xml.in:92
+#: data/metainfo.appdata.xml.in:94
 msgid "Add \"calculator\" category to launcher"
 msgstr "Добавлена категория \"Калькулятор\" в лаунчер"
 
-#: data/metainfo.appdata.xml.in:97
+#: data/metainfo.appdata.xml.in:99
 msgid "Under-the-hood packaging updates for elementary OS 6"
 msgstr "Обновления пакетов \"под капотом\" для elementary OS 6"
 
-#: data/metainfo.appdata.xml.in:102
+#: data/metainfo.appdata.xml.in:104
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone "
 "can see all the details and make their own calculations. Plus:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:104
+#: data/metainfo.appdata.xml.in:106
 msgid "More details on launch"
 msgstr "Подробности о запуске"
 
-#: data/metainfo.appdata.xml.in:105
+#: data/metainfo.appdata.xml.in:107
 msgid "Bolded sections of descriptions for easier skimmability"
 msgstr "Разделы описания выделены жирным шрифтом для облегчения просмотра"
 
-#: data/metainfo.appdata.xml.in:106
+#: data/metainfo.appdata.xml.in:108
 msgid "Fix window resizing for different results"
 msgstr "Исправлено изменение размера окна для различных результатов"
 
-#: data/metainfo.appdata.xml.in:107
+#: data/metainfo.appdata.xml.in:109
 msgid "Animate between results"
 msgstr "Анимация между выводом результатов"
 
-#: data/metainfo.appdata.xml.in:113
+#: data/metainfo.appdata.xml.in:115
 msgid "Port to elementary OS 6"
 msgstr "Порт на elementary OS 6"
 
-#: data/metainfo.appdata.xml.in:115
+#: data/metainfo.appdata.xml.in:117
 msgid "Follow the dark style preference"
 msgstr "Следуйте за предпочтениями тёмного стиля"
 
-#: data/metainfo.appdata.xml.in:116
+#: data/metainfo.appdata.xml.in:118
 msgid "Drag window from anywhere"
 msgstr "Перетащите окно из любого места"
 
-#: data/metainfo.appdata.xml.in:117
+#: data/metainfo.appdata.xml.in:119
 msgid "Refreshed typography and design"
 msgstr "Обновлены типографика и дизайн"
 
-#: data/metainfo.appdata.xml.in:123
+#: data/metainfo.appdata.xml.in:125
 msgid "Code style and organization fixes"
 msgstr "Исправления стиля и организации кода"
 
-#: data/metainfo.appdata.xml.in:128
+#: data/metainfo.appdata.xml.in:130
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/metainfo.appdata.xml.in:130
+#: data/metainfo.appdata.xml.in:132
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
 msgstr "Обновлены переводы на испанский благодаря Adolfo Jayme-Barrientos"
 
-#: data/metainfo.appdata.xml.in:131
+#: data/metainfo.appdata.xml.in:133
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
 msgstr "Привет! Переводы на голландский благодаря Heimen Stoffels"
 
-#: data/metainfo.appdata.xml.in:137
+#: data/metainfo.appdata.xml.in:139
 msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr "С Новым Годом! Сегодня только некоторые исправления AppData. 😉"
 
-#: data/metainfo.appdata.xml.in:142
+#: data/metainfo.appdata.xml.in:144
 msgid "Under-the-hood tweaks"
 msgstr "Правки \"под капотом\""
 
-#: data/metainfo.appdata.xml.in:147
+#: data/metainfo.appdata.xml.in:149
 msgid "Hello, Juno!"
 msgstr "Здравствуй, Juno!"
 
-#: data/metainfo.appdata.xml.in:149
+#: data/metainfo.appdata.xml.in:151
 msgid "Update translation link"
 msgstr "Обновлена ссылка на перевод"
 
-#: data/metainfo.appdata.xml.in:150
+#: data/metainfo.appdata.xml.in:152
 msgid "Under the hood cleanup"
 msgstr "Чистка \"под капотом\""
 
-#: data/metainfo.appdata.xml.in:156
+#: data/metainfo.appdata.xml.in:158
 msgid "Add translation instructions and update translation link in app data"
 msgstr ""
 "Добавлены инструкции по переводу и обновлена ссылку на перевод в данных "
 "приложения."
 
-#: data/metainfo.appdata.xml.in:161
+#: data/metainfo.appdata.xml.in:163
 msgid "Added translation link to app data"
 msgstr "Добавлена ссылка на перевод данных приложения"
 
-#: data/metainfo.appdata.xml.in:166
+#: data/metainfo.appdata.xml.in:168
 msgid "Lithuanian Translation"
 msgstr "Перевод на литовский"
 
-#: data/metainfo.appdata.xml.in:168
+#: data/metainfo.appdata.xml.in:170
 msgid "Lithuanian translation thanks to welaq"
 msgstr "Перевод на литовский благодаря welaq"
 
-#: data/metainfo.appdata.xml.in:169
+#: data/metainfo.appdata.xml.in:171
 msgid "Fixed deprecation"
 msgstr "Исправлено устаревание"
 
-#: data/metainfo.appdata.xml.in:175
+#: data/metainfo.appdata.xml.in:177
 msgid "Translation &amp; Tweaks"
 msgstr "Перевод и правки"
 
-#: data/metainfo.appdata.xml.in:177
+#: data/metainfo.appdata.xml.in:179
 msgid "French translations"
 msgstr "Переводы на французский"
 
-#: data/metainfo.appdata.xml.in:178
+#: data/metainfo.appdata.xml.in:180
 msgid "Hide labels when data is invalid"
 msgstr "Скрыты метки, если данные недействительны"
 
-#: data/metainfo.appdata.xml.in:179
+#: data/metainfo.appdata.xml.in:181
 msgid "Fix max length on width entry"
 msgstr "Исправлена максимальную длину при вводе ширины"
 
-#: data/metainfo.appdata.xml.in:180
+#: data/metainfo.appdata.xml.in:182
 msgid "Fix displayed AppData"
 msgstr "Исправлены отображаемые AppData"
 
-#: data/metainfo.appdata.xml.in:182
+#: data/metainfo.appdata.xml.in:184
 msgid "Behind the scenes:"
 msgstr "За кулисами:"
 
-#: data/metainfo.appdata.xml.in:184
+#: data/metainfo.appdata.xml.in:186
 msgid "Add editorconfig and Travis for more consistency"
 msgstr "Добавлен editorconfig и Travis для большей согласованности"
 
-#: data/metainfo.appdata.xml.in:185
+#: data/metainfo.appdata.xml.in:187
 msgid "Split utilities out into their own file"
 msgstr "Разделены утилиты по отдельным файлам"
 
-#: data/metainfo.appdata.xml.in:191
+#: data/metainfo.appdata.xml.in:193
 msgid "AppData tweaks"
 msgstr "Правки AppData"
 
-#: data/metainfo.appdata.xml.in:196
+#: data/metainfo.appdata.xml.in:198
 msgid "Fixed:"
 msgstr "Исправлено:"
 
-#: data/metainfo.appdata.xml.in:198
+#: data/metainfo.appdata.xml.in:200
 msgid "Window no longer resizes when switching between analyses"
 msgstr "Размер окна больше не изменяется при переключении между анализами"
 
-#: data/metainfo.appdata.xml.in:204
+#: data/metainfo.appdata.xml.in:206
 msgid "Under the hood changes:"
 msgstr "Изменения \"под капотом\":"
 
-#: data/metainfo.appdata.xml.in:206
+#: data/metainfo.appdata.xml.in:208
 msgid "Include success icon as a fallback for other icon sets"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:212
+#: data/metainfo.appdata.xml.in:214
 msgid "Changes:"
 msgstr "Изменения:"
 
-#: data/metainfo.appdata.xml.in:214
+#: data/metainfo.appdata.xml.in:216
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:215
+#: data/metainfo.appdata.xml.in:217
 msgid "Metadata additions and tweaks"
 msgstr "Добавления и правки метаданных"
 
-#: data/metainfo.appdata.xml.in:217
+#: data/metainfo.appdata.xml.in:219
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/metainfo.appdata.xml.in:219
+#: data/metainfo.appdata.xml.in:221
 msgid "Install all available icon sizes"
 msgstr "Установите все доступные размеры значков"
 
-#: data/metainfo.appdata.xml.in:220
+#: data/metainfo.appdata.xml.in:222
 msgid "Allow all languages to be translated"
 msgstr "Разрешите перевод на все языки"
 
-#: data/metainfo.appdata.xml.in:222
+#: data/metainfo.appdata.xml.in:224
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
 msgstr "И ещё! Прочтите недавнюю запись в блоге на странице goo.gl/tKwkq4."
 
-#: data/metainfo.appdata.xml.in:228
+#: data/metainfo.appdata.xml.in:230
 msgid "Added logical resolution"
 msgstr "Добавлено логическое разрешение"
 
-#: data/metainfo.appdata.xml.in:229
+#: data/metainfo.appdata.xml.in:231
 msgid "Cleaned up design by moving display details to below the analysis"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:236
+#: data/metainfo.appdata.xml.in:238
 msgid "New purple accent color"
 msgstr "Новый фиолетовый акцентный цвет"
 
-#: data/metainfo.appdata.xml.in:237
+#: data/metainfo.appdata.xml.in:239
 msgid "Refined margins and alignment"
 msgstr "Уточнены поля и выравнивание"
 
-#: data/metainfo.appdata.xml.in:238
+#: data/metainfo.appdata.xml.in:240
 msgid "Escape now closes the window"
 msgstr "Клавиша Escape теперь закрывает окно"
 
-#: data/metainfo.appdata.xml.in:239
+#: data/metainfo.appdata.xml.in:241
 msgid "Lots of little code cleanup"
 msgstr "Много небольших очисток кода"
 
-#: data/metainfo.appdata.xml.in:246
+#: data/metainfo.appdata.xml.in:248
 msgid "Fix bug with setting display icon"
 msgstr "Исправлена ошибка с настройкой значка дисплея"
 
-#: data/metainfo.appdata.xml.in:247
+#: data/metainfo.appdata.xml.in:249
 msgid "Under-the-hood fixes"
 msgstr "Исправления \"под капотом\""
 
-#: data/metainfo.appdata.xml.in:253
+#: data/metainfo.appdata.xml.in:255
 msgid "Display icon now changes according to display type"
 msgstr "Значок дисплея теперь меняется в зависимости от типа дисплея"
 
-#: data/metainfo.appdata.xml.in:259
+#: data/metainfo.appdata.xml.in:261
 msgid "Select between laptop or desktop"
 msgstr "Выберите между ноутбуком или настольным ПК"
 
-#: data/metainfo.appdata.xml.in:260
+#: data/metainfo.appdata.xml.in:262
 msgid "Refreshed icons thanks to Micah Ilbery"
 msgstr "Обновленные иконки благодаря Micah Ilbery"
 
-#: data/metainfo.appdata.xml.in:267
+#: data/metainfo.appdata.xml.in:269
 msgid "Completely reworked DPI ranges"
 msgstr "Полностью переработанные диапазоны DPI"
 
-#: data/metainfo.appdata.xml.in:269 data/metainfo.appdata.xml.in:279
+#: data/metainfo.appdata.xml.in:271 data/metainfo.appdata.xml.in:281
 msgid "Tweaked DPI assessment and reasoning copy"
 msgstr "Изменена оценка DPI и копия с объяснениями"
 
-#: data/metainfo.appdata.xml.in:270
+#: data/metainfo.appdata.xml.in:272
 msgid "Flattened titlebar"
 msgstr "Исправлен стиль заголовка"
 
-#: data/metainfo.appdata.xml.in:271
+#: data/metainfo.appdata.xml.in:273
 msgid "Fixed bugs and warnings"
 msgstr "Исправлены ошибки и предупреждения"
 
-#: data/metainfo.appdata.xml.in:278
+#: data/metainfo.appdata.xml.in:280
 msgid "All new side-by-side UI"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:280
+#: data/metainfo.appdata.xml.in:282
 msgid "Added icons to make assessment clearer"
 msgstr "Добавлены значки, делающие оценку более понятной"
 
-#: data/metainfo.appdata.xml.in:287
+#: data/metainfo.appdata.xml.in:289
 msgid "Made visualization interactive!"
 msgstr "Визуализация интерактивна!"
 
-#: data/metainfo.appdata.xml.in:288
+#: data/metainfo.appdata.xml.in:290
 msgid "Added Cassidy-approval and reasoning"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:289
+#: data/metainfo.appdata.xml.in:291
 msgid "Fix a bug where sometimes an extra zero would sneak in"
 msgstr "Исправлена ошибку, из-за которой иногда закрадывался лишний ноль"
 
-#: data/metainfo.appdata.xml.in:290
+#: data/metainfo.appdata.xml.in:292
 msgid "Under-the-hood restructuring"
 msgstr "Реструктуризация \"под капотом\""
 
-#: data/metainfo.appdata.xml.in:297
+#: data/metainfo.appdata.xml.in:299
 msgid "Shiny new icon"
 msgstr "Новый блестящий значок"
 
-#: data/metainfo.appdata.xml.in:298
+#: data/metainfo.appdata.xml.in:300
 msgid "Added visualization to UI"
 msgstr "Добавлена визуализация в интерфейс"
 
-#: data/metainfo.appdata.xml.in:299
+#: data/metainfo.appdata.xml.in:301
 msgid "Significant code cleanup"
 msgstr "Значительная очистка кода"
 
-#: data/metainfo.appdata.xml.in:305
+#: data/metainfo.appdata.xml.in:307
 #, fuzzy
 msgid "Initial release"
 msgstr "Начальный выпуск для AppCenter"
 
-#: data/metainfo.appdata.xml.in:336
+#: data/metainfo.appdata.xml.in:338
 msgid "Cassidy James Blaede"
 msgstr "Кэссиди Джеймс Блейд"
+
+#~ msgid "Special thanks:"
+#~ msgstr "Особая благодарность:"
 
 #~ msgid "com.github.cassidyjames.dippi"
 #~ msgstr "com.github.cassidyjames.dippi"

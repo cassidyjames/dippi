@@ -12,6 +12,10 @@ on:
       - 'po/POTFILES.in'
       - 'po/extra/LINGUAS'
       - 'po/extra/POTFILES.in'
+      - '.github/workflows/gettext.yml'
+
+permissions:
+  contents: write
 
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -19,34 +23,27 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:39
     steps:
-      - uses: actions/checkout@v2
       - name: Install deps
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            appstream \
-            gettext\
+          sudo dnf update -y
+          sudo dnf install -y \
+            appstream-devel \
+            gettext-devel \
             git \
-            libadwaita-1-dev \
-            libgtk-4-dev \
-            libxml2-utils \
+            gtk4-devel \
+            libadwaita-devel \
+            libxml2-devel \
             meson \
-            policykit-1 \
-            sudo \
-            valac
+            vala
 
-      - name: Build libadwaita
-        run: |
-          git clone https://gitlab.gnome.org/GNOME/libadwaita.git /tmp/libadwaita
-          cd /tmp/libadwaita
-          git checkout 1.2.0
-          meson . _build -Dexamples=false
-          ninja -C _build
-          sudo ninja -C _build install
-          cd -
-          rm -rf /tmp/libadwaita
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: |
@@ -56,20 +53,17 @@ jobs:
 
       - name: Regenerate translation files
         run: |
-          ninja -C _build $(git ls-files | grep \.pot$ | sed 's/.*\///' | sed 's/.pot/-update-po/')
+          ninja -C _build com.github.cassidyjames.dippi-pot
+          ninja -C _build com.github.cassidyjames.dippi-update-po
 
-      - name: Commit & push
+      - name: Commit
         continue-on-error: true
         run: |
-          echo "Configuring git credentials…"
-          git remote set-url origin https://x-access-token:"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-
-          echo "Committing…"
-          git checkout main
-          git add .
-          git commit --message "Update translation files"
-
-          echo "Pushing…"
-          git push --set-upstream origin main || true
+          # FILES_CHANGED=$(git diff --name-only | wc -l)
+          # if [[ $FILES_CHANGED != 0 ]]; then
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git commit -am "Update translation files"
+          git push
+          # fi
