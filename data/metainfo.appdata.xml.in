@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018–2024 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
-  <id>com.github.cassidyjames.dippi</id>
-  <metadata_license>CC0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
   <name>Dippi</name>
-  <summary>Calculate display info like DPI and aspect ratio</summary>
+  <summary>Calculate display info like DPI</summary>
+  <branding>
+    <color type="primary" scheme_preference="light">#f66151</color>
+    <color type="primary" scheme_preference="dark">#813d9c</color>
+  </branding>
+  <developer_name translatable="no">Cassidy James Blaede</developer_name>
+  <developer id="com.cassidyjames">
+    <name translatable="no">Cassidy James Blaede</name>
+  </developer>
   <description>
     <p>Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</p>
     <p>Lots of handy features:</p>
@@ -29,12 +34,76 @@
     </ul>
     <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
-  <translation type="gettext">com.github.cassidyjames.dippi</translation>
+  <id>com.github.cassidyjames.dippi</id>
   <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
   <provides>
     <binary>com.github.cassidyjames.dippi</binary>
   </provides>
+  <translation type="gettext">com.github.cassidyjames.dippi</translation>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <content_rating type="oars-1.1"></content_rating>
+  <url type="homepage">https://cassidyjames.com/dippi</url>
+  <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
+  <url type="translate">https://github.com/cassidyjames/dippi/tree/main/po#readme</url>
+  <url type="donation">https://cassidyjames.com/pay</url>
+  <url type="help">https://cassidyjames.com/support</url>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Result for a 16-inch laptop display at 3840×2160, showing it is ideal for HiDPI</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/hidpi.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Result for a 13-inch laptop display at 1920×1080, showing it is potentially problematic</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/problematic.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Result for a 27-inch desktop display at 2560×1440, showing it is ideal for loDPI</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/lodpi.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Default state of the app, inviting you to enter a display's details</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/default.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Result for a 16-inch laptop display at 3840×2160, showing it is ideal for HiDPI</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/hidpi-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Result for a 13-inch laptop display at 1920×1080, showing it is potentially problematic</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/problematic-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Result for a 27-inch desktop display at 2560×1440, showing it is ideal for loDPI</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/lodpi-dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Default state of the app, inviting you to enter a display's details</caption>
+      <image>https://raw.githubusercontent.com/cassidyjames/dippi/10fae0b4946336cad5ebd23b4893b141f2b5d369/data/screenshots/default-dark.png</image>
+    </screenshot>
+  </screenshots>
   <releases>
+    <release version="4.1.0" date="2024-08-20">
+      <description>
+        <p>Lighten up!</p>
+        <ul>
+          <li>Lighter icon color for a fresh aesthetic and better contrast</li>
+          <li>Improved app store listing with a shorter summary and new brand colors</li>
+          <li>Updated for GNOME 46</li>
+        </ul>
+        <p>Updated translations:</p>
+        <ul>
+          <li>Updated French translations thanks to Irénée Thirion</li>
+          <li>Updated Italian translations thanks to Albano Battistella</li>
+          <li>Updated Australian English thanks to Ben Beasley</li>
+          <li>Updated British English thanks to Ben Beasley</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/cassidyjames/dippi/issues/125">Dark icon too low-contrast on dark backgrounds</issue>
+        <issue url="https://github.com/cassidyjames/dippi/issues/126">Summary longer than 35 characters</issue>
+      </issues>
+    </release>
     <release version="4.0.6" date="2023-10-10">
       <description>
         <p>GNOME 45 and crash fix</p>
@@ -64,7 +133,7 @@
         </ul>
         <p>New and updated translations:</p>
         <ul>
-          <li>French translations thanks to Irénée THIRION</li>
+          <li>French translations thanks to Irénée Thirion</li>
           <li>Italian translations thanks to Albano Battistella</li>
           <li>Russian translations thanks to @ViktorOn</li>
           <li>Improvements to developer tools to make translations easier to keep up to date</li>
@@ -136,7 +205,7 @@
     </release>
     <release version="2.7.3" date="2019-04-09">
       <description>
-        <p>Updated translations</p>
+        <p>Updated translations:</p>
         <ul>
           <li>Updated Spanish translations thanks to Adolfo Jayme-Barrientos</li>
           <li>Hallo! Dutch translations thanks to Heimen Stoffels</li>
@@ -317,49 +386,4 @@
       </description>
     </release>
   </releases>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/default-dark.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/hidpi-dark.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/problematic-dark.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/cassidyjames/dippi/4.0.6/data/screenshots/lodpi-dark.png</image>
-    </screenshot>
-  </screenshots>
-  <content_rating type="oars-1.1"></content_rating>
-  <developer_name translatable="no">Cassidy James Blaede</developer_name>
-  <developer id="com.cassidyjames">
-    <name translatable="no">Cassidy James Blaede</name>
-  </developer>
-  <url type="homepage">https://cassidyjames.com/dippi</url>
-  <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
-  <url type="translate">https://github.com/cassidyjames/dippi/tree/main/po#readme</url>
-  <url type="donation">https://cassidyjames.com/pay</url>
-  <url type="help">https://cassidyjames.com/support</url>
-  <branding>
-    <color type="primary">#613583</color>
-  </branding>
-  <custom>
-    <value key="x-appcenter-color-primary">#613583</value>
-    <value key="x-appcenter-color-primary-text">#fff</value>
-    <value key="x-appcenter-suggested-price">4</value>
-    <value key="x-appcenter-stripe">pk_live_51BisUzDZzsY2pYhKUvevG2RX6kT5JL74hO2AHKqd69zYYuoo0d4y3Mcb8IoSM1cv81ZgMW0pSqLUsD4e1HqAqkSX00t6yXPfZh</value>
-  </custom>
 </component>
