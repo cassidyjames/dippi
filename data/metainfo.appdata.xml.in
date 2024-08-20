@@ -91,6 +91,13 @@
           <li>Improved app store listing with a shorter summary and new brand colors</li>
           <li>Updated for GNOME 46</li>
         </ul>
+        <p>Updated translations:</p>
+        <ul>
+          <li>Updated French translations thanks to Irénée Thirion</li>
+          <li>Updated Italian translations thanks to Albano Battistella</li>
+          <li>Updated Australian English thanks to Ben Beasley</li>
+          <li>Updated British English thanks to Ben Beasley</li>
+        </ul>
       </description>
       <issues>
         <issue url="https://github.com/cassidyjames/dippi/issues/125">Dark icon too low-contrast on dark backgrounds</issue>
@@ -126,7 +133,7 @@
         </ul>
         <p>New and updated translations:</p>
         <ul>
-          <li>French translations thanks to Irénée THIRION</li>
+          <li>French translations thanks to Irénée Thirion</li>
           <li>Italian translations thanks to Albano Battistella</li>
           <li>Russian translations thanks to @ViktorOn</li>
           <li>Improvements to developer tools to make translations easier to keep up to date</li>
@@ -198,7 +205,7 @@
     </release>
     <release version="2.7.3" date="2019-04-09">
       <description>
-        <p>Updated translations</p>
+        <p>Updated translations:</p>
         <ul>
           <li>Updated Spanish translations thanks to Adolfo Jayme-Barrientos</li>
           <li>Hallo! Dutch translations thanks to Heimen Stoffels</li>
