@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 18:52+0000\n"
+"POT-Creation-Date: 2024-08-20 19:03+0000\n"
 "PO-Revision-Date: 2018-01-20 00:00-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -32,7 +32,7 @@ msgid ""
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
 msgstr ""
-"Analyze any display. Input a few simple details and figure out the aspect "
+"Analyse any display. Input a few simple details and figure out the aspect "
 "ratio, DPI, and other details of a particular display. Great for deciding "
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
@@ -472,10 +472,6 @@ msgstr ""
 msgid "Initial release"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:347
-msgid "Cassidy James Blaede"
-msgstr "Cassidy James Blaede"
-
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
 msgstr "Display information calculator"
@@ -499,7 +495,7 @@ msgid ""
 "details of a particular display. Great for deciding which laptop or external "
 "monitor to purchase, and if it would be considered HiDPI."
 msgstr ""
-"Analyze any display. Input a few simple details and figure out the aspect "
+"Analyse any display. Input a few simple details and figure out the aspect "
 "ratio, DPI, and other details of a particular display. Great for deciding "
 "which laptop or external monitor to purchase, and if it would be considered "
 "HiDPI."
@@ -538,7 +534,7 @@ msgstr ""
 
 #: src/MainWindow.vala:205
 msgid "Analyze a Display"
-msgstr "Analyze a Display"
+msgstr "Analyse a Display"
 
 #: src/MainWindow.vala:206
 msgid ""
@@ -684,6 +680,9 @@ msgstr "Laptop"
 #: src/Utils.vala:17
 msgid "Desktop"
 msgstr "Desktop"
+
+#~ msgid "Cassidy James Blaede"
+#~ msgstr "Cassidy James Blaede"
 
 #~ msgid "Special thanks:"
 #~ msgstr "Special thanks:"
