@@ -495,10 +495,6 @@ msgstr "Nettoyage significatif du code"
 msgid "Initial release"
 msgstr "Première version"
 
-#: data/metainfo.appdata.xml.in:347
-msgid "Cassidy James Blaede"
-msgstr "Cassidy James Blaede"
-
 #: data/launcher.desktop.in:4
 msgid "Display information calculator"
 msgstr "Calculateur d’informations d’affichage"
@@ -708,6 +704,9 @@ msgstr "Laptop"
 #: src/Utils.vala:17
 msgid "Desktop"
 msgstr "Ordinateur de bureau"
+
+#~ msgid "Cassidy James Blaede"
+#~ msgstr "Cassidy James Blaede"
 
 #~ msgid "Special thanks:"
 #~ msgstr "Remerciements"
