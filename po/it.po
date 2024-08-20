@@ -127,7 +127,7 @@ msgstr "Anche GNOMEier"
 
 #: data/metainfo.appdata.xml.in:61
 msgid "Added “About” window"
-msgstr "Aggiunta la finestra "Informazioni".
+msgstr "Aggiunta la finestra “Informazioni”."
 
 #: data/metainfo.appdata.xml.in:62
 msgid "Improved text legibility"
@@ -210,7 +210,7 @@ msgstr ""
 
 #: data/metainfo.appdata.xml.in:115
 msgid "More details on launch"
-msgstr ""Maggiori dettagli sull'avvio"
+msgstr "Maggiori dettagli sull'avvio"
 
 #: data/metainfo.appdata.xml.in:116
 msgid "Bolded sections of descriptions for easier skimmability"
@@ -596,7 +596,7 @@ msgid ""
 "typical viewing distances."
 msgstr ""
 "Non HiDPI, ma <b>un bel punto debole</b>. Il testo e l'interfaccia utente dovrebbero essere leggibili nella "
-"tipica distanza di visione".
+"tipica distanza di visione."
 
 #: src/MainWindow.vala:233 src/MainWindow.vala:247 src/MainWindow.vala:254
 msgid "Potentially Problematic"
@@ -646,7 +646,7 @@ msgstr ""
 
 #: src/MainWindow.vala:257
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
-msgstr ""Il testo e l'interfaccia utente appariranno <b>troppo piccoli per le normali distanze di visualizzazione</b>."
+msgstr "Il testo e l'interfaccia utente appariranno <b>troppo piccoli per le normali distanze di visualizzazione</b>."
 
 #: src/MainWindow.vala:264
 msgid ""
