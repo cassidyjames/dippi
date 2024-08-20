@@ -7,7 +7,7 @@
   xmlns="http://usefulinc.com/ns/doap#"
 >
   <name>Dippi</name>
-  <shortdesc xml:lang="en">Calculate display info like DPI and aspect ratio</shortdesc>
+  <shortdesc xml:lang="en">Calculate display info like DPI</shortdesc>
   <description xml:lang="en">Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI.</description>
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
 
@@ -22,6 +22,18 @@
       <foaf:name>Cassidy James Blaede</foaf:name>
       <foaf:mbox rdf:resource="mailto:c@ssidyjam.es" />
       <gnome:userid>cassidyjames</gnome:userid>
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage rdf:resource="https://gitlab.gnome.org"/>
+          <foaf:accountName>cassidyjames</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage rdf:resource="https://github.com"/>
+          <foaf:accountName>cassidyjames</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
     </foaf:Person>
   </maintainer>
 </Project>
