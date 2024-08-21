@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2022 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2024 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 namespace Dippi.Utils {
@@ -58,6 +58,36 @@ namespace Dippi.Utils {
             return greatest_common_divisor (a % b, b);
         } else {
             return greatest_common_divisor (a, b % a);
+        }
+    }
+
+    public string common_ratio (int width, int height) {
+        int aspect_width = width / greatest_common_divisor (width, height);
+        int aspect_height = height / greatest_common_divisor (width, height);
+
+        var aspect_string = "%i:%i".printf (aspect_width, aspect_height);
+
+        switch (aspect_string) {
+            case "2:1":
+                // Yay marketing terms!
+                return "2:1 (18:9)";
+
+            case "8:5":
+                // Yay marketing terms!
+                return "8:5 (16:10)";
+
+            case "43:18":
+                // e.g. 3440×1440
+                return "7:3 (21:9)";
+
+            case "85:48":
+                // e.g. 1360×768
+            case "683:384":
+                // e.g. 1366×768
+                return "16:9";
+
+            default:
+                return aspect_string;
         }
     }
 }
