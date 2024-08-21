@@ -46,7 +46,6 @@ template $NewWindow : Adw.ApplicationWindow {
 
           Box {
             orientation: vertical;
-            spacing: 12;
 
             ListBox {
               selection-mode: none;
@@ -68,48 +67,20 @@ template $NewWindow : Adw.ApplicationWindow {
                   value: 13.3;
                 };
               }
-            }
 
-            Grid {
-              column-homogeneous: true;
-              column-spacing: 12;
+              Grid {
+                column-homogeneous: true;
 
-              ListBox {
-                selection-mode: none;
-
-                styles [
-                  "boxed-list"
-                ]
                 Adw.EntryRow {
                   title: _("Width (px)");
                   text: "3200";
                 }
-              }
-
-              // Label {
-              //   label: "×";
-              // }
-
-              ListBox {
-                selection-mode: none;
-
-                styles [
-                  "boxed-list"
-                ]
 
                 Adw.EntryRow {
                   title: _("Height (px)");
                   text: "1800";
                 }
               }
-            }
-
-            ListBox {
-              selection-mode: none;
-
-              styles [
-                "boxed-list"
-              ]
 
               Adw.ComboRow drop_down {
                 title: _("Display Type");

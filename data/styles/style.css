@@ -23,9 +23,14 @@ navigation-split-view > navigation-view > navigation-view-page#calculate {
   background-color: alpha(@accent_bg_color, 0.1);
 }
 
+#calculate statuspage image.icon {
+  margin-bottom: 0;
+}
+
+/* FIXME: terrible, terrible, I should feel bad. Well, not that bad. */
 .edit-icon {
   -gtk-icon-size: 0;
-  margin: 0;
-  opacity: 1;
+  margin: -12px;
+  opacity: 0;
   padding: 0;
 }
