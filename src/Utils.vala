@@ -109,7 +109,7 @@ namespace Dippi.Utils {
             case "375:812":
             case "6:13":
             case "13:6":
-                return "13:6 (19.5:9, 2.17:1)";
+                return "13:6 (19.5:9)";
 
             case "84:187":
             case "187:84":
