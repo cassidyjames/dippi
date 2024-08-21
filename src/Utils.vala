@@ -11,9 +11,11 @@ namespace Dippi.Utils {
         public string to_string () {
             switch (this) {
                 case INTERNAL:
+                    ///TRANSLATORS: label for the button to select an internal/laptop display
                     return _("Laptop");
 
                 case EXTERNAL:
+                    ///TRANSLATORS: label for the button to select an external/desktop monitor
                     return _("Desktop");
 
                 default:
@@ -62,10 +64,18 @@ namespace Dippi.Utils {
     }
 
     public string common_ratio (int width, int height) {
+        // We don't need every possible resolution/aspect ratio handled here, but
+        // https://en.wikipedia.org/wiki/List_of_computer_display_standards
+        // is a decent place to check. For now, this is just case-by-case for
+        // common resolutions and aspect ratios we've seen in the wild.
+        //
+        // In general, put the true (or approximately true) ratio first, then put
+        // any other aspect ratio (like one used in marketing) in parenthesis.
+
         int aspect_width = width / greatest_common_divisor (width, height);
         int aspect_height = height / greatest_common_divisor (width, height);
 
-        var aspect_string = "%i:%i".printf (aspect_width, aspect_height);
+        string aspect_string = "%i:%i".printf (aspect_width, aspect_height);
 
         switch (aspect_string) {
             case "2:1":
@@ -77,13 +87,13 @@ namespace Dippi.Utils {
                 return "8:5 (16:10)";
 
             case "43:18":
-                // e.g. 3440×1440
+                // 3440×1440
                 return "7:3 (21:9)";
 
             case "85:48":
-                // e.g. 1360×768
+                // 1360×768
             case "683:384":
-                // e.g. 1366×768
+                // 1366×768
                 return "16:9";
 
             default:
