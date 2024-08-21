@@ -13,7 +13,9 @@ public class Dippi.App : Adw.Application {
 
     protected override void activate () {
         var app_window = new MainWindow (this);
+        var new_window = new NewWindow (this);
         app_window.show ();
+        new_window.show ();
 
         var quit_action = new SimpleAction ("quit", null);
 

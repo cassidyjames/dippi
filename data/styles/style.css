@@ -13,3 +13,12 @@
   margin: 0;
   padding: 0;
 }
+
+statuspage > scrolledwindow > viewport > box {
+  margin: 0 24px 24px;
+}
+
+.sidebar-pane,
+navigation-split-view > navigation-view > navigation-view-page#calculate {
+  background-color: alpha(@accent_bg_color, 0.1);
+}

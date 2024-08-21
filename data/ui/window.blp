@@ -1,0 +1,174 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2018–2024 Cassidy James Blaede <c@ssidyjam.es>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $NewWindow : Adw.ApplicationWindow {
+  width-request: 360;
+  height-request: 360;
+  default-width: 768;
+  default-height: 512;
+
+  Adw.Breakpoint {
+    condition ("max-width: 600sp")
+
+    setters {
+      split_view.collapsed: true;
+      button.visible: true;
+    }
+  }
+
+  content: Adw.NavigationSplitView split_view {
+    min-sidebar-width: 360;
+
+    sidebar: Adw.NavigationPage {
+      title: _("Analyze a Display");
+      tag: "sidebar";
+      name: "calculate";
+
+      styles [
+        "accent"
+      ]
+
+      child: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+          show-title: false;
+        }
+
+        content: Adw.StatusPage {
+          title: _("Analyze a Display");
+          description: _("Enter a display’s details to calculate");
+          icon-name: "com.github.cassidyjames.dippi";
+
+          Box {
+            orientation: vertical;
+
+            ListBox {
+              selection-mode: none;
+
+              styles [
+                "boxed-list"
+              ]
+
+              Adw.SpinRow {
+                title: _("Diagonal Size");
+                subtitle: _("In inches");
+                climb-rate: 0.2;
+                digits: 1;
+
+                adjustment: Adjustment {
+                  lower: 0.1;
+                  upper: 100;
+                  step-increment: 0.1;
+                  value: 13.3;
+                };
+              }
+
+              Box {
+                Adw.EntryRow {
+                  title: _("Width (px)");
+                  text: "3200";
+                }
+
+                Label {
+                  label: "×";
+                }
+
+                Adw.EntryRow {
+                  title: _("Height (px)");
+                  text: "1800";
+                }
+              }
+
+              Adw.ComboRow drop_down {
+                title: _("Display Type");
+                subtitle: _("Defaults based on size");
+
+                model: StringList list {
+                  strings [
+                    "Laptop",
+                    "Desktop"
+                  ]
+                };
+              }
+            }
+
+            Button button {
+              visible: false;
+              halign: center;
+              can-shrink: true;
+              label: _("Calculate");
+              action-name: "navigation.push";
+              action-target: "'result'";
+              margin-top: 36;
+
+              styles [
+                "pill",
+                "suggested-action"
+              ]
+            }
+          }
+        };
+      };
+    };
+
+    content: Adw.NavigationPage {
+      title: _("Result");
+      tag: "result";
+      name: "result";
+
+      styles [
+        "success"
+      ]
+
+      child: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+          show-title: false;
+        }
+
+        content: Adw.StatusPage {
+          title: _("Ideal for HiDPI");
+          // description: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
+          icon-name: "test-pass-symbolic";
+
+          Box {
+            orientation: vertical;
+            halign: center;
+
+            Label {
+              label: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
+              margin-bottom: 24;
+              use-markup: true;
+              wrap: true;
+
+              styles [
+                "body"
+              ]
+            }
+
+            Label {
+              label: "16:9\t276 DPI\t1600×900@2x";
+              margin-bottom: 24;
+              use-markup: true;
+              wrap: true;
+
+              styles [
+                "body"
+              ]
+            }
+
+            LinkButton {
+              label: _("Share Results…");
+              uri: "https://cassidyjames.com/dippi/?d=13.3&w=3200&h=1800&t=l";
+            }
+          }
+        };
+      };
+    };
+  };
+}
