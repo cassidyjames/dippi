@@ -86,9 +86,14 @@ namespace Dippi.Utils {
                 // Yay marketing terms!
                 return "8:5 (16:10)";
 
+            case "7:3":
             case "43:18":
-                // 3440×1440
+                // e.g. 3440×1440
                 return "7:3 (21:9)";
+
+            case "37:18":
+                // Some smartphones
+                return "37:18 (18.5:9)";
 
             case "85:48":
                 // 1360×768
