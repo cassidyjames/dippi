@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2023 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2024 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 public class Dippi.MainWindow : Adw.ApplicationWindow {
@@ -16,10 +16,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     private const int EXTERNAL_UNCLEAR_RANGE = 20;
 
     private const double INCHES_INFER_EXTERNAL = 18;
-    private const int DPI_INFER_HIDPI = 192; // According to GNOME
-
-    private int aspect_width = DEFAULT_ASPECT_WIDTH;
-    private int aspect_height = DEFAULT_ASPECT_HEIGHT;
+    private const int DPI_INFER_HIDPI = 192; // According to GNOME and elementary
 
     private double inches = 0.0;
     private int width = 0;
@@ -38,7 +35,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     private Gtk.Stack range_stack;
     private Utils.DisplayType display_type;
 
-    public MainWindow (Gtk.Application application) {
+    public MainWindow (Adw.Application application) {
         Object (
             application: application,
             resizable: false
@@ -98,6 +95,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             pixel_size = 128
         };
 
+        ///TRANSLATORS: Label for the entry for the diagonal size of the display, e.g. 27-inches
         var diag_label = new Gtk.Label (_("Diagonal size:")) {
             halign = Gtk.Align.END
         };
@@ -110,6 +108,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         var diag_entry_focus_controller = new Gtk.EventControllerFocus ();
         diag_entry.add_controller (diag_entry_focus_controller);
 
+        ///TRANSLATORS: Label for the entry for the pixel resolution of the display, e.g. 1920×1080
         var res_label = new Gtk.Label (_("Resolution:")) {
             halign = Gtk.Align.END
         };
@@ -130,13 +129,14 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         var height_entry_focus_controller = new Gtk.EventControllerFocus ();
         height_entry.add_controller (height_entry_focus_controller);
 
-        var x_label = new Gtk.Label (_("×"));
-        var px_label = new Gtk.Label (_("px"));
+        var x_label = new Gtk.Label ("×");
+        var px_label = new Gtk.Label ("px");
 
         var inches_label = new Gtk.Label (_("inches")) {
             halign = Gtk.Align.START
         };
 
+        ///TRANSLATORS: Used to label the selection for type of display (e.g. laptop or desktop)
         var type_label = new Gtk.Label (_("Type:")) {
             halign = Gtk.Align.END
         };
@@ -192,6 +192,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
         link_button = new Gtk.LinkButton.with_label (
             "https://cassidyjames.com/dippi/",
+            ///TRANSLATORS: label for the button to open a web page to share the results of the calculation
             _("Share results…")
         ) {
             halign = Gtk.Align.END,
@@ -429,9 +430,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
 
     private void recalculate_aspect (int width, int height) {
         if (width > 0 && height > 0) {
-            aspect_width = width / Utils.greatest_common_divisor (width, height);
-            aspect_height = height / Utils.greatest_common_divisor (width, height);
-            aspect_result_label.label = (aspect_width).to_string () + _(":") + (aspect_height).to_string ();
+            aspect_result_label.label = Utils.common_ratio (width, height);
         } else {
             aspect_result_label.label = "";
         }

@@ -83,6 +83,18 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.1.1" date="2024-08-21">
+      <description>
+        <p>Lies! Deception!</p>
+        <ul>
+          <li>Better handle several common resolutions/aspect ratios</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/cassidyjames/dippi/issues/6">Common aspect ratios are dumb</issue>
+        <issue url="https://github.com/cassidyjames/dippi/issues/55">Unexpected ratio for 3440×1440</issue>
+      </issues>
+    </release>
     <release version="4.1.0" date="2024-08-20">
       <description>
         <p>Lighten up!</p>

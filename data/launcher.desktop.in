@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Dippi
 GenericName=Display information calculator
-Comment=Calculate display info like DPI and aspect ratio
+Comment=Calculate display info like DPI
 Categories=Calculator;Utility;
 Exec=com.github.cassidyjames.dippi
 Icon=com.github.cassidyjames.dippi
