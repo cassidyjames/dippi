@@ -22,3 +22,10 @@ statuspage > scrolledwindow > viewport > box {
 navigation-split-view > navigation-view > navigation-view-page#calculate {
   background-color: alpha(@accent_bg_color, 0.1);
 }
+
+.edit-icon {
+  -gtk-icon-size: 0;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+}
