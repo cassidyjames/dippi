@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-20 19:03+0000\n"
+"POT-Creation-Date: 2024-08-21 15:15+0000\n"
 "PO-Revision-Date: 2018-03-25 18:48+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -19,16 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/metainfo.appdata.xml.in:7 data/launcher.desktop.in:3
+#: data/metainfo.appdata.xml.in:4 data/launcher.desktop.in:3
 msgid "Dippi"
 msgstr "Dippi"
 
-#: data/metainfo.appdata.xml.in:8 data/launcher.desktop.in:5
-msgid "Calculate display info like DPI and aspect ratio"
+#: data/metainfo.appdata.xml.in:5 data/launcher.desktop.in:5
+#, fuzzy
+msgid "Calculate display info like DPI"
 msgstr ""
 "Apskaičiuoti tokią ekrano informaciją kaip taškus colyje (DPI) ir proporcijas"
 
-#: data/metainfo.appdata.xml.in:10
+#: data/metainfo.appdata.xml.in:10 data/metainfo.appdata.xml.in:12
+msgid "Cassidy James Blaede"
+msgstr "Cassidy James Blaede"
+
+#: data/metainfo.appdata.xml.in:15
 msgid ""
 "Analyze any display. Input a few simple details and figure out the aspect "
 "ratio, DPI, and other details of a particular display. Great for deciding "
@@ -40,437 +45,499 @@ msgstr ""
 "informaciją. Puikiai tinka sprendžiant kurį nešiojamąjį kompiuterį ar "
 "išorinį ekraną įsigyti, ir ar jis bus laikomas HiDPI."
 
-#: data/metainfo.appdata.xml.in:11
+#: data/metainfo.appdata.xml.in:16
 #, fuzzy
 msgid "Lots of handy features:"
 msgstr "Naudingos ypatybės:"
 
-#: data/metainfo.appdata.xml.in:13
+#: data/metainfo.appdata.xml.in:18
 msgid "Find out if a display is a good choice based on its size and resolution"
 msgstr "Sužinokite ar ekranas pagal savo dydį ir raišką yra geras pasirinkimas"
 
-#: data/metainfo.appdata.xml.in:14
+#: data/metainfo.appdata.xml.in:19
 msgid "Get advice about different densities"
 msgstr "Gaukite patarimus apie įvairius tankius"
 
-#: data/metainfo.appdata.xml.in:15
+#: data/metainfo.appdata.xml.in:20
 msgid "Learn the logical resolution"
 msgstr "Sužinokite loginę raišką"
 
-#: data/metainfo.appdata.xml.in:16 data/metainfo.appdata.xml.in:279
+#: data/metainfo.appdata.xml.in:21 data/metainfo.appdata.xml.in:360
 msgid "Differentiate between laptops and desktop displays"
 msgstr "Atskirkite nešiojamųjų ir stalinių kompiuterių ekranus"
 
-#: data/metainfo.appdata.xml.in:17
+#: data/metainfo.appdata.xml.in:22
 msgid "Stupid simple: all in a cute li'l window"
 msgstr "Kvailai paprasta:  viskas viename mažame lange"
 
-#: data/metainfo.appdata.xml.in:19
+#: data/metainfo.appdata.xml.in:24
 msgid ""
 "Based my expertise and experience shipping HiDPI hardware and software at "
 "System76 and elementary."
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:20
+#: data/metainfo.appdata.xml.in:25
 #, fuzzy
 msgid "Tells you if a display’s density is:"
 msgstr "Nurodo ar ekrano tankis yra:"
 
-#: data/metainfo.appdata.xml.in:22
+#: data/metainfo.appdata.xml.in:27
 msgid "Very Low DPI,"
 msgstr "Labai žemo DPI,"
 
-#: data/metainfo.appdata.xml.in:23
+#: data/metainfo.appdata.xml.in:28
 msgid "Fairly Low DPI,"
 msgstr "Pakankamai žemo DPI,"
 
-#: data/metainfo.appdata.xml.in:24
+#: data/metainfo.appdata.xml.in:29
 msgid "Ideal for LoDPI,"
 msgstr "Idealus LoDPI,"
 
-#: data/metainfo.appdata.xml.in:25
+#: data/metainfo.appdata.xml.in:30
 msgid "Potentially Problematic,"
 msgstr "Galimai problematiškas,"
 
-#: data/metainfo.appdata.xml.in:26
+#: data/metainfo.appdata.xml.in:31
 msgid "Ideal for HiDPI,"
 msgstr "Idealus HiDPI,"
 
-#: data/metainfo.appdata.xml.in:27
+#: data/metainfo.appdata.xml.in:32
 msgid "Fairly High for HiDPI, or"
 msgstr "Pakankamai didelis HiDPI ar"
 
-#: data/metainfo.appdata.xml.in:28 src/MainWindow.vala:275
+#: data/metainfo.appdata.xml.in:33 src/MainWindow.vala:276
 msgid "Too High DPI"
 msgstr "Per didelio DPI"
 
-#: data/metainfo.appdata.xml.in:30
+#: data/metainfo.appdata.xml.in:35
 #, fuzzy
 msgid "Special thanks to Micah Ilbery for the shiny icons."
 msgstr "Micah Ilbery už blizgančias piktogramas"
 
-#: data/metainfo.appdata.xml.in:40
+#: data/metainfo.appdata.xml.in:53 data/metainfo.appdata.xml.in:69
+msgid ""
+"Result for a 16-inch laptop display at 3840×2160, showing it is ideal for "
+"HiDPI"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:57 data/metainfo.appdata.xml.in:73
+msgid ""
+"Result for a 13-inch laptop display at 1920×1080, showing it is potentially "
+"problematic"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:61 data/metainfo.appdata.xml.in:77
+msgid ""
+"Result for a 27-inch desktop display at 2560×1440, showing it is ideal for "
+"loDPI"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:65 data/metainfo.appdata.xml.in:81
+msgid "Default state of the app, inviting you to enter a display's details"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:88
+msgid "Lies! Deception!"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:90
+msgid "Better handle several common resolutions/aspect ratios"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:100
+msgid "Lighten up!"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:102
+msgid "Lighter icon color for a fresh aesthetic and better contrast"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:103
+msgid "Improved app store listing with a shorter summary and new brand colors"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:104
+msgid "Updated for GNOME 46"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:106 data/metainfo.appdata.xml.in:220
+msgid "Updated translations:"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:108
+msgid "Updated French translations thanks to Irénée Thirion"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:109
+msgid "Updated Italian translations thanks to Albano Battistella"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:110
+msgid "Updated Australian English thanks to Ben Beasley"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:111
+msgid "Updated British English thanks to Ben Beasley"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:121
 msgid "GNOME 45 and crash fix"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:49
+#: data/metainfo.appdata.xml.in:130
 msgid "Translations and GNOME 44"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:54
+#: data/metainfo.appdata.xml.in:135
 msgid "Hotfix: fix About window when closing and re-opening it"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:59
+#: data/metainfo.appdata.xml.in:140
 msgid "Even GNOMEier"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:61
+#: data/metainfo.appdata.xml.in:142
 msgid "Added “About” window"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:62
+#: data/metainfo.appdata.xml.in:143
 msgid "Improved text legibility"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:63
+#: data/metainfo.appdata.xml.in:144
 msgid "Updated runtime to GNOME 43"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:65
+#: data/metainfo.appdata.xml.in:146
 msgid "New and updated translations:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:67
-msgid "French translations thanks to Irénée THIRION"
+#: data/metainfo.appdata.xml.in:148
+msgid "French translations thanks to Irénée Thirion"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:68
+#: data/metainfo.appdata.xml.in:149
 msgid "Italian translations thanks to Albano Battistella"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:69
+#: data/metainfo.appdata.xml.in:150
 msgid "Russian translations thanks to @ViktorOn"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:70
+#: data/metainfo.appdata.xml.in:151
 msgid ""
 "Improvements to developer tools to make translations easier to keep up to "
 "date"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:76
+#: data/metainfo.appdata.xml.in:157
 msgid "Complete reworking"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:78
+#: data/metainfo.appdata.xml.in:159
 msgid "elementary → GNOME styling"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:79
+#: data/metainfo.appdata.xml.in:160
 msgid "Refreshed icons thanks again to Micah Ilbery"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:80
+#: data/metainfo.appdata.xml.in:161
 msgid ""
 "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:86 data/metainfo.appdata.xml.in:94
+#: data/metainfo.appdata.xml.in:167 data/metainfo.appdata.xml.in:175
 msgid "Under-the-hood improvements:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:88 data/metainfo.appdata.xml.in:97
+#: data/metainfo.appdata.xml.in:169 data/metainfo.appdata.xml.in:178
 msgid "Update Stripe key"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:96
+#: data/metainfo.appdata.xml.in:177
 msgid "Stricter sandboxing"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:103
+#: data/metainfo.appdata.xml.in:184
 msgid "Add \"calculator\" category to launcher"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:108
+#: data/metainfo.appdata.xml.in:189
 msgid "Under-the-hood packaging updates for elementary OS 6"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:113
+#: data/metainfo.appdata.xml.in:194
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone "
 "can see all the details and make their own calculations. Plus:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:115
+#: data/metainfo.appdata.xml.in:196
 msgid "More details on launch"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:116
+#: data/metainfo.appdata.xml.in:197
 msgid "Bolded sections of descriptions for easier skimmability"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:117
+#: data/metainfo.appdata.xml.in:198
 msgid "Fix window resizing for different results"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:118
+#: data/metainfo.appdata.xml.in:199
 msgid "Animate between results"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:124
+#: data/metainfo.appdata.xml.in:205
 msgid "Port to elementary OS 6"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:126
+#: data/metainfo.appdata.xml.in:207
 msgid "Follow the dark style preference"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:127
+#: data/metainfo.appdata.xml.in:208
 msgid "Drag window from anywhere"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:128
+#: data/metainfo.appdata.xml.in:209
 msgid "Refreshed typography and design"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:134
+#: data/metainfo.appdata.xml.in:215
 msgid "Code style and organization fixes"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:139
-msgid "Updated translations"
-msgstr ""
-
-#: data/metainfo.appdata.xml.in:141
+#: data/metainfo.appdata.xml.in:222
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:142
+#: data/metainfo.appdata.xml.in:223
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:148
+#: data/metainfo.appdata.xml.in:229
 msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:153
+#: data/metainfo.appdata.xml.in:234
 msgid "Under-the-hood tweaks"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:158
+#: data/metainfo.appdata.xml.in:239
 msgid "Hello, Juno!"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:160
+#: data/metainfo.appdata.xml.in:241
 msgid "Update translation link"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:161
+#: data/metainfo.appdata.xml.in:242
 msgid "Under the hood cleanup"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:167
+#: data/metainfo.appdata.xml.in:248
 msgid "Add translation instructions and update translation link in app data"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:172
+#: data/metainfo.appdata.xml.in:253
 msgid "Added translation link to app data"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:177
+#: data/metainfo.appdata.xml.in:258
 msgid "Lithuanian Translation"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:179
+#: data/metainfo.appdata.xml.in:260
 msgid "Lithuanian translation thanks to welaq"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:180
+#: data/metainfo.appdata.xml.in:261
 msgid "Fixed deprecation"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:186
+#: data/metainfo.appdata.xml.in:267
 msgid "Translation &amp; Tweaks"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:188
+#: data/metainfo.appdata.xml.in:269
 msgid "French translations"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:189
+#: data/metainfo.appdata.xml.in:270
 msgid "Hide labels when data is invalid"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:190
+#: data/metainfo.appdata.xml.in:271
 msgid "Fix max length on width entry"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:191
+#: data/metainfo.appdata.xml.in:272
 msgid "Fix displayed AppData"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:193
+#: data/metainfo.appdata.xml.in:274
 msgid "Behind the scenes:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:195
+#: data/metainfo.appdata.xml.in:276
 msgid "Add editorconfig and Travis for more consistency"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:196
+#: data/metainfo.appdata.xml.in:277
 msgid "Split utilities out into their own file"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:202
+#: data/metainfo.appdata.xml.in:283
 msgid "AppData tweaks"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:207
+#: data/metainfo.appdata.xml.in:288
 msgid "Fixed:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:209
+#: data/metainfo.appdata.xml.in:290
 msgid "Window no longer resizes when switching between analyses"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:215
+#: data/metainfo.appdata.xml.in:296
 msgid "Under the hood changes:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:217
+#: data/metainfo.appdata.xml.in:298
 msgid "Include success icon as a fallback for other icon sets"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:223
+#: data/metainfo.appdata.xml.in:304
 msgid "Changes:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:225
+#: data/metainfo.appdata.xml.in:306
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:226
+#: data/metainfo.appdata.xml.in:307
 msgid "Metadata additions and tweaks"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:228
+#: data/metainfo.appdata.xml.in:309
 msgid "Fixes:"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:230
+#: data/metainfo.appdata.xml.in:311
 msgid "Install all available icon sizes"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:231
+#: data/metainfo.appdata.xml.in:312
 msgid "Allow all languages to be translated"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:233
+#: data/metainfo.appdata.xml.in:314
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:239
+#: data/metainfo.appdata.xml.in:320
 #, fuzzy
 msgid "Added logical resolution"
 msgstr "Sužinokite loginę raišką"
 
-#: data/metainfo.appdata.xml.in:240
+#: data/metainfo.appdata.xml.in:321
 msgid "Cleaned up design by moving display details to below the analysis"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:247
+#: data/metainfo.appdata.xml.in:328
 msgid "New purple accent color"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:248
+#: data/metainfo.appdata.xml.in:329
 msgid "Refined margins and alignment"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:249
+#: data/metainfo.appdata.xml.in:330
 msgid "Escape now closes the window"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:250
+#: data/metainfo.appdata.xml.in:331
 msgid "Lots of little code cleanup"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:257
+#: data/metainfo.appdata.xml.in:338
 msgid "Fix bug with setting display icon"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:258
+#: data/metainfo.appdata.xml.in:339
 msgid "Under-the-hood fixes"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:264
+#: data/metainfo.appdata.xml.in:345
 msgid "Display icon now changes according to display type"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:270
+#: data/metainfo.appdata.xml.in:351
 #, fuzzy
 msgid "Select between laptop or desktop"
 msgstr "Atskirkite nešiojamųjų ir stalinių kompiuterių ekranus"
 
-#: data/metainfo.appdata.xml.in:271
+#: data/metainfo.appdata.xml.in:352
 msgid "Refreshed icons thanks to Micah Ilbery"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:278
+#: data/metainfo.appdata.xml.in:359
 msgid "Completely reworked DPI ranges"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:280 data/metainfo.appdata.xml.in:290
+#: data/metainfo.appdata.xml.in:361 data/metainfo.appdata.xml.in:371
 msgid "Tweaked DPI assessment and reasoning copy"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:281
+#: data/metainfo.appdata.xml.in:362
 msgid "Flattened titlebar"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:282
+#: data/metainfo.appdata.xml.in:363
 msgid "Fixed bugs and warnings"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:289
+#: data/metainfo.appdata.xml.in:370
 msgid "All new side-by-side UI"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:291
+#: data/metainfo.appdata.xml.in:372
 msgid "Added icons to make assessment clearer"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:298
+#: data/metainfo.appdata.xml.in:379
 msgid "Made visualization interactive!"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:299
+#: data/metainfo.appdata.xml.in:380
 msgid "Added Cassidy-approval and reasoning"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:300
+#: data/metainfo.appdata.xml.in:381
 msgid "Fix a bug where sometimes an extra zero would sneak in"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:301
+#: data/metainfo.appdata.xml.in:382
 msgid "Under-the-hood restructuring"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:308
+#: data/metainfo.appdata.xml.in:389
 msgid "Shiny new icon"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:309
+#: data/metainfo.appdata.xml.in:390
 msgid "Added visualization to UI"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:310
+#: data/metainfo.appdata.xml.in:391
 msgid "Significant code cleanup"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:316
+#: data/metainfo.appdata.xml.in:397
 msgid "Initial release"
 msgstr ""
 
@@ -486,11 +553,11 @@ msgstr ""
 "DPI;tankis;monitorius;ekranas;raiška;skiriamoji geba;ekranas;plotis;aukštis;"
 "HiDPI;loDPI;proporcija;proporcijos;santykis;"
 
-#: src/MainWindow.vala:50
+#: src/MainWindow.vala:47
 msgid "About"
 msgstr ""
 
-#: src/MainWindow.vala:60
+#: src/MainWindow.vala:57
 #, fuzzy
 msgid ""
 "Input a few simple details and figure out the aspect ratio, DPI, and other "
@@ -502,27 +569,19 @@ msgstr ""
 "informaciją. Puikiai tinka sprendžiant kurį nešiojamąjį kompiuterį ar "
 "išorinį ekraną įsigyti, ir ar jis bus laikomas HiDPI."
 
-#: src/MainWindow.vala:65
+#: src/MainWindow.vala:62
 msgid "translator-credits"
 msgstr ""
 
-#: src/MainWindow.vala:101
+#: src/MainWindow.vala:99
 msgid "Diagonal size:"
 msgstr "Įstrižainės dydis:"
 
-#: src/MainWindow.vala:113
+#: src/MainWindow.vala:112
 msgid "Resolution:"
 msgstr "Raiška:"
 
-#: src/MainWindow.vala:133
-msgid "×"
-msgstr "×"
-
-#: src/MainWindow.vala:134
-msgid "px"
-msgstr "pikselių"
-
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:135
 msgid "inches"
 msgstr "colių"
 
@@ -530,31 +589,31 @@ msgstr "colių"
 msgid "Type:"
 msgstr "Tipas:"
 
-#: src/MainWindow.vala:195
+#: src/MainWindow.vala:196
 msgid "Share results…"
 msgstr ""
 
-#: src/MainWindow.vala:205
+#: src/MainWindow.vala:206
 msgid "Analyze a Display"
 msgstr "Išanalizuokite ekraną"
 
-#: src/MainWindow.vala:206
+#: src/MainWindow.vala:207
 msgid ""
 "For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–"
 "156 is ideal for laptops</b>."
 msgstr ""
 
-#: src/MainWindow.vala:206
+#: src/MainWindow.vala:207
 msgid ""
 "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
 "for laptops</b>."
 msgstr ""
 
-#: src/MainWindow.vala:212
+#: src/MainWindow.vala:213
 msgid "Very Low DPI"
 msgstr "Labai žemas DPI"
 
-#: src/MainWindow.vala:213
+#: src/MainWindow.vala:214
 #, fuzzy
 msgid ""
 "Text and UI are likely to be too big for typical viewing distances. <b>Avoid "
@@ -563,11 +622,11 @@ msgstr ""
 "Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, greičiausiai, bus "
 "per dideli. Jei įmanoma, venkite."
 
-#: src/MainWindow.vala:219
+#: src/MainWindow.vala:220
 msgid "Fairly Low DPI"
 msgstr "Pakankamai žemas DPI"
 
-#: src/MainWindow.vala:220
+#: src/MainWindow.vala:221
 #, fuzzy
 msgid ""
 "Text and UI might be too big for typical viewing distances, but it's "
@@ -577,11 +636,11 @@ msgstr ""
 "dideli, tačiau tai didžiąja dalimi priklauso nuo naudotojo įpročių ir "
 "fizinio atstumo nuo ekrano."
 
-#: src/MainWindow.vala:226
+#: src/MainWindow.vala:227
 msgid "Ideal for LoDPI"
 msgstr "Idealus LoDPI"
 
-#: src/MainWindow.vala:227
+#: src/MainWindow.vala:228
 #, fuzzy
 msgid ""
 "Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at "
@@ -590,11 +649,11 @@ msgstr ""
 "Ne HiDPI, tačiau geras viduriukas. Tekstas ir naudotojo sąsaja, žiūrint iš "
 "įprastų nuotolių, turėtų būti įskaitomi."
 
-#: src/MainWindow.vala:233 src/MainWindow.vala:247 src/MainWindow.vala:254
+#: src/MainWindow.vala:234 src/MainWindow.vala:248 src/MainWindow.vala:255
 msgid "Potentially Problematic"
 msgstr "Galimai problematiškas"
 
-#: src/MainWindow.vala:234
+#: src/MainWindow.vala:235
 #, fuzzy
 msgid ""
 "Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too "
@@ -605,12 +664,12 @@ msgstr ""
 "gali būti per maži, tačiau priverstinai naudojant HiDPI, jie atrodytų per "
 "dideli. Patyrimas gali būti šiek tiek pagerintas, padidinus teksto dydį."
 
-#: src/MainWindow.vala:240
+#: src/MainWindow.vala:241
 #, fuzzy
 msgid "Tweak for HiDPI"
 msgstr "Idealus HiDPI"
 
-#: src/MainWindow.vala:241
+#: src/MainWindow.vala:242
 msgid ""
 "This display may default to loDPI on some desktops, which could result in "
 "too-small text and UI. However, it <b>may be usable with HiDPI by manually "
@@ -618,7 +677,7 @@ msgid ""
 "text size."
 msgstr ""
 
-#: src/MainWindow.vala:248
+#: src/MainWindow.vala:249
 #, fuzzy
 msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> "
@@ -627,7 +686,7 @@ msgstr ""
 "Šis ekranas yra labai sudėtingame rėžyje ir, greičiausiai, keičiant mastelį "
 "pagal sveikąjį skaičių, pats savaime neveiks tinkamai."
 
-#: src/MainWindow.vala:255
+#: src/MainWindow.vala:256
 #, fuzzy
 msgid ""
 "HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
@@ -636,11 +695,11 @@ msgstr ""
 "Pagal numatymą HiDPI, tačiau tekstas ir naudotojo sąsaja gali atrodyti per "
 "dideli. Išjungus HiDPI ir padidinus teksto dydį, gali būti šiek tiek geriau."
 
-#: src/MainWindow.vala:261
+#: src/MainWindow.vala:262
 msgid "Ideal for HiDPI"
 msgstr "Idealus HiDPI"
 
-#: src/MainWindow.vala:262
+#: src/MainWindow.vala:263
 #, fuzzy
 msgid ""
 "Crisp HiDPI text and UI along with a readable size at typical viewing "
@@ -649,11 +708,11 @@ msgstr ""
 "Ryškus HiDPI tekstas ir naudotojo sąsaja, skaitomo dydžio iš įprasto "
 "nuotolio. Tai yra aukso puodas."
 
-#: src/MainWindow.vala:268
+#: src/MainWindow.vala:269
 msgid "Fairly High for HiDPI"
 msgstr "Pakankamai didelis HiDPI"
 
-#: src/MainWindow.vala:269
+#: src/MainWindow.vala:270
 #, fuzzy
 msgid ""
 "Text and UI are likely to appear <b>too small for typical viewing distances</"
@@ -662,31 +721,33 @@ msgstr ""
 "Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, greičiausiai, "
 "atrodys per maži. Padidinus teksto dydį, gali būti šiek tiek geriau."
 
-#: src/MainWindow.vala:276
+#: src/MainWindow.vala:277
 #, fuzzy
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
 "Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, atrodys per maži."
 
-#: src/MainWindow.vala:419
+#: src/MainWindow.vala:420
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
 
-#: src/MainWindow.vala:434
-msgid ":"
-msgstr ":"
-
-#: src/Utils.vala:14
+#: src/Utils.vala:15
 msgid "Laptop"
 msgstr "Nešiojamas"
 
-#: src/Utils.vala:17
+#: src/Utils.vala:19
 msgid "Desktop"
 msgstr "Stalinis"
 
-#~ msgid "Cassidy James Blaede"
-#~ msgstr "Cassidy James Blaede"
+#~ msgid "×"
+#~ msgstr "×"
+
+#~ msgid "px"
+#~ msgstr "pikselių"
+
+#~ msgid ":"
+#~ msgstr ":"
 
 #~ msgid "Special thanks:"
 #~ msgstr "Ypatingos padėkos:"
