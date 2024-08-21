@@ -69,6 +69,9 @@ namespace Dippi.Utils {
         // is a decent place to check. For now, this is just case-by-case for
         // common resolutions and aspect ratios we've seen in the wild.
         //
+        // We can also use this to catch "backwards" ratios, e.g. portrait
+        // displays (like on a smartphone).
+        //
         // In general, put the true (or approximately true) ratio first, then put
         // any other aspect ratio (like one used in marketing) in parenthesis.
 
@@ -78,27 +81,60 @@ namespace Dippi.Utils {
         string aspect_string = "%i:%i".printf (aspect_width, aspect_height);
 
         switch (aspect_string) {
+            case "1:2":
             case "2:1":
-                // Yay marketing terms!
                 return "2:1 (18:9)";
 
+            case "5:8":
             case "8:5":
-                // Yay marketing terms!
                 return "8:5 (16:10)";
 
-            case "7:3":
-            case "43:18":
-                // e.g. 3440×1440
-                return "7:3 (21:9)";
-
+            // Some smartphones
+            case "18:37":
             case "37:18":
-                // Some smartphones
                 return "37:18 (18.5:9)";
 
+            // Pretty much just iPhone absurdity
+            case "422:195":
+            case "195:422":
+            case "466:215":
+            case "215:466":
+            case "284:131":
+            case "131:284":
+            case "463:214":
+            case "214:463":
+            case "448:207":
+            case "207:448":
+            case "812:375":
+            case "375:812":
+            case "6:13":
+            case "13:6":
+                return "13:6 (19.5:9, 2.17:1)";
+
+            case "84:187":
+            case "187:84":
+            case "101:45":
+            case "45:101":
+                return "20:9";
+
+            case "3:7":
+            case "7:3":
+            // e.g. 3440×1440
+            case "43:18":
+                return "7:3 (21:9)";
+
+            // 1360×768
+            case "48:85":
             case "85:48":
-                // 1360×768
+            // 1366×768
+            case "384:683":
             case "683:384":
-                // 1366×768
+            // iPhone 6–8
+            case "667:375":
+            case "375:667":
+            // iPhone 5
+            case "71:40":
+            case "40:71":
                 return "16:9";
 
             default:
