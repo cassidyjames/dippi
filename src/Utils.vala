@@ -85,6 +85,17 @@ namespace Dippi.Utils {
             case "2:1":
                 return "2:1 (18:9)";
 
+            case "2:3":
+                return "3:2";
+
+            case "3:4":
+                return "4:3";
+
+            // The funkiest
+            case "64:45":
+            case "45:64":
+                return "2:√2";
+
             case "5:8":
             case "8:5":
                 return "8:5 (16:10)";
