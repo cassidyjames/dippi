@@ -71,6 +71,10 @@ template $NewWindow : Adw.ApplicationWindow {
               Grid {
                 column-homogeneous: true;
 
+                styles [
+                  "linked"
+                ]
+
                 Adw.EntryRow {
                   title: _("Width (px)");
                   text: "3200";
@@ -82,16 +86,26 @@ template $NewWindow : Adw.ApplicationWindow {
                 }
               }
 
-              Adw.ComboRow drop_down {
-                title: _("Display Type");
-                subtitle: _("Defaults based on size");
+              Adw.ActionRow {
+                title: _("Type");
 
-                model: StringList list {
-                  strings [
-                    "Laptop",
-                    "Desktop"
+                [suffix]
+                Box {
+                  styles [
+                    "linked"
                   ]
-                };
+
+                  ToggleButton internal_toggle {
+                    label: _("Laptop");
+                    valign: center;
+                  }
+
+                  ToggleButton external_toggle {
+                    group: internal_toggle;
+                    label: _("Desktop");
+                    valign: center;
+                  }
+                }
               }
             }
 

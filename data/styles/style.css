@@ -14,7 +14,7 @@
   padding: 0;
 }
 
-statuspage > scrolledwindow > viewport > box {
+.sidebar-pane statuspage > scrolledwindow > viewport > box {
   margin: 0 24px 24px;
 }
 
@@ -24,6 +24,12 @@ navigation-split-view > navigation-view > navigation-view-page#calculate {
 }
 
 #calculate statuspage image.icon {
+  -gtk-icon-shadow:
+    0 1px 12px rgba(0, 0, 0, 0.05),
+    0 -1px rgba(0, 0, 0, 0.05),
+    1px 0 rgba(0, 0, 0, 0.1),
+    0 1px rgba(0, 0, 0, 0.3),
+    -1px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
 }
 
