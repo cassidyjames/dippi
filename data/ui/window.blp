@@ -7,10 +7,12 @@ using Gtk 4.0;
 using Adw 1;
 
 template $NewWindow : Adw.ApplicationWindow {
+  icon-name: "com.github.cassidyjames.dippi";
+  title: "Dippi";
   width-request: 360;
   height-request: 360;
   default-width: 768;
-  default-height: 512;
+  default-height: 496;
 
   Adw.Breakpoint {
     condition ("max-width: 600sp")
@@ -33,98 +35,124 @@ template $NewWindow : Adw.ApplicationWindow {
         "accent"
       ]
 
-      child: Adw.ToolbarView {
-        [top]
-        Adw.HeaderBar {
-          show-title: false;
-        }
+      child: Overlay {
+        WindowHandle {
+          Adw.StatusPage {
+            title: _("Analyze a Display");
+            description: _("Enter a display’s details to calculate");
+            icon-name: "com.github.cassidyjames.dippi";
 
-        content: Adw.StatusPage {
-          title: _("Analyze a Display");
-          description: _("Enter a display’s details to calculate");
-          icon-name: "com.github.cassidyjames.dippi";
+            Box {
+              orientation: vertical;
+              spacing: 12;
 
-          Box {
-            orientation: vertical;
-
-            ListBox {
-              selection-mode: none;
-
-              styles [
-                "boxed-list"
-              ]
-
-              Adw.SpinRow {
-                title: _("Diagonal Size");
-                subtitle: _("In inches");
-                climb-rate: 0.2;
-                digits: 1;
-
-                adjustment: Adjustment {
-                  lower: 0.1;
-                  upper: 100;
-                  step-increment: 0.1;
-                  value: 13.3;
-                };
-              }
-
-              Grid {
-                column-homogeneous: true;
+              ListBox {
+                selection-mode: none;
 
                 styles [
-                  "linked"
+                  "boxed-list"
                 ]
 
-                Adw.EntryRow {
-                  title: _("Width (px)");
-                  text: "3200";
+                Adw.SpinRow {
+                  title: _("Diagonal Size");
+                  subtitle: _("In inches");
+                  digits: 1;
+
+                  adjustment: Adjustment {
+                    lower: 0.1;
+                    upper: 100;
+                    step-increment: 0.1;
+                    value: 13.3;
+                  };
+                }
+              }
+
+              Overlay {
+                Grid {
+                  column-homogeneous: true;
+                  column-spacing: 12;
+                  name: "resolution";
+
+                  ListBox {
+                    selection-mode: none;
+
+                    styles [
+                      "boxed-list"
+                    ]
+
+                    Adw.EntryRow {
+                      title: _("Width (px)");
+                      text: "3200";
+                      // max-length: 5; // Available in Libadwaita 1.6
+                    }
+                  }
+
+                  ListBox {
+                    selection-mode: none;
+
+                    styles [
+                      "boxed-list"
+                    ]
+
+                    Adw.EntryRow {
+                      title: _("Height (px)");
+                      text: "1800";
+                      // max-length: 5; // Available in Libadwaita 1.6
+                    }
+                  }
                 }
 
-                Adw.EntryRow {
-                  title: _("Height (px)");
-                  text: "1800";
+                [overlay]
+                Label {
+                  can-focus: false;
+                  can-target: false;
+                  label: "×";
                 }
               }
 
-              Adw.ActionRow {
-                title: _("Type");
+              ListBox {
+                selection-mode: none;
 
-                [suffix]
-                Box {
-                  styles [
-                    "linked"
-                  ]
+                styles [
+                  "boxed-list"
+                ]
 
-                  ToggleButton internal_toggle {
-                    label: _("Laptop");
-                    valign: center;
-                  }
+                Adw.ComboRow {
+                  title: _("Type");
+                  subtitle: _("Inferred based on size");
 
-                  ToggleButton external_toggle {
-                    group: internal_toggle;
-                    label: _("Desktop");
-                    valign: center;
-                  }
+                  model: StringList list {
+                    strings [
+                      "Laptop",
+                      "Desktop"
+                    ]
+                  };
                 }
               }
-            }
 
-            Button button {
-              visible: false;
-              halign: center;
-              can-shrink: true;
-              label: _("Calculate");
-              action-name: "navigation.push";
-              action-target: "'result'";
-              margin-top: 36;
+              Button button {
+                visible: false;
+                halign: center;
+                can-shrink: true;
+                label: _("Calculate");
+                action-name: "navigation.push";
+                action-target: "'result'";
+                margin-top: 12;
 
-              styles [
-                "pill",
-                "suggested-action"
-              ]
+                styles [
+                  "pill",
+                  "suggested-action"
+                ]
+              }
             }
           }
-        };
+        }
+
+        [overlay]
+        Adw.HeaderBar {
+          show-title: false;
+          valign: start;
+        }
       };
     };
 
@@ -137,49 +165,56 @@ template $NewWindow : Adw.ApplicationWindow {
         "success"
       ]
 
-      child: Adw.ToolbarView {
-        [top]
-        Adw.HeaderBar {
-          show-title: false;
-        }
+      child: Overlay {
+        WindowHandle {
+          Adw.StatusPage {
+            title: _("Ideal for HiDPI");
+            icon-name: "test-pass-symbolic";
 
-        content: Adw.StatusPage {
-          title: _("Ideal for HiDPI");
-          // description: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
-          icon-name: "test-pass-symbolic";
+            Box {
+              orientation: vertical;
+              halign: center;
 
-          Box {
-            orientation: vertical;
-            halign: center;
+              Label {
+                label: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
+                margin-bottom: 24;
+                use-markup: true;
+                wrap: true;
 
-            Label {
-              label: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
-              margin-bottom: 24;
-              use-markup: true;
-              wrap: true;
+                styles [
+                  "body"
+                ]
+              }
 
-              styles [
-                "body"
-              ]
-            }
+              Label {
+                label: "16:9\t276 DPI\t1600×900@2x";
+                margin-bottom: 24;
+                use-markup: true;
+                wrap: true;
 
-            Label {
-              label: "16:9\t276 DPI\t1600×900@2x";
-              margin-bottom: 24;
-              use-markup: true;
-              wrap: true;
+                styles [
+                  "body"
+                ]
+              }
 
-              styles [
-                "body"
-              ]
-            }
+              LinkButton {
+                label: _("Share Results…");
+                uri: "https://cassidyjames.com/dippi/?d=13.3&w=3200&h=1800&t=l";
 
-            LinkButton {
-              label: _("Share Results…");
-              uri: "https://cassidyjames.com/dippi/?d=13.3&w=3200&h=1800&t=l";
+                styles [
+                  "pill",
+                  "suggested-action"
+                ]
+              }
             }
           }
-        };
+        }
+
+        [overlay]
+        Adw.HeaderBar {
+          show-title: false;
+          valign: start;
+        }
       };
     };
   };
