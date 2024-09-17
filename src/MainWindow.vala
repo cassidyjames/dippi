@@ -43,6 +43,8 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        add_css_class ("old");
+
         var about_button = new Gtk.Button.from_icon_name ("about-symbolic") {
             tooltip_text = _("About")
         };

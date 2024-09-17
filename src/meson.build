@@ -20,8 +20,9 @@ executable(
   vala_args: [ '--gresourcesdir=data/' ],
   dependencies: [
     dependency('gtk4', version: '>=4.14.4'),
-    dependency('libadwaita-1', version: '>=1.5.2'),
+    dependency('libadwaita-1', version: '>=1.5.3'),
     meson.get_compiler('c').find_library('m', required : false)
   ],
   install: true
 )
+

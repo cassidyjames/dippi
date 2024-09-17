@@ -42,9 +42,8 @@ namespace Dippi.Utils {
             Math.pow (width, 2) +
             Math.pow (height, 2)
         ) / inches;
-        int rounded_dpi = (int)unrounded_dpi;
 
-        return rounded_dpi;
+        return (int)unrounded_dpi;
     }
 
     public int greatest_common_divisor (int a, int b) {
@@ -70,7 +69,7 @@ namespace Dippi.Utils {
         // common resolutions and aspect ratios we've seen in the wild.
         //
         // We can also use this to catch "backwards" ratios, e.g. portrait
-        // displays (like on a smartphone).
+        // displays (like on a smartphone or rotated desktop monitor).
         //
         // In general, put the true (or approximately true) ratio first, then put
         // any other aspect ratio (like one used in marketing) in parenthesis.
