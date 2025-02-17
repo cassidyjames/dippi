@@ -3,17 +3,13 @@ install_data(
   install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps',
 )
 
-install_data(
-  'icons' / project_name + '-symbolic.svg',
-  install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps',
-)
-
+blueprint_compiler = find_program('blueprint-compiler', required: true)
 blueprints = custom_target('blueprints',
   input: files(
-    'ui/window.blp',
+    'MainWindow.blp',
   ),
   output: '.',
-  command: [ find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@' ],
+  command: [ blueprint_compiler, 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@' ],
 )
 
 asresources = gnome.compile_resources(
@@ -23,22 +19,16 @@ asresources = gnome.compile_resources(
   dependencies: blueprints,
 )
 
-i18n.merge_file(
-  input: 'launcher.desktop.in',
-  output: project_name + '.desktop',
-  po_dir: meson.project_source_root() / 'po' / 'extra',
-  type: 'desktop',
-  install: true,
-  install_dir: get_option('datadir') / 'applications'
+install_data(
+  'launcher.desktop',
+  install_dir: get_option('datadir') / 'applications',
+  rename: project_name + '.desktop'
 )
 
-i18n.merge_file(
-  input: 'metainfo.appdata.xml.in',
-  output: project_name + '.metainfo.xml',
-  po_dir: meson.project_source_root() / 'po' / 'extra',
-  type: 'xml',
-  install: true,
-  install_dir: get_option('datadir') / 'metainfo'
+install_data(
+  'metainfo.xml',
+  install_dir: get_option('datadir') / 'metainfo',
+  rename: project_name + '.metainfo.xml'
 )
 
 desktop_file_validate = find_program('desktop-file-validate', required:false)

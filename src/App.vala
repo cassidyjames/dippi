@@ -1,9 +1,9 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2024 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2025 Cassidy James Blaede <c@ssidyjam.es>
  */
 
-public class Dippi.App : Adw.Application {
+public class Leanback.App : Adw.Application {
     public App () {
         Object (
             application_id: APP_ID,
@@ -12,23 +12,19 @@ public class Dippi.App : Adw.Application {
     }
 
     protected override void activate () {
-        var app_window = new MainWindow (this);
-        var new_window = new NewWindow (this);
-        app_window.show ();
-        new_window.show ();
+        var main_window = new MainWindow (this);
+        main_window.show ();
 
         var quit_action = new SimpleAction ("quit", null);
 
         add_action (quit_action);
         set_accels_for_action ("app.quit", {
-            "Escape",
             "<Ctrl>Q",
-            "<Ctrl>W",
         });
 
         quit_action.activate.connect (() => {
-            if (app_window != null) {
-                app_window.destroy ();
+            if (main_window != null) {
+                main_window.destroy ();
             }
         });
     }
@@ -38,3 +34,4 @@ public class Dippi.App : Adw.Application {
         return app.run (args);
     }
 }
+

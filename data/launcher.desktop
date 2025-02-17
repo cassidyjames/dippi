@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Leanback
+Comment=Launch apps on a TV
+Categories=Video;AudioVideo;Player;Viewer;
+Exec=leanback-wrapper
+Icon=com.cassidyjames.leanback
+Terminal=false
+Type=Application
+Keywords=tv;media;game;console;browse;watch;

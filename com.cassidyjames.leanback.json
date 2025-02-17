@@ -1,0 +1,150 @@
+{
+  "app-id": "com.cassidyjames.leanback",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version": "46",
+  "sdk": "org.gnome.Sdk",
+  "command": "leanback-wrapper",
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--device=dri",
+    "--share=ipc",
+    "--talk-name=org.freedesktop.Flatpak",
+    "--filesystem=host:ro",
+    "--filesystem=xdg-data/applications:ro",
+    "--filesystem=xdg-data/flatpak:ro",
+    "--filesystem=/var/lib/flatpak:ro"
+  ],
+  "modules": [
+    {
+      "name": "blueprint-compiler",
+      "buildsystem": "meson",
+      "cleanup": ["*"],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+          "tag": "v0.12.0"
+        }
+      ]
+    },
+    {
+      "name": "appstream",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dcompose=true",
+        "-Dgir=true",
+        "-Dvapi=true",
+        "-Dapidocs=false",
+        "-Dinstall-docs=false"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/ximion/appstream.git",
+          "tag": "v1.0.4"
+        }
+      ],
+      "modules": [
+        {
+          "name": "yaml",
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/yaml/libyaml",
+              "tag": "0.2.5"
+            }
+          ]
+        },
+        {
+          "name": "snowball",
+          "buildsystem": "simple",
+          "build-commands": [
+            "make libstemmer.so -j$FLATPAK_BUILDER_N_JOBS",
+            "install -Dm644 include/libstemmer.h /app/include/libstemmer.h",
+            "cp -d libstemmer.so.* -t /app/lib/",
+            "install -Dm644 libstemmer.so /app/lib/libstemmer.so"
+          ],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/snowballstem/snowball.git",
+              "tag": "v2.2.0"
+            },
+            {
+              "type": "patch",
+              "path": "patches/snowball_build-options.diff"
+            },
+            {
+              "type": "patch",
+              "path": "patches/snowball_shared-library.diff"
+            }
+          ]
+        },
+        {
+          "name": "libxmlb",
+          "buildsystem": "meson",
+          "config-opts": [
+            "-Dstemmer=true",
+            "-Dintrospection=false",
+            "-Dgtkdoc=false"
+          ],
+          "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/hughsie/libxmlb.git",
+              "tag": "0.3.18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "glib",
+      "buildsystem": "meson",
+      "config-opts": [
+        "-Dselinux=disabled",
+        "-Dtests=false"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.gnome.org/sources/glib/2.80/glib-2.80.0.tar.xz",
+          "sha256": "8228a92f92a412160b139ae68b6345bd28f24434a7b5af150ebe21ff587a561d"
+        },
+        {
+          "type": "patch",
+          "path": "build-aux/flatpak/glib-desktopappinfo.patch"
+        }
+      ]
+    },
+    {
+      "name": "leanback-wrapper",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -m755 leanback-wrapper /app/bin"
+      ],
+      "sources": [
+        {
+          "type": "script",
+          "dest-filename": "leanback-wrapper",
+          "commands": [
+            "export PATH=$PATH:/run/host/usr/bin",
+            "export XDG_DATA_DIRS=$XDG_DATA_DIRS:/run/host/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share",
+            "com.cassidyjames.leanback"
+          ]
+        }
+      ]
+      },
+    {
+      "name": "leanback",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ]
+    }
+  ]
+}

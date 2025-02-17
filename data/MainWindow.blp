@@ -1,0 +1,38 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2025 Cassidy James Blaede <c@ssidyjam.es>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $MainWindow : Adw.ApplicationWindow {
+  icon-name: "com.github.cassidyjames.dippi";
+  title: "Leanback";
+  width-request: 360;
+  height-request: 360;
+  default-width: 1920;
+  default-height: 1080;
+
+  Gtk.ScrolledWindow {
+    propagate-natural-height: true;
+    has-frame: false;
+
+    Adw.Clamp {
+      maximum-size: 1792;
+
+      Gtk.FlowBox flowbox {
+        orientation: horizontal;
+        row-spacing: 24;
+        column-spacing: 24;
+        homogeneous: true;
+        max-children-per-line: 5;
+        min-children-per-line: 1;
+        margin-start: 24;
+        margin-end: 24;
+        margin-top: 100;
+        margin-bottom: 24;
+      }
+    }
+  }
+}
