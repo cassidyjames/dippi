@@ -3,7 +3,6 @@
   <gresource prefix="/com/github/cassidyjames/dippi/">
     <file alias="metainfo.xml" preprocess="xml-stripblanks">metainfo.appdata.xml.in</file>
     <file alias="style.css">styles/style.css</file>
-    <file alias="style-dark.css">styles/dark.css</file>
   </gresource>
   <gresource prefix="/com/github/cassidyjames/dippi/icons/scalable/actions/">
     <file alias="com.github.cassidyjames.dippi.svg" preprocess="xml-stripblanks">icons/com.github.cassidyjames.dippi.svg</file>

@@ -83,11 +83,14 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="4.1.1" date="2024-08-21">
+    <release version="4.1.1" date="2025-11-01">
       <description>
-        <p>Lies! Deception!</p>
+        <p> GNOME 49 “Brescia”</p>
         <ul>
           <li>Better handle several common resolutions/aspect ratios</li>
+          <li>Respect desktop accent color instead of always using purple</li>
+          <li>Updated with the latest GNOME 49 platform and Adwaita 1.8</li>
+          <li>Updated Italian translations thanks to Albano Battistella</li>
         </ul>
       </description>
       <issues>
