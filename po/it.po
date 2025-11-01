@@ -1,14 +1,14 @@
 # Italian translations for com.github.cassidyjames.dippi package.
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
-# Albano Battistella <albano_battistella@hotmail.com>, 2022,2023.
+# Albano Battistella <albano_battistella@hotmail.com>, 2022,2023,2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-21 15:15+0000\n"
-"PO-Revision-Date: 2023-01-26 17:30+0100\n"
+"PO-Revision-Date: 2024-08-22 13:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -22,9 +22,8 @@ msgid "Dippi"
 msgstr "Dippi"
 
 #: data/metainfo.appdata.xml.in:5 data/launcher.desktop.in:5
-#, fuzzy
 msgid "Calculate display info like DPI"
-msgstr "Calcola informazioni di visualizzazione come DPI e proporzioni"
+msgstr "Calcola le informazioni di visualizzazione come DPI"
 
 #: data/metainfo.appdata.xml.in:10 data/metainfo.appdata.xml.in:12
 msgid "Cassidy James Blaede"
@@ -43,9 +42,8 @@ msgstr ""
 "HiDPI."
 
 #: data/metainfo.appdata.xml.in:16
-#, fuzzy
 msgid "Lots of handy features:"
-msgstr "Funzioni utili:"
+msgstr "Tante funzioni utili:"
 
 #: data/metainfo.appdata.xml.in:18
 msgid "Find out if a display is a good choice based on its size and resolution"
@@ -110,87 +108,88 @@ msgid "Too High DPI"
 msgstr "DPI troppo alto"
 
 #: data/metainfo.appdata.xml.in:35
-#, fuzzy
 msgid "Special thanks to Micah Ilbery for the shiny icons."
-msgstr "Micah Ilbery per le icone luccicanti"
+msgstr "un ringraziamento speciale a Micah Ilbery per le icone scintillanti."
 
 #: data/metainfo.appdata.xml.in:53 data/metainfo.appdata.xml.in:69
 msgid ""
 "Result for a 16-inch laptop display at 3840×2160, showing it is ideal for "
 "HiDPI"
 msgstr ""
+"Risultato per un display di un laptop da 16 pollici a 3840×2160, che dimostra che è ideale per "
+"HiDPI"
 
 #: data/metainfo.appdata.xml.in:57 data/metainfo.appdata.xml.in:73
 msgid ""
 "Result for a 13-inch laptop display at 1920×1080, showing it is potentially "
 "problematic"
 msgstr ""
+"Risultato per un display di un laptop da 13 pollici a 1920×1080, che mostra che è potenzialmente "
+"problematico"
 
 #: data/metainfo.appdata.xml.in:61 data/metainfo.appdata.xml.in:77
 msgid ""
 "Result for a 27-inch desktop display at 2560×1440, showing it is ideal for "
 "loDPI"
 msgstr ""
+"Risultato per un display desktop da 27 pollici a 2560×1440, che dimostra che è ideale per "
+"loDPI"
 
 #: data/metainfo.appdata.xml.in:65 data/metainfo.appdata.xml.in:81
 msgid "Default state of the app, inviting you to enter a display's details"
-msgstr ""
+msgstr "Stato predefinito dell'app, che ti invita a inserire i dettagli di un display"
 
 #: data/metainfo.appdata.xml.in:88
 msgid "Lies! Deception!"
-msgstr ""
+msgstr "Bugie! Inganno!"
 
 #: data/metainfo.appdata.xml.in:90
 msgid "Better handle several common resolutions/aspect ratios"
-msgstr ""
+msgstr "Gestire meglio diverse risoluzioni/rapporti d'aspetto comuni"
 
 #: data/metainfo.appdata.xml.in:100
 msgid "Lighten up!"
-msgstr ""
+msgstr "Rilassati!"
 
 #: data/metainfo.appdata.xml.in:102
 msgid "Lighter icon color for a fresh aesthetic and better contrast"
-msgstr ""
+msgstr "Colore dell'icona più chiaro per un'estetica fresca e un contrasto migliore"
 
 #: data/metainfo.appdata.xml.in:103
 msgid "Improved app store listing with a shorter summary and new brand colors"
-msgstr ""
+msgstr "Elenco dell'app store migliorato con un riepilogo più breve e nuovi colori del marchio"
 
 #: data/metainfo.appdata.xml.in:104
-#, fuzzy
 msgid "Updated for GNOME 46"
-msgstr "Runtime aggiornato a GNOME 43"
+msgstr "Aggiornato per GNOME 46"
 
 #: data/metainfo.appdata.xml.in:106 data/metainfo.appdata.xml.in:220
-#, fuzzy
 msgid "Updated translations:"
-msgstr "Traduzioni aggiornate"
+msgstr "Traduzioni aggiornate:"
 
 #: data/metainfo.appdata.xml.in:108
-#, fuzzy
 msgid "Updated French translations thanks to Irénée Thirion"
-msgstr "Traduzioni in francese grazie a Irénée THIRION"
+msgstr "Aggionate le raduzioni in francese grazie a Irénée Thirion"
 
 #: data/metainfo.appdata.xml.in:109
-#, fuzzy
 msgid "Updated Italian translations thanks to Albano Battistella"
-msgstr "Traduzioni in italiano grazie ad Albano Battistella"
+msgstr "Aggiornate le traduzioni in italiano grazie ad Albano Battistella"
 
 #: data/metainfo.appdata.xml.in:110
 msgid "Updated Australian English thanks to Ben Beasley"
-msgstr ""
+msgstr "Inglese australiano aggiornato grazie a Ben Beasley"
 
 #: data/metainfo.appdata.xml.in:111
 msgid "Updated British English thanks to Ben Beasley"
-msgstr ""
+msgstr "Inglese britannico aggiornato grazie a Ben Beasley"
 
 #: data/metainfo.appdata.xml.in:121
 msgid "GNOME 45 and crash fix"
-msgstr ""
+msgstr "GNOME 45 e correzione degli arresti anomali"
 
 #: data/metainfo.appdata.xml.in:130
 msgid "Translations and GNOME 44"
-msgstr ""
+msgstr "Traduzioni e GNOME 44"
 
 #: data/metainfo.appdata.xml.in:135
 msgid "Hotfix: fix About window when closing and re-opening it"
@@ -219,9 +218,8 @@ msgid "New and updated translations:"
 msgstr "Nuove traduzioni e aggiornate:"
 
 #: data/metainfo.appdata.xml.in:148
-#, fuzzy
 msgid "French translations thanks to Irénée Thirion"
-msgstr "Traduzioni in francese grazie a Irénée THIRION"
+msgstr "Traduzioni in francese grazie a Irénée Thirion"
 
 #: data/metainfo.appdata.xml.in:149
 msgid "Italian translations thanks to Albano Battistella"
@@ -262,7 +260,6 @@ msgid "Under-the-hood improvements:"
 msgstr "Miglioramenti sotto il cofano:"
 
 #: data/metainfo.appdata.xml.in:169 data/metainfo.appdata.xml.in:178
-#, fuzzy
 msgid "Update Stripe key"
 msgstr "Aggiornato la Stripe key"
 
@@ -686,9 +683,8 @@ msgstr ""
 "testo."
 
 #: src/MainWindow.vala:241
-#, fuzzy
 msgid "Tweak for HiDPI"
-msgstr "Ideale per HiDPI"
+msgstr "Ottimizzazione per HiDPI"
 
 #: src/MainWindow.vala:242
 msgid ""
@@ -697,6 +693,10 @@ msgid ""
 "enabling 2× scaling</b>. Further adjustments can be made by decreasing the "
 "text size."
 msgstr ""
+"Questo display potrebbe essere impostato di default su loDPI su alcuni desktop, il che potrebbe comportare "
+"testo e interfaccia utente troppo piccoli. Tuttavia, <b>potrebbe essere utilizzabile con HiDPI abilitando manualmente "
+"il ridimensionamento 2×</b>. Ulteriori regolazioni possono essere apportate riducendo le "
+"dimensioni del testo."
 
 #: src/MainWindow.vala:249
 msgid ""
