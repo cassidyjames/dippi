@@ -584,4 +584,3 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         }
     }
 }
-
