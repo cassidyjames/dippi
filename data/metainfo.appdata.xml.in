@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018–2024 Cassidy James Blaede <c@ssidyjam.es> -->
+<!-- Copyright 2018–2025 Cassidy James Blaede <c@ssidyjam.es> -->
 <component type="desktop">
   <name>Dippi</name>
   <summary>Calculate display info like DPI</summary>
@@ -34,12 +34,16 @@
     </ul>
     <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
-  <id>com.github.cassidyjames.dippi</id>
+  <id>com.cassidyjames.dippi</id>
   <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
   <provides>
-    <binary>com.github.cassidyjames.dippi</binary>
+    <binary>com.cassidyjames.dippi</binary>
+    <id>com.github.cassidyjames.dippi</id>
   </provides>
-  <translation type="gettext">com.github.cassidyjames.dippi</translation>
+  <replaces>
+    <id>com.github.cassidyjames.dippi</id>
+  </replaces>
+  <translation type="gettext">com.cassidyjames.dippi</translation>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <content_rating type="oars-1.1"></content_rating>
@@ -83,6 +87,11 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.2.0" date="2025-11-04">
+      <description>
+        <p>Under the hood changes (migrated app ID)</p>
+      </description>
+    </release>
     <release version="4.1.1" date="2025-11-01">
       <description>
         <p> GNOME 49 “Brescia”</p>

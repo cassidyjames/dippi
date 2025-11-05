@@ -25,7 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: fedora:40
+      image: fedora:43
     steps:
       - name: Install deps
         run: |
@@ -53,8 +53,8 @@ jobs:
 
       - name: Regenerate translation files
         run: |
-          ninja -C _build com.github.cassidyjames.dippi-pot
-          ninja -C _build com.github.cassidyjames.dippi-update-po
+          ninja -C _build com.cassidyjames.dippi-pot
+          ninja -C _build com.cassidyjames.dippi-update-po
 
       - name: Commit
         continue-on-error: true
