@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/cassidyjames/dippi/">
+  <gresource prefix="/com/cassidyjames/dippi/">
     <file alias="metainfo.xml" preprocess="xml-stripblanks">metainfo.appdata.xml.in</file>
     <file alias="style.css">styles/style.css</file>
   </gresource>
-  <gresource prefix="/com/github/cassidyjames/dippi/icons/scalable/actions/">
-    <file alias="com.github.cassidyjames.dippi.svg" preprocess="xml-stripblanks">icons/com.github.cassidyjames.dippi.svg</file>
+  <gresource prefix="/com/cassidyjames/dippi/icons/scalable/actions/">
+    <file alias="com.cassidyjames.dippi.svg" preprocess="xml-stripblanks">icons/com.cassidyjames.dippi.svg</file>
     <file alias="display-measure-diagonal.svg" preprocess="xml-stripblanks">icons/display-measure-diagonal.svg</file>
     <file alias="display-measure-horizontal.svg" preprocess="xml-stripblanks">icons/display-measure-horizontal.svg</file>
     <file alias="display-measure-vertical.svg" preprocess="xml-stripblanks">icons/display-measure-vertical.svg</file>

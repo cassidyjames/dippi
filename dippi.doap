@@ -12,7 +12,7 @@
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
 
   <homepage rdf:resource="https://cassidyjames.com/dippi" />
-  <download-page rdf:resource="https://flathub.org/apps/details/com.github.cassidyjames.dippi" />
+  <download-page rdf:resource="https://flathub.org/apps/com.github.cassidyjames.dippi" />
   <bug-database rdf:resource="https://github.com/cassidyjames/dippi/issues" />
 
   <programming-language>Vala</programming-language>

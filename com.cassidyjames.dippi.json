@@ -1,9 +1,9 @@
 {
-  "app-id": "com.github.cassidyjames.dippi",
+  "app-id": "com.cassidyjames.dippi",
   "runtime" : "org.gnome.Platform",
   "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
-  "command": "com.github.cassidyjames.dippi",
+  "command": "com.cassidyjames.dippi",
   "finish-args": [
     "--share=ipc",
     "--socket=fallback-x11",

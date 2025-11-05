@@ -2,7 +2,7 @@
 [![Installs](https://img.shields.io/flathub/downloads/com.github.cassidyjames.clairvoyant?label=Installs)][Flathub]
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 
-![Icon](data/icons/com.github.cassidyjames.dippi.svg?raw=true)
+![Icon](data/icons/com.cassidyjames.dippi.svg?raw=true)
 
 # Dippi
 
