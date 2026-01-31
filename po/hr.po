@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-05 05:43+0000\n"
-"PO-Revision-Date: 2025-11-08 22:08+0100\n"
+"PO-Revision-Date: 2026-01-31 15:20+0100\n"
 "Last-Translator: Milo Ivir <mail@mivirtype.de>\n"
-"Language-Team: none\n"
+"Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,7 +159,7 @@ msgstr "Aktualiziran prijevod na talijanski: Albano Battistella"
 
 #: data/metainfo.appdata.xml.in:112
 msgid "Lighten up!"
-msgstr ""
+msgstr "Osvijetli!"
 
 #: data/metainfo.appdata.xml.in:114
 msgid "Lighter icon color for a fresh aesthetic and better contrast"
@@ -232,7 +232,7 @@ msgstr "Prijevodi na talijanski: Albano Battistella"
 
 #: data/metainfo.appdata.xml.in:162
 msgid "Russian translations thanks to @ViktorOn"
-msgstr "Prijevodi na rski: @ViktorOn"
+msgstr "Prijevodi na ruski: @ViktorOn"
 
 #: data/metainfo.appdata.xml.in:163
 msgid "Improvements to developer tools to make translations easier to keep up to date"
@@ -248,11 +248,11 @@ msgstr "elementary → GNOME stil"
 
 #: data/metainfo.appdata.xml.in:172
 msgid "Refreshed icons thanks again to Micah Ilbery"
-msgstr ""
+msgstr "Novi izgled ikona: Micah Ilbery"
 
 #: data/metainfo.appdata.xml.in:173
 msgid "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
-msgstr ""
+msgstr "Tehnička nadogradnja na najnoviju GNOME platformu uključujući GTK4 i LibAdwaita"
 
 #: data/metainfo.appdata.xml.in:179 data/metainfo.appdata.xml.in:187
 msgid "Under-the-hood improvements:"
@@ -260,25 +260,27 @@ msgstr "Poboljšanja u pozadini:"
 
 #: data/metainfo.appdata.xml.in:181 data/metainfo.appdata.xml.in:190
 msgid "Update Stripe key"
-msgstr ""
+msgstr "Ažuriran Stripe ključ"
 
 #: data/metainfo.appdata.xml.in:189
 msgid "Stricter sandboxing"
-msgstr ""
+msgstr "Stroži sandboxing"
 
 #: data/metainfo.appdata.xml.in:196
 msgid "Add \"calculator\" category to launcher"
-msgstr ""
+msgstr "Dodana kategorija „kalkulator“ u pokretaču"
 
 #: data/metainfo.appdata.xml.in:201
 msgid "Under-the-hood packaging updates for elementary OS 6"
-msgstr ""
+msgstr "Ažuriranja pakiranja za elementary OS 6"
 
 #: data/metainfo.appdata.xml.in:206
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone can see all "
 "the details and make their own calculations. Plus:"
 msgstr ""
+"Avantura poveznice: sada je moguće dijeliti Dippi rezultate kao poveznicu tako da svatko "
+"može vidjeti sve detalje i napraviti vlastite izračune. Plus:"
 
 #: data/metainfo.appdata.xml.in:208
 msgid "More details on launch"
@@ -286,7 +288,7 @@ msgstr "Više detalja tijekom pokretanja"
 
 #: data/metainfo.appdata.xml.in:209
 msgid "Bolded sections of descriptions for easier skimmability"
-msgstr ""
+msgstr "Podebljani dijelovi opisa za lakši pregled"
 
 #: data/metainfo.appdata.xml.in:210
 msgid "Fix window resizing for different results"
@@ -334,7 +336,7 @@ msgstr "Podešavanja u pozadini"
 
 #: data/metainfo.appdata.xml.in:251
 msgid "Hello, Juno!"
-msgstr ""
+msgstr "Bok, Juno!"
 
 #: data/metainfo.appdata.xml.in:253
 msgid "Update translation link"
@@ -364,7 +366,7 @@ msgstr "Prijevod na litavski: welaqu"
 
 #: data/metainfo.appdata.xml.in:273
 msgid "Fixed deprecation"
-msgstr ""
+msgstr "Ispravljeno zastarivanje"
 
 #: data/metainfo.appdata.xml.in:279
 msgid "Translation & Tweaks"
@@ -498,11 +500,11 @@ msgstr "Potpuno prerađeni DPI rasponi"
 
 #: data/metainfo.appdata.xml.in:373 data/metainfo.appdata.xml.in:383
 msgid "Tweaked DPI assessment and reasoning copy"
-msgstr ""
+msgstr "Dorađena analiza DPI-ja i tekst obrazloženja"
 
 #: data/metainfo.appdata.xml.in:374
 msgid "Flattened titlebar"
-msgstr ""
+msgstr "Pojednostavljena naslovna traka"
 
 #: data/metainfo.appdata.xml.in:375
 msgid "Fixed bugs and warnings"
@@ -514,7 +516,7 @@ msgstr "Potpuno novo usporedno korisničko sučelje"
 
 #: data/metainfo.appdata.xml.in:384
 msgid "Added icons to make assessment clearer"
-msgstr ""
+msgstr "Dodane su ikone za jasniju analizu"
 
 #: data/metainfo.appdata.xml.in:391
 msgid "Made visualization interactive!"
@@ -522,7 +524,7 @@ msgstr "Vizualizacija je sada interaktivna!"
 
 #: data/metainfo.appdata.xml.in:392
 msgid "Added Cassidy-approval and reasoning"
-msgstr ""
+msgstr "Dodano Cassidyjevo odobrenje i obrazloženje"
 
 #: data/metainfo.appdata.xml.in:393
 msgid "Fix a bug where sometimes an extra zero would sneak in"
