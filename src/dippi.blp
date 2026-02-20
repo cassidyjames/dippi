@@ -7,6 +7,7 @@ using Gtk 4.0;
 using Adw 1;
 
 template $DippiMainWindow: Adw.ApplicationWindow {
+  title: _("Dippi");
   width-request: 360;
   default-width: 722;
   default-height: 409;
@@ -26,7 +27,6 @@ template $DippiMainWindow: Adw.ApplicationWindow {
 
     sidebar: Adw.NavigationPage {
       tag: "input";
-      title: _("Dippi");
 
       child: Adw.ToolbarView {
         [top]
@@ -114,14 +114,12 @@ template $DippiMainWindow: Adw.ApplicationWindow {
 
                   Adw.Toggle {
                     name: "internal";
-                    // icon-name: "laptop-symbolic";
                     ///TRANSLATORS: label for the button to select an internal/laptop display
                     label: _("Laptop");
                   }
 
                   Adw.Toggle {
                     name: "external";
-                    // icon-name: "display-symbolic";
                     ///TRANSLATORS: label for the button to select an external/desktop monitor
                     label: _("Desktop");
                   }
@@ -153,7 +151,6 @@ template $DippiMainWindow: Adw.ApplicationWindow {
 
     content: Adw.NavigationPage {
       tag: "result";
-      title: _("Results");
 
       child: Adw.ToolbarView {
         [top]
