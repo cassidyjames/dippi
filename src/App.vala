@@ -13,13 +13,12 @@ public class Dippi.App : Adw.Application {
 
     protected override void activate () {
         var app_window = new MainWindow (this);
-        app_window.show ();
+        app_window.present ();
 
         var quit_action = new SimpleAction ("quit", null);
 
         add_action (quit_action);
         set_accels_for_action ("app.quit", {
-            "Escape",
             "<Ctrl>Q",
             "<Ctrl>W",
         });

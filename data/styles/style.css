@@ -1,12 +1,8 @@
-.title-1 {
-  font-size: 225%;
-}
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2018–2025 Cassidy James Blaede <c@ssidyjam.es>
+ */
 
 .body {
   line-height: 1.25;
-}
-
-.link {
-  margin: 0;
-  padding: 0;
 }

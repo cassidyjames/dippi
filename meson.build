@@ -10,9 +10,23 @@ i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
+blueprint_compiler = find_program('blueprint-compiler')
+
+blueprints = custom_target('blueprints',
+  input: files('src' / 'dippi.blp'),
+  output: 'dippi.ui',
+  command: [
+    blueprint_compiler,
+    'compile',
+    '--output', '@OUTPUT@',
+    '@INPUT@',
+  ],
+)
+
 asresources = gnome.compile_resources(
   'as-resources', 'data' / 'gresource.xml',
-  source_dir: 'data',
+  dependencies: blueprints,
+  source_dir: ['data', meson.current_build_dir()],
   c_name: 'as'
 )
 
@@ -41,5 +55,6 @@ executable(
   ],
   install: true
 )
+
 subdir('data')
 subdir('po')
