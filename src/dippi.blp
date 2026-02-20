@@ -8,20 +8,20 @@ using Adw 1;
 
 template $DippiMainWindow: Adw.ApplicationWindow {
   width-request: 360;
-  default-width: 844;
-  default-height: 434;
+  default-width: 722;
+  default-height: 409;
 
   Adw.Breakpoint {
     condition ("max-width: 600sp")
 
     setters {
       split_view.collapsed: true;
-      view_results_bar.visible: true;
+      calculate_revealer.reveal-child: true;
     }
   }
 
   content: Adw.NavigationSplitView split_view {
-    sidebar-width-fraction: 0.45;
+    sidebar-width-fraction: 0.48;
     max-sidebar-width: 360;
 
     sidebar: Adw.NavigationPage {
@@ -47,21 +47,6 @@ template $DippiMainWindow: Adw.ApplicationWindow {
           }
         }
 
-        [bottom]
-        Gtk.ActionBar view_results_bar {
-          visible: false;
-
-          [center]
-          Gtk.Button view_results_button {
-            label: _("View Results");
-            action-name: "win.view-results";
-            styles [
-              "suggested-action",
-              "pill",
-            ]
-          }
-        }
-
         content: Gtk.ScrolledWindow {
           hscrollbar-policy: never;
 
@@ -69,60 +54,49 @@ template $DippiMainWindow: Adw.ApplicationWindow {
             orientation: vertical;
             spacing: 24;
             valign: center;
-            margin-top: 24;
             margin-start: 24;
             margin-end: 24;
-            margin-bottom: 24;
 
             Gtk.Image diagram {
               icon-name: "com.cassidyjames.dippi";
               pixel-size: 96;
+
+              styles [
+                "icon-dropshadow",
+              ]
             }
 
             Adw.PreferencesGroup {
-              Adw.EntryRow diag_entry {
-                title: _("Diagonal size");
-                input-purpose: number;
-
-                [suffix]
-                Gtk.Label {
-                  label: _("in");
-                  valign: center;
-
-                  styles [
-                    "dim-label",
-                  ]
-                }
+              Adw.SpinRow diag_entry {
+                title: _("Diagonal inches");
+                digits: 1;
+                climb-rate: 0.1;
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 999;
+                  step-increment: 0.1;
+                  page-increment: 1;
+                };
               }
 
-              Adw.EntryRow width_entry {
-                title: _("Width");
-                input-purpose: number;
-
-                [suffix]
-                Gtk.Label {
-                  label: "px";
-                  valign: center;
-
-                  styles [
-                    "dim-label",
-                  ]
-                }
+              Adw.SpinRow width_entry {
+                title: _("Width (px)");
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 99999;
+                  step-increment: 10;
+                  page-increment: 100;
+                };
               }
 
-              Adw.EntryRow height_entry {
-                title: _("Height");
-                input-purpose: number;
-
-                [suffix]
-                Gtk.Label {
-                  label: "px";
-                  valign: center;
-
-                  styles [
-                    "dim-label",
-                  ]
-                }
+              Adw.SpinRow height_entry {
+                title: _("Height (px)");
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 99999;
+                  step-increment: 10;
+                  page-increment: 100;
+                };
               }
 
               Adw.ActionRow {
@@ -130,19 +104,45 @@ template $DippiMainWindow: Adw.ApplicationWindow {
                 activatable: false;
 
                 [suffix]
-                Gtk.Box type_buttons {
+                Adw.ToggleGroup type_group {
+                  active-name: "internal";
                   valign: center;
 
                   styles [
-                    "linked",
+                    "round",
                   ]
 
-                  Gtk.ToggleButton internal_button {
+                  Adw.Toggle {
+                    name: "internal";
+                    // icon-name: "laptop-symbolic";
+                    ///TRANSLATORS: label for the button to select an internal/laptop display
+                    label: _("Laptop");
                   }
 
-                  Gtk.ToggleButton external_button {
-                    group: internal_button;
+                  Adw.Toggle {
+                    name: "external";
+                    // icon-name: "display-symbolic";
+                    ///TRANSLATORS: label for the button to select an external/desktop monitor
+                    label: _("Desktop");
                   }
+                }
+              }
+
+            }
+
+            Gtk.Revealer calculate_revealer {
+              reveal-child: false;
+
+              Adw.PreferencesGroup {
+                margin-bottom: 24;
+
+                Adw.ButtonRow calculate_button {
+                  title: _("Calculate");
+                  action-name: "win.calculate";
+
+                  styles [
+                    "suggested-action",
+                  ]
                 }
               }
             }
@@ -174,8 +174,6 @@ template $DippiMainWindow: Adw.ApplicationWindow {
               spacing: 12;
               valign: center;
               vexpand: true;
-              margin-top: 24;
-              margin-bottom: 24;
 
               Gtk.Stack range_stack {
                 hhomogeneous: false;

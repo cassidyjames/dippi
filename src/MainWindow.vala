@@ -36,23 +36,21 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.LinkButton link_button;
     [GtkChild]
-    private unowned Gtk.ToggleButton internal_button;
-    [GtkChild]
-    private unowned Gtk.ToggleButton external_button;
+    private unowned Adw.ToggleGroup type_group;
     [GtkChild]
     private unowned Adw.NavigationSplitView split_view;
     [GtkChild]
     private unowned Gtk.Stack range_stack;
     [GtkChild]
-    private unowned Adw.EntryRow diag_entry;
+    private unowned Adw.SpinRow diag_entry;
     [GtkChild]
-    private unowned Adw.EntryRow width_entry;
+    private unowned Adw.SpinRow width_entry;
     [GtkChild]
-    private unowned Adw.EntryRow height_entry;
+    private unowned Adw.SpinRow height_entry;
 
     private Utils.DisplayType display_type;
 
-    private SimpleAction view_results_action;
+    private SimpleAction calculate_action;
 
     private Gtk.EventControllerFocus width_entry_focus_ctrl;
     private Gtk.EventControllerFocus height_entry_focus_ctrl;
@@ -64,10 +62,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        internal_button.label = Utils.DisplayType.INTERNAL.to_string ();
-        external_button.label = Utils.DisplayType.EXTERNAL.to_string ();
-
-        var about_dialog = new Adw.AboutDialog.from_appdata (
+var about_dialog = new Adw.AboutDialog.from_appdata (
             "/com/cassidyjames/dippi/metainfo.xml", VERSION
         ) {
             comments = _("Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for deciding which laptop or external monitor to purchase, and if it would be considered HiDPI."),
@@ -99,14 +94,13 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => about_dialog.present (this));
 
-        // Used by "View Results" button in collapsed/mobile mode
-        view_results_action = new SimpleAction ("view-results", null);
-        view_results_action.set_enabled (false);
-        view_results_action.activate.connect (() => split_view.show_content = true);
+        calculate_action = new SimpleAction ("calculate", null);
+        calculate_action.set_enabled (false);
+        calculate_action.activate.connect (() => split_view.show_content = true);
 
         var action_group = new SimpleActionGroup ();
         action_group.add_action (about_action);
-        action_group.add_action (view_results_action);
+        action_group.add_action (calculate_action);
         this.insert_action_group ("win", action_group);
 
         var direction = "diagonal";
@@ -135,20 +129,16 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             set_display_icon (direction);
         });
 
-        diag_entry.changed.connect (() => {
-            string? text = diag_entry.get_text ();
-            if (text != null && text != "") {
-                inches = double.parse (diag_entry.get_text ());
-                assess_dpi (
-                    recalculate_dpi (inches, width, height),
-                    infer_display_type (inches)
-                );
-            }
+        diag_entry.notify["value"].connect (() => {
+            inches = diag_entry.value;
+            assess_dpi (
+                recalculate_dpi (inches, width, height),
+                infer_display_type (inches)
+            );
         });
 
-        width_entry.changed.connect (() => {
-            string? text = width_entry.get_text ();
-            width = int.parse (text);
+        width_entry.notify["value"].connect (() => {
+            width = (int) width_entry.value;
             if (width != 0) {
                 is_default_width = false;
                 recalculate_aspect (width, height);
@@ -163,15 +153,14 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                         DEFAULT_ASPECT_HEIGHT /
                         DEFAULT_ASPECT_WIDTH
                     );
-                    height_entry.text = (calculated_height).to_string ();
+                    height_entry.value = calculated_height;
                     is_default_height = true;
                 }
             }
         });
 
-        height_entry.changed.connect (() => {
-            string? text = height_entry.get_text ();
-            height = int.parse (height_entry.get_text ());
+        height_entry.notify["value"].connect (() => {
+            height = (int) height_entry.value;
             if (height != 0) {
                 is_default_height = false;
                 recalculate_aspect (width, height);
@@ -186,26 +175,18 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                         DEFAULT_ASPECT_WIDTH /
                         DEFAULT_ASPECT_HEIGHT
                     );
-                    width_entry.text = (calculated_width).to_string ();
+                    width_entry.value = calculated_width;
                     is_default_width = true;
                 }
             }
         });
 
-        internal_button.toggled.connect (() => {
-            if (internal_button.active) {
-                display_type = Utils.DisplayType.INTERNAL;
-                assess_dpi (Utils.dpi (inches, width, height), display_type);
-                set_display_icon (direction);
-            }
-        });
-
-        external_button.toggled.connect (() => {
-            if (external_button.active) {
-                display_type = Utils.DisplayType.EXTERNAL;
-                assess_dpi (Utils.dpi (inches, width, height), display_type);
-                set_display_icon (direction);
-            }
+        type_group.notify["active"].connect (() => {
+            display_type = type_group.active == 0
+                ? Utils.DisplayType.INTERNAL
+                : Utils.DisplayType.EXTERNAL;
+            assess_dpi (Utils.dpi (inches, width, height), display_type);
+            set_display_icon (direction);
         });
 
         diag_entry.grab_focus ();
@@ -315,16 +296,16 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             type_param
         );
 
-        view_results_action.set_enabled (link_button.visible);
+        calculate_action.set_enabled (link_button.visible);
     }
 
     private Utils.DisplayType infer_display_type (double inches) {
         if (inches < INCHES_INFER_EXTERNAL) {
             display_type = Utils.DisplayType.INTERNAL;
-            internal_button.active = true;
+            type_group.active = 0;
         } else {
             display_type = Utils.DisplayType.EXTERNAL;
-            external_button.active = true;
+            type_group.active = 1;
         }
 
         return display_type;
