@@ -87,6 +87,15 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.0.0" date="2026-02-20">
+      <description>
+        <p>Hello Adwaita (finally)!</p>
+        <ul>
+          <li>Redesigned with a modern GNOME-style split view and inputs</li>
+          <li>Adapts to smaller and larger window sizes—including on phones</li>
+        </ul>
+      </description>
+    </release>
     <release version="4.2.0" date="2025-11-04">
       <description>
         <p>Under the hood changes (migrated app ID)</p>

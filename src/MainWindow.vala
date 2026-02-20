@@ -40,15 +40,22 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.ToggleButton external_button;
     [GtkChild]
+    private unowned Adw.NavigationSplitView split_view;
+    [GtkChild]
     private unowned Gtk.Stack range_stack;
     [GtkChild]
-    private unowned Gtk.Entry diag_entry;
+    private unowned Adw.EntryRow diag_entry;
     [GtkChild]
-    private unowned Gtk.Entry width_entry;
+    private unowned Adw.EntryRow width_entry;
     [GtkChild]
-    private unowned Gtk.Entry height_entry;
+    private unowned Adw.EntryRow height_entry;
 
     private Utils.DisplayType display_type;
+
+    private SimpleAction view_results_action;
+
+    private Gtk.EventControllerFocus width_entry_focus_ctrl;
+    private Gtk.EventControllerFocus height_entry_focus_ctrl;
 
     public MainWindow (Adw.Application application) {
         Object (
@@ -57,11 +64,9 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        // Set button labels from the enum (these are translatable in Utils)
         internal_button.label = Utils.DisplayType.INTERNAL.to_string ();
         external_button.label = Utils.DisplayType.EXTERNAL.to_string ();
 
-        // Set up the About dialog
         var about_dialog = new Adw.AboutDialog.from_appdata (
             "/com/cassidyjames/dippi/metainfo.xml", VERSION
         ) {
@@ -88,47 +93,48 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             new DateTime.now_local ().get_year (),
             about_dialog.developer_name
         );
-
-        // Set MainWindow properties from the AppData
         this.icon_name = about_dialog.application_icon;
         this.title = about_dialog.application_name;
 
-        // About action
         var about_action = new SimpleAction ("about", null);
         about_action.activate.connect (() => about_dialog.present (this));
 
+        // Used by "View Results" button in collapsed/mobile mode
+        view_results_action = new SimpleAction ("view-results", null);
+        view_results_action.set_enabled (false);
+        view_results_action.activate.connect (() => split_view.show_content = true);
+
         var action_group = new SimpleActionGroup ();
         action_group.add_action (about_action);
+        action_group.add_action (view_results_action);
         this.insert_action_group ("win", action_group);
 
-        // Focus controllers for diagram icon changes
         var direction = "diagonal";
 
-        var diag_entry_focus_controller = new Gtk.EventControllerFocus ();
-        diag_entry.add_controller (diag_entry_focus_controller);
+        var diag_entry_focus_ctrl = new Gtk.EventControllerFocus ();
+        diag_entry.add_controller (diag_entry_focus_ctrl);
 
-        var width_entry_focus_controller = new Gtk.EventControllerFocus ();
-        width_entry.add_controller (width_entry_focus_controller);
+        width_entry_focus_ctrl = new Gtk.EventControllerFocus ();
+        width_entry.add_controller (width_entry_focus_ctrl);
 
-        var height_entry_focus_controller = new Gtk.EventControllerFocus ();
-        height_entry.add_controller (height_entry_focus_controller);
+        height_entry_focus_ctrl = new Gtk.EventControllerFocus ();
+        height_entry.add_controller (height_entry_focus_ctrl);
 
-        diag_entry_focus_controller.enter.connect ((event) => {
+        diag_entry_focus_ctrl.enter.connect ((event) => {
             direction = "diagonal";
             set_display_icon (direction);
         });
 
-        width_entry_focus_controller.enter.connect ((event) => {
+        width_entry_focus_ctrl.enter.connect ((event) => {
             direction = "horizontal";
             set_display_icon (direction);
         });
 
-        height_entry_focus_controller.enter.connect ((event) => {
+        height_entry_focus_ctrl.enter.connect ((event) => {
             direction = "vertical";
             set_display_icon (direction);
         });
 
-        // Input change handlers
         diag_entry.changed.connect (() => {
             string? text = diag_entry.get_text ();
             if (text != null && text != "") {
@@ -151,7 +157,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                     display_type
                 );
 
-                if (!height_entry.has_focus && (is_default_height || height == 0)) {
+                if (!height_entry_focus_ctrl.contains_focus && (is_default_height || height == 0)) {
                     double calculated_height = Math.round (
                         width *
                         DEFAULT_ASPECT_HEIGHT /
@@ -174,7 +180,7 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
                     display_type
                 );
 
-                if (!width_entry.has_focus && (is_default_width || width == 0)) {
+                if (!width_entry_focus_ctrl.contains_focus && (is_default_width || width == 0)) {
                     double calculated_width = Math.round (
                         height *
                         DEFAULT_ASPECT_WIDTH /
@@ -308,6 +314,8 @@ public class Dippi.MainWindow : Adw.ApplicationWindow {
             height,
             type_param
         );
+
+        view_results_action.set_enabled (link_button.visible);
     }
 
     private Utils.DisplayType infer_display_type (double inches) {

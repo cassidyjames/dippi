@@ -47,9 +47,15 @@ Dippi 4 was designed and developed on and for GNOME. As such, contributors agree
 
 ## Developing and Building
 
+Dippi is a GNOME app built using Vala and GTK, designed to be distributed via Flatpak. It strives to follow the modern [GNOME HIG](https://developer.gnome.org/hig/) using [libadwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/).
+
 If you want to hack on and build Dippi yourself, I recommend using GNOME Builder. Clone the repository, then just* hit run!
 
 <small>*If you're hitting issues, try "Update project dependencies" in the top-center build menu to ensure you have the SDK installed.</small>
+
+### From CLI
+
+To build from the CLI, use `flatpak-builder`. Since Dippi targets distribution via Flathub, the [Flathub docs](https://docs.flathub.org/docs/for-app-authors/submission#build-and-install) may be useful.
 
 ## Special Thanks
 
