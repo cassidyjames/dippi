@@ -1,5 +1,6 @@
 data/metainfo.appdata.xml.in
 data/launcher.desktop.in
+src/dippi.blp
 src/App.vala
 src/MainWindow.vala
 src/Utils.vala

@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2018–2025 Cassidy James Blaede <c@ssidyjam.es>
+ * SPDX-FileCopyrightText: 2018–2026 Cassidy James Blaede <c@ssidyjam.es>
  */
 
 public class Dippi.App : Adw.Application {
@@ -13,13 +13,12 @@ public class Dippi.App : Adw.Application {
 
     protected override void activate () {
         var app_window = new MainWindow (this);
-        app_window.show ();
+        app_window.present ();
 
         var quit_action = new SimpleAction ("quit", null);
 
         add_action (quit_action);
         set_accels_for_action ("app.quit", {
-            "Escape",
             "<Ctrl>Q",
             "<Ctrl>W",
         });

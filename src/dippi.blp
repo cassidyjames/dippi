@@ -1,0 +1,775 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2025–2026 Cassidy James Blaede <c@ssidyjam.es>
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $DippiMainWindow: Adw.ApplicationWindow {
+  title: _("Dippi");
+  width-request: 360;
+  default-width: 722;
+  default-height: 409;
+
+  Adw.Breakpoint {
+    condition ("max-width: 600sp")
+
+    setters {
+      split_view.collapsed: true;
+      calculate_revealer.reveal-child: true;
+    }
+  }
+
+  content: Adw.NavigationSplitView split_view {
+    sidebar-width-fraction: 0.48;
+    max-sidebar-width: 360;
+
+    sidebar: Adw.NavigationPage {
+      title: _("Dippi");
+      tag: "input";
+
+      child: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+          show-title: false;
+
+          styles [
+            "flat",
+          ]
+
+          [start]
+          Gtk.Button {
+            icon-name: "about-symbolic";
+            tooltip-text: _("About Dippi");
+            action-name: "win.about";
+
+            styles [
+              "dim-label",
+            ]
+          }
+        }
+
+        content: Gtk.ScrolledWindow {
+          hscrollbar-policy: never;
+
+          Gtk.Box {
+            orientation: vertical;
+            spacing: 24;
+            valign: center;
+            margin-start: 24;
+            margin-end: 24;
+
+            Gtk.Image diagram {
+              icon-name: "com.cassidyjames.dippi";
+              pixel-size: 96;
+
+              styles [
+                "icon-dropshadow",
+              ]
+            }
+
+            Adw.PreferencesGroup {
+              Adw.SpinRow diag_entry {
+                title: _("Diagonal inches");
+                digits: 1;
+                climb-rate: 0.1;
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 999;
+                  step-increment: 0.1;
+                  page-increment: 1;
+                };
+              }
+
+              Adw.SpinRow width_entry {
+                title: _("Width (px)");
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 99999;
+                  step-increment: 10;
+                  page-increment: 100;
+                };
+              }
+
+              Adw.SpinRow height_entry {
+                title: _("Height (px)");
+                adjustment: Gtk.Adjustment {
+                  lower: 0;
+                  upper: 99999;
+                  step-increment: 10;
+                  page-increment: 100;
+                };
+              }
+
+              Adw.ActionRow {
+                title: _("Type");
+                activatable: false;
+
+                [suffix]
+                Adw.ToggleGroup type_group {
+                  active-name: "internal";
+                  valign: center;
+
+                  styles [
+                    "round",
+                  ]
+
+                  Adw.Toggle {
+                    name: "internal";
+                    ///TRANSLATORS: label for the button to select an internal/laptop display
+                    label: _("Laptop");
+                  }
+
+                  Adw.Toggle {
+                    name: "external";
+                    ///TRANSLATORS: label for the button to select an external/desktop monitor
+                    label: _("Desktop");
+                  }
+                }
+              }
+
+            }
+
+            Gtk.Revealer calculate_revealer {
+              reveal-child: false;
+
+              Adw.PreferencesGroup {
+                margin-bottom: 24;
+
+                Adw.ButtonRow calculate_button {
+                  title: _("Calculate");
+                  action-name: "win.calculate";
+
+                  styles [
+                    "suggested-action",
+                  ]
+                }
+              }
+            }
+          }
+        };
+      };
+    };
+
+    content: Adw.NavigationPage {
+      title: _("Result");
+      tag: "result";
+
+      child: Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar {
+        show-title: false;
+
+          styles [
+            "flat",
+          ]
+        }
+
+        content: Gtk.WindowHandle {
+          Adw.Clamp {
+            maximum-size: 480;
+            margin-start: 24;
+            margin-end: 24;
+
+            Gtk.Box {
+              orientation: vertical;
+              spacing: 24;
+              valign: center;
+              vexpand: true;
+
+              Gtk.Stack range_stack {
+                hhomogeneous: false;
+
+                Gtk.StackPage {
+                  name: "invalid";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "loupe-large-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "accent",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Analyze a Display");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "accent",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal for laptops</b>.\n\nFor HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "low";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-error-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "error",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Very Low DPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "error",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible.</b>");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "lodpi-low";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-warning-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Fairly Low DPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Text and UI might be too big for typical viewing distances, but it's <b>largely up to user preference</b> and physical distance from the display.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "lodpi-ideal";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "test-pass-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "success",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Ideal for LoDPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "success",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing distances.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "lodpi-high";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-warning-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Potentially Problematic");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by default</b>, but forcing HiDPI would make them appear too large. The experience may be slightly improved by increasing the text size.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "lodpi-should-be-hidpi";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "settings-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Tweak for HiDPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("This display may default to loDPI on some desktops, which could result in too-small text and UI. However, it <b>may be usable with HiDPI by manually enabling 2× scaling</b>. Further adjustments can be made by decreasing the text size.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "unclear";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-warning-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Potentially Problematic");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the box.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "hidpi-low";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-warning-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Potentially Problematic");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and increasing the text size might help.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "hidpi-ideal";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "test-pass-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "success",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Ideal for HiDPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "success",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This is the jackpot.</b>");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "hidpi-high";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-warning-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "warning",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Fairly High for HiDPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "warning",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Text and UI are likely to appear <b>too small for typical viewing distances</b>. Increasing the text size may help.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+
+                Gtk.StackPage {
+                  name: "high";
+                  child: Gtk.Box {
+                    orientation: horizontal;
+                    spacing: 12;
+
+                    Gtk.Image {
+                      icon-name: "dialog-error-symbolic";
+                      pixel-size: 32;
+                      valign: start;
+
+                      styles [
+                        "error",
+                      ]
+                    }
+
+                    Gtk.Box {
+                      orientation: vertical;
+                      spacing: 6;
+
+                      Gtk.Label {
+                        label: _("Too High DPI");
+                        halign: start;
+                        valign: end;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "title-1",
+                          "error",
+                        ]
+                      }
+
+                      Gtk.Label {
+                        label: _("Text and UI will appear <b>too small for typical viewing distances</b>.");
+                        max-width-chars: 40;
+                        use-markup: true;
+                        valign: start;
+                        wrap: true;
+                        xalign: 0.0;
+
+                        styles [
+                          "body",
+                        ]
+                      }
+                    }
+                  };
+                }
+              }
+
+              Gtk.Box result_details {
+                spacing: 12;
+                halign: start;
+                margin-start: 44; // 32px icon + 12px box spacing
+
+                Gtk.Label aspect_result_label {
+                  halign: start;
+                  valign: end;
+
+                  styles [
+                    "dim-label",
+                  ]
+                }
+
+                Gtk.Label dpi_result_label {
+                  halign: start;
+                  valign: end;
+
+                  styles [
+                    "dim-label",
+                  ]
+                }
+
+                Gtk.Label logical_resolution_label {
+                  halign: start;
+                  valign: end;
+
+                  styles [
+                    "dim-label",
+                  ]
+                }
+              }
+
+              Gtk.LinkButton link_button {
+                label: _("Share results…");
+                uri: "https://cassidyjames.com/dippi/";
+                halign: center;
+                visible: false;
+
+                styles [
+                  "suggested-action",
+                  "pill",
+                ]
+              }
+            }
+          }
+        };
+      };
+    };
+  };
+}
+

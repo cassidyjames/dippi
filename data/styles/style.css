@@ -1,12 +1,14 @@
-.title-1 {
-  font-size: 225%;
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2018–2026 Cassidy James Blaede <c@ssidyjam.es>
+ */
+
+:root {
+  --sidebar-bg-color: color-mix(in oklab, var(--accent-color), var(--view-bg-color) 85%);
+  --sidebar-backdrop-color: color-mix(in oklab, var(--accent-color), var(--view-bg-color) 90%);
+  --window-bg-color: color-mix(in oklab, var(--accent-color), var(--view-bg-color) 95%);
 }
 
 .body {
   line-height: 1.25;
-}
-
-.link {
-  margin: 0;
-  padding: 0;
 }
