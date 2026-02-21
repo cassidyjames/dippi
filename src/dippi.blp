@@ -168,7 +168,7 @@ template $DippiMainWindow: Adw.ApplicationWindow {
 
             Gtk.Box {
               orientation: vertical;
-              spacing: 12;
+              spacing: 24;
               valign: center;
               vexpand: true;
 
@@ -718,6 +718,7 @@ template $DippiMainWindow: Adw.ApplicationWindow {
               Gtk.Box result_details {
                 spacing: 12;
                 halign: start;
+                margin-start: 44; // 32px icon + 12px box spacing
 
                 Gtk.Label aspect_result_label {
                   halign: start;
@@ -750,8 +751,13 @@ template $DippiMainWindow: Adw.ApplicationWindow {
               Gtk.LinkButton link_button {
                 label: _("Share results…");
                 uri: "https://cassidyjames.com/dippi/";
-                halign: start;
+                halign: center;
                 visible: false;
+
+                styles [
+                  "suggested-action",
+                  "pill",
+                ]
               }
             }
           }

@@ -103,6 +103,9 @@ var about_dialog = new Adw.AboutDialog.from_appdata (
         action_group.add_action (calculate_action);
         this.insert_action_group ("win", action_group);
 
+        link_button.remove_css_class ("flat");
+        link_button.remove_css_class ("link");
+
         var direction = "diagonal";
 
         var diag_entry_focus_ctrl = new Gtk.EventControllerFocus ();
