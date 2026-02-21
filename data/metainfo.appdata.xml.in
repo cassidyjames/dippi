@@ -93,6 +93,7 @@
         <ul>
           <li>Redesigned with a modern GNOME-style split view and inputs</li>
           <li>Adapts to smaller and larger window sizes—including on phones</li>
+          <li>Croatian translations thanks to Milo Ivir</li>
         </ul>
       </description>
     </release>
