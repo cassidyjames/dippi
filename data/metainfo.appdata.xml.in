@@ -48,10 +48,12 @@
   <project_license>GPL-3.0-or-later</project_license>
   <content_rating type="oars-1.1"></content_rating>
   <url type="homepage">https://cassidyjames.com/dippi</url>
+  <url type="vcs-browser">https://github.com/cassidyjames/dippi</url>
+  <url type="contribute">https://github.com/cassidyjames/dippi</url>
   <url type="bugtracker">https://github.com/cassidyjames/dippi/issues</url>
   <url type="translate">https://github.com/cassidyjames/dippi/tree/main/po#readme</url>
+  <url type="contact">https://cassidyjames.com</url>
   <url type="donation">https://cassidyjames.com/pay</url>
-  <url type="help">https://cassidyjames.com/support</url>
   <screenshots>
     <screenshot type="default">
       <caption>Result for a 16-inch laptop display at 3840×2160, showing it is ideal for HiDPI</caption>
