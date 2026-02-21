@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 02:32+0000\n"
+"POT-Creation-Date: 2026-02-21 03:18+0000\n"
 "PO-Revision-Date: 2026-01-31 15:20+0100\n"
 "Last-Translator: Milo Ivir <mail@mivirtype.de>\n"
 "Language-Team: \n"
@@ -61,7 +61,7 @@ msgstr "Dobij savjet o različitim gustoćama"
 msgid "Learn the logical resolution"
 msgstr "Saznaj logičku rezoluciju"
 
-#: data/metainfo.appdata.xml.in:21 data/metainfo.appdata.xml.in:382
+#: data/metainfo.appdata.xml.in:21 data/metainfo.appdata.xml.in:384
 msgid "Differentiate between laptops and desktop displays"
 msgstr "Razlikuj laptop i desktop ekrane"
 
@@ -113,7 +113,7 @@ msgstr "Previsok DPI"
 msgid "Special thanks to Micah Ilbery for the shiny icons."
 msgstr "Posebna zahvala Micahu Ilberyju na sjajnim ikonama."
 
-#: data/metainfo.appdata.xml.in:57 data/metainfo.appdata.xml.in:73
+#: data/metainfo.appdata.xml.in:59 data/metainfo.appdata.xml.in:75
 msgid ""
 "Result for a 16-inch laptop display at 3840×2160, showing it is ideal for "
 "HiDPI"
@@ -121,7 +121,7 @@ msgstr ""
 "Rezultat za 16-inčni ekran laptopa s rezolucijom od 3840×2160, što pokazuje "
 "da je idealan za HiDPI"
 
-#: data/metainfo.appdata.xml.in:61 data/metainfo.appdata.xml.in:77
+#: data/metainfo.appdata.xml.in:63 data/metainfo.appdata.xml.in:79
 msgid ""
 "Result for a 13-inch laptop display at 1920×1080, showing it is potentially "
 "problematic"
@@ -129,7 +129,7 @@ msgstr ""
 "Rezultat za 13-inčni ekran laptopa s rezolucijom od 1920×1080, pokazujući da "
 "je potencijalno problematičan"
 
-#: data/metainfo.appdata.xml.in:65 data/metainfo.appdata.xml.in:81
+#: data/metainfo.appdata.xml.in:67 data/metainfo.appdata.xml.in:83
 msgid ""
 "Result for a 27-inch desktop display at 2560×1440, showing it is ideal for "
 "loDPI"
@@ -137,179 +137,179 @@ msgstr ""
 "Rezultat za 27-inčni ekran desktop računala s rezolucijom od 2560×1440, što "
 "pokazuje da je idealan za loDPI"
 
-#: data/metainfo.appdata.xml.in:69 data/metainfo.appdata.xml.in:85
+#: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
 msgid "Default state of the app, inviting you to enter a display's details"
 msgstr "Zadano stanje aplikacije, pozivajući te da uneseš detalje ekrana"
 
-#: data/metainfo.appdata.xml.in:92
+#: data/metainfo.appdata.xml.in:94
 msgid "Hello Adwaita (finally)!"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:94
+#: data/metainfo.appdata.xml.in:96
 msgid "Redesigned with a modern GNOME-style split view and inputs"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:95
+#: data/metainfo.appdata.xml.in:97
 msgid "Adapts to smaller and larger window sizes—including on phones"
 msgstr ""
 
-#: data/metainfo.appdata.xml.in:96
+#: data/metainfo.appdata.xml.in:98
 #, fuzzy
 msgid "Croatian translations thanks to Milo Ivir"
 msgstr "Prijevodi na ruski: @ViktorOn"
 
-#: data/metainfo.appdata.xml.in:102
+#: data/metainfo.appdata.xml.in:104
 msgid "Under the hood changes (migrated app ID)"
 msgstr "Promjene u pozadini (migrirannje ID-a aplikacije)"
 
-#: data/metainfo.appdata.xml.in:107
+#: data/metainfo.appdata.xml.in:109
 msgid "GNOME 49 “Brescia”"
 msgstr "GNOME 49 „Brescia“"
 
-#: data/metainfo.appdata.xml.in:109
+#: data/metainfo.appdata.xml.in:111
 msgid "Better handle several common resolutions/aspect ratios"
 msgstr "Bolje rukovanje nekih uobičajenih rezolucija/omjera"
 
-#: data/metainfo.appdata.xml.in:110
+#: data/metainfo.appdata.xml.in:112
 msgid "Respect desktop accent color instead of always using purple"
 msgstr ""
 "Koristi se boja isticanja desktop računala umjesto da se uvijek koristi "
 "ljubičasta"
 
-#: data/metainfo.appdata.xml.in:111
+#: data/metainfo.appdata.xml.in:113
 msgid "Updated with the latest GNOME 49 platform and Adwaita 1.8"
 msgstr "Aktualizirano s najnovijom platformom GNOME 49 i Adwaita 1.8"
 
-#: data/metainfo.appdata.xml.in:112 data/metainfo.appdata.xml.in:131
+#: data/metainfo.appdata.xml.in:114 data/metainfo.appdata.xml.in:133
 msgid "Updated Italian translations thanks to Albano Battistella"
 msgstr "Aktualiziran prijevod na talijanski: Albano Battistella"
 
-#: data/metainfo.appdata.xml.in:122
+#: data/metainfo.appdata.xml.in:124
 msgid "Lighten up!"
 msgstr "Osvijetli!"
 
-#: data/metainfo.appdata.xml.in:124
+#: data/metainfo.appdata.xml.in:126
 msgid "Lighter icon color for a fresh aesthetic and better contrast"
 msgstr "Svjetlija boja ikona za svježu estetiku i bolji kontrast"
 
-#: data/metainfo.appdata.xml.in:125
+#: data/metainfo.appdata.xml.in:127
 msgid "Improved app store listing with a shorter summary and new brand colors"
 msgstr ""
 "Poboljšani unos u trgovini aplikacija s kraćim sažetkom i novim bojama robne "
 "marke"
 
-#: data/metainfo.appdata.xml.in:126
+#: data/metainfo.appdata.xml.in:128
 msgid "Updated for GNOME 46"
 msgstr "Aktualizirano na GNOME 46"
 
-#: data/metainfo.appdata.xml.in:128 data/metainfo.appdata.xml.in:242
+#: data/metainfo.appdata.xml.in:130 data/metainfo.appdata.xml.in:244
 msgid "Updated translations:"
 msgstr "Aktualizirani prijevodi:"
 
-#: data/metainfo.appdata.xml.in:130
+#: data/metainfo.appdata.xml.in:132
 msgid "Updated French translations thanks to Irénée Thirion"
 msgstr "Aktualiziran prijevod na francuski: Irénée Thirion"
 
-#: data/metainfo.appdata.xml.in:132
+#: data/metainfo.appdata.xml.in:134
 msgid "Updated Australian English thanks to Ben Beasley"
 msgstr "Aktualiziran prijevod na australski engleski: Benu Beasleyju"
 
-#: data/metainfo.appdata.xml.in:133
+#: data/metainfo.appdata.xml.in:135
 msgid "Updated British English thanks to Ben Beasley"
 msgstr "Aktualiziran prijevod na britanski engleski: Ben Beasley"
 
-#: data/metainfo.appdata.xml.in:143
+#: data/metainfo.appdata.xml.in:145
 msgid "GNOME 45 and crash fix"
 msgstr "GNOME 45 i ispravak prekida aplikacije"
 
-#: data/metainfo.appdata.xml.in:152
+#: data/metainfo.appdata.xml.in:154
 msgid "Translations and GNOME 44"
 msgstr "Prijevodi i GNOME 44"
 
-#: data/metainfo.appdata.xml.in:157
+#: data/metainfo.appdata.xml.in:159
 msgid "Hotfix: fix About window when closing and re-opening it"
 msgstr ""
 "Hitni popravak: popravak prozora O aplikaciji prilikom zatvaranja i ponovnog "
 "otvaranja"
 
-#: data/metainfo.appdata.xml.in:162
+#: data/metainfo.appdata.xml.in:164
 msgid "Even GNOMEier"
 msgstr "Još GNOME-nije"
 
-#: data/metainfo.appdata.xml.in:164
+#: data/metainfo.appdata.xml.in:166
 msgid "Added “About” window"
 msgstr "Dodan prozor „O aplikaciji“"
 
-#: data/metainfo.appdata.xml.in:165
+#: data/metainfo.appdata.xml.in:167
 msgid "Improved text legibility"
 msgstr "Poboljšana čitljivost teksta"
 
-#: data/metainfo.appdata.xml.in:166
+#: data/metainfo.appdata.xml.in:168
 msgid "Updated runtime to GNOME 43"
 msgstr "Aktualizirano vrijeme izvođenja na GNOME 43"
 
-#: data/metainfo.appdata.xml.in:168
+#: data/metainfo.appdata.xml.in:170
 msgid "New and updated translations:"
 msgstr "Novi i aktualizirani prijevodi:"
 
-#: data/metainfo.appdata.xml.in:170
+#: data/metainfo.appdata.xml.in:172
 msgid "French translations thanks to Irénée Thirion"
 msgstr "Prijevodi na francuski: Irénée Thirion"
 
-#: data/metainfo.appdata.xml.in:171
+#: data/metainfo.appdata.xml.in:173
 msgid "Italian translations thanks to Albano Battistella"
 msgstr "Prijevodi na talijanski: Albano Battistella"
 
-#: data/metainfo.appdata.xml.in:172
+#: data/metainfo.appdata.xml.in:174
 msgid "Russian translations thanks to @ViktorOn"
 msgstr "Prijevodi na ruski: @ViktorOn"
 
-#: data/metainfo.appdata.xml.in:173
+#: data/metainfo.appdata.xml.in:175
 msgid ""
 "Improvements to developer tools to make translations easier to keep up to "
 "date"
 msgstr "Poboljšanja alata za programere kako bi se prijevodi lakše ažurirali"
 
-#: data/metainfo.appdata.xml.in:179
+#: data/metainfo.appdata.xml.in:181
 msgid "Complete reworking"
 msgstr "Potpuna prerada"
 
-#: data/metainfo.appdata.xml.in:181
+#: data/metainfo.appdata.xml.in:183
 msgid "elementary → GNOME styling"
 msgstr "elementary → GNOME stil"
 
-#: data/metainfo.appdata.xml.in:182
+#: data/metainfo.appdata.xml.in:184
 msgid "Refreshed icons thanks again to Micah Ilbery"
 msgstr "Novi izgled ikona: Micah Ilbery"
 
-#: data/metainfo.appdata.xml.in:183
+#: data/metainfo.appdata.xml.in:185
 msgid ""
 "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
 msgstr ""
 "Tehnička nadogradnja na najnoviju GNOME platformu uključujući GTK4 i "
 "LibAdwaita"
 
-#: data/metainfo.appdata.xml.in:189 data/metainfo.appdata.xml.in:197
+#: data/metainfo.appdata.xml.in:191 data/metainfo.appdata.xml.in:199
 msgid "Under-the-hood improvements:"
 msgstr "Poboljšanja u pozadini:"
 
-#: data/metainfo.appdata.xml.in:191 data/metainfo.appdata.xml.in:200
+#: data/metainfo.appdata.xml.in:193 data/metainfo.appdata.xml.in:202
 msgid "Update Stripe key"
 msgstr "Ažuriran Stripe ključ"
 
-#: data/metainfo.appdata.xml.in:199
+#: data/metainfo.appdata.xml.in:201
 msgid "Stricter sandboxing"
 msgstr "Stroži sandboxing"
 
-#: data/metainfo.appdata.xml.in:206
+#: data/metainfo.appdata.xml.in:208
 msgid "Add \"calculator\" category to launcher"
 msgstr "Dodana kategorija „kalkulator“ u pokretaču"
 
-#: data/metainfo.appdata.xml.in:211
+#: data/metainfo.appdata.xml.in:213
 msgid "Under-the-hood packaging updates for elementary OS 6"
 msgstr "Ažuriranja pakiranja za elementary OS 6"
 
-#: data/metainfo.appdata.xml.in:216
+#: data/metainfo.appdata.xml.in:218
 msgid ""
 "The Adventure of Link: you can now share Dippi results as a link so anyone "
 "can see all the details and make their own calculations. Plus:"
@@ -317,149 +317,149 @@ msgstr ""
 "Avantura poveznice: sada je moguće dijeliti Dippi rezultate kao poveznicu "
 "tako da svatko može vidjeti sve detalje i napraviti vlastite izračune. Plus:"
 
-#: data/metainfo.appdata.xml.in:218
+#: data/metainfo.appdata.xml.in:220
 msgid "More details on launch"
 msgstr "Više detalja tijekom pokretanja"
 
-#: data/metainfo.appdata.xml.in:219
+#: data/metainfo.appdata.xml.in:221
 msgid "Bolded sections of descriptions for easier skimmability"
 msgstr "Podebljani dijelovi opisa za lakši pregled"
 
-#: data/metainfo.appdata.xml.in:220
+#: data/metainfo.appdata.xml.in:222
 msgid "Fix window resizing for different results"
 msgstr "Ispravljeno mijenjanje veličine prozora za različite rezultate"
 
-#: data/metainfo.appdata.xml.in:221
+#: data/metainfo.appdata.xml.in:223
 msgid "Animate between results"
 msgstr "Animacija između rezultata"
 
-#: data/metainfo.appdata.xml.in:227
+#: data/metainfo.appdata.xml.in:229
 msgid "Port to elementary OS 6"
 msgstr "Implementacija za elementary OS 6"
 
-#: data/metainfo.appdata.xml.in:229
+#: data/metainfo.appdata.xml.in:231
 msgid "Follow the dark style preference"
 msgstr "Slijedi postavke tamnog stila"
 
-#: data/metainfo.appdata.xml.in:230
+#: data/metainfo.appdata.xml.in:232
 msgid "Drag window from anywhere"
 msgstr "Povlačenje prozora s bilo kojeg mjesta"
 
-#: data/metainfo.appdata.xml.in:231
+#: data/metainfo.appdata.xml.in:233
 msgid "Refreshed typography and design"
 msgstr "Osvježena tipografija i dizajn"
 
-#: data/metainfo.appdata.xml.in:237
+#: data/metainfo.appdata.xml.in:239
 msgid "Code style and organization fixes"
 msgstr "Ispravci stila koda i organizacije"
 
-#: data/metainfo.appdata.xml.in:244
+#: data/metainfo.appdata.xml.in:246
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
 msgstr "Aktualiziran prijevod na španjolski: Adolf Jayme-Barrientos"
 
-#: data/metainfo.appdata.xml.in:245
+#: data/metainfo.appdata.xml.in:247
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
 msgstr "Zdravo! Prijevodi na nizozemski: Heimen Stoffels"
 
-#: data/metainfo.appdata.xml.in:251
+#: data/metainfo.appdata.xml.in:253
 msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr "Sretna nova godina! Danas samo neki ispravci u podacima aplikacije. 😉"
 
-#: data/metainfo.appdata.xml.in:256
+#: data/metainfo.appdata.xml.in:258
 msgid "Under-the-hood tweaks"
 msgstr "Podešavanja u pozadini"
 
-#: data/metainfo.appdata.xml.in:261
+#: data/metainfo.appdata.xml.in:263
 msgid "Hello, Juno!"
 msgstr "Bok, Juno!"
 
-#: data/metainfo.appdata.xml.in:263
+#: data/metainfo.appdata.xml.in:265
 msgid "Update translation link"
 msgstr "Aktualizirana poveznica za prevođenje"
 
-#: data/metainfo.appdata.xml.in:264
+#: data/metainfo.appdata.xml.in:266
 msgid "Under the hood cleanup"
 msgstr "Čišćenje u pozadini"
 
-#: data/metainfo.appdata.xml.in:270
+#: data/metainfo.appdata.xml.in:272
 msgid "Add translation instructions and update translation link in app data"
 msgstr ""
 "Dodavanje uputa za prevođenje i aktualiziranje poveznice za prevođenje u "
 "podacima aplikacije"
 
-#: data/metainfo.appdata.xml.in:275
+#: data/metainfo.appdata.xml.in:277
 msgid "Added translation link to app data"
 msgstr "Dodana je poveznica za prevođenje u podatke aplikacije"
 
-#: data/metainfo.appdata.xml.in:280
+#: data/metainfo.appdata.xml.in:282
 msgid "Lithuanian Translation"
 msgstr "Prijevod na litavski"
 
-#: data/metainfo.appdata.xml.in:282
+#: data/metainfo.appdata.xml.in:284
 msgid "Lithuanian translation thanks to welaq"
 msgstr "Prijevod na litavski: welaqu"
 
-#: data/metainfo.appdata.xml.in:283
+#: data/metainfo.appdata.xml.in:285
 msgid "Fixed deprecation"
 msgstr "Ispravljeno zastarivanje"
 
-#: data/metainfo.appdata.xml.in:289
+#: data/metainfo.appdata.xml.in:291
 msgid "Translation & Tweaks"
 msgstr "Prijevod i podešavanja"
 
-#: data/metainfo.appdata.xml.in:291
+#: data/metainfo.appdata.xml.in:293
 msgid "French translations"
 msgstr "Prijevodi na francuski"
 
-#: data/metainfo.appdata.xml.in:292
+#: data/metainfo.appdata.xml.in:294
 msgid "Hide labels when data is invalid"
 msgstr "Sakrij oznake kada podaci nisu valjani"
 
-#: data/metainfo.appdata.xml.in:293
+#: data/metainfo.appdata.xml.in:295
 msgid "Fix max length on width entry"
 msgstr "Ispravljena maksimalna duljina pri unosu širine"
 
-#: data/metainfo.appdata.xml.in:294
+#: data/metainfo.appdata.xml.in:296
 msgid "Fix displayed AppData"
 msgstr "Ispravak prikazanih podataka aplikacije"
 
-#: data/metainfo.appdata.xml.in:296
+#: data/metainfo.appdata.xml.in:298
 msgid "Behind the scenes:"
 msgstr "U pozadini:"
 
-#: data/metainfo.appdata.xml.in:298
+#: data/metainfo.appdata.xml.in:300
 msgid "Add editorconfig and Travis for more consistency"
 msgstr "Dodavanje editorconfig i Travis za veću dosljednost"
 
-#: data/metainfo.appdata.xml.in:299
+#: data/metainfo.appdata.xml.in:301
 msgid "Split utilities out into their own file"
 msgstr "Podijela uslužnih programa u vlastite datoteke"
 
-#: data/metainfo.appdata.xml.in:305
+#: data/metainfo.appdata.xml.in:307
 msgid "AppData tweaks"
 msgstr "Podešavanja u podacima aplikacije"
 
-#: data/metainfo.appdata.xml.in:310
+#: data/metainfo.appdata.xml.in:312
 msgid "Fixed:"
 msgstr "Ispravljeno:"
 
-#: data/metainfo.appdata.xml.in:312
+#: data/metainfo.appdata.xml.in:314
 msgid "Window no longer resizes when switching between analyses"
 msgstr "Prozor više ne mijenja veličinu prilikom prebacivanja između analiza"
 
-#: data/metainfo.appdata.xml.in:318
+#: data/metainfo.appdata.xml.in:320
 msgid "Under the hood changes:"
 msgstr "Podešavanja u pozadini:"
 
-#: data/metainfo.appdata.xml.in:320
+#: data/metainfo.appdata.xml.in:322
 msgid "Include success icon as a fallback for other icon sets"
 msgstr "Uključivanje ikone uspjeha kao rezerve za druge skupove ikona"
 
-#: data/metainfo.appdata.xml.in:326
+#: data/metainfo.appdata.xml.in:328
 msgid "Changes:"
 msgstr "Promjene:"
 
-#: data/metainfo.appdata.xml.in:328
+#: data/metainfo.appdata.xml.in:330
 msgid ""
 "Tweaked DPI ranges for internal displays to be a tiny more strict for the "
 "“ideal” range"
@@ -467,123 +467,123 @@ msgstr ""
 "Prilagođeni DPI rasponi za interne ekrane kako bi bili malo stroži za "
 "„idealni“ raspon"
 
-#: data/metainfo.appdata.xml.in:329
+#: data/metainfo.appdata.xml.in:331
 msgid "Metadata additions and tweaks"
 msgstr "Dodavanja i podešavanja metapodataka"
 
-#: data/metainfo.appdata.xml.in:331
+#: data/metainfo.appdata.xml.in:333
 msgid "Fixes:"
 msgstr "Ispravci:"
 
-#: data/metainfo.appdata.xml.in:333
+#: data/metainfo.appdata.xml.in:335
 msgid "Install all available icon sizes"
 msgstr "Instaliraj sve dostupne veličine ikona"
 
-#: data/metainfo.appdata.xml.in:334
+#: data/metainfo.appdata.xml.in:336
 msgid "Allow all languages to be translated"
 msgstr "Dozvoli prijevode na sve jezike"
 
-#: data/metainfo.appdata.xml.in:336
+#: data/metainfo.appdata.xml.in:338
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
 msgstr "I još mnogo toga! Pročitaj nedavni post na blogu na goo.gl/tKwkq4"
 
-#: data/metainfo.appdata.xml.in:342
+#: data/metainfo.appdata.xml.in:344
 msgid "Added logical resolution"
 msgstr "Dodana je logička rezolucija"
 
-#: data/metainfo.appdata.xml.in:343
+#: data/metainfo.appdata.xml.in:345
 msgid "Cleaned up design by moving display details to below the analysis"
 msgstr "Očišćen dizajn premještanjem detalja ekrana ispod analize"
 
-#: data/metainfo.appdata.xml.in:350
+#: data/metainfo.appdata.xml.in:352
 msgid "New purple accent color"
 msgstr "Nova ljubičasta boja za isticanje"
 
-#: data/metainfo.appdata.xml.in:351
+#: data/metainfo.appdata.xml.in:353
 msgid "Refined margins and alignment"
 msgstr "Poboljšane margine i poravnanje"
 
-#: data/metainfo.appdata.xml.in:352
+#: data/metainfo.appdata.xml.in:354
 msgid "Escape now closes the window"
 msgstr "Tipka „escape“ sada zatvara prozor"
 
-#: data/metainfo.appdata.xml.in:353
+#: data/metainfo.appdata.xml.in:355
 msgid "Lots of little code cleanup"
 msgstr "Puno malih čišćenja koda"
 
-#: data/metainfo.appdata.xml.in:360
+#: data/metainfo.appdata.xml.in:362
 msgid "Fix bug with setting display icon"
 msgstr "Ispravljena greška s postavljanjem ikone ekrana"
 
-#: data/metainfo.appdata.xml.in:361
+#: data/metainfo.appdata.xml.in:363
 msgid "Under-the-hood fixes"
 msgstr "Popravci u pozadini"
 
-#: data/metainfo.appdata.xml.in:367
+#: data/metainfo.appdata.xml.in:369
 msgid "Display icon now changes according to display type"
 msgstr "Ikona ekrana se sada mijenja ovisno o vrsti ekrana"
 
-#: data/metainfo.appdata.xml.in:373
+#: data/metainfo.appdata.xml.in:375
 msgid "Select between laptop or desktop"
 msgstr "Biraj između laptopa ili desktop računala"
 
-#: data/metainfo.appdata.xml.in:374
+#: data/metainfo.appdata.xml.in:376
 msgid "Refreshed icons thanks to Micah Ilbery"
 msgstr "Nove ikone: Micah Ilbery"
 
-#: data/metainfo.appdata.xml.in:381
+#: data/metainfo.appdata.xml.in:383
 msgid "Completely reworked DPI ranges"
 msgstr "Potpuno prerađeni DPI rasponi"
 
-#: data/metainfo.appdata.xml.in:383 data/metainfo.appdata.xml.in:393
+#: data/metainfo.appdata.xml.in:385 data/metainfo.appdata.xml.in:395
 msgid "Tweaked DPI assessment and reasoning copy"
 msgstr "Dorađena analiza DPI-ja i tekst obrazloženja"
 
-#: data/metainfo.appdata.xml.in:384
+#: data/metainfo.appdata.xml.in:386
 msgid "Flattened titlebar"
 msgstr "Pojednostavljena naslovna traka"
 
-#: data/metainfo.appdata.xml.in:385
+#: data/metainfo.appdata.xml.in:387
 msgid "Fixed bugs and warnings"
 msgstr "Ispravljene greške i upozorenja"
 
-#: data/metainfo.appdata.xml.in:392
+#: data/metainfo.appdata.xml.in:394
 msgid "All new side-by-side UI"
 msgstr "Potpuno novo usporedno korisničko sučelje"
 
-#: data/metainfo.appdata.xml.in:394
+#: data/metainfo.appdata.xml.in:396
 msgid "Added icons to make assessment clearer"
 msgstr "Dodane su ikone za jasniju analizu"
 
-#: data/metainfo.appdata.xml.in:401
+#: data/metainfo.appdata.xml.in:403
 msgid "Made visualization interactive!"
 msgstr "Vizualizacija je sada interaktivna!"
 
-#: data/metainfo.appdata.xml.in:402
+#: data/metainfo.appdata.xml.in:404
 msgid "Added Cassidy-approval and reasoning"
 msgstr "Dodano Cassidyjevo odobrenje i obrazloženje"
 
-#: data/metainfo.appdata.xml.in:403
+#: data/metainfo.appdata.xml.in:405
 msgid "Fix a bug where sometimes an extra zero would sneak in"
 msgstr "Ispravljena greška kada bi se ponekad ušuljala dodatna nula"
 
-#: data/metainfo.appdata.xml.in:404
+#: data/metainfo.appdata.xml.in:406
 msgid "Under-the-hood restructuring"
 msgstr "Restrukturiranje u pozadini"
 
-#: data/metainfo.appdata.xml.in:411
+#: data/metainfo.appdata.xml.in:413
 msgid "Shiny new icon"
 msgstr "Sjajna nova ikona"
 
-#: data/metainfo.appdata.xml.in:412
+#: data/metainfo.appdata.xml.in:414
 msgid "Added visualization to UI"
 msgstr "Dodana je vizualizacija u korisničko sučelje"
 
-#: data/metainfo.appdata.xml.in:413
+#: data/metainfo.appdata.xml.in:415
 msgid "Significant code cleanup"
 msgstr "Značajno čišćenje koda"
 
-#: data/metainfo.appdata.xml.in:419
+#: data/metainfo.appdata.xml.in:421
 msgid "Initial release"
 msgstr "Prvo izdanje"
 
