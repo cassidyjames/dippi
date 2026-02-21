@@ -35,7 +35,7 @@
     <p>Special thanks to Micah Ilbery for the shiny icons.</p>
   </description>
   <id>com.cassidyjames.dippi</id>
-  <launchable type="desktop-id">com.github.cassidyjames.dippi.desktop</launchable>
+  <launchable type="desktop-id">com.cassidyjames.dippi.desktop</launchable>
   <provides>
     <binary>com.cassidyjames.dippi</binary>
     <id>com.github.cassidyjames.dippi</id>
