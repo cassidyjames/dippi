@@ -26,11 +26,14 @@ template $DippiMainWindow: Adw.ApplicationWindow {
     max-sidebar-width: 360;
 
     sidebar: Adw.NavigationPage {
+      title: _("Dippi");
       tag: "input";
 
       child: Adw.ToolbarView {
         [top]
         Adw.HeaderBar {
+          show-title: false;
+
           styles [
             "flat",
           ]
@@ -150,11 +153,14 @@ template $DippiMainWindow: Adw.ApplicationWindow {
     };
 
     content: Adw.NavigationPage {
+      title: _("Result");
       tag: "result";
 
       child: Adw.ToolbarView {
         [top]
         Adw.HeaderBar {
+        show-title: false;
+
           styles [
             "flat",
           ]
