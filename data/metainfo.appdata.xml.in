@@ -3,6 +3,7 @@
 <component type="desktop">
   <name>Dippi</name>
   <summary>Calculate display info like DPI</summary>
+  <summary xml:lang="hr">Izračunavanje podataka ekrana kao DPI</summary>
   <branding>
     <color type="primary" scheme_preference="light">#f66151</color>
     <color type="primary" scheme_preference="dark">#813d9c</color>
@@ -33,6 +34,27 @@
       <li>Too High DPI</li>
     </ul>
     <p>Special thanks to Micah Ilbery for the shiny icons.</p>
+    <p xml:lang="hr">Analiziraj bilo koji ekran. Unesi nekoliko jednostavnih detalja i izračunaj omjer, DPI i druge detalje određenog ekrana. Izvrsno za odlučivanje kupnje laptopa ili eksternog monitora i hoće li se smatrati HiDPI-jem.</p>
+    <p>Puno praktičnih funkcija:</p>
+    <ul>
+      <li>Saznaj je li ekran dobar izbor na temelju njegove veličine i rezolucije</li>
+      <li>Dobij savjet o različitim gustoćama</li>
+      <li>Saznaj logičku rezoluciju</li>
+      <li>Razlikuj laptop i desktop ekrane</li>
+      <li>Apsolutno jednostavno: sve u slatkom malom prozoru</li>
+    </ul>
+    <p>Temeljio sam svoju stručnost i iskustvo u isporuci HiDPI hardvera i softvera za System76 i elementary.</p>
+    <p>Otkriva gustoću ekrana:</p>
+    <ul>
+      <li>Vrlo nizak DPI,</li>
+      <li>Prilično nizak DPI,</li>
+      <li>Idealno za LoDPI,</li>
+      <li>Potencijalno problematično,</li>
+      <li>Idealno za HiDPI,</li>
+      <li>Prilično visoko za HiDPI, ili</li>
+      <li>Previsok DPI</li>
+    </ul>
+    <p>Posebna zahvala Micahu Ilberyju na sjajnim ikonama.</p>
   </description>
   <id>com.cassidyjames.dippi</id>
   <launchable type="desktop-id">com.cassidyjames.dippi.desktop</launchable>

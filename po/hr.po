@@ -2,22 +2,22 @@
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
 # Automatically generated, 2018.
-# Milo Ivir <mail@mivirtype.de>, 2025.
+# Milo Ivir <mail@mivirtype.de>, 2025., 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.cassidyjames.dippi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-21 03:18+0000\n"
-"PO-Revision-Date: 2026-01-31 15:20+0100\n"
+"PO-Revision-Date: 2026-02-21 21:06+0100\n"
 "Last-Translator: Milo Ivir <mail@mivirtype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.8\n"
 
 #: data/metainfo.appdata.xml.in:4 data/launcher.desktop.in:2 src/dippi.blp:10
@@ -35,14 +35,13 @@ msgstr "Cassidy James Blaede"
 
 #: data/metainfo.appdata.xml.in:15
 msgid ""
-"Analyze any display. Input a few simple details and figure out the aspect "
-"ratio, DPI, and other details of a particular display. Great for deciding "
-"which laptop or external monitor to purchase, and if it would be considered "
-"HiDPI."
+"Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and "
+"other details of a particular display. Great for deciding which laptop or external "
+"monitor to purchase, and if it would be considered HiDPI."
 msgstr ""
-"Analiziraj bilo koji ekran. Unesi nekoliko jednostavnih detalja i izračunaj "
-"omjer, DPI i druge detalje određenog ekrana. Izvrsno za odlučivanje kupnje "
-"laptopa ili eksternog monitora i hoće li se smatrati HiDPI-jem."
+"Analiziraj bilo koji ekran. Unesi nekoliko jednostavnih detalja i izračunaj omjer, DPI i "
+"druge detalje određenog ekrana. Izvrsno za odlučivanje kupnje laptopa ili eksternog "
+"monitora i hoće li se smatrati HiDPI-jem."
 
 #: data/metainfo.appdata.xml.in:16
 msgid "Lots of handy features:"
@@ -50,8 +49,7 @@ msgstr "Puno praktičnih funkcija:"
 
 #: data/metainfo.appdata.xml.in:18
 msgid "Find out if a display is a good choice based on its size and resolution"
-msgstr ""
-"Saznaj je li ekran dobar izbor na temelju njegove veličine i rezolucije"
+msgstr "Saznaj je li ekran dobar izbor na temelju njegove veličine i rezolucije"
 
 #: data/metainfo.appdata.xml.in:19
 msgid "Get advice about different densities"
@@ -71,11 +69,11 @@ msgstr "Apsolutno jednostavno: sve u slatkom malom prozoru"
 
 #: data/metainfo.appdata.xml.in:24
 msgid ""
-"Based my expertise and experience shipping HiDPI hardware and software at "
-"System76 and elementary."
+"Based my expertise and experience shipping HiDPI hardware and software at System76 and "
+"elementary."
 msgstr ""
-"Temeljio sam svoju stručnost i iskustvo u isporuci HiDPI hardvera i softvera "
-"za System76 i elementary."
+"Temeljio sam svoju stručnost i iskustvo u isporuci HiDPI hardvera i softvera za System76 "
+"i elementary."
 
 #: data/metainfo.appdata.xml.in:25
 msgid "Tells you if a display’s density is:"
@@ -114,28 +112,23 @@ msgid "Special thanks to Micah Ilbery for the shiny icons."
 msgstr "Posebna zahvala Micahu Ilberyju na sjajnim ikonama."
 
 #: data/metainfo.appdata.xml.in:59 data/metainfo.appdata.xml.in:75
-msgid ""
-"Result for a 16-inch laptop display at 3840×2160, showing it is ideal for "
-"HiDPI"
+msgid "Result for a 16-inch laptop display at 3840×2160, showing it is ideal for HiDPI"
 msgstr ""
-"Rezultat za 16-inčni ekran laptopa s rezolucijom od 3840×2160, što pokazuje "
-"da je idealan za HiDPI"
+"Rezultat za 16-inčni ekran laptopa s rezolucijom od 3840×2160, što pokazuje da je idealan "
+"za HiDPI"
 
 #: data/metainfo.appdata.xml.in:63 data/metainfo.appdata.xml.in:79
 msgid ""
-"Result for a 13-inch laptop display at 1920×1080, showing it is potentially "
-"problematic"
+"Result for a 13-inch laptop display at 1920×1080, showing it is potentially problematic"
 msgstr ""
-"Rezultat za 13-inčni ekran laptopa s rezolucijom od 1920×1080, pokazujući da "
-"je potencijalno problematičan"
+"Rezultat za 13-inčni ekran laptopa s rezolucijom od 1920×1080, pokazujući da je "
+"potencijalno problematičan"
 
 #: data/metainfo.appdata.xml.in:67 data/metainfo.appdata.xml.in:83
-msgid ""
-"Result for a 27-inch desktop display at 2560×1440, showing it is ideal for "
-"loDPI"
+msgid "Result for a 27-inch desktop display at 2560×1440, showing it is ideal for loDPI"
 msgstr ""
-"Rezultat za 27-inčni ekran desktop računala s rezolucijom od 2560×1440, što "
-"pokazuje da je idealan za loDPI"
+"Rezultat za 27-inčni ekran desktop računala s rezolucijom od 2560×1440, što pokazuje da "
+"je idealan za loDPI"
 
 #: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
 msgid "Default state of the app, inviting you to enter a display's details"
@@ -143,20 +136,19 @@ msgstr "Zadano stanje aplikacije, pozivajući te da uneseš detalje ekrana"
 
 #: data/metainfo.appdata.xml.in:94
 msgid "Hello Adwaita (finally)!"
-msgstr ""
+msgstr "Pozdrav Adwaita (konačno)!"
 
 #: data/metainfo.appdata.xml.in:96
 msgid "Redesigned with a modern GNOME-style split view and inputs"
-msgstr ""
+msgstr "Novi dizajn s modernim GNOME stilom podijeljenog prikaza i unosa"
 
 #: data/metainfo.appdata.xml.in:97
 msgid "Adapts to smaller and larger window sizes—including on phones"
-msgstr ""
+msgstr "Prilagođava se manjim i većim veličinama prozora – uključujući i na mobitelima"
 
 #: data/metainfo.appdata.xml.in:98
-#, fuzzy
 msgid "Croatian translations thanks to Milo Ivir"
-msgstr "Prijevodi na ruski: @ViktorOn"
+msgstr "Prijevodi na hrvatski: Milo Ivir"
 
 #: data/metainfo.appdata.xml.in:104
 msgid "Under the hood changes (migrated app ID)"
@@ -172,9 +164,7 @@ msgstr "Bolje rukovanje nekih uobičajenih rezolucija/omjera"
 
 #: data/metainfo.appdata.xml.in:112
 msgid "Respect desktop accent color instead of always using purple"
-msgstr ""
-"Koristi se boja isticanja desktop računala umjesto da se uvijek koristi "
-"ljubičasta"
+msgstr "Koristi se boja isticanja desktop računala umjesto da se uvijek koristi ljubičasta"
 
 #: data/metainfo.appdata.xml.in:113
 msgid "Updated with the latest GNOME 49 platform and Adwaita 1.8"
@@ -194,9 +184,7 @@ msgstr "Svjetlija boja ikona za svježu estetiku i bolji kontrast"
 
 #: data/metainfo.appdata.xml.in:127
 msgid "Improved app store listing with a shorter summary and new brand colors"
-msgstr ""
-"Poboljšani unos u trgovini aplikacija s kraćim sažetkom i novim bojama robne "
-"marke"
+msgstr "Poboljšani unos u trgovini aplikacija s kraćim sažetkom i novim bojama robne marke"
 
 #: data/metainfo.appdata.xml.in:128
 msgid "Updated for GNOME 46"
@@ -229,8 +217,7 @@ msgstr "Prijevodi i GNOME 44"
 #: data/metainfo.appdata.xml.in:159
 msgid "Hotfix: fix About window when closing and re-opening it"
 msgstr ""
-"Hitni popravak: popravak prozora O aplikaciji prilikom zatvaranja i ponovnog "
-"otvaranja"
+"Hitni popravak: popravak prozora O aplikaciji prilikom zatvaranja i ponovnog otvaranja"
 
 #: data/metainfo.appdata.xml.in:164
 msgid "Even GNOMEier"
@@ -265,9 +252,7 @@ msgid "Russian translations thanks to @ViktorOn"
 msgstr "Prijevodi na ruski: @ViktorOn"
 
 #: data/metainfo.appdata.xml.in:175
-msgid ""
-"Improvements to developer tools to make translations easier to keep up to "
-"date"
+msgid "Improvements to developer tools to make translations easier to keep up to date"
 msgstr "Poboljšanja alata za programere kako bi se prijevodi lakše ažurirali"
 
 #: data/metainfo.appdata.xml.in:181
@@ -283,11 +268,8 @@ msgid "Refreshed icons thanks again to Micah Ilbery"
 msgstr "Novi izgled ikona: Micah Ilbery"
 
 #: data/metainfo.appdata.xml.in:185
-msgid ""
-"Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
-msgstr ""
-"Tehnička nadogradnja na najnoviju GNOME platformu uključujući GTK4 i "
-"LibAdwaita"
+msgid "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
+msgstr "Tehnička nadogradnja na najnoviju GNOME platformu uključujući GTK4 i LibAdwaita"
 
 #: data/metainfo.appdata.xml.in:191 data/metainfo.appdata.xml.in:199
 msgid "Under-the-hood improvements:"
@@ -311,11 +293,11 @@ msgstr "Ažuriranja pakiranja za elementary OS 6"
 
 #: data/metainfo.appdata.xml.in:218
 msgid ""
-"The Adventure of Link: you can now share Dippi results as a link so anyone "
-"can see all the details and make their own calculations. Plus:"
+"The Adventure of Link: you can now share Dippi results as a link so anyone can see all "
+"the details and make their own calculations. Plus:"
 msgstr ""
-"Avantura poveznice: sada je moguće dijeliti Dippi rezultate kao poveznicu "
-"tako da svatko može vidjeti sve detalje i napraviti vlastite izračune. Plus:"
+"Avantura poveznice: sada je moguće dijeliti Dippi rezultate kao poveznicu tako da svatko "
+"može vidjeti sve detalje i napraviti vlastite izračune. Plus:"
 
 #: data/metainfo.appdata.xml.in:220
 msgid "More details on launch"
@@ -384,8 +366,8 @@ msgstr "Čišćenje u pozadini"
 #: data/metainfo.appdata.xml.in:272
 msgid "Add translation instructions and update translation link in app data"
 msgstr ""
-"Dodavanje uputa za prevođenje i aktualiziranje poveznice za prevođenje u "
-"podacima aplikacije"
+"Dodavanje uputa za prevođenje i aktualiziranje poveznice za prevođenje u podacima "
+"aplikacije"
 
 #: data/metainfo.appdata.xml.in:277
 msgid "Added translation link to app data"
@@ -461,11 +443,9 @@ msgstr "Promjene:"
 
 #: data/metainfo.appdata.xml.in:330
 msgid ""
-"Tweaked DPI ranges for internal displays to be a tiny more strict for the "
-"“ideal” range"
+"Tweaked DPI ranges for internal displays to be a tiny more strict for the “ideal” range"
 msgstr ""
-"Prilagođeni DPI rasponi za interne ekrane kako bi bili malo stroži za "
-"„idealni“ raspon"
+"Prilagođeni DPI rasponi za interne ekrane kako bi bili malo stroži za „idealni“ raspon"
 
 #: data/metainfo.appdata.xml.in:331
 msgid "Metadata additions and tweaks"
@@ -596,27 +576,24 @@ msgid "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;as
 msgstr "DPI;gustoća;monitor;rezolucija;prikaz;širina;visina;ekran;HiDPI;loDPI;omjer;"
 
 #: src/dippi.blp:44
-#, fuzzy
 msgid "About Dippi"
-msgstr "Dippi"
+msgstr "O aplikaciji Dippi"
 
 #: src/dippi.blp:74
-#, fuzzy
 msgid "Diagonal inches"
-msgstr "Veličina dijagonale:"
+msgstr "Dijagonalni inči"
 
 #: src/dippi.blp:86
 msgid "Width (px)"
-msgstr ""
+msgstr "Širina (px)"
 
 #: src/dippi.blp:96
 msgid "Height (px)"
-msgstr ""
+msgstr "Visina (px)"
 
 #: src/dippi.blp:106
-#, fuzzy
 msgid "Type"
-msgstr "Vrsta:"
+msgstr "Vrsta"
 
 #: src/dippi.blp:121 src/Utils.vala:15
 msgid "Laptop"
@@ -628,27 +605,28 @@ msgstr "Desktop"
 
 #: src/dippi.blp:141
 msgid "Calculate"
-msgstr ""
+msgstr "Izračunaj"
 
 #: src/dippi.blp:156
 msgid "Result"
-msgstr ""
+msgstr "Rezultat"
 
 #: src/dippi.blp:205
 msgid "Analyze a Display"
 msgstr "Analiziraj ekran"
 
 #: src/dippi.blp:218
-#, fuzzy
 msgid ""
-"For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–"
-"156 is ideal for laptops</b>.\n"
+"For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–156 is ideal "
+"for laptops</b>.\n"
 "\n"
-"For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
-"for laptops</b>."
+"For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."
 msgstr ""
-"Za LoDPI je raspon DPI-a od <b>90 do 150 idealan za destktop računala</b>, "
-"dok je raspon od <b>124 do 156 idealan za laptope</b>."
+"Za LoDPI je raspon DPI-a od <b>90 do 150 idealan za destktop računala</b>, dok je raspon "
+"od <b>124 do 156 idealan za laptope</b>.\n"
+"\n"
+"Za HiDPI je raspon od <b>180 do 300 idealan za destktop računala</b>, dok raspon od "
+"<b>248 do 312 idealan za laptope</b>."
 
 #: src/dippi.blp:254
 msgid "Very Low DPI"
@@ -656,11 +634,11 @@ msgstr "Vrlo nizak DPI"
 
 #: src/dippi.blp:267
 msgid ""
-"Text and UI are likely to be too big for typical viewing distances. <b>Avoid "
-"if possible.</b>"
+"Text and UI are likely to be too big for typical viewing distances. <b>Avoid if possible."
+"</b>"
 msgstr ""
-"Tekst i korisničko sučelje će vjerojatno biti preveliki za tipične "
-"udaljenosti od ekrana. <b>Izbjegni ako je moguće.</b>"
+"Tekst i korisničko sučelje će vjerojatno biti preveliki za tipične udaljenosti od ekrana. "
+"<b>Izbjegni ako je moguće.</b>"
 
 #: src/dippi.blp:303
 msgid "Fairly Low DPI"
@@ -668,12 +646,11 @@ msgstr "Prilično nizak DPI"
 
 #: src/dippi.blp:316
 msgid ""
-"Text and UI might be too big for typical viewing distances, but it's "
-"<b>largely up to user preference</b> and physical distance from the display."
+"Text and UI might be too big for typical viewing distances, but it's <b>largely up to "
+"user preference</b> and physical distance from the display."
 msgstr ""
-"Tekst i korisničko sučelje su možda preveliki za tipične udaljenosti od "
-"ekrana, ali to <b>ovisi o korisničkim postavkama</b> i fizičkoj udaljenosti "
-"od ekrana."
+"Tekst i korisničko sučelje su možda preveliki za tipične udaljenosti od ekrana, ali to "
+"<b>ovisi o korisničkim postavkama</b> i fizičkoj udaljenosti od ekrana."
 
 #: src/dippi.blp:352
 msgid "Ideal for LoDPI"
@@ -681,11 +658,11 @@ msgstr "Idealno za LoDPI"
 
 #: src/dippi.blp:365
 msgid ""
-"Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at "
-"typical viewing distances."
+"Not HiDPI, but <b>a nice sweet spot</b>. Text and UI should be legible at typical viewing "
+"distances."
 msgstr ""
-"Nije HiDPI, ali je <b>optimalno</b>. Tekst i korisničko sučelje bi trebali "
-"biti čitljivi na tipičnim udaljenostima od ekrana."
+"Nije HiDPI, ali je <b>optimalno</b>. Tekst i korisničko sučelje bi trebali biti čitljivi "
+"na tipičnim udaljenostima od ekrana."
 
 #: src/dippi.blp:401 src/dippi.blp:499 src/dippi.blp:548
 msgid "Potentially Problematic"
@@ -693,14 +670,13 @@ msgstr "Potencijalno problematično"
 
 #: src/dippi.blp:414
 msgid ""
-"Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too "
-"small by default</b>, but forcing HiDPI would make them appear too large. "
-"The experience may be slightly improved by increasing the text size."
+"Relatively high resolution, but not quite HiDPI. Text and UI <b>may be too small by "
+"default</b>, but forcing HiDPI would make them appear too large. The experience may be "
+"slightly improved by increasing the text size."
 msgstr ""
-"Relativno visoka rezolucija, ali ne baš HiDPI. Tekst i korisničko sučelje "
-"<b>mogu biti premali prema zadanim postavkama</b>, ali forsiranje HiDPI-ja "
-"bi ih učinilo prevelikima. Doživljaj se može malo poboljšati povećanjem "
-"veličine teksta."
+"Relativno visoka rezolucija, ali ne baš HiDPI. Tekst i korisničko sučelje <b>mogu biti "
+"premali prema zadanim postavkama</b>, ali forsiranje HiDPI-ja bi ih učinilo prevelikima. "
+"Doživljaj se može malo poboljšati povećanjem veličine teksta."
 
 #: src/dippi.blp:450
 msgid "Tweak for HiDPI"
@@ -708,33 +684,30 @@ msgstr "Podešavanje za HiDPI"
 
 #: src/dippi.blp:463
 msgid ""
-"This display may default to loDPI on some desktops, which could result in "
-"too-small text and UI. However, it <b>may be usable with HiDPI by manually "
-"enabling 2× scaling</b>. Further adjustments can be made by decreasing the "
-"text size."
+"This display may default to loDPI on some desktops, which could result in too-small text "
+"and UI. However, it <b>may be usable with HiDPI by manually enabling 2× scaling</b>. "
+"Further adjustments can be made by decreasing the text size."
 msgstr ""
-"Ovaj ekran može prema zadanim postavkama imati loDPI na nekim desktop "
-"računalima, što može rezultirati premalim tekstom i korisničkim sučeljem. "
-"Međutim, <b>može se koristiti s HiDPI-jem putem ručnog uključivanja "
-"dvostrukog skaliranja</b>. Daljnje prilagodbe se mogu izvršiti smanjenjem "
-"veličine teksta."
+"Ovaj ekran može prema zadanim postavkama imati loDPI na nekim desktop računalima, što "
+"može rezultirati premalim tekstom i korisničkim sučeljem. Međutim, <b>može se koristiti s "
+"HiDPI-jem putem ručnog uključivanja dvostrukog skaliranja</b>. Daljnje prilagodbe se mogu "
+"izvršiti smanjenjem veličine teksta."
 
 #: src/dippi.blp:512
 msgid ""
-"This display is in a very tricky range and is <b>not likely to work well</b> "
-"with integer scaling out of the box."
+"This display is in a very tricky range and is <b>not likely to work well</b> with integer "
+"scaling out of the box."
 msgstr ""
-"Ovaj ekran je u vrlo problematičnom rasponu i <b>vjerojatno neće dobro "
-"raditi</b> s cjelobrojnim skaliranjem."
+"Ovaj ekran je u vrlo problematičnom rasponu i <b>vjerojatno neće dobro raditi</b> s "
+"cjelobrojnim skaliranjem."
 
 #: src/dippi.blp:561
 msgid ""
-"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off "
-"HiDPI and increasing the text size might help."
+"HiDPI by default, but <b>text and UI may appear too large</b>. Turning off HiDPI and "
+"increasing the text size might help."
 msgstr ""
-"HiDPI prema zadanim postavkama, ali <b>tekst i korisničko sučelje mogu "
-"izgledati preveliki</b>. Isključivanje HiDPI-ja i povećanje veličine teksta "
-"bi moglo pomoći."
+"HiDPI prema zadanim postavkama, ali <b>tekst i korisničko sučelje mogu izgledati "
+"preveliki</b>. Isključivanje HiDPI-ja i povećanje veličine teksta bi moglo pomoći."
 
 #: src/dippi.blp:597
 msgid "Ideal for HiDPI"
@@ -742,11 +715,11 @@ msgstr "Idealno za HiDPI"
 
 #: src/dippi.blp:610
 msgid ""
-"Crisp HiDPI text and UI along with a readable size at typical viewing "
-"distances. <b>This is the jackpot.</b>"
+"Crisp HiDPI text and UI along with a readable size at typical viewing distances. <b>This "
+"is the jackpot.</b>"
 msgstr ""
-"Oštar HiDPI tekst i korisničko sučelje zajedno s čitljivom veličinom na "
-"tipičnim udaljenostima od ekrana. <b>Ovo je jackpot.</b>"
+"Oštar HiDPI tekst i korisničko sučelje zajedno s čitljivom veličinom na tipičnim "
+"udaljenostima od ekrana. <b>Ovo je jackpot.</b>"
 
 #: src/dippi.blp:646
 msgid "Fairly High for HiDPI"
@@ -754,17 +727,16 @@ msgstr "Prilično visoko za HiDPI"
 
 #: src/dippi.blp:659
 msgid ""
-"Text and UI are likely to appear <b>too small for typical viewing distances</"
-"b>. Increasing the text size may help."
+"Text and UI are likely to appear <b>too small for typical viewing distances</b>. "
+"Increasing the text size may help."
 msgstr ""
-"Tekst i korisničko sučelje će se vjerojatno činiti <b>premalim za tipične "
-"udaljenosti od ekrana</b>. Povećanje veličine teksta može pomoći."
+"Tekst i korisničko sučelje će se vjerojatno činiti <b>premalim za tipične udaljenosti od "
+"ekrana</b>. Povećanje veličine teksta može pomoći."
 
 #: src/dippi.blp:708
 msgid "Text and UI will appear <b>too small for typical viewing distances</b>."
 msgstr ""
-"Tekst i korisničko sučelje će izgledati <b>premali za tipične udaljenosti od "
-"ekrana</b>."
+"Tekst i korisničko sučelje će izgledati <b>premali za tipične udaljenosti od ekrana</b>."
 
 #: src/dippi.blp:758
 msgid "Share results…"
@@ -772,13 +744,13 @@ msgstr "Dijeli rezultate …"
 
 #: src/MainWindow.vala:68
 msgid ""
-"Input a few simple details and figure out the aspect ratio, DPI, and other "
-"details of a particular display. Great for deciding which laptop or external "
-"monitor to purchase, and if it would be considered HiDPI."
+"Input a few simple details and figure out the aspect ratio, DPI, and other details of a "
+"particular display. Great for deciding which laptop or external monitor to purchase, and "
+"if it would be considered HiDPI."
 msgstr ""
-"Unesi nekoliko jednostavnih detalja i dobij uvid omjer, DPI i druge detalje "
-"određenog ekrana. Izvrsno za odlučivanje kupnje laptopa ili eksternog "
-"monitora i hoće li se smatrati HiDPI-jem."
+"Unesi nekoliko jednostavnih detalja i dobij uvid omjer, DPI i druge detalje određenog "
+"ekrana. Izvrsno za odlučivanje kupnje laptopa ili eksternog monitora i hoće li se "
+"smatrati HiDPI-jem."
 
 #: src/MainWindow.vala:73
 msgid "translator-credits"
@@ -788,19 +760,3 @@ msgstr "Milo Ivir <mail@milotype.de>"
 #, c-format
 msgid "%d DPI"
 msgstr "%d DPI"
-
-#~ msgid "About"
-#~ msgstr "O aplikaciji"
-
-#~ msgid "Resolution:"
-#~ msgstr "Rezolucija:"
-
-#~ msgid "inches"
-#~ msgstr "inča"
-
-#~ msgid ""
-#~ "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
-#~ "for laptops</b>."
-#~ msgstr ""
-#~ "Za HiDPI je raspon DPI-a od <b>180 do 300 idealan za destktop računala</"
-#~ "b>, dok je raspon od <b>248 do 312 idealan za laptope</b>."
