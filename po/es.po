@@ -607,8 +607,8 @@ msgid ""
 "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal for laptops</b>."
 msgstr ""
 "Para LoDPI, un rango de PPP de <b>90–150 es ideal para escritorios</b> mientras que <b>124–156 es ideal para "
-"notebooks</b>.\r\n"
-"\r\n"
+"notebooks</b>.\n"
+"\n"
 "Para HiDPI, <b>180–300 es ideal para escritorios</b> mientras que <b>248–312 es ideal para notebooks</b>."
 
 #: src/dippi.blp:254
@@ -675,7 +675,7 @@ msgid ""
 "This display is in a very tricky range and is <b>not likely to work well</b> with integer scaling out of the "
 "box."
 msgstr ""
-"Esta pantalla se encuentra en un intervalo muy intricado y <b>es probable que no funcione bien<b/> de "
+"Esta pantalla se encuentra en un intervalo muy intricado y <b>es probable que no funcione bien</b> de "
 "inmediato con un ajuste de escala entero."
 
 #: src/dippi.blp:561
@@ -728,7 +728,7 @@ msgstr ""
 
 #: src/MainWindow.vala:73
 msgid "translator-credits"
-msgstr "translator-credits"
+msgstr "Félix Fischer, Adolfo Jayme Barrientos, Alain M."
 
 #: src/MainWindow.vala:202
 #, c-format
