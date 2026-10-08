@@ -70,7 +70,7 @@ msgid ""
 "elementary."
 msgstr ""
 "HiDPI აპარატურის და პროგრამების შეძენის ჩემს გამოცდილებასა და ცოდნაზე System76-ში და "
-"Elementary-ში."
+"elementary-ში."
 
 #: data/metainfo.appdata.xml.in:25
 msgid "Tells you if a display’s density is:"
@@ -152,7 +152,7 @@ msgstr "ცვლილებები შიდა სამზარეულ�
 
 #: data/metainfo.appdata.xml.in:109
 msgid "GNOME 49 “Brescia”"
-msgstr "GNOME 49 “Brescia\""
+msgstr "GNOME 49 “Brescia”"
 
 #: data/metainfo.appdata.xml.in:111
 msgid "Better handle several common resolutions/aspect ratios"
@@ -286,7 +286,7 @@ msgstr "'კალკულატორის' კატეგორიის �
 
 #: data/metainfo.appdata.xml.in:213
 msgid "Under-the-hood packaging updates for elementary OS 6"
-msgstr "შიდა სამზარეულოში მოხდა შეფუთვის განახლებები Elementary OS 6-ისთვის"
+msgstr "შიდა სამზარეულოში მოხდა შეფუთვის განახლებები elementary OS 6-ისთვის"
 
 #: data/metainfo.appdata.xml.in:218
 msgid ""

@@ -76,7 +76,7 @@ msgid ""
 "System76 and elementary."
 msgstr ""
 "HiDPI აპარატურის და პროგრამების შეძენის ჩემს გამოცდილებასა და ცოდნაზე "
-"System76-ში და Elementary-ში."
+"System76-ში და elementary-ში."
 
 #: data/metainfo.appdata.xml.in:20
 msgid "Tells you if a display’s density is:"
@@ -201,7 +201,7 @@ msgstr "'კალკულატორის' კატეგორიის �
 
 #: data/metainfo.appdata.xml.in:99
 msgid "Under-the-hood packaging updates for elementary OS 6"
-msgstr "შიდა სამზარეულოში მოხდა შეფუთვის განახლებები Elementary OS 6-ისთვის"
+msgstr "შიდა სამზარეულოში მოხდა შეფუთვის განახლებები elementary OS 6-ისთვის"
 
 #: data/metainfo.appdata.xml.in:104
 msgid ""
