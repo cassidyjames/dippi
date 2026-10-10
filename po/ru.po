@@ -103,7 +103,7 @@ msgstr "Достаточно высокий для HiDPI, или"
 
 #: data/metainfo.appdata.xml.in:33 src/dippi.blp:695
 msgid "Too High DPI"
-msgstr "Очень высокий DPI"
+msgstr "Слишком высокий DPI"
 
 #: data/metainfo.appdata.xml.in:35
 msgid "Special thanks to Micah Ilbery for the shiny icons."
