@@ -1,7 +1,7 @@
 # Italian translations for com.github.cassidyjames.dippi package.
 # Copyright (C) 2018 THE com.github.cassidyjames.dippi'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.cassidyjames.dippi package.
-# Albano Battistella <albano_battistella@hotmail.com>, 2022,2023,2024.
+# Albano Battistella <albano_battistella@hotmail.com>, 2022,2023,2024,2026.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-10 04:17+0000\n"
 "PO-Revision-Date: 2024-08-22 13:30+0100\n"
-"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -142,69 +142,63 @@ msgstr ""
 "Stato predefinito dell'app, che ti invita a inserire i dettagli di un display"
 
 #: data/metainfo.appdata.xml.in:94
-#, fuzzy
 msgid "GNOME 51 and translations"
-msgstr "GNOME 45 e correzione degli arresti anomali"
+msgstr "GNOME 51 e traduzioni"
 
 #: data/metainfo.appdata.xml.in:96
-#, fuzzy
 msgid "Updated with the latest GNOME 51 platform"
 msgstr ""
-"Aggiornamento tecnico all'ultima piattaforma GNOME, incluse GTK4 e LibAdwaita"
+"Aggiornato con la più recente piattaforma GNOME 51"
 
 #: data/metainfo.appdata.xml.in:97
-#, fuzzy
 msgid "Georgian translations thanks to Ekaterine Papava"
-msgstr "Traduzioni in russo grazie a @ViktorOn"
+msgstr "Traduzioni in georgiano a cura di Ekaterine Papava"
 
 #: data/metainfo.appdata.xml.in:98
-#, fuzzy
 msgid "Updated Spanish translations thanks to Félix Fischer"
-msgstr "Traduzione spagnola aggiornata grazie ad Adolfo Jayme-Barrientos"
+msgstr "Traduzioni in spagnolo aggiornate grazie a Félix Fischer."
 
 #: data/metainfo.appdata.xml.in:99
-#, fuzzy
 msgid "Updated Croatian translations thanks to Milo Ivir"
-msgstr "Traduzioni in russo grazie a @ViktorOn"
+msgstr "Traduzioni in croato aggiornate grazie a Milo Ivir"
 
 #: data/metainfo.appdata.xml.in:100
 msgid ""
 "Fixed an issue with translations not showing up for launcher and Flathub"
 msgstr ""
+"Risolto un problema per cui le traduzioni non venivano visualizzate nel launcher e su Flathub"
 
 #: data/metainfo.appdata.xml.in:101
 msgid "Fixed the app itself not showing translations"
-msgstr ""
+msgstr "Risolto il problema per cui l'app non visualizzava le traduzioni"
 
 #: data/metainfo.appdata.xml.in:102
 msgid "Long results no longer get cut off at smaller window sizes"
-msgstr ""
+msgstr "I risultati lunghi non vengono più troncati quando la finestra è di dimensioni ridotte"
 
 #: data/metainfo.appdata.xml.in:108
 msgid "Hello Adwaita (finally)!"
-msgstr ""
+msgstr "Ciao Adwaita (finalmente)!"
 
 #: data/metainfo.appdata.xml.in:110
 msgid "Redesigned with a modern GNOME-style split view and inputs"
-msgstr ""
+msgstr "Riprogettato con una moderna visualizzazione suddivisa e sistemi di input in stile GNOME"
 
 #: data/metainfo.appdata.xml.in:111
 msgid "Adapts to smaller and larger window sizes—including on phones"
-msgstr ""
+msgstr "Si adatta a finestre di dimensioni ridotte e ampie, inclusi gli smartphone"
 
 #: data/metainfo.appdata.xml.in:112
-#, fuzzy
 msgid "Croatian translations thanks to Milo Ivir"
-msgstr "Traduzioni in russo grazie a @ViktorOn"
+msgstr "Traduzioni in croato a cura di Milo Ivir"
 
 #: data/metainfo.appdata.xml.in:118
-#, fuzzy
 msgid "Under the hood changes (migrated app ID)"
-msgstr "Cambia sotto il cofano:"
+msgstr "Modifiche interne (ID dell'app migrato)"
 
 #: data/metainfo.appdata.xml.in:123
 msgid "GNOME 49 “Brescia”"
-msgstr ""
+msgstr "GNOME 49 “Brescia”"
 
 #: data/metainfo.appdata.xml.in:125
 msgid "Better handle several common resolutions/aspect ratios"
@@ -212,13 +206,11 @@ msgstr "Gestire meglio diverse risoluzioni/rapporti d'aspetto comuni"
 
 #: data/metainfo.appdata.xml.in:126
 msgid "Respect desktop accent color instead of always using purple"
-msgstr ""
+msgstr "Rispetta il colore di accento del desktop invece di usare sempre il viola."
 
 #: data/metainfo.appdata.xml.in:127
-#, fuzzy
 msgid "Updated with the latest GNOME 49 platform and Adwaita 1.8"
-msgstr ""
-"Aggiornamento tecnico all'ultima piattaforma GNOME, incluse GTK4 e LibAdwaita"
+msgstr "Aggiornato con le più recenti piattaforme GNOME 49 e Adwaita 1.8"
 
 #: data/metainfo.appdata.xml.in:128 data/metainfo.appdata.xml.in:147
 msgid "Updated Italian translations thanks to Albano Battistella"
@@ -450,9 +442,8 @@ msgid "Fixed deprecation"
 msgstr "Deprecazioni corrette"
 
 #: data/metainfo.appdata.xml.in:305
-#, fuzzy
 msgid "Translation & Tweaks"
-msgstr "Traduzione &amp; Modifiche"
+msgstr "Traduzione & Ritocchi"
 
 #: data/metainfo.appdata.xml.in:307
 msgid "French translations"
@@ -645,27 +636,24 @@ msgid "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;as
 msgstr "DPI;densità;monitor;risoluzione;visualizzazione;larghezza;altezza;schermo;HiDPI;loDPI;proporzioni;"
 
 #: src/dippi.blp:44
-#, fuzzy
 msgid "About Dippi"
-msgstr "Dippi"
+msgstr "Informazioni su Dippi"
 
 #: src/dippi.blp:74
-#, fuzzy
 msgid "Diagonal inches"
-msgstr "Dimensione diagonale:"
+msgstr "Diagonale in pollici"
 
 #: src/dippi.blp:86
 msgid "Width (px)"
-msgstr ""
+msgstr "Larghezza (px)"
 
 #: src/dippi.blp:96
 msgid "Height (px)"
-msgstr ""
+msgstr "Altezza (px)"
 
 #: src/dippi.blp:106
-#, fuzzy
 msgid "Type"
-msgstr "Tipo:"
+msgstr "Tipo"
 
 #: src/dippi.blp:121 src/Utils.vala:15
 msgid "Laptop"
@@ -677,18 +665,17 @@ msgstr "Desktop"
 
 #: src/dippi.blp:141
 msgid "Calculate"
-msgstr ""
+msgstr "Calcolare"
 
 #: src/dippi.blp:156
 msgid "Result"
-msgstr ""
+msgstr "Risultato"
 
 #: src/dippi.blp:209
 msgid "Analyze a Display"
 msgstr "Analizza un display"
 
 #: src/dippi.blp:222
-#, fuzzy
 msgid ""
 "For LoDPI, a DPI range of <b>90–150 is ideal for desktops</b> while <b>124–"
 "156 is ideal for laptops</b>.\n"
@@ -696,8 +683,11 @@ msgid ""
 "For HiDPI, <b>180–300 is ideal for desktops</b> while <b>248–312 is ideal "
 "for laptops</b>."
 msgstr ""
-"Per LoDPI, un intervallo DPI di <b>90–150 è l'ideale per i desktop</b> "
-"mentre <b>124–156 è l'ideale per i laptop</b>."
+"Per LoDPI, un intervallo di DPI di <b>90–150 è ideale per i desktop</b>, mentre <b>124–"
+"156 è ideale per i portatili</b>.\n"
+"\n"
+"Per HiDPI, <b>180–300 è ideale per i desktop</b>, mentre <b>248–312 è ideale "
+"per i portatili</b>."
 
 #: src/dippi.blp:258
 msgid "Very Low DPI"
