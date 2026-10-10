@@ -89,6 +89,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.0.3" date="2026-10-09">
+      <description>
+        <p>GNOME 51 and translations</p>
+        <ul>
+          <li>Updated with the latest GNOME 51 platform</li>
+          <li>Georgian translations thanks to Ekaterine Papava</li>
+          <li>Updated Spanish translations thanks to Félix Fischer</li>
+          <li>Updated Croatian translations thanks to Milo Ivir</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.0.0" date="2026-02-20">
       <description>
         <p>Hello Adwaita (finally)!</p>
