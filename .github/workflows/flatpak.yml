@@ -13,11 +13,11 @@ jobs:
   flatpak:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-51
       options: --privileged
     steps:
-    - uses: actions/checkout@v4
-    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+    - uses: actions/checkout@v7
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6.8
       with:
         bundle: dippi.flatpak
         manifest-path: com.cassidyjames.dippi.json
