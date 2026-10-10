@@ -97,6 +97,9 @@
           <li>Georgian translations thanks to Ekaterine Papava</li>
           <li>Updated Spanish translations thanks to Félix Fischer</li>
           <li>Updated Croatian translations thanks to Milo Ivir</li>
+          <li>Fixed an issue with translations not showing up for launcher and Flathub</li>
+          <li>Fixed the app itself not showing translations</li>
+          <li>Long results no longer get cut off at smaller window sizes</li>
         </ul>
       </description>
     </release>
