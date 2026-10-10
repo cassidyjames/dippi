@@ -54,7 +54,8 @@ jobs:
             --state-dir="$STATE_DIR" \
             --build-shell="$MODULE" <<'EOF'
           set -e
-          # flatpak-builder 1.4 configures before opening the shell; newer versions don't
+          # flatpak-builder 1.4 configures and opens the shell in the build dir; newer versions don't
+          cd "$FLATPAK_BUILDER_BUILDDIR"
           [ -f _flatpak_build/build.ninja ] || meson setup _flatpak_build
           ninja -C _flatpak_build \
             com.cassidyjames.dippi-pot \
