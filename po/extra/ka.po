@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-10 17:51+0000\n"
+"POT-Creation-Date: 2026-10-10 03:18+0000\n"
 "PO-Revision-Date: 2026-10-09 04:34+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <(nothing)>\n"
@@ -17,448 +17,606 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
 
-#: data/launcher.desktop.in:3 data/metainfo.appdata.xml.in:7
+#: data/launcher.desktop.in:2 data/metainfo.appdata.xml.in:4
 msgid "Dippi"
 msgstr "Dippi"
 
-#: data/launcher.desktop.in:4
+#: data/launcher.desktop.in:3
 msgid "Display information calculator"
 msgstr "ეკრანის ინფორმაციის კალკულატორი"
 
-#: data/launcher.desktop.in:5 data/metainfo.appdata.xml.in:8
-msgid "Calculate display info like DPI and aspect ratio"
+#: data/launcher.desktop.in:4 data/metainfo.appdata.xml.in:5
+#, fuzzy
+msgid "Calculate display info like DPI"
 msgstr "ეკრანის ისეთი ინფორმაციების გამოთვლა, როგორიცაა DPI და ზომის ფარდობა"
 
-#: data/launcher.desktop.in:12
+#: data/launcher.desktop.in:11
 msgid "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;"
 msgstr "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;მასშტაბი;ფარდობა;ეკრანი;გაფართოება;სიგანე;სიმაღლე;"
 
-#: data/metainfo.appdata.xml.in:10
-msgid ""
-"Analyze any display. Input a few simple details and figure out the aspect ratio, DPI, and other details of a particular display. Great for "
-"deciding which laptop or external monitor to purchase, and if it would be considered HiDPI."
-msgstr ""
-"ნებისმიერი ეკრანის ანალიზი. შეიყვანეთ რამდენიმე მარტივი დეტალი და გაარკვიეთ ეკრანის ზომების ფარდობა, DPI და სხვა დეტალები. გადასარევია "
-"გასარკვევეად, რომელი ლეპტოპის ეკრანი, ან გარე ეკრანი შეიძინოთ და თუ უნდა იყოს ის HiDPI-ად ჩათვლილი."
+#: data/metainfo.appdata.xml.in:10 data/metainfo.appdata.xml.in:12
+msgid "Cassidy James Blaede"
+msgstr "Cassidy James Blaede"
 
-#: data/metainfo.appdata.xml.in:11
+#: data/metainfo.appdata.xml.in:15
+msgid ""
+"Analyze any display. Input a few simple details and figure out the aspect "
+"ratio, DPI, and other details of a particular display. Great for deciding "
+"which laptop or external monitor to purchase, and if it would be considered "
+"HiDPI."
+msgstr ""
+"ნებისმიერი ეკრანის ანალიზი. შეიყვანეთ რამდენიმე მარტივი დეტალი და გაარკვიეთ "
+"ეკრანის ზომების ფარდობა, DPI და სხვა დეტალები. გადასარევია გასარკვევეად, "
+"რომელი ლეპტოპის ეკრანი, ან გარე ეკრანი შეიძინოთ და თუ უნდა იყოს ის HiDPI-ად "
+"ჩათვლილი."
+
+#: data/metainfo.appdata.xml.in:16
 msgid "Lots of handy features:"
 msgstr "ბევრი სასარგებლო ფუნქცია:"
 
-#: data/metainfo.appdata.xml.in:13
+#: data/metainfo.appdata.xml.in:18
 msgid "Find out if a display is a good choice based on its size and resolution"
-msgstr "გაერკვიეთ, ეკრანი კარგია, თუ არა მის ზომაზე და გარჩევადობაზე დაყრდნობით"
+msgstr ""
+"გაერკვიეთ, ეკრანი კარგია, თუ არა მის ზომაზე და გარჩევადობაზე დაყრდნობით"
 
-#: data/metainfo.appdata.xml.in:14
+#: data/metainfo.appdata.xml.in:19
 msgid "Get advice about different densities"
 msgstr "რჩევა სხვადასხვა სიმკვრივეების შესახებ"
 
-#: data/metainfo.appdata.xml.in:15
+#: data/metainfo.appdata.xml.in:20
 msgid "Learn the logical resolution"
 msgstr "გაიგეთ ლოგიკური გაფართოების შესახებ"
 
-#: data/metainfo.appdata.xml.in:16 data/metainfo.appdata.xml.in:270
+#: data/metainfo.appdata.xml.in:21 data/metainfo.appdata.xml.in:395
 msgid "Differentiate between laptops and desktop displays"
 msgstr "განსხვავება ნოუთბუქისა და სამაგიდო კომპიუტერის ეკრანებს შორის"
 
-#: data/metainfo.appdata.xml.in:17
+#: data/metainfo.appdata.xml.in:22
 msgid "Stupid simple: all in a cute li'l window"
 msgstr "სულელურად მარტივი: ის ერთი პატარა ფანჯრუკაა"
 
-#: data/metainfo.appdata.xml.in:19
-msgid "Based my expertise and experience shipping HiDPI hardware and software at System76 and elementary."
-msgstr "System76-ში და elementary-ში HiDPI აპარატურის და პროგრამების აგებისა და მიწოდების ჩემს გამოცდილებასა და ცოდნაზე დაყრდნობით."
+#: data/metainfo.appdata.xml.in:24
+msgid ""
+"Based my expertise and experience shipping HiDPI hardware and software at "
+"System76 and elementary."
+msgstr ""
+"System76-ში და elementary-ში HiDPI აპარატურის და პროგრამების აგებისა და "
+"მიწოდების ჩემს გამოცდილებასა და ცოდნაზე დაყრდნობით."
 
-#: data/metainfo.appdata.xml.in:20
+#: data/metainfo.appdata.xml.in:25
 msgid "Tells you if a display’s density is:"
 msgstr "გეუბნებათ, თუ თქვენი ეკრანის სიმკვრივეა:"
 
-#: data/metainfo.appdata.xml.in:22
+#: data/metainfo.appdata.xml.in:27
 msgid "Very Low DPI,"
 msgstr "ძალიან დაბალი DPI,"
 
-#: data/metainfo.appdata.xml.in:23
+#: data/metainfo.appdata.xml.in:28
 msgid "Fairly Low DPI,"
 msgstr "საკმაოდ დაბალი DPI,"
 
-#: data/metainfo.appdata.xml.in:24
+#: data/metainfo.appdata.xml.in:29
 msgid "Ideal for LoDPI,"
 msgstr "იდეალურია LoDPI-ისთვის,"
 
-#: data/metainfo.appdata.xml.in:25
+#: data/metainfo.appdata.xml.in:30
 msgid "Potentially Problematic,"
 msgstr "პოტენციურად პრობლემატური,"
 
-#: data/metainfo.appdata.xml.in:26
+#: data/metainfo.appdata.xml.in:31
 msgid "Ideal for HiDPI,"
 msgstr "იდეალურია HiDPI-ისთვის,"
 
-#: data/metainfo.appdata.xml.in:27
+#: data/metainfo.appdata.xml.in:32
 msgid "Fairly High for HiDPI, or"
 msgstr "საკმაოდ მაღალია HiDPI-ისთვის, ან"
 
-#: data/metainfo.appdata.xml.in:28
+#: data/metainfo.appdata.xml.in:33
 msgid "Too High DPI"
 msgstr "მეტისმეტად მაღალი DPI"
 
-#: data/metainfo.appdata.xml.in:30
+#: data/metainfo.appdata.xml.in:35
 msgid "Special thanks to Micah Ilbery for the shiny icons."
 msgstr "დიდი მადლობა მიკა ილბერის კაშკაშა ხატულებისთვის."
 
-#: data/metainfo.appdata.xml.in:40
+#: data/metainfo.appdata.xml.in:59 data/metainfo.appdata.xml.in:75
+msgid ""
+"Result for a 16-inch laptop display at 3840×2160, showing it is ideal for "
+"HiDPI"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:63 data/metainfo.appdata.xml.in:79
+msgid ""
+"Result for a 13-inch laptop display at 1920×1080, showing it is potentially "
+"problematic"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:67 data/metainfo.appdata.xml.in:83
+msgid ""
+"Result for a 27-inch desktop display at 2560×1440, showing it is ideal for "
+"loDPI"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
+msgid "Default state of the app, inviting you to enter a display's details"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:94
+#, fuzzy
+msgid "GNOME 51 and translations"
+msgstr "ახალი და განახლებული თარგმანები:"
+
+#: data/metainfo.appdata.xml.in:96
+msgid "Updated with the latest GNOME 51 platform"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:97
+#, fuzzy
+msgid "Georgian translations thanks to Ekaterine Papava"
+msgstr "რუსული თარგმანისთვის მადლობა @ViktorOn-ს"
+
+#: data/metainfo.appdata.xml.in:98
+#, fuzzy
+msgid "Updated Spanish translations thanks to Félix Fischer"
+msgstr "განახლებული ესპანური თარგმანისთვის მადლობა Adolfo Jayme-Barrientos-ს"
+
+#: data/metainfo.appdata.xml.in:99
+#, fuzzy
+msgid "Updated Croatian translations thanks to Milo Ivir"
+msgstr "განახლებული ესპანური თარგმანისთვის მადლობა Adolfo Jayme-Barrientos-ს"
+
+#: data/metainfo.appdata.xml.in:105
+msgid "Hello Adwaita (finally)!"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:107
+msgid "Redesigned with a modern GNOME-style split view and inputs"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:108
+msgid "Adapts to smaller and larger window sizes—including on phones"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:109
+#, fuzzy
+msgid "Croatian translations thanks to Milo Ivir"
+msgstr "რუსული თარგმანისთვის მადლობა @ViktorOn-ს"
+
+#: data/metainfo.appdata.xml.in:115
+#, fuzzy
+msgid "Under the hood changes (migrated app ID)"
+msgstr "ცვლილებები შიდა სამზარეულოში:"
+
+#: data/metainfo.appdata.xml.in:120
+msgid "GNOME 49 “Brescia”"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:122
+msgid "Better handle several common resolutions/aspect ratios"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:123
+msgid "Respect desktop accent color instead of always using purple"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:124
+#, fuzzy
+msgid "Updated with the latest GNOME 49 platform and Adwaita 1.8"
+msgstr ""
+"ტექნიკური განახლება GNOME-ის უახლეს პლატფორმაზე GTK4-ისა და LibAdwaita-ის "
+"ჩათვლით"
+
+#: data/metainfo.appdata.xml.in:125 data/metainfo.appdata.xml.in:144
+#, fuzzy
+msgid "Updated Italian translations thanks to Albano Battistella"
+msgstr "იტალიური თარგმანისთვის მადლობა Albano Battistella-ს"
+
+#: data/metainfo.appdata.xml.in:135
+msgid "Lighten up!"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:137
+msgid "Lighter icon color for a fresh aesthetic and better contrast"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:138
+msgid "Improved app store listing with a shorter summary and new brand colors"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:139
+#, fuzzy
+msgid "Updated for GNOME 46"
+msgstr "გაშვების გარემო განახლდა GNOME 43-მდე"
+
+#: data/metainfo.appdata.xml.in:141 data/metainfo.appdata.xml.in:255
+#, fuzzy
+msgid "Updated translations:"
+msgstr "განახლებული თარგმანები"
+
+#: data/metainfo.appdata.xml.in:143
+#, fuzzy
+msgid "Updated French translations thanks to Irénée Thirion"
+msgstr "ფრანგული თარგმანი. მადლობა Irénée THIRION-ს"
+
+#: data/metainfo.appdata.xml.in:145
+msgid "Updated Australian English thanks to Ben Beasley"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:146
+msgid "Updated British English thanks to Ben Beasley"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:156
+msgid "GNOME 45 and crash fix"
+msgstr ""
+
+#: data/metainfo.appdata.xml.in:165
 msgid "Translations and GNOME 44"
 msgstr "თარგმანები და GNOME 44"
 
-#: data/metainfo.appdata.xml.in:45
+#: data/metainfo.appdata.xml.in:170
 msgid "Hotfix: fix About window when closing and re-opening it"
-msgstr "სწრაფი გასწორება: გასწორდა ფანჯარა 'შესახებ' მისი დახურვისა და თავიდან გახსნის შემდეგ"
+msgstr ""
+"სწრაფი გასწორება: გასწორდა ფანჯარა 'შესახებ' მისი დახურვისა და თავიდან "
+"გახსნის შემდეგ"
 
-#: data/metainfo.appdata.xml.in:50
+#: data/metainfo.appdata.xml.in:175
 msgid "Even GNOMEier"
 msgstr "უფრო მეტად გა-GNOME-ება"
 
-#: data/metainfo.appdata.xml.in:52
+#: data/metainfo.appdata.xml.in:177
 msgid "Added “About” window"
 msgstr "დაემატა ფანჯარა 'შესახებ'"
 
-#: data/metainfo.appdata.xml.in:53
+#: data/metainfo.appdata.xml.in:178
 msgid "Improved text legibility"
 msgstr "გასწორდა ტექსტის მკაფიოობა"
 
-#: data/metainfo.appdata.xml.in:54
+#: data/metainfo.appdata.xml.in:179
 msgid "Updated runtime to GNOME 43"
 msgstr "გაშვების გარემო განახლდა GNOME 43-მდე"
 
-#: data/metainfo.appdata.xml.in:56
+#: data/metainfo.appdata.xml.in:181
 msgid "New and updated translations:"
 msgstr "ახალი და განახლებული თარგმანები:"
 
-#: data/metainfo.appdata.xml.in:58
-msgid "French translations thanks to Irénée THIRION"
+#: data/metainfo.appdata.xml.in:183
+#, fuzzy
+msgid "French translations thanks to Irénée Thirion"
 msgstr "ფრანგული თარგმანი. მადლობა Irénée THIRION-ს"
 
-#: data/metainfo.appdata.xml.in:59
+#: data/metainfo.appdata.xml.in:184
 msgid "Italian translations thanks to Albano Battistella"
 msgstr "იტალიური თარგმანისთვის მადლობა Albano Battistella-ს"
 
-#: data/metainfo.appdata.xml.in:60
+#: data/metainfo.appdata.xml.in:185
 msgid "Russian translations thanks to @ViktorOn"
 msgstr "რუსული თარგმანისთვის მადლობა @ViktorOn-ს"
 
-#: data/metainfo.appdata.xml.in:61
-msgid "Improvements to developer tools to make translations easier to keep up to date"
-msgstr "გაუმჯობესდა პროგრამისტის ხელსაწყოებში, რომ თარგმანებში სიახლეების პოვნა უფრო ადვილი იყოს"
+#: data/metainfo.appdata.xml.in:186
+msgid ""
+"Improvements to developer tools to make translations easier to keep up to "
+"date"
+msgstr ""
+"გაუმჯობესდა პროგრამისტის ხელსაწყოებში, რომ თარგმანებში სიახლეების პოვნა უფრო "
+"ადვილი იყოს"
 
-#: data/metainfo.appdata.xml.in:67
+#: data/metainfo.appdata.xml.in:192
 msgid "Complete reworking"
 msgstr "სრულად გადაიწერა თავიდან"
 
-#: data/metainfo.appdata.xml.in:69
+#: data/metainfo.appdata.xml.in:194
 msgid "elementary → GNOME styling"
 msgstr "elementary → GNOME-ის სტილზე"
 
-#: data/metainfo.appdata.xml.in:70
+#: data/metainfo.appdata.xml.in:195
 msgid "Refreshed icons thanks again to Micah Ilbery"
 msgstr "გაუმჯობესდა ხატულები. მადლობა მიკა ილბერის კიდევ ერთხელ"
 
-#: data/metainfo.appdata.xml.in:71
-msgid "Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
-msgstr "ტექნიკური განახლება GNOME-ის უახლეს პლატფორმაზე GTK4-ისა და LibAdwaita-ის ჩათვლით"
+#: data/metainfo.appdata.xml.in:196
+msgid ""
+"Technical upgrade to the latest GNOME platform including GTK4 and LibAdwaita"
+msgstr ""
+"ტექნიკური განახლება GNOME-ის უახლეს პლატფორმაზე GTK4-ისა და LibAdwaita-ის "
+"ჩათვლით"
 
-#: data/metainfo.appdata.xml.in:77 data/metainfo.appdata.xml.in:85
+#: data/metainfo.appdata.xml.in:202 data/metainfo.appdata.xml.in:210
 msgid "Under-the-hood improvements:"
 msgstr "გაუმჯობესებები შიდა სამზარეულოში:"
 
-#: data/metainfo.appdata.xml.in:79 data/metainfo.appdata.xml.in:88
+#: data/metainfo.appdata.xml.in:204 data/metainfo.appdata.xml.in:213
 msgid "Update Stripe key"
 msgstr "განახლდა Stripe-ის გასაღები"
 
-#: data/metainfo.appdata.xml.in:87
+#: data/metainfo.appdata.xml.in:212
 msgid "Stricter sandboxing"
 msgstr "უფრო მკაცრი სენდბოქსი"
 
-#: data/metainfo.appdata.xml.in:94
+#: data/metainfo.appdata.xml.in:219
 msgid "Add \"calculator\" category to launcher"
 msgstr "'კალკულატორის' კატეგორიის დამატება გამშვებზე"
 
-#: data/metainfo.appdata.xml.in:99
+#: data/metainfo.appdata.xml.in:224
 msgid "Under-the-hood packaging updates for elementary OS 6"
 msgstr "შიდა სამზარეულოში მოხდა შეფუთვის განახლებები elementary OS 6-ისთვის"
 
-#: data/metainfo.appdata.xml.in:104
-msgid "The Adventure of Link: you can now share Dippi results as a link so anyone can see all the details and make their own calculations. Plus:"
+#: data/metainfo.appdata.xml.in:229
+msgid ""
+"The Adventure of Link: you can now share Dippi results as a link so anyone "
+"can see all the details and make their own calculations. Plus:"
 msgstr ""
-"კავშირის თავგადასავალი: ახლა შეგიძლიათ, Dippi-ის შედეგები ბმულის სახით გააზიაროთ, რომ ყველამ ნახოს ყველა დეტალი და მოახდინოს გამოთვლები "
-"თავისთვის. პლუს:"
+"კავშირის თავგადასავალი: ახლა შეგიძლიათ, Dippi-ის შედეგები ბმულის სახით "
+"გააზიაროთ, რომ ყველამ ნახოს ყველა დეტალი და მოახდინოს გამოთვლები თავისთვის. "
+"პლუს:"
 
-#: data/metainfo.appdata.xml.in:106
+#: data/metainfo.appdata.xml.in:231
 msgid "More details on launch"
 msgstr "მეტი დეტალები გაშვების შესახებ"
 
-#: data/metainfo.appdata.xml.in:107
+#: data/metainfo.appdata.xml.in:232
 msgid "Bolded sections of descriptions for easier skimmability"
 msgstr "აღწერების გამუქებული სექციები უფრო ადვილად წასაკითხად"
 
-#: data/metainfo.appdata.xml.in:108
+#: data/metainfo.appdata.xml.in:233
 msgid "Fix window resizing for different results"
 msgstr "გასწორდა ფანჯრის ზომის შეცვლა სხვადასხვა შედეგისთვის"
 
-#: data/metainfo.appdata.xml.in:109
+#: data/metainfo.appdata.xml.in:234
 msgid "Animate between results"
 msgstr "ანიმაცია შედეგებს შორის"
 
-#: data/metainfo.appdata.xml.in:115
+#: data/metainfo.appdata.xml.in:240
 msgid "Port to elementary OS 6"
 msgstr "გადატანა elementary OS 6-ზე"
 
-#: data/metainfo.appdata.xml.in:117
+#: data/metainfo.appdata.xml.in:242
 msgid "Follow the dark style preference"
 msgstr "მუქი სტილის პარამეტრის მიყოლა"
 
-#: data/metainfo.appdata.xml.in:118
+#: data/metainfo.appdata.xml.in:243
 msgid "Drag window from anywhere"
 msgstr "ფანჯრის გადმოთრევა ნებისმიერი ადგილიდან"
 
-#: data/metainfo.appdata.xml.in:119
+#: data/metainfo.appdata.xml.in:244
 msgid "Refreshed typography and design"
 msgstr "განახლდა ტიპოგრაფია და დიზაინი"
 
-#: data/metainfo.appdata.xml.in:125
+#: data/metainfo.appdata.xml.in:250
 msgid "Code style and organization fixes"
 msgstr "გასწორდა კოდის სტილი და ორგანიზაცია"
 
-#: data/metainfo.appdata.xml.in:130
-msgid "Updated translations"
-msgstr "განახლებული თარგმანები"
-
-#: data/metainfo.appdata.xml.in:132
+#: data/metainfo.appdata.xml.in:257
 msgid "Updated Spanish translations thanks to Adolfo Jayme-Barrientos"
 msgstr "განახლებული ესპანური თარგმანისთვის მადლობა Adolfo Jayme-Barrientos-ს"
 
-#: data/metainfo.appdata.xml.in:133
+#: data/metainfo.appdata.xml.in:258
 msgid "Hallo! Dutch translations thanks to Heimen Stoffels"
 msgstr "ჰალო! ნიდერლანდური თარგმანისთვის მადლობა Heimen Stoffels-ს"
 
-#: data/metainfo.appdata.xml.in:139
+#: data/metainfo.appdata.xml.in:264
 msgid "Happy new year! Just some AppData fixes today. 😉"
 msgstr "გილოცავთ ახალ წერილს! გასწორდა AppData-ის რამდენიმე შეცდომა. 😉"
 
-#: data/metainfo.appdata.xml.in:144
+#: data/metainfo.appdata.xml.in:269
 msgid "Under-the-hood tweaks"
 msgstr "ცვლილებები შიდა სამზარეულოში"
 
-#: data/metainfo.appdata.xml.in:149
+#: data/metainfo.appdata.xml.in:274
 msgid "Hello, Juno!"
 msgstr "გამარჯობა, ჯუნო!"
 
-#: data/metainfo.appdata.xml.in:151
+#: data/metainfo.appdata.xml.in:276
 msgid "Update translation link"
 msgstr "განახლდა თარგმანის ბმული"
 
-#: data/metainfo.appdata.xml.in:152
+#: data/metainfo.appdata.xml.in:277
 msgid "Under the hood cleanup"
 msgstr "გასუფთავება შიდა სამზარეულოში"
 
-#: data/metainfo.appdata.xml.in:158
+#: data/metainfo.appdata.xml.in:283
 msgid "Add translation instructions and update translation link in app data"
-msgstr "დაემატა თარგმანის ინსტრუქციები და განახლდა თარგმანების ბმული აპლიკაციის მონაცემებში"
+msgstr ""
+"დაემატა თარგმანის ინსტრუქციები და განახლდა თარგმანების ბმული აპლიკაციის "
+"მონაცემებში"
 
-#: data/metainfo.appdata.xml.in:163
+#: data/metainfo.appdata.xml.in:288
 msgid "Added translation link to app data"
 msgstr "აპლიკაციის მონაცემებს დაემატა თარგმანის ბმული"
 
-#: data/metainfo.appdata.xml.in:168
+#: data/metainfo.appdata.xml.in:293
 msgid "Lithuanian Translation"
 msgstr "ლიეტუვური თარგმანი"
 
-#: data/metainfo.appdata.xml.in:170
+#: data/metainfo.appdata.xml.in:295
 msgid "Lithuanian translation thanks to welaq"
 msgstr "ლიეტუვური თარგმანი. მადლობა welaq-ს"
 
-#: data/metainfo.appdata.xml.in:171
+#: data/metainfo.appdata.xml.in:296
 msgid "Fixed deprecation"
 msgstr "გასწორდა მოძველება"
 
-#: data/metainfo.appdata.xml.in:177
-msgid "Translation &amp; Tweaks"
+#: data/metainfo.appdata.xml.in:302
+#, fuzzy
+msgid "Translation & Tweaks"
 msgstr "თარგმანები &amp; მცირე თვისებები"
 
-#: data/metainfo.appdata.xml.in:179
+#: data/metainfo.appdata.xml.in:304
 msgid "French translations"
 msgstr "ფრანგული თარგმანი"
 
-#: data/metainfo.appdata.xml.in:180
+#: data/metainfo.appdata.xml.in:305
 msgid "Hide labels when data is invalid"
 msgstr "ჭდეების დამალვა, როცა მონაცემები არასწორია"
 
-#: data/metainfo.appdata.xml.in:181
+#: data/metainfo.appdata.xml.in:306
 msgid "Fix max length on width entry"
 msgstr "გასწორდა მაქს. სიგრძე სიგანის შეყვანისას"
 
-#: data/metainfo.appdata.xml.in:182
+#: data/metainfo.appdata.xml.in:307
 msgid "Fix displayed AppData"
 msgstr "გასწორდა ნაჩვენები AppData"
 
-#: data/metainfo.appdata.xml.in:184
+#: data/metainfo.appdata.xml.in:309
 msgid "Behind the scenes:"
 msgstr "კულისებს მიღმა:"
 
-#: data/metainfo.appdata.xml.in:186
+#: data/metainfo.appdata.xml.in:311
 msgid "Add editorconfig and Travis for more consistency"
 msgstr "დაემატა editorconfig და Travis უკეთესი ერთგვაროვნობისთვის"
 
-#: data/metainfo.appdata.xml.in:187
+#: data/metainfo.appdata.xml.in:312
 msgid "Split utilities out into their own file"
 msgstr "ხელსაწყოების გაყოფა საკუთარ ფაილებად"
 
-#: data/metainfo.appdata.xml.in:193
+#: data/metainfo.appdata.xml.in:318
 msgid "AppData tweaks"
 msgstr "AppData-ის ჩასწორებები"
 
-#: data/metainfo.appdata.xml.in:198
+#: data/metainfo.appdata.xml.in:323
 msgid "Fixed:"
 msgstr "ჩასწორებულია:"
 
-#: data/metainfo.appdata.xml.in:200
+#: data/metainfo.appdata.xml.in:325
 msgid "Window no longer resizes when switching between analyses"
 msgstr "ფანჯარა აღარ იცვლის ზომებს ანალიზებს შორის გადართვისას"
 
-#: data/metainfo.appdata.xml.in:206
+#: data/metainfo.appdata.xml.in:331
 msgid "Under the hood changes:"
 msgstr "ცვლილებები შიდა სამზარეულოში:"
 
-#: data/metainfo.appdata.xml.in:208
+#: data/metainfo.appdata.xml.in:333
 msgid "Include success icon as a fallback for other icon sets"
-msgstr "შეიცავს წარმატების ხატულას როგორც სათადარიგოს სხვა ხატულას ნაკრებებისთვის"
+msgstr ""
+"შეიცავს წარმატების ხატულას როგორც სათადარიგოს სხვა ხატულას ნაკრებებისთვის"
 
-#: data/metainfo.appdata.xml.in:214
+#: data/metainfo.appdata.xml.in:339
 msgid "Changes:"
 msgstr "ცვლილებები:"
 
-#: data/metainfo.appdata.xml.in:216
-msgid "Tweaked DPI ranges for internal displays to be a tiny more strict for the “ideal” range"
-msgstr "შეიცვალა DPI-ის შუალედები შიდა ეკრანებისთვის, რომ ისინი უფრო მკაცრი იყოს \"იდეალური\" შუალედისთვის"
+#: data/metainfo.appdata.xml.in:341
+msgid ""
+"Tweaked DPI ranges for internal displays to be a tiny more strict for the "
+"“ideal” range"
+msgstr ""
+"შეიცვალა DPI-ის შუალედები შიდა ეკრანებისთვის, რომ ისინი უფრო მკაცრი იყოს "
+"\"იდეალური\" შუალედისთვის"
 
-#: data/metainfo.appdata.xml.in:217
+#: data/metainfo.appdata.xml.in:342
 msgid "Metadata additions and tweaks"
 msgstr "მეტამონაცემების დამატება და ცვლილებები"
 
-#: data/metainfo.appdata.xml.in:219
+#: data/metainfo.appdata.xml.in:344
 msgid "Fixes:"
 msgstr "შეცდომების გასწორებები:"
 
-#: data/metainfo.appdata.xml.in:221
+#: data/metainfo.appdata.xml.in:346
 msgid "Install all available icon sizes"
 msgstr "ყველა ხელმისაწვდომი ხატულას ზომის დაყენება"
 
-#: data/metainfo.appdata.xml.in:222
+#: data/metainfo.appdata.xml.in:347
 msgid "Allow all languages to be translated"
 msgstr "ყველა ენაზე თარგმანის დაშვება"
 
-#: data/metainfo.appdata.xml.in:224
+#: data/metainfo.appdata.xml.in:349
 msgid "And more! Read the recent blog post at goo.gl/tKwkq4"
 msgstr "და მეტი! წაიკითხეთ უახლესი ბლოგის სტატია ბმულზე goo.gl/tKwkq4"
 
-#: data/metainfo.appdata.xml.in:230
+#: data/metainfo.appdata.xml.in:355
 msgid "Added logical resolution"
 msgstr "დაემატა ლოგიკური გარჩევადობა"
 
-#: data/metainfo.appdata.xml.in:231
+#: data/metainfo.appdata.xml.in:356
 msgid "Cleaned up design by moving display details to below the analysis"
 msgstr "გასუფთავდა დიზაინი ეკრანის დეტალები ანალიზის ქვემოთ გადატანით"
 
-#: data/metainfo.appdata.xml.in:238
+#: data/metainfo.appdata.xml.in:363
 msgid "New purple accent color"
 msgstr "ახალი იისფერი აქცენტის ფერი"
 
-#: data/metainfo.appdata.xml.in:239
+#: data/metainfo.appdata.xml.in:364
 msgid "Refined margins and alignment"
 msgstr "გასწორდა საზღვრები და სწორება"
 
-#: data/metainfo.appdata.xml.in:240
+#: data/metainfo.appdata.xml.in:365
 msgid "Escape now closes the window"
 msgstr "ღილაკი Escape ახლა დახურავს ფანჯარას"
 
-#: data/metainfo.appdata.xml.in:241
+#: data/metainfo.appdata.xml.in:366
 msgid "Lots of little code cleanup"
 msgstr "პატარ-პატარა კოდის გასუფთავებები"
 
-#: data/metainfo.appdata.xml.in:248
+#: data/metainfo.appdata.xml.in:373
 msgid "Fix bug with setting display icon"
 msgstr "გასწორდა ეკრანის ხატულას დაყენება"
 
-#: data/metainfo.appdata.xml.in:249
+#: data/metainfo.appdata.xml.in:374
 msgid "Under-the-hood fixes"
 msgstr "ცვლილებები შიდა სამზარეულოში"
 
-#: data/metainfo.appdata.xml.in:255
+#: data/metainfo.appdata.xml.in:380
 msgid "Display icon now changes according to display type"
 msgstr "ეკრანის ხატულა ახლა იცვლება ეკრანის ტიპთან ერთად"
 
-#: data/metainfo.appdata.xml.in:261
+#: data/metainfo.appdata.xml.in:386
 msgid "Select between laptop or desktop"
 msgstr "არჩევა ნოუთბუქსა და სამაგიდო კომპიუტერს შორის"
 
-#: data/metainfo.appdata.xml.in:262
+#: data/metainfo.appdata.xml.in:387
 msgid "Refreshed icons thanks to Micah Ilbery"
 msgstr "განახლდა ხატულები. მადლობა მიკა ილბერის"
 
-#: data/metainfo.appdata.xml.in:269
+#: data/metainfo.appdata.xml.in:394
 msgid "Completely reworked DPI ranges"
 msgstr "სრულად თავიდან დაიწერა DPI-ის შუალედები"
 
-#: data/metainfo.appdata.xml.in:271 data/metainfo.appdata.xml.in:281
+#: data/metainfo.appdata.xml.in:396 data/metainfo.appdata.xml.in:406
 msgid "Tweaked DPI assessment and reasoning copy"
 msgstr "შეიცვალა DPI-ის შეფასებისა და მსჯელობის ტექსტი"
 
-#: data/metainfo.appdata.xml.in:272
+#: data/metainfo.appdata.xml.in:397
 msgid "Flattened titlebar"
 msgstr "გაბრტყელებული სათაურის ზოლი"
 
-#: data/metainfo.appdata.xml.in:273
+#: data/metainfo.appdata.xml.in:398
 msgid "Fixed bugs and warnings"
 msgstr "გასწორდა შეცდომები და გაფრთხილებები"
 
-#: data/metainfo.appdata.xml.in:280
+#: data/metainfo.appdata.xml.in:405
 msgid "All new side-by-side UI"
 msgstr "ახალი გვერდიგვერდ ინტერფეისი"
 
-#: data/metainfo.appdata.xml.in:282
+#: data/metainfo.appdata.xml.in:407
 msgid "Added icons to make assessment clearer"
 msgstr "დაემატა ხატულები, რომ შეფასებები უფრო გასაგები იყოს"
 
-#: data/metainfo.appdata.xml.in:289
+#: data/metainfo.appdata.xml.in:414
 msgid "Made visualization interactive!"
 msgstr "ვიზუალიზაცია გახდა ინტერაქტიური!"
 
-#: data/metainfo.appdata.xml.in:290
+#: data/metainfo.appdata.xml.in:415
 msgid "Added Cassidy-approval and reasoning"
 msgstr "დაემატა Cassidy-approval და მსჯელობა"
 
-#: data/metainfo.appdata.xml.in:291
+#: data/metainfo.appdata.xml.in:416
 msgid "Fix a bug where sometimes an extra zero would sneak in"
 msgstr "გასწორდა შეცდომა, როცა ხანდახან დამატებითი ნული გვეპარებოდა"
 
-#: data/metainfo.appdata.xml.in:292
+#: data/metainfo.appdata.xml.in:417
 msgid "Under-the-hood restructuring"
 msgstr "რესტრუქტურიზაცია შიდა სამზარეულოში"
 
-#: data/metainfo.appdata.xml.in:299
+#: data/metainfo.appdata.xml.in:424
 msgid "Shiny new icon"
 msgstr "ახალი კაშკაშა ხატულა"
 
-#: data/metainfo.appdata.xml.in:300
+#: data/metainfo.appdata.xml.in:425
 msgid "Added visualization to UI"
 msgstr "ინტერფეისს დაემატა ვიზუალიზაცია"
 
-#: data/metainfo.appdata.xml.in:301
+#: data/metainfo.appdata.xml.in:426
 msgid "Significant code cleanup"
 msgstr "კოდი საკმაოდ გაიწმინდა"
 
-#: data/metainfo.appdata.xml.in:307
+#: data/metainfo.appdata.xml.in:432
 msgid "Initial release"
 msgstr "საწყისი ვერსია"
-
-#: data/metainfo.appdata.xml.in:338
-msgid "Cassidy James Blaede"
-msgstr "Cassidy James Blaede"
