@@ -432,7 +432,7 @@ msgstr "გასწორდა მოძველება"
 
 #: data/metainfo.appdata.xml.in:302
 msgid "Translation & Tweaks"
-msgstr "თარგმანები & მცირე თვისებები"
+msgstr "თარგმანები &amp; მცირე თვისებები"
 
 #: data/metainfo.appdata.xml.in:304
 msgid "French translations"
