@@ -38,7 +38,7 @@ msgid ""
 "HiDPI."
 msgstr ""
 "ნებისმიერი ეკრანის ანალიზი. შეიყვანეთ რამდენიმე მარტივი დეტალი და გაარკვიეთ "
-"ეკრანის ზომების ფარდობა, DPI და სხვა დეტალები. გადასარევია გასარკვევად, "
+"ეკრანის ზომების ფარდობა, DPI და სხვა დეტალები. გადასარევია გასარკვევეად, "
 "რომელი ლეპტოპის ეკრანი, ან გარე ეკრანი შეიძინოთ და თუ უნდა იყოს ის HiDPI-ად "
 "ჩათვლილი."
 
@@ -57,11 +57,11 @@ msgstr "რჩევა სხვადასხვა სიმკვრივ�
 
 #: data/metainfo.appdata.xml.in:20
 msgid "Learn the logical resolution"
-msgstr "გაიგეთ ლოგიკური გარჩევადობის შესახებ"
+msgstr "გაიგეთ ლოგიკური გაფართოების შესახებ"
 
 #: data/metainfo.appdata.xml.in:21 data/metainfo.appdata.xml.in:395
 msgid "Differentiate between laptops and desktop displays"
-msgstr "განსხვავება ლეპტოპისა და სამაგიდო კომპიუტერის ეკრანებს შორის"
+msgstr "განსხვავება ნოუთბუქისა და სამაგიდო კომპიუტერის ეკრანებს შორის"
 
 #: data/metainfo.appdata.xml.in:22
 msgid "Stupid simple: all in a cute li'l window"
@@ -390,7 +390,7 @@ msgstr "ჰალო! ნიდერლანდური თარგმან
 
 #: data/metainfo.appdata.xml.in:264
 msgid "Happy new year! Just some AppData fixes today. 😉"
-msgstr "გილოცავთ ახალ წელს! გასწორდა AppData-ის რამდენიმე შეცდომა. 😉"
+msgstr "გილოცავთ ახალ წერილს! გასწორდა AppData-ის რამდენიმე შეცდომა. 😉"
 
 #: data/metainfo.appdata.xml.in:269
 msgid "Under-the-hood tweaks"
@@ -553,7 +553,7 @@ msgstr "ეკრანის ხატულა ახლა იცვლებ
 
 #: data/metainfo.appdata.xml.in:386
 msgid "Select between laptop or desktop"
-msgstr "არჩევა ლეპტოპსა და სამაგიდო კომპიუტერს შორის"
+msgstr "არჩევა ნოუთბუქსა და სამაგიდო კომპიუტერს შორის"
 
 #: data/metainfo.appdata.xml.in:387
 msgid "Refreshed icons thanks to Micah Ilbery"
@@ -621,7 +621,7 @@ msgstr "ეკრანის ინფორმაციის კალკუ�
 
 #: data/launcher.desktop.in:11
 msgid "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;"
-msgstr "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;მასშტაბი;სიმკვრივე;ფარდობა;გარჩევადობა;სიგანე;სიმაღლე;"
+msgstr "DPI;density;monitor;resolution;display;width;height;screen;HiDPI;loDPI;aspect;ratio;მასშტაბი;ფარდობა;ეკრანი;გაფართოება;სიგანე;სიმაღლე;"
 
 #: src/dippi.blp:44
 msgid "About Dippi"

@@ -11,7 +11,6 @@ on:
       - 'data/launcher.desktop.in'
       - 'data/metainfo.appdata.xml.in'
       - 'po/POTFILES'
-      - 'po/extra/POTFILES'
       - '.github/workflows/gettext.yml'
   workflow_dispatch:
 
@@ -59,9 +58,7 @@ jobs:
           [ -f _flatpak_build/build.ninja ] || meson setup _flatpak_build
           ninja -C _flatpak_build \
             com.cassidyjames.dippi-pot \
-            com.cassidyjames.dippi-update-po \
-            extra-pot \
-            extra-update-po
+            com.cassidyjames.dippi-update-po
           touch .gettext-done
           EOF
 
@@ -70,7 +67,6 @@ jobs:
           test -f "$SOURCE_DIR/.gettext-done"
 
           cp "$SOURCE_DIR"/po/*.pot "$SOURCE_DIR"/po/*.po po/
-          cp "$SOURCE_DIR"/po/extra/*.pot "$SOURCE_DIR"/po/extra/*.po po/extra/
 
       - name: Commit and push
         run: |
