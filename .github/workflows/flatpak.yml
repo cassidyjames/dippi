@@ -11,14 +11,24 @@ concurrency:
 
 jobs:
   flatpak:
-    runs-on: ubuntu-latest
+    name: flatpak (${{ matrix.arch }})
+    runs-on: ${{ matrix.runner }}
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-51
       options: --privileged
+    strategy:
+      matrix:
+        include:
+        - arch: x86_64
+          runner: ubuntu-latest
+        - arch: aarch64
+          runner: ubuntu-24.04-arm
+      fail-fast: false
     steps:
     - uses: actions/checkout@v7
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6.8
       with:
         bundle: dippi.flatpak
         manifest-path: com.cassidyjames.dippi.json
-        cache-key: "flatpak-builder-${{ github.sha }}"
+        cache-key: "flatpak-builder-${{ github.sha }}-${{ matrix.arch }}"
+        arch: ${{ matrix.arch }}
