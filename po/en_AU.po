@@ -25,7 +25,7 @@ msgstr "Dippi"
 #: data/metainfo.appdata.xml.in:5 data/launcher.desktop.in:4
 #, fuzzy
 msgid "Calculate display info like DPI"
-msgstr "Calculate display info like DPI and aspect ratio"
+msgstr "Calculate display info like DPI"
 
 #: data/metainfo.appdata.xml.in:10 data/metainfo.appdata.xml.in:12
 msgid "Cassidy James Blaede"
@@ -79,7 +79,7 @@ msgstr ""
 #: data/metainfo.appdata.xml.in:25
 #, fuzzy
 msgid "Tells you if a display’s density is:"
-msgstr "Tells you if a display‘s density is:"
+msgstr "Tells you if a display’s density is:"
 
 #: data/metainfo.appdata.xml.in:27
 msgid "Very Low DPI,"
