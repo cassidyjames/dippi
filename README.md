@@ -20,7 +20,7 @@ Analyze any display. Input a few simple details and figure out the aspect ratio,
 - Get advice about different densities
 - Learn the logical resolution
 - Differentiate between laptops and desktop displays
-- Stupid simple: all in a cute li'l window
+- Stupid simple: all in a cute li’l window
 
 Based my expertise and experience shipping HiDPI hardware and software at System76 and elementary.
 
@@ -43,7 +43,7 @@ Dippi 4 was designed and developed on and for GNOME. As such, contributors agree
 > [!IMPORTANT]
 > **Dippi is on Flathub!** 🎉️ Get the latest version with a refreshed design from [Flathub].
 >
->If you're on elementary OS, **the AppCenter version is no longer maintained or receiving updates.** Install from [Flathub] to get the latest design and future updates.
+>If you’re on elementary OS, **the AppCenter version is no longer maintained or receiving updates.** Install from [Flathub] to get the latest design and future updates.
 
 ## Developing and Building
 
@@ -51,7 +51,7 @@ Dippi is a GNOME app built using Vala and GTK, designed to be distributed via Fl
 
 If you want to hack on and build Dippi yourself, I recommend using GNOME Builder. Clone the repository, then just* hit run!
 
-<small>*If you're hitting issues, try "Update project dependencies" in the top-center build menu to ensure you have the SDK installed.</small>
+<small>*If you’re hitting issues, try "Update project dependencies" in the top-center build menu to ensure you have the SDK installed.</small>
 
 ### From CLI
 
