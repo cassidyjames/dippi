@@ -79,7 +79,7 @@ msgstr ""
 #: data/metainfo.appdata.xml.in:25
 #, fuzzy
 msgid "Tells you if a display’s density is:"
-msgstr "Tells you if a display‘s density is:"
+msgstr "Tells you if a display’s density is:"
 
 #: data/metainfo.appdata.xml.in:27
 msgid "Very Low DPI,"
