@@ -64,7 +64,7 @@ msgid "Differentiate between laptops and desktop displays"
 msgstr "განსხვავება ლეპტოპისა და სამაგიდო კომპიუტერის ეკრანებს შორის"
 
 #: data/metainfo.appdata.xml.in:22
-msgid "Stupid simple: all in a cute li'l window"
+msgid "Stupid simple: all in a cute li’l window"
 msgstr "სულელურად მარტივი: ის ერთი პატარა ფანჯრუკაა"
 
 #: data/metainfo.appdata.xml.in:24
@@ -136,7 +136,7 @@ msgstr ""
 "ის იდეალურია loDPI-ისთვის"
 
 #: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
-msgid "Default state of the app, inviting you to enter a display's details"
+msgid "Default state of the app, inviting you to enter a display’s details"
 msgstr ""
 "აპის ნაგულისხმევი მდგომარეობა, რომელშიც ის გიწვევთ, ეკრანის დეტალები "
 "შეიყვანოთ"
@@ -714,7 +714,7 @@ msgstr "საკმაოდ დაბალი DPI"
 
 #: src/dippi.blp:320
 msgid ""
-"Text and UI might be too big for typical viewing distances, but it's "
+"Text and UI might be too big for typical viewing distances, but it’s "
 "<b>largely up to user preference</b> and physical distance from the display."
 msgstr ""
 

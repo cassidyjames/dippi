@@ -68,7 +68,7 @@ msgid "Differentiate between laptops and desktop displays"
 msgstr "Atskirkite nešiojamųjų ir stalinių kompiuterių ekranus"
 
 #: data/metainfo.appdata.xml.in:22
-msgid "Stupid simple: all in a cute li'l window"
+msgid "Stupid simple: all in a cute li’l window"
 msgstr "Kvailai paprasta:  viskas viename mažame lange"
 
 #: data/metainfo.appdata.xml.in:24
@@ -134,7 +134,7 @@ msgid ""
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
-msgid "Default state of the app, inviting you to enter a display's details"
+msgid "Default state of the app, inviting you to enter a display’s details"
 msgstr ""
 
 #: data/metainfo.appdata.xml.in:94
@@ -690,7 +690,7 @@ msgstr "Pakankamai žemas DPI"
 #: src/dippi.blp:320
 #, fuzzy
 msgid ""
-"Text and UI might be too big for typical viewing distances, but it's "
+"Text and UI might be too big for typical viewing distances, but it’s "
 "<b>largely up to user preference</b> and physical distance from the display."
 msgstr ""
 "Tekstas ir naudotojo sąsaja, žiūrint iš įprasto nuotolio, gali būti per "

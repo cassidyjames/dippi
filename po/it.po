@@ -65,7 +65,7 @@ msgid "Differentiate between laptops and desktop displays"
 msgstr "Distinguere tra laptop e display desktop"
 
 #: data/metainfo.appdata.xml.in:22
-msgid "Stupid simple: all in a cute li'l window"
+msgid "Stupid simple: all in a cute li’l window"
 msgstr "Stupido e semplice: tutto in una graziosa finestrella"
 
 #: data/metainfo.appdata.xml.in:24
@@ -137,7 +137,7 @@ msgstr ""
 "è ideale per loDPI"
 
 #: data/metainfo.appdata.xml.in:71 data/metainfo.appdata.xml.in:87
-msgid "Default state of the app, inviting you to enter a display's details"
+msgid "Default state of the app, inviting you to enter a display’s details"
 msgstr ""
 "Stato predefinito dell'app, che ti invita a inserire i dettagli di un display"
 
@@ -719,7 +719,7 @@ msgstr "DPI abbastanza basso"
 
 #: src/dippi.blp:320
 msgid ""
-"Text and UI might be too big for typical viewing distances, but it's "
+"Text and UI might be too big for typical viewing distances, but it’s "
 "<b>largely up to user preference</b> and physical distance from the display."
 msgstr ""
 "Il testo e l'interfaccia utente potrebbero essere troppo grandi per le "
