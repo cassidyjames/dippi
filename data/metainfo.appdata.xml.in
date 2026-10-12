@@ -89,6 +89,15 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="5.0.4" date="2026-10-11">
+      <description>
+        <p>Updated translations</p>
+        <ul>
+          <li>Updated Croatian translations thanks to Milo Ivir</li>
+          <li>Updated Italian translations thanks to Albano Battistella</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.0.3" date="2026-10-09">
       <description>
         <p>GNOME 51 and translations</p>
